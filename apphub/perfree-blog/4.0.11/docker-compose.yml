@@ -1,0 +1,25 @@
+services:
+  perfree-blog:
+    image: "registry.cn-hangzhou.aliyuncs.com/perfree/perfree_blog:v4.0.11"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:8080
+    volumes:
+      - "${APP_PATH}/data:/perfree-server/resources"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:${PANEL_DB_TYPE}://${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&nullCatalogMeansCurrent=true
+      SPRING_DATASOURCE_USERNAME: ${PANEL_DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,31 @@
+services:
+  zerotier-planet:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:4000"
+      - "${HOST_IP}:${PANEL_APP_PORT_SERVER}:9993"
+      - "${HOST_IP}:${PANEL_APP_PORT_SERVER}:9993/udp"
+      - "${HOST_IP}:${PANEL_APP_PORT_DOWNLOAD}:3180"
+    volumes:
+      - ./data/zerotier-one:/var/lib/zerotier-one
+      - ./data/etc:/opt/key-networks/ztncui/etc
+    environment:
+      - MYADDR=${HOST_IP_ADDR}
+      - HTTP_PORT=4000
+      - HTTP_ALL_INTERFACES=yes
+      - ZTNCUI_PASSWD=${PASSWORD}
+    image: keynetworks/ztncui:1.2.18
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

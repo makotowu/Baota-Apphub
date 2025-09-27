@@ -1,0 +1,33 @@
+services:
+  obsidian:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+      - "${PANEL_APP_PORT_HTTPS}:${PANEL_APP_PORT_HTTPS}"
+    volumes:
+      - ${APP_PATH}/data/vaults:/vaults
+      - ${APP_PATH}/data/config:/config
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TIME_ZONE}
+      - DOCKER_MODS=linuxserver/mods:universal-git
+      - CUSTOM_PORT=${WEB_PORT}
+      - CUSTOM_HTTPS_PORT=${PANEL_APP_PORT_HTTPS}
+      - CUSTOM_USER=${HTTP_USER}
+      - PASSWORD=${HTTP_PWD}
+    image: sytone/obsidian-remote:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

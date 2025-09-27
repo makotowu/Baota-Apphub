@@ -1,0 +1,22 @@
+services:
+  langchain-chatchat:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8501"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: ${GPU_DRIVER_TYPE}
+              count: all
+              capabilities: [gpu]
+    image: registry.cn-beijing.aliyuncs.com/chatchat/chatchat:0.2.10
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

@@ -1,0 +1,21 @@
+services:
+  allinone:
+    image: "youshandefeiyang/allinone:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    privileged: ${PRIVILEGED_MODE}
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:35455"
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

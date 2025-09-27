@@ -1,0 +1,38 @@
+services:
+  docker_osx:
+    image: "sickcodes/docker-osx:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: ${RESTART_POLICY}
+    networks:
+      - baota_net
+    devices:
+      - /dev/kvm
+    environment:
+      - INTERNAL_SSH_PORT=10022
+      - DISPLAY:=${DISPLAY:-:0.0}
+      - NOPICKER=false
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_SSH}:10022
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev:/dev
+      - /lib/modules:/lib/modules
+      - docker-osx_data:/home
+      - ${IMAGE_FILE}:/image
+    cap_add:
+      - ALL
+    labels:
+      createdBy: "bt_apps"
+
+volumes:
+  docker-osx_data:
+    name: docker-osx_data
+
+networks:
+  baota_net:
+    external: true

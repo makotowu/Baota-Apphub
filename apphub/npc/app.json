@@ -1,0 +1,128 @@
+{
+    "appid": -1,
+    "appname": "npc",
+    "apptitle": "NPC",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "0",
+            "s_version": [
+                "27.01"
+            ]
+        }
+    ],
+    "appdesc": "内网穿透代理服务器 NPS 的客户端",
+    "appstatus": 1,
+    "home": "https://ehang-io.github.io/nps",
+    "help": "https://ehang-io.github.io/nps",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "nps_server_addr",
+            "name": "NPS 服务端地址",
+            "type": "string",
+            "default": "1.2.3.4:8025",
+            "suffix": "NPS 服务端地址",
+            "unit": ""
+        },
+        {
+            "attr": "nps_vkey",
+            "name": "服务端显示的客户端连接密钥",
+            "type": "string",
+            "default": "xly7traGe3r0t6UWltristuh1",
+            "suffix": "服务端显示的客户端连接密钥",
+            "unit": ""
+        },
+        {
+            "attr": "tls_enable_switch",
+            "name": "服务端与客户端的通信是否启用 TLS",
+            "type": "string",
+            "default": "true",
+            "suffix": "服务端与客户端的通信是否启用 TLS",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "nps_server_addr",
+            "type": "string",
+            "default": null,
+            "desc": "NPS 服务端地址"
+        },
+        {
+            "key": "nps_vkey",
+            "type": "string",
+            "default": null,
+            "desc": "服务端显示的客户端连接密钥"
+        },
+        {
+            "key": "tls_enable_switch",
+            "type": "string",
+            "default": null,
+            "desc": "服务端与客户端的通信是否启用 TLS"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

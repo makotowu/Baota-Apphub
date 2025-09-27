@@ -1,0 +1,14 @@
+services:
+  npc:
+    image: yisier1/npc:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    restart: always
+    network_mode: "host"
+    command: -server=${NPS_SERVER_ADDR} -vkey=${NPS_VKEY} -tls_enable=${TLS_ENABLE_SWITCH}
+    container_name: ${APP_NAME}
+    labels:
+      createdBy: "bt_apps"

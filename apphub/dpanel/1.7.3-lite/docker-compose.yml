@@ -1,0 +1,25 @@
+services:
+  dpanel:
+    image: "dpanel/dpanel:1.7.3-lite"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8080"
+    volumes:
+      - ${DOCKER_SOCK_PATH}:/var/run/docker.sock
+      - ${APP_PATH}/data:/dpanel
+    environment:
+      - APP_NAME=${APP_NAME}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

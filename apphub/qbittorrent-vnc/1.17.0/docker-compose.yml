@@ -1,0 +1,33 @@
+services:
+  qbittorrent-vnc:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${PANEL_APP_PORT_HTTPS}:6901"
+      - "${PANEL_APP_PORT_PEER}:${PANEL_APP_PORT_PEER}"
+      - "${PANEL_APP_PORT_PEER}:${PANEL_APP_PORT_PEER}/udp"
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - "${DOWNLOAD_PATH}:/home/kasm-user/Downloads"
+      - "qbittorrent-vnc_data:/home/kasm-user"
+    environment:
+      - VNC_PW=${HTTP_PWD}
+    shm_size: ${MEM_USE}
+    tty: true
+    image: kasmweb/qbittorrent:1.17.0
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+volumes:
+  qbittorrent-vnc_data:
+
+networks:  
+  baota_net:  
+    external: true

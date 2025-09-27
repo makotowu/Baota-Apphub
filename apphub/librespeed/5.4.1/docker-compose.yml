@@ -1,0 +1,31 @@
+services:
+  librespeed:
+    image: "ghcr.io/librespeed/speedtest:5.4.1"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    environment:
+      - MODE=${MODE}
+      - TITLE=${TITLE}
+      - TELEMETRY=${TELEMETRY}
+      - ENABLE_ID_OBFUSCATION=${ENABLE_ID_OBFUSCATION}
+      - REDACT_IP_ADDRESSES=${REDACT_IP_ADDRESSES}
+      - PASSWORD=${PASSWORD}
+      - EMAIL=${EMAIL}
+      - DISABLE_IPINFO=${DISABLE_IPINFO}
+      - DISTANCE=${DISTANCE}
+      - WEBPORT=${WEB_PORT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,27 @@
+services:
+  baidunetdisk:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    environment:
+      USER_ID: "1000"
+      GROUP_ID: "1000"
+      VNC_PASSWORD: "${VNC_PASSWORD}"
+      NOVNC_LANGUAGE: "zh_Hans"
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:5800"
+    volumes:
+      - "${CONFIG_PATH}:/config"
+      - "${DOWNLOAD_PATH}:/config/baidunetdiskdownload"
+    image: johngong/baidunetdisk:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

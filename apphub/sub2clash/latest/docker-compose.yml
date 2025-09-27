@@ -1,0 +1,32 @@
+services:
+  sub2clash:
+    image: nite07/sub2clash:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - ./data/logs:/app/logs
+      - ./data/templates:/app/templates
+      - ./data/data:/app/data
+    environment:
+      - PORT=${WEB_PORT}
+      - META_TEMPLATE=${META_TEMPLATE}
+      - PROXY_TEMPLATE=${PROXY_TEMPLATE}
+      - REQUEST_RETRY_TIMES=${REQUEST_RETRY_TIMES}
+      - REQUEST_MAX_FILE_SIZE=${REQUEST_MAX_FILE_SIZE}
+      - CACHE_EXPIRE=${CACHE_EXPIRE}
+      - LOG_LEVEL=${LOG_LEVEL}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

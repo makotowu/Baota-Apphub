@@ -1,0 +1,618 @@
+{
+    "appid": -1,
+    "appname": "discourse",
+    "apptitle": "Discourse",
+    "apptype": "BuildWebsite",
+    "appTypeCN": "建站",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "3",
+            "s_version": [
+                "4.5"
+            ]
+        }
+    ],
+    "appdesc": "开源讨论平台",
+    "appstatus": 1,
+    "home": "https://www.discourse.org",
+    "help": "https://docs.discourse.org",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40268",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_data_to_persist",
+            "name": "持久化数据",
+            "type": "string",
+            "default": "plugins public/backups public/uploads",
+            "suffix": "持久化数据",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_enable_https",
+            "name": "启用 HTTPS",
+            "type": "string",
+            "default": "no",
+            "suffix": "启用 HTTPS",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_external_http_port_number",
+            "name": "外部 HTTP 端口",
+            "type": "number",
+            "default": "80",
+            "suffix": "外部 HTTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_external_https_port_number",
+            "name": "外部 HTTPS 端口",
+            "type": "number",
+            "default": "443",
+            "suffix": "外部 HTTPS 端口",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_host",
+            "name": "Discourse 主机",
+            "type": "string",
+            "default": "www.example.com",
+            "suffix": "Discourse 主机",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_port_number",
+            "name": "Discourse 端口",
+            "type": "number",
+            "default": "3000",
+            "suffix": "Discourse 端口",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_skip_bootstrap",
+            "name": "跳过引导",
+            "type": "string",
+            "default": "",
+            "suffix": "跳过引导",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_site_name",
+            "name": "网站名称",
+            "type": "string",
+            "default": "My site!",
+            "suffix": "网站名称",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_env",
+            "name": "环境",
+            "type": "string",
+            "default": "production",
+            "suffix": "环境",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_precompile_assets",
+            "name": "预编译资产",
+            "type": "string",
+            "default": "yes",
+            "suffix": "预编译资产",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_enable_conf_persistence",
+            "name": "启用配置持久化",
+            "type": "string",
+            "default": "no",
+            "suffix": "启用配置持久化",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_extra_conf_content",
+            "name": "额外配置内容",
+            "type": "string",
+            "default": "yes",
+            "suffix": "额外配置内容",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_passenger_spawn_method",
+            "name": "Passenger 启动方法",
+            "type": "string",
+            "default": "direct",
+            "suffix": "Passenger 启动方法",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_passenger_extra_flags",
+            "name": "Passenger 额外标志",
+            "type": "string",
+            "default": "",
+            "suffix": "Passenger 额外标志",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_username",
+            "name": "用户名",
+            "type": "string",
+            "default": "siteadmin",
+            "suffix": "用户名",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_password",
+            "name": "密码",
+            "type": "string",
+            "default": "siteadmin12345",
+            "suffix": "密码",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_email",
+            "name": "电子邮箱",
+            "type": "string",
+            "default": "admin@localhost.com",
+            "suffix": "电子邮箱",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_first_name",
+            "name": "名",
+            "type": "string",
+            "default": "Admin",
+            "suffix": "名",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_last_name",
+            "name": "姓",
+            "type": "string",
+            "default": "User",
+            "suffix": "姓",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_smtp_host",
+            "name": "SMTP 主机",
+            "type": "string",
+            "default": "",
+            "suffix": "SMTP 主机",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_smtp_port_number",
+            "name": "SMTP 端口",
+            "type": "number",
+            "default": "",
+            "suffix": "SMTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_smtp_user",
+            "name": "SMTP 用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "SMTP 用户名",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_smtp_password",
+            "name": "SMTP 密码",
+            "type": "string",
+            "default": "",
+            "suffix": "SMTP 密码",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_smtp_protocol",
+            "name": "SMTP 协议",
+            "type": "string",
+            "default": "",
+            "suffix": "SMTP 协议",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_smtp_auth",
+            "name": "SMTP 认证",
+            "type": "string",
+            "default": "login",
+            "suffix": "SMTP 认证",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_smtp_open_timeout",
+            "name": "SMTP 打开超时",
+            "type": "number",
+            "default": "",
+            "suffix": "SMTP 打开超时",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_smtp_read_timeout",
+            "name": "SMTP 读取超时",
+            "type": "number",
+            "default": "",
+            "suffix": "SMTP 读取超时",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_host",
+            "name": "数据库服务",
+            "type": "string",
+            "default": "",
+            "suffix": "数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_port",
+            "name": "数据库端口号",
+            "type": "number",
+            "default": "5432",
+            "suffix": "数据库端口号",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_name",
+            "name": "数据库名",
+            "type": "string",
+            "default": "bitnami_discourse",
+            "suffix": "数据库名",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "bn_discourse",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "discourse",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "redis_host",
+            "name": "Redis服务",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis服务",
+            "unit": ""
+        },
+        {
+            "attr": "redis_port",
+            "name": "Redis服务端口",
+            "type": "number",
+            "default": "6379",
+            "suffix": "Redis服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "panel_redis_root_password",
+            "name": "Redis 密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis 密码",
+            "unit": ""
+        },
+        {
+            "attr": "discourse_redis_use_ssl",
+            "name": "Redis 使用 SSL",
+            "type": "string",
+            "default": "no",
+            "suffix": "Redis 使用 SSL",
+            "unit": ""
+        },
+        {
+            "attr": "postgresql_client_create_database_extensions",
+            "name": "PostgreSQL 客户端创建数据库扩展",
+            "type": "string",
+            "default": "hstore,pg_trgm",
+            "suffix": "PostgreSQL 客户端创建数据库扩展",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "discourse_data_to_persist",
+            "type": "string",
+            "default": null,
+            "desc": "持久化数据"
+        },
+        {
+            "key": "discourse_enable_https",
+            "type": "string",
+            "default": null,
+            "desc": "启用 HTTPS"
+        },
+        {
+            "key": "discourse_external_http_port_number",
+            "type": "port",
+            "default": null,
+            "desc": "外部 HTTP 端口"
+        },
+        {
+            "key": "discourse_external_https_port_number",
+            "type": "port",
+            "default": null,
+            "desc": "外部 HTTPS 端口"
+        },
+        {
+            "key": "discourse_host",
+            "type": "string",
+            "default": null,
+            "desc": "Discourse 主机"
+        },
+        {
+            "key": "discourse_port_number",
+            "type": "port",
+            "default": null,
+            "desc": "Discourse 端口"
+        },
+        {
+            "key": "discourse_skip_bootstrap",
+            "type": "string",
+            "default": null,
+            "desc": "跳过引导"
+        },
+        {
+            "key": "discourse_site_name",
+            "type": "string",
+            "default": null,
+            "desc": "网站名称"
+        },
+        {
+            "key": "discourse_env",
+            "type": "string",
+            "default": null,
+            "desc": "环境"
+        },
+        {
+            "key": "discourse_precompile_assets",
+            "type": "string",
+            "default": null,
+            "desc": "预编译资产"
+        },
+        {
+            "key": "discourse_enable_conf_persistence",
+            "type": "string",
+            "default": null,
+            "desc": "启用配置持久化"
+        },
+        {
+            "key": "discourse_extra_conf_content",
+            "type": "string",
+            "default": null,
+            "desc": "额外配置内容"
+        },
+        {
+            "key": "discourse_passenger_spawn_method",
+            "type": "string",
+            "default": null,
+            "desc": "Passenger 启动方法"
+        },
+        {
+            "key": "discourse_passenger_extra_flags",
+            "type": "string",
+            "default": null,
+            "desc": "Passenger 额外标志"
+        },
+        {
+            "key": "discourse_username",
+            "type": "string",
+            "default": null,
+            "desc": "用户名"
+        },
+        {
+            "key": "discourse_password",
+            "type": "string",
+            "default": null,
+            "desc": "密码"
+        },
+        {
+            "key": "discourse_email",
+            "type": "string",
+            "default": null,
+            "desc": "电子邮箱"
+        },
+        {
+            "key": "discourse_first_name",
+            "type": "string",
+            "default": null,
+            "desc": "名"
+        },
+        {
+            "key": "discourse_last_name",
+            "type": "string",
+            "default": null,
+            "desc": "姓"
+        },
+        {
+            "key": "discourse_smtp_host",
+            "type": "string",
+            "default": null,
+            "desc": "SMTP 主机"
+        },
+        {
+            "key": "discourse_smtp_port_number",
+            "type": "port",
+            "default": null,
+            "desc": "SMTP 端口"
+        },
+        {
+            "key": "discourse_smtp_user",
+            "type": "string",
+            "default": null,
+            "desc": "SMTP 用户名"
+        },
+        {
+            "key": "discourse_smtp_password",
+            "type": "string",
+            "default": null,
+            "desc": "SMTP 密码"
+        },
+        {
+            "key": "discourse_smtp_protocol",
+            "type": "string",
+            "default": null,
+            "desc": "SMTP 协议"
+        },
+        {
+            "key": "discourse_smtp_auth",
+            "type": "string",
+            "default": null,
+            "desc": "SMTP 认证"
+        },
+        {
+            "key": "discourse_smtp_open_timeout",
+            "type": "string",
+            "default": null,
+            "desc": "SMTP 打开超时"
+        },
+        {
+            "key": "discourse_smtp_read_timeout",
+            "type": "string",
+            "default": null,
+            "desc": "SMTP 读取超时"
+        },
+        {
+            "key": "panel_db_host",
+            "type": "string",
+            "default": null,
+            "desc": "数据库服务"
+        },
+        {
+            "key": "panel_db_port",
+            "type": "port",
+            "default": null,
+            "desc": "数据库端口号"
+        },
+        {
+            "key": "panel_db_name",
+            "type": "string",
+            "default": null,
+            "desc": "数据库名"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "redis_host",
+            "type": "string",
+            "default": null,
+            "desc": "Redis服务"
+        },
+        {
+            "key": "redis_port",
+            "type": "port",
+            "default": null,
+            "desc": "Redis服务端口"
+        },
+        {
+            "key": "panel_redis_root_password",
+            "type": "string",
+            "default": null,
+            "desc": "Redis 密码"
+        },
+        {
+            "key": "discourse_redis_use_ssl",
+            "type": "string",
+            "default": null,
+            "desc": "Redis 使用 SSL"
+        },
+        {
+            "key": "postgresql_client_create_database_extensions",
+            "type": "string",
+            "default": null,
+            "desc": "PostgreSQL 客户端创建数据库扩展"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

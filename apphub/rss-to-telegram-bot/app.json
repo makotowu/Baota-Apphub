@@ -1,0 +1,287 @@
+{
+    "appid": -1,
+    "appname": "rss-to-telegram-bot",
+    "apptitle": "RSS-to-Telegram-Bot",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "2",
+            "s_version": [
+                "10.0"
+            ]
+        }
+    ],
+    "appdesc": "关心你的阅读体验的 Telegram RSS 机器人",
+    "appstatus": 1,
+    "home": "https://github.com/Rongronggg9/RSS-to-Telegram-Bot",
+    "help": "https://github.com/Rongronggg9/RSS-to-Telegram-Bot",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40054,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "bot_token",
+            "name": "Telegram Bot token (@BotFather)",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram Bot token (@BotFather)",
+            "unit": ""
+        },
+        {
+            "attr": "telegram_user_id",
+            "name": "Telegram用户ID (@userinfobot)",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram用户ID (@userinfobot)",
+            "unit": ""
+        },
+        {
+            "attr": "telegraph_api_token1",
+            "name": "Telegram api token 1",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram api token 1",
+            "unit": ""
+        },
+        {
+            "attr": "telegraph_api_token2",
+            "name": "Telegram api token 2",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram api token 2",
+            "unit": ""
+        },
+        {
+            "attr": "telegraph_api_token3",
+            "name": "Telegram api token 3",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram api token 3",
+            "unit": ""
+        },
+        {
+            "attr": "telegraph_api_token4",
+            "name": "Telegram api token 4",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram api token 4",
+            "unit": ""
+        },
+        {
+            "attr": "telegraph_api_token5",
+            "name": "Telegram api token 5",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram api token 5",
+            "unit": ""
+        },
+        {
+            "attr": "telegraph_api_token6",
+            "name": "Telegram api token 6",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram api token 6",
+            "unit": ""
+        },
+        {
+            "attr": "tg_api_id",
+            "name": "Telegram api id (https://core.telegram.org/api/obtaining_api_id)",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram api id (https://core.telegram.org/api/obtaining_api_id)",
+            "unit": ""
+        },
+        {
+            "attr": "tg_api_hash",
+            "name": "Telegram api hash",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram api hash",
+            "unit": ""
+        },
+        {
+            "attr": "useragent",
+            "name": "User-Agent",
+            "type": "string",
+            "default": "Mozilla/5.0 (Android 12; Mobile; rv:68.0) Gecko/68.0 Firefox/96.0",
+            "suffix": "User-Agent",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_server",
+            "name": "SOCKS5代理 (socks5://172.17.0.1:1080)",
+            "type": "string",
+            "default": "",
+            "suffix": "SOCKS5代理 (socks5://172.17.0.1:1080)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "bot_token",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram Bot token (@BotFather)"
+        },
+        {
+            "key": "telegram_user_id",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram用户ID (@userinfobot)"
+        },
+        {
+            "key": "telegraph_api_token1",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram api token 1"
+        },
+        {
+            "key": "telegraph_api_token2",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram api token 2"
+        },
+        {
+            "key": "telegraph_api_token3",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram api token 3"
+        },
+        {
+            "key": "telegraph_api_token4",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram api token 4"
+        },
+        {
+            "key": "telegraph_api_token5",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram api token 5"
+        },
+        {
+            "key": "telegraph_api_token6",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram api token 6"
+        },
+        {
+            "key": "tg_api_id",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram api id (https://core.telegram.org/api/obtaining_api_id)"
+        },
+        {
+            "key": "tg_api_hash",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram api hash"
+        },
+        {
+            "key": "useragent",
+            "type": "string",
+            "default": null,
+            "desc": "User-Agent"
+        },
+        {
+            "key": "proxy_server",
+            "type": "string",
+            "default": null,
+            "desc": "SOCKS5代理 (socks5://172.17.0.1:1080)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

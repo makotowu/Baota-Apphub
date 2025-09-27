@@ -1,0 +1,164 @@
+{
+    "appid": -1,
+    "appname": "aria2-pro",
+    "apptitle": "Aria2-Pro",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "更好用的 Aria2 Docker 容器镜像",
+    "appstatus": 1,
+    "home": "https://github.com/P3TERX/Aria2-Pro-Docker",
+    "help": "https://p3terx.com/archives/docker-aria2-pro.html",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "rpc_port_value",
+            "name": "RPC端口",
+            "type": "number",
+            "default": 6800,
+            "suffix": "RPC端口",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "监听端口",
+            "type": "number",
+            "default": 6888,
+            "suffix": "监听端口",
+            "unit": ""
+        },
+        {
+            "attr": "token",
+            "name": "RPC密钥",
+            "type": "string",
+            "default": "aria2",
+            "suffix": "RPC密钥",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置文件所在路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置文件所在路径",
+            "unit": ""
+        },
+        {
+            "attr": "download_path",
+            "name": "下载文件夹路径",
+            "type": "string",
+            "default": "./data/downloads",
+            "suffix": "下载文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "tracker_url",
+            "name": "TRACKER链接",
+            "type": "string",
+            "default": "https://trackerslist.com/all_aria2.txt",
+            "suffix": "TRACKER链接",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "rpc_port_value",
+            "type": "port",
+            "default": null,
+            "desc": "RPC端口"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "监听端口"
+        },
+        {
+            "key": "token",
+            "type": "string",
+            "default": null,
+            "desc": "RPC密钥"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置文件所在路径"
+        },
+        {
+            "key": "download_path",
+            "type": "string",
+            "default": null,
+            "desc": "下载文件夹路径"
+        },
+        {
+            "key": "tracker_url",
+            "type": "string",
+            "default": null,
+            "desc": "TRACKER链接"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

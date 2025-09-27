@@ -1,0 +1,126 @@
+services:
+  worker:
+    container_name: ${APP_NAME}-worker
+    restart: always
+    networks:
+      - aurora-network
+      - aurora-worker
+    volumes:
+      - ${SSH_KEY_PATH}:/app/ansible/env/ssh_key
+      - ${APP_PATH}/data/aurora:/app/ansible/priv_data_dirs
+    environment:
+      TZ: 'Asia/Shanghai'
+      DATABASE_URL: postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@postgres:5432/${PANEL_DB_NAME}
+      ASYNC_DATABASE_URL: "postgresql+asyncpg://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@postgres:5432/${PANEL_DB_NAME}"
+      TRAFFIC_INTERVAL_SECONDS: 600
+      DDNS_INTERVAL_SECONDS: 120
+    command: bash worker.sh
+    image: leishi1313/aurora-admin-backend:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    depends_on:
+      - redis
+    labels:
+      createdBy: Apps
+
+  backend:
+    container_name: ${APP_NAME}-backend
+    restart: always
+    networks:
+      - aurora-network
+    volumes:
+      - ${APP_PATH}/data/aurora:/app/ansible/priv_data_dirs
+    environment:
+      TZ: 'Asia/Shanghai'
+      PYTHONPATH: .
+      DATABASE_URL: postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@postgres:5432/${PANEL_DB_NAME}
+      ASYNC_DATABASE_URL: "postgresql+asyncpg://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@postgres:5432/${PANEL_DB_NAME}"
+      SECREY_KEY: ${SECRECY_KEY}
+    image: leishi1313/aurora-admin-backend:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    command: bash -c "while !</dev/tcp/postgres/5432; do sleep 1; done; alembic upgrade heads && python app/main.py"
+    depends_on:
+      - postgres
+      - redis
+    labels:
+      createdBy: Apps
+
+  nginx:
+    container_name: ${APP_NAME}-nginx
+    restart: always
+    networks:
+      - aurora-network
+    image: leishi1313/aurora-admin-frontend:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    environment:
+      TZ: 'Asia/Shanghai'
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:80"
+    depends_on:
+      - backend
+    labels:
+      createdBy: Apps
+
+  redis:
+    container_name: ${APP_NAME}-redis
+    restart: always
+    networks:
+      - aurora-network
+    environment:
+      TZ: 'Asia/Shanghai'
+    image: redis:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:
+      createdBy: Apps
+
+  postgres:
+    container_name: ${APP_NAME}-postgres
+    restart: always
+    networks:
+      - aurora-network
+    volumes:
+      - "${APP_PATH}/data/db-data:/var/lib/postgresql/data"
+    environment:
+      TZ: 'Asia/Shanghai'
+      POSTGRES_USER: ${PANEL_DB_USER}
+      POSTGRES_PASSWORD: ${PANEL_DB_USER_PASSWORD}
+      POSTGRES_DB: ${PANEL_DB_NAME}
+    image: postgres:13-alpine
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:
+      createdBy: Apps
+
+networks:
+  aurora-worker:
+    external: true
+    enable_ipv6: false
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"
+    ipam:
+      driver: default
+      config:
+        - subnet: fd00:ea23:9c80:4a54:e242:5f97::/96
+          gateway: fd00:ea23:9c80:4a54:e242:5f97::1
+  aurora-network:
+    external: true
+    driver: bridge

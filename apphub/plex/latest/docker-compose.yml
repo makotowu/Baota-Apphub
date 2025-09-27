@@ -1,0 +1,38 @@
+services:
+  plex:
+    image: "linuxserver/plex:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:32400/tcp"
+      - "${HOST_IP}:${PANEL_APP_PORT_TCP_3005}:3005/tcp"
+      - "${HOST_IP}:${PANEL_APP_PORT_TCP_8324}:8324/tcp"
+      - "${HOST_IP}:${PANEL_APP_PORT_TCP_32469}:32469/tcp"
+      - "${HOST_IP}:${PANEL_APP_PORT_UDP_1900}:1900/udp"
+      - "${HOST_IP}:${PANEL_APP_PORT_UDP_32410}:32410/udp"
+      - "${HOST_IP}:${PANEL_APP_PORT_UDP_32412}:32412/udp"
+      - "${HOST_IP}:${PANEL_APP_PORT_UDP_32413}:32413/udp"
+      - "${HOST_IP}:${PANEL_APP_PORT_UDP_32414}:32414/udp"
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMEZONE}
+      - VERSION=docker
+      - PLEX_CLAIM=${PLEX_CLAIM}
+    volumes:
+      - ${LIBRARY_PATH}:/config
+      - ${TVSERIES_PATH}:/tv
+      - ${MOVIES_PATH}:/movies
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

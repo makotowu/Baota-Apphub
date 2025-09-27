@@ -1,0 +1,254 @@
+{
+    "appid": -1,
+    "appname": "stash",
+    "apptitle": "Stash",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "0",
+            "s_version": [
+                "28.1"
+            ]
+        }
+    ],
+    "appdesc": "媒体管理工具",
+    "appstatus": 1,
+    "home": "https://stashapp.cc",
+    "help": "https://docs.stashapp.cc",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40299",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "stash_data",
+            "name": "媒体数据路径",
+            "type": "string",
+            "default": "./data/data",
+            "suffix": "媒体数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "stash_metadata",
+            "name": "元数据路径",
+            "type": "string",
+            "default": "./data/metadata",
+            "suffix": "元数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "stash_cache",
+            "name": "缓存路径",
+            "type": "string",
+            "default": "./data/cache",
+            "suffix": "缓存路径",
+            "unit": ""
+        },
+        {
+            "attr": "stash_blobs",
+            "name": "二进制数据路径 (场景封面、图像）",
+            "type": "string",
+            "default": "./data/blobs",
+            "suffix": "二进制数据路径 (场景封面、图像）",
+            "unit": ""
+        },
+        {
+            "attr": "stash_generated",
+            "name": "生成内容路径",
+            "type": "string",
+            "default": "./data/generated",
+            "suffix": "生成内容路径",
+            "unit": ""
+        },
+        {
+            "attr": "stash_data_internal",
+            "name": "容器内部媒体数据路径",
+            "type": "string",
+            "default": "/data",
+            "suffix": "容器内部媒体数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "stash_metadata_internal",
+            "name": "容器内部元数据路径",
+            "type": "string",
+            "default": "/metadata",
+            "suffix": "容器内部元数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "stash_cache_internal",
+            "name": "容器内部缓存路径",
+            "type": "string",
+            "default": "/cache",
+            "suffix": "容器内部缓存路径",
+            "unit": ""
+        },
+        {
+            "attr": "stash_blobs_internal",
+            "name": "容器内部二进制数据路径 (场景封面、图像）",
+            "type": "string",
+            "default": "/blobs",
+            "suffix": "容器内部二进制数据路径 (场景封面、图像）",
+            "unit": ""
+        },
+        {
+            "attr": "stash_generated_internal",
+            "name": "容器内部生成内容路径",
+            "type": "string",
+            "default": "/generated",
+            "suffix": "容器内部生成内容路径",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "stash_data",
+            "type": "string",
+            "default": null,
+            "desc": "媒体数据路径"
+        },
+        {
+            "key": "stash_metadata",
+            "type": "string",
+            "default": null,
+            "desc": "元数据路径"
+        },
+        {
+            "key": "stash_cache",
+            "type": "string",
+            "default": null,
+            "desc": "缓存路径"
+        },
+        {
+            "key": "stash_blobs",
+            "type": "string",
+            "default": null,
+            "desc": "二进制数据路径 (场景封面、图像）"
+        },
+        {
+            "key": "stash_generated",
+            "type": "string",
+            "default": null,
+            "desc": "生成内容路径"
+        },
+        {
+            "key": "stash_data_internal",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部媒体数据路径"
+        },
+        {
+            "key": "stash_metadata_internal",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部元数据路径"
+        },
+        {
+            "key": "stash_cache_internal",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部缓存路径"
+        },
+        {
+            "key": "stash_blobs_internal",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部二进制数据路径 (场景封面、图像）"
+        },
+        {
+            "key": "stash_generated_internal",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部生成内容路径"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

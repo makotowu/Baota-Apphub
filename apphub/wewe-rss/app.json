@@ -1,0 +1,203 @@
+{
+    "appid": -1,
+    "appname": "wewe-rss",
+    "apptitle": "WeWe RSS",
+    "apptype": "BuildWebsite",
+    "appTypeCN": "建站",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "2",
+            "s_version": [
+                "6.1"
+            ]
+        }
+    ],
+    "appdesc": "更优雅的微信公众号订阅方式",
+    "appstatus": 1,
+    "home": "https://github.com/cooderl/wewe-rss",
+    "help": "https://github.com/cooderl/wewe-rss",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40332",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "database_type",
+            "name": "数据库类型",
+            "type": "string",
+            "default": "sqlite",
+            "suffix": "数据库类型",
+            "unit": ""
+        },
+        {
+            "attr": "auth_code",
+            "name": "授权码",
+            "type": "string",
+            "default": "password",
+            "suffix": "授权码",
+            "unit": ""
+        },
+        {
+            "attr": "server_origin_url",
+            "name": "外部访问地址",
+            "type": "string",
+            "default": "http://1.2.3.4:40332",
+            "suffix": "外部访问地址",
+            "unit": ""
+        },
+        {
+            "attr": "feed_mode",
+            "name": "提取模式",
+            "type": "string",
+            "default": "fulltext",
+            "suffix": "提取模式",
+            "unit": ""
+        },
+        {
+            "attr": "cron_expression",
+            "name": "定时更新表达式",
+            "type": "string",
+            "default": "35 5,17 * * *",
+            "suffix": "定时更新表达式",
+            "unit": ""
+        },
+        {
+            "attr": "max_request_per_minute",
+            "name": "每分钟最大请求次数",
+            "type": "number",
+            "default": "60",
+            "suffix": "每分钟最大请求次数",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据路径"
+        },
+        {
+            "key": "database_type",
+            "type": "string",
+            "default": null,
+            "desc": "数据库类型"
+        },
+        {
+            "key": "auth_code",
+            "type": "string",
+            "default": null,
+            "desc": "授权码"
+        },
+        {
+            "key": "server_origin_url",
+            "type": "string",
+            "default": null,
+            "desc": "外部访问地址"
+        },
+        {
+            "key": "feed_mode",
+            "type": "string",
+            "default": null,
+            "desc": "提取模式"
+        },
+        {
+            "key": "cron_expression",
+            "type": "string",
+            "default": null,
+            "desc": "定时更新表达式"
+        },
+        {
+            "key": "max_request_per_minute",
+            "type": "string",
+            "default": null,
+            "desc": "每分钟最大请求次数"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

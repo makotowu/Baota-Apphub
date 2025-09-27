@@ -1,0 +1,20 @@
+services:
+  headscale-ui:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${PANEL_APP_PORT_HTTPS}:443"
+    image: ghcr.io/gurucomputing/headscale-ui:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

@@ -1,0 +1,248 @@
+{
+    "appid": -1,
+    "appname": "softethervpn",
+    "apptitle": "SoftEtherVPN",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "开源多协议 VPN 软件",
+    "appstatus": 1,
+    "home": "https://www.softether.org",
+    "help": "https://www.softether.org/4-docs",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "vpn_port_53",
+            "name": "VPN 端口 53",
+            "type": "number",
+            "default": "53",
+            "suffix": "VPN 端口 53",
+            "unit": ""
+        },
+        {
+            "attr": "vpn_port_443",
+            "name": "VPN 端口 443",
+            "type": "number",
+            "default": "444",
+            "suffix": "VPN 端口 443",
+            "unit": ""
+        },
+        {
+            "attr": "vpn_port_992",
+            "name": "VPN 端口 992",
+            "type": "number",
+            "default": "992",
+            "suffix": "VPN 端口 992",
+            "unit": ""
+        },
+        {
+            "attr": "vpn_port_1194_udp",
+            "name": "VPN 端口 1194 (UDP)",
+            "type": "number",
+            "default": "1194",
+            "suffix": "VPN 端口 1194 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "vpn_port_5555",
+            "name": "VPN 端口 5555",
+            "type": "number",
+            "default": "5555",
+            "suffix": "VPN 端口 5555",
+            "unit": ""
+        },
+        {
+            "attr": "vpn_port_500_udp",
+            "name": "VPN 端口 500 (UDP)",
+            "type": "number",
+            "default": "500",
+            "suffix": "VPN 端口 500 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "vpn_port_4500_udp",
+            "name": "VPN 端口 4500 (UDP)",
+            "type": "number",
+            "default": "4500",
+            "suffix": "VPN 端口 4500 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "vpn_port_1701_udp",
+            "name": "VPN 端口 1701 (UDP)",
+            "type": "number",
+            "default": "1701",
+            "suffix": "VPN 端口 1701 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "softether_data_path",
+            "name": "SoftEther 数据路径",
+            "type": "string",
+            "default": "./data/softether_data",
+            "suffix": "SoftEther 数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "softether_log_path",
+            "name": "SoftEther 日志路径",
+            "type": "string",
+            "default": "./data/softether_log",
+            "suffix": "SoftEther 日志路径",
+            "unit": ""
+        },
+        {
+            "attr": "softether_packetlog_path",
+            "name": "SoftEther 数据包日志路径",
+            "type": "string",
+            "default": "./data/softether_packetlog",
+            "suffix": "SoftEther 数据包日志路径",
+            "unit": ""
+        },
+        {
+            "attr": "softether_securitylog_path",
+            "name": "SoftEther 安全日志路径",
+            "type": "string",
+            "default": "./data/softether_securitylog",
+            "suffix": "SoftEther 安全日志路径",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "vpn_port_53",
+            "type": "port",
+            "default": null,
+            "desc": "VPN 端口 53"
+        },
+        {
+            "key": "vpn_port_443",
+            "type": "port",
+            "default": null,
+            "desc": "VPN 端口 443"
+        },
+        {
+            "key": "vpn_port_992",
+            "type": "port",
+            "default": null,
+            "desc": "VPN 端口 992"
+        },
+        {
+            "key": "vpn_port_1194_udp",
+            "type": "port",
+            "default": null,
+            "desc": "VPN 端口 1194 (UDP)"
+        },
+        {
+            "key": "vpn_port_5555",
+            "type": "port",
+            "default": null,
+            "desc": "VPN 端口 5555"
+        },
+        {
+            "key": "vpn_port_500_udp",
+            "type": "port",
+            "default": null,
+            "desc": "VPN 端口 500 (UDP)"
+        },
+        {
+            "key": "vpn_port_4500_udp",
+            "type": "port",
+            "default": null,
+            "desc": "VPN 端口 4500 (UDP)"
+        },
+        {
+            "key": "vpn_port_1701_udp",
+            "type": "port",
+            "default": null,
+            "desc": "VPN 端口 1701 (UDP)"
+        },
+        {
+            "key": "softether_data_path",
+            "type": "string",
+            "default": null,
+            "desc": "SoftEther 数据路径"
+        },
+        {
+            "key": "softether_log_path",
+            "type": "string",
+            "default": null,
+            "desc": "SoftEther 日志路径"
+        },
+        {
+            "key": "softether_packetlog_path",
+            "type": "string",
+            "default": null,
+            "desc": "SoftEther 数据包日志路径"
+        },
+        {
+            "key": "softether_securitylog_path",
+            "type": "string",
+            "default": null,
+            "desc": "SoftEther 安全日志路径"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

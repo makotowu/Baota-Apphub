@@ -1,0 +1,245 @@
+{
+    "appid": -1,
+    "appname": "upsnap",
+    "apptitle": "UpSnap",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "5",
+            "s_version": [
+                "1"
+            ]
+        }
+    ],
+    "appdesc": "一个简单的唤醒网络应用程序",
+    "appstatus": 1,
+    "home": "https://github.com/seriousm4x/UpSnap",
+    "help": "https://github.com/seriousm4x/UpSnap",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40318",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "listen_addr",
+            "name": "监听地址",
+            "type": "string",
+            "default": "0.0.0.0",
+            "suffix": "监听地址",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "upsnap_interval",
+            "name": "扫描间隔",
+            "type": "string",
+            "default": "@every 10s",
+            "suffix": "扫描间隔",
+            "unit": ""
+        },
+        {
+            "attr": "upsnap_scan_range",
+            "name": "扫描网段范围",
+            "type": "string",
+            "default": "192.168.1.0/24",
+            "suffix": "扫描网段范围",
+            "unit": ""
+        },
+        {
+            "attr": "upsnap_scan_timeout",
+            "name": "扫描超时",
+            "type": "string",
+            "default": "500ms",
+            "suffix": "扫描超时",
+            "unit": ""
+        },
+        {
+            "attr": "upsnap_ping_privileged",
+            "name": "使用特权权限进行 Ping",
+            "type": "string",
+            "default": "true",
+            "suffix": "使用特权权限进行 Ping",
+            "unit": ""
+        },
+        {
+            "attr": "upsnap_website_title",
+            "name": "网站标题",
+            "type": "string",
+            "default": "Upsnap Dashboard",
+            "suffix": "网站标题",
+            "unit": ""
+        },
+        {
+            "attr": "dns_server_1",
+            "name": "DNS 服务器 1",
+            "type": "string",
+            "default": "119.29.29.29",
+            "suffix": "DNS 服务器 1",
+            "unit": ""
+        },
+        {
+            "attr": "dns_server_2",
+            "name": "DNS 服务器 2",
+            "type": "string",
+            "default": "223.5.5.5",
+            "suffix": "DNS 服务器 2",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "listen_addr",
+            "type": "string",
+            "default": null,
+            "desc": "监听地址"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据路径"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "upsnap_interval",
+            "type": "string",
+            "default": null,
+            "desc": "扫描间隔"
+        },
+        {
+            "key": "upsnap_scan_range",
+            "type": "string",
+            "default": null,
+            "desc": "扫描网段范围"
+        },
+        {
+            "key": "upsnap_scan_timeout",
+            "type": "string",
+            "default": null,
+            "desc": "扫描超时"
+        },
+        {
+            "key": "upsnap_ping_privileged",
+            "type": "string",
+            "default": null,
+            "desc": "使用特权权限进行 Ping"
+        },
+        {
+            "key": "upsnap_website_title",
+            "type": "string",
+            "default": null,
+            "desc": "网站标题"
+        },
+        {
+            "key": "dns_server_1",
+            "type": "string",
+            "default": null,
+            "desc": "DNS 服务器 1"
+        },
+        {
+            "key": "dns_server_2",
+            "type": "string",
+            "default": null,
+            "desc": "DNS 服务器 2"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

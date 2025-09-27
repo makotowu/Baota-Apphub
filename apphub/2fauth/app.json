@@ -1,0 +1,828 @@
+{
+    "appid": -1,
+    "appname": "2fauth",
+    "apptitle": "2FAuth",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "5",
+            "s_version": [
+                "6.0"
+            ]
+        }
+    ],
+    "appdesc": "开源双因素认证管理器",
+    "appstatus": 1,
+    "home": "https://docs.2fauth.app",
+    "help": "https://docs.2fauth.app",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40273",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "app_name",
+            "name": "应用名",
+            "type": "string",
+            "default": "2FAuth",
+            "suffix": "应用名",
+            "unit": ""
+        },
+        {
+            "attr": "app_env",
+            "name": "应用环境",
+            "type": "string",
+            "default": "local",
+            "suffix": "应用环境",
+            "unit": ""
+        },
+        {
+            "attr": "app_timezone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "app_debug",
+            "name": "调试模式",
+            "type": "string",
+            "default": "false",
+            "suffix": "调试模式",
+            "unit": ""
+        },
+        {
+            "attr": "site_owner",
+            "name": "站点拥有者",
+            "type": "string",
+            "default": "admin@localhost.com",
+            "suffix": "站点拥有者",
+            "unit": ""
+        },
+        {
+            "attr": "app_key",
+            "name": "应用密钥 (32 位字符)",
+            "type": "string",
+            "default": "yuBiR9dlyokasPeguSPl8oPRLpHiqAbr",
+            "suffix": "应用密钥 (32 位字符)",
+            "unit": ""
+        },
+        {
+            "attr": "app_url",
+            "name": "应用网址 (外部访问地址)",
+            "type": "string",
+            "default": "http://localhost:40273",
+            "suffix": "应用网址 (外部访问地址)",
+            "unit": ""
+        },
+        {
+            "attr": "is_demo_app",
+            "name": "演示模式",
+            "type": "string",
+            "default": "false",
+            "suffix": "演示模式",
+            "unit": ""
+        },
+        {
+            "attr": "log_channel",
+            "name": "日志通道",
+            "type": "string",
+            "default": "daily",
+            "suffix": "日志通道",
+            "unit": ""
+        },
+        {
+            "attr": "log_level",
+            "name": "日志级别",
+            "type": "string",
+            "default": "notice",
+            "suffix": "日志级别",
+            "unit": ""
+        },
+        {
+            "attr": "db_database",
+            "name": "数据库路径",
+            "type": "string",
+            "default": "/srv/database/database.sqlite",
+            "suffix": "数据库路径",
+            "unit": ""
+        },
+        {
+            "attr": "cache_driver",
+            "name": "缓存驱动",
+            "type": "string",
+            "default": "file",
+            "suffix": "缓存驱动",
+            "unit": ""
+        },
+        {
+            "attr": "session_driver",
+            "name": "会话驱动",
+            "type": "string",
+            "default": "file",
+            "suffix": "会话驱动",
+            "unit": ""
+        },
+        {
+            "attr": "mail_mailer",
+            "name": "邮件发送方式",
+            "type": "string",
+            "default": "log",
+            "suffix": "邮件发送方式",
+            "unit": ""
+        },
+        {
+            "attr": "mail_host",
+            "name": "邮件服务器",
+            "type": "string",
+            "default": "",
+            "suffix": "邮件服务器",
+            "unit": ""
+        },
+        {
+            "attr": "mail_port",
+            "name": "邮件端口",
+            "type": "number",
+            "default": "",
+            "suffix": "邮件端口",
+            "unit": ""
+        },
+        {
+            "attr": "mail_username",
+            "name": "邮件用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "邮件用户名",
+            "unit": ""
+        },
+        {
+            "attr": "mail_password",
+            "name": "邮件密码",
+            "type": "string",
+            "default": "",
+            "suffix": "邮件密码",
+            "unit": ""
+        },
+        {
+            "attr": "mail_encryption",
+            "name": "邮件加密方式",
+            "type": "string",
+            "default": "",
+            "suffix": "邮件加密方式",
+            "unit": ""
+        },
+        {
+            "attr": "mail_from_name",
+            "name": "邮件发件人姓名",
+            "type": "string",
+            "default": "",
+            "suffix": "邮件发件人姓名",
+            "unit": ""
+        },
+        {
+            "attr": "mail_from_address",
+            "name": "邮件发件人地址",
+            "type": "string",
+            "default": "",
+            "suffix": "邮件发件人地址",
+            "unit": ""
+        },
+        {
+            "attr": "mail_verify_ssl_peer",
+            "name": "邮件验证 SSL 证书",
+            "type": "string",
+            "default": "true",
+            "suffix": "邮件验证 SSL 证书",
+            "unit": ""
+        },
+        {
+            "attr": "throttle_api",
+            "name": "API 限制",
+            "type": "number",
+            "default": "60",
+            "suffix": "API 限制",
+            "unit": ""
+        },
+        {
+            "attr": "login_throttle",
+            "name": "登录限制",
+            "type": "number",
+            "default": "5",
+            "suffix": "登录限制",
+            "unit": ""
+        },
+        {
+            "attr": "authentication_guard",
+            "name": "认证保护",
+            "type": "string",
+            "default": "web-guard",
+            "suffix": "认证保护",
+            "unit": ""
+        },
+        {
+            "attr": "authentication_log_retention",
+            "name": "认证日志保留",
+            "type": "number",
+            "default": "365",
+            "suffix": "认证日志保留",
+            "unit": ""
+        },
+        {
+            "attr": "auth_proxy_header_for_user",
+            "name": "用户认证代理头",
+            "type": "string",
+            "default": "",
+            "suffix": "用户认证代理头",
+            "unit": ""
+        },
+        {
+            "attr": "auth_proxy_header_for_email",
+            "name": "邮箱认证代理头",
+            "type": "string",
+            "default": "",
+            "suffix": "邮箱认证代理头",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_logout_url",
+            "name": "代理注销网址",
+            "type": "string",
+            "default": "",
+            "suffix": "代理注销网址",
+            "unit": ""
+        },
+        {
+            "attr": "webauthn_name",
+            "name": "WebAuthn 名称",
+            "type": "string",
+            "default": "2FAuth",
+            "suffix": "WebAuthn 名称",
+            "unit": ""
+        },
+        {
+            "attr": "webauthn_id",
+            "name": "WebAuthn ID",
+            "type": "string",
+            "default": "",
+            "suffix": "WebAuthn ID",
+            "unit": ""
+        },
+        {
+            "attr": "webauthn_user_verification",
+            "name": "WebAuthn 用户验证",
+            "type": "string",
+            "default": "preferred",
+            "suffix": "WebAuthn 用户验证",
+            "unit": ""
+        },
+        {
+            "attr": "trusted_proxies",
+            "name": "信任代理",
+            "type": "string",
+            "default": "",
+            "suffix": "信任代理",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_for_outgoing_requests",
+            "name": "出站请求代理",
+            "type": "string",
+            "default": "",
+            "suffix": "出站请求代理",
+            "unit": ""
+        },
+        {
+            "attr": "broadcast_driver",
+            "name": "广播驱动",
+            "type": "string",
+            "default": "log",
+            "suffix": "广播驱动",
+            "unit": ""
+        },
+        {
+            "attr": "queue_driver",
+            "name": "队列驱动",
+            "type": "string",
+            "default": "sync",
+            "suffix": "队列驱动",
+            "unit": ""
+        },
+        {
+            "attr": "session_lifetime",
+            "name": "会话有效期",
+            "type": "number",
+            "default": "120",
+            "suffix": "会话有效期",
+            "unit": ""
+        },
+        {
+            "attr": "redis_host",
+            "name": "Redis服务",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis服务",
+            "unit": ""
+        },
+        {
+            "attr": "redis_port",
+            "name": "Redis服务端口",
+            "type": "number",
+            "default": "6379",
+            "suffix": "Redis服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "panel_redis_root_password",
+            "name": "Redis 密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis 密码",
+            "unit": ""
+        },
+        {
+            "attr": "pusher_app_id",
+            "name": "Pusher 应用 ID",
+            "type": "string",
+            "default": "",
+            "suffix": "Pusher 应用 ID",
+            "unit": ""
+        },
+        {
+            "attr": "pusher_app_key",
+            "name": "Pusher 应用密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "Pusher 应用密钥",
+            "unit": ""
+        },
+        {
+            "attr": "pusher_app_secret",
+            "name": "Pusher 应用密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "Pusher 应用密钥",
+            "unit": ""
+        },
+        {
+            "attr": "pusher_app_cluster",
+            "name": "Pusher 应用集群",
+            "type": "string",
+            "default": "mt1",
+            "suffix": "Pusher 应用集群",
+            "unit": ""
+        },
+        {
+            "attr": "mix_env",
+            "name": "Mix 环境",
+            "type": "string",
+            "default": "local",
+            "suffix": "Mix 环境",
+            "unit": ""
+        },
+        {
+            "attr": "openid_authorize_url",
+            "name": "OpenID 授权 URL (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "OpenID 授权 URL (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "openid_token_url",
+            "name": "OpenID 令牌 URL (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "OpenID 令牌 URL (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "openid_userinfo_url",
+            "name": "OpenID 用户信息 URL (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "OpenID 用户信息 URL (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "openid_client_id",
+            "name": "OpenID 客户端 ID (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "OpenID 客户端 ID (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "openid_client_secret",
+            "name": "OpenID 客户端密钥 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "OpenID 客户端密钥 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "github_client_id",
+            "name": "GitHub 客户端 ID (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "GitHub 客户端 ID (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "github_client_secret",
+            "name": "GitHub 客户端密钥 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "GitHub 客户端密钥 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "app_name",
+            "type": "string",
+            "default": null,
+            "desc": "应用名"
+        },
+        {
+            "key": "app_env",
+            "type": "string",
+            "default": null,
+            "desc": "应用环境"
+        },
+        {
+            "key": "app_timezone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "app_debug",
+            "type": "string",
+            "default": null,
+            "desc": "调试模式"
+        },
+        {
+            "key": "site_owner",
+            "type": "string",
+            "default": null,
+            "desc": "站点拥有者"
+        },
+        {
+            "key": "app_key",
+            "type": "string",
+            "default": null,
+            "desc": "应用密钥 (32 位字符)"
+        },
+        {
+            "key": "app_url",
+            "type": "string",
+            "default": null,
+            "desc": "应用网址 (外部访问地址)"
+        },
+        {
+            "key": "is_demo_app",
+            "type": "string",
+            "default": null,
+            "desc": "演示模式"
+        },
+        {
+            "key": "log_channel",
+            "type": "string",
+            "default": null,
+            "desc": "日志通道"
+        },
+        {
+            "key": "log_level",
+            "type": "string",
+            "default": null,
+            "desc": "日志级别"
+        },
+        {
+            "key": "db_database",
+            "type": "string",
+            "default": null,
+            "desc": "数据库路径"
+        },
+        {
+            "key": "cache_driver",
+            "type": "string",
+            "default": null,
+            "desc": "缓存驱动"
+        },
+        {
+            "key": "session_driver",
+            "type": "string",
+            "default": null,
+            "desc": "会话驱动"
+        },
+        {
+            "key": "mail_mailer",
+            "type": "string",
+            "default": null,
+            "desc": "邮件发送方式"
+        },
+        {
+            "key": "mail_host",
+            "type": "string",
+            "default": null,
+            "desc": "邮件服务器"
+        },
+        {
+            "key": "mail_port",
+            "type": "port",
+            "default": null,
+            "desc": "邮件端口"
+        },
+        {
+            "key": "mail_username",
+            "type": "string",
+            "default": null,
+            "desc": "邮件用户名"
+        },
+        {
+            "key": "mail_password",
+            "type": "string",
+            "default": null,
+            "desc": "邮件密码"
+        },
+        {
+            "key": "mail_encryption",
+            "type": "string",
+            "default": null,
+            "desc": "邮件加密方式"
+        },
+        {
+            "key": "mail_from_name",
+            "type": "string",
+            "default": null,
+            "desc": "邮件发件人姓名"
+        },
+        {
+            "key": "mail_from_address",
+            "type": "string",
+            "default": null,
+            "desc": "邮件发件人地址"
+        },
+        {
+            "key": "mail_verify_ssl_peer",
+            "type": "string",
+            "default": null,
+            "desc": "邮件验证 SSL 证书"
+        },
+        {
+            "key": "throttle_api",
+            "type": "string",
+            "default": null,
+            "desc": "API 限制"
+        },
+        {
+            "key": "login_throttle",
+            "type": "string",
+            "default": null,
+            "desc": "登录限制"
+        },
+        {
+            "key": "authentication_guard",
+            "type": "string",
+            "default": null,
+            "desc": "认证保护"
+        },
+        {
+            "key": "authentication_log_retention",
+            "type": "string",
+            "default": null,
+            "desc": "认证日志保留"
+        },
+        {
+            "key": "auth_proxy_header_for_user",
+            "type": "string",
+            "default": null,
+            "desc": "用户认证代理头"
+        },
+        {
+            "key": "auth_proxy_header_for_email",
+            "type": "string",
+            "default": null,
+            "desc": "邮箱认证代理头"
+        },
+        {
+            "key": "proxy_logout_url",
+            "type": "string",
+            "default": null,
+            "desc": "代理注销网址"
+        },
+        {
+            "key": "webauthn_name",
+            "type": "string",
+            "default": null,
+            "desc": "WebAuthn 名称"
+        },
+        {
+            "key": "webauthn_id",
+            "type": "string",
+            "default": null,
+            "desc": "WebAuthn ID"
+        },
+        {
+            "key": "webauthn_user_verification",
+            "type": "string",
+            "default": null,
+            "desc": "WebAuthn 用户验证"
+        },
+        {
+            "key": "trusted_proxies",
+            "type": "string",
+            "default": null,
+            "desc": "信任代理"
+        },
+        {
+            "key": "proxy_for_outgoing_requests",
+            "type": "string",
+            "default": null,
+            "desc": "出站请求代理"
+        },
+        {
+            "key": "broadcast_driver",
+            "type": "string",
+            "default": null,
+            "desc": "广播驱动"
+        },
+        {
+            "key": "queue_driver",
+            "type": "string",
+            "default": null,
+            "desc": "队列驱动"
+        },
+        {
+            "key": "session_lifetime",
+            "type": "string",
+            "default": null,
+            "desc": "会话有效期"
+        },
+        {
+            "key": "redis_host",
+            "type": "string",
+            "default": null,
+            "desc": "Redis服务"
+        },
+        {
+            "key": "redis_port",
+            "type": "port",
+            "default": null,
+            "desc": "Redis服务端口"
+        },
+        {
+            "key": "panel_redis_root_password",
+            "type": "string",
+            "default": null,
+            "desc": "Redis 密码"
+        },
+        {
+            "key": "pusher_app_id",
+            "type": "string",
+            "default": null,
+            "desc": "Pusher 应用 ID"
+        },
+        {
+            "key": "pusher_app_key",
+            "type": "string",
+            "default": null,
+            "desc": "Pusher 应用密钥"
+        },
+        {
+            "key": "pusher_app_secret",
+            "type": "string",
+            "default": null,
+            "desc": "Pusher 应用密钥"
+        },
+        {
+            "key": "pusher_app_cluster",
+            "type": "string",
+            "default": null,
+            "desc": "Pusher 应用集群"
+        },
+        {
+            "key": "mix_env",
+            "type": "string",
+            "default": null,
+            "desc": "Mix 环境"
+        },
+        {
+            "key": "openid_authorize_url",
+            "type": "string",
+            "default": null,
+            "desc": "OpenID 授权 URL (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "openid_token_url",
+            "type": "string",
+            "default": null,
+            "desc": "OpenID 令牌 URL (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "openid_userinfo_url",
+            "type": "string",
+            "default": null,
+            "desc": "OpenID 用户信息 URL (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "openid_client_id",
+            "type": "string",
+            "default": null,
+            "desc": "OpenID 客户端 ID (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "openid_client_secret",
+            "type": "string",
+            "default": null,
+            "desc": "OpenID 客户端密钥 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "github_client_id",
+            "type": "string",
+            "default": null,
+            "desc": "GitHub 客户端 ID (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "github_client_secret",
+            "type": "string",
+            "default": null,
+            "desc": "GitHub 客户端密钥 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

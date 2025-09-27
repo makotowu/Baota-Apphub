@@ -1,0 +1,156 @@
+{
+    "appid": -1,
+    "appname": "chatgpt-next-web",
+    "apptitle": "ChatGPT-Next-Web",
+    "apptype": "AI",
+    "appTypeCN": "AI/大模型",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "2",
+            "s_version": [
+                "16.0"
+            ]
+        }
+    ],
+    "appdesc": "一键免费部署你的跨平台私人 ChatGPT 应用",
+    "appstatus": 1,
+    "home": "https://github.com/Yidadaa/ChatGPT-Next-Web",
+    "help": "https://github.com/Yidadaa/ChatGPT-Next-Web",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40042,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "api_key",
+            "name": "OPENAI API KEY",
+            "type": "string",
+            "default": "sk-xxx",
+            "suffix": "OPENAI API KEY",
+            "unit": ""
+        },
+        {
+            "attr": "secret_key",
+            "name": "访问权限密钥，可选(强烈建议填写)",
+            "type": "string",
+            "default": "chatgptnextweb",
+            "suffix": "访问权限密钥，可选(强烈建议填写)",
+            "unit": ""
+        },
+        {
+            "attr": "proxy",
+            "name": "代理地址(例子：http://127.0.0.1:7890 user password)",
+            "type": "string",
+            "default": "",
+            "suffix": "代理地址(例子：http://127.0.0.1:7890 user password)",
+            "unit": ""
+        },
+        {
+            "attr": "api_base_url",
+            "name": "API接口地址",
+            "type": "string",
+            "default": "https://api.openai.com",
+            "suffix": "API接口地址",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "api_key",
+            "type": "string",
+            "default": null,
+            "desc": "OPENAI API KEY"
+        },
+        {
+            "key": "secret_key",
+            "type": "string",
+            "default": null,
+            "desc": "访问权限密钥，可选(强烈建议填写)"
+        },
+        {
+            "key": "proxy",
+            "type": "string",
+            "default": null,
+            "desc": "代理地址(例子：http://127.0.0.1:7890 user password)"
+        },
+        {
+            "key": "api_base_url",
+            "type": "string",
+            "default": null,
+            "desc": "API接口地址"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

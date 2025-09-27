@@ -1,0 +1,25 @@
+services:
+  laftools:
+    image: "codegentoolbox/laftools-linux-x64:v5.5.20"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:39899"
+    environment:
+      - LAFREGION=${LAF_REGION}
+      - APPLANG=${APP_LANG}
+    volumes:
+      - ${APP_PATH}/data:/root/.miaoda
+    labels:
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

@@ -1,0 +1,38 @@
+services:
+  palworld-server:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - ${WEB_PORT}:${WEB_PORT}/udp
+      - ${PANEL_APP_PORT_RCON}:${PANEL_APP_PORT_RCON}/tcp
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data:/opt/palworld/Pal/Saved
+    environment:
+      - GAME_PORT=${WEB_PORT}
+      - MAX_PLAYERS=${MAX_PLAYERS}
+      - ENABLE_MULTITHREAD=${MULTITHREAD_SWITCH}
+      - IS_PUBLIC=${PUBLIC_SWITCH}
+      - PUBLIC_IP=${PUBLIC_IP}
+      - PUBLIC_PORT=${PANEL_APP_PORT_PUBLIC}
+      - FORCE_UPDATE=${UPDATE_SWITCH}
+      - SERVER_NAME=${SERVER_NAME}
+      - SERVER_DESC=${SERVER_DESC}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - SERVER_PASSWORD=${SERVER_PASSWORD}
+      - RCON_ENABLED=${RCON_SWITCH}
+      - RCON_PORT=${PANEL_APP_PORT_RCON}
+    image: kagurazakanyaa/palworld:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

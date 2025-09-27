@@ -1,0 +1,33 @@
+services:
+  nitter:
+    image: zedeus/nitter:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - ${APP_PATH}/data/nitter.conf:/src/nitter.conf:Z,ro
+    healthcheck:
+      test: wget -nv --tries=1 --spider http://127.0.0.1:${WEB_PORT}/Jack/status/20 || exit 1
+      interval: 30s
+      timeout: 5s
+      retries: 2
+    user: "998:998"
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

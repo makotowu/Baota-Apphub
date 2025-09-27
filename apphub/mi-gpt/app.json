@@ -1,0 +1,254 @@
+{
+    "appid": -1,
+    "appname": "mi-gpt",
+    "apptitle": "MiGPT",
+    "apptype": "AI",
+    "appTypeCN": "AI/大模型",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "4",
+            "s_version": [
+                "2.0"
+            ]
+        }
+    ],
+    "appdesc": "将小爱音箱接入 ChatGPT 和豆包",
+    "appstatus": 1,
+    "home": "https://github.com/idootop/mi-gpt",
+    "help": "https://github.com/idootop/mi-gpt",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "openai_model",
+            "name": "模型",
+            "type": "string",
+            "default": "gpt-4o",
+            "suffix": "模型",
+            "unit": ""
+        },
+        {
+            "attr": "openai_api_key",
+            "name": "API 密钥",
+            "type": "string",
+            "default": "sk-xxxxxxxxxxxxxxx",
+            "suffix": "API 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "openai_base_url",
+            "name": "基础 URL",
+            "type": "string",
+            "default": "https://api.openai.com/v1",
+            "suffix": "基础 URL",
+            "unit": ""
+        },
+        {
+            "attr": "openai_api_version",
+            "name": "Azure OpenAI API 版本 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "Azure OpenAI API 版本 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "azure_openai_api_key",
+            "name": "Azure OpenAI API 密钥 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "Azure OpenAI API 密钥 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "azure_openai_endpoint",
+            "name": "Azure OpenAI 端点 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "Azure OpenAI 端点 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "azure_openai_deployment",
+            "name": "Azure OpenAI 部署名 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "Azure OpenAI 部署名 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "audio_silent",
+            "name": "静音音频链接 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "静音音频链接 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "audio_beep",
+            "name": "提示音链接 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "提示音链接 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "audio_active",
+            "name": "唤醒音频链接 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "唤醒音频链接 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "audio_error",
+            "name": "错误音频链接 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "错误音频链接 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "tts_base_url",
+            "name": "TTS 接口地址 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "TTS 接口地址 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "openai_model",
+            "type": "string",
+            "default": null,
+            "desc": "模型"
+        },
+        {
+            "key": "openai_api_key",
+            "type": "string",
+            "default": null,
+            "desc": "API 密钥"
+        },
+        {
+            "key": "openai_base_url",
+            "type": "string",
+            "default": null,
+            "desc": "基础 URL"
+        },
+        {
+            "key": "openai_api_version",
+            "type": "string",
+            "default": null,
+            "desc": "Azure OpenAI API 版本 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "azure_openai_api_key",
+            "type": "string",
+            "default": null,
+            "desc": "Azure OpenAI API 密钥 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "azure_openai_endpoint",
+            "type": "string",
+            "default": null,
+            "desc": "Azure OpenAI 端点 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "azure_openai_deployment",
+            "type": "string",
+            "default": null,
+            "desc": "Azure OpenAI 部署名 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "audio_silent",
+            "type": "string",
+            "default": null,
+            "desc": "静音音频链接 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "audio_beep",
+            "type": "string",
+            "default": null,
+            "desc": "提示音链接 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "audio_active",
+            "type": "string",
+            "default": null,
+            "desc": "唤醒音频链接 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "audio_error",
+            "type": "string",
+            "default": null,
+            "desc": "错误音频链接 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "tts_base_url",
+            "type": "string",
+            "default": null,
+            "desc": "TTS 接口地址 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,35 @@
+services:
+  emby-amilys:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8096"
+      - "${HOST_IP}:${PANEL_APP_PORT_HTTPS}:8920"
+    volumes:
+      - "${APP_PATH}/data:/config"
+      - "${APP_PATH}/mnt:/mnt/share1"
+      - "${MOUNT_PATH2}:/mnt/share2"
+    environment:
+      - UID=1000
+      - GID=1000
+      - GIDLIST=1000,0
+      - TZ=${TIME_ZONE}
+      # - NVIDIA_VISIBLE_DEVICES=all # 映射NVIDIA显卡
+      # - NVIDIA_DRIVER_CAPABILITIES=all # 映射NVIDIA显卡
+    #runtime: nvidia # Expose NVIDIA GPUs
+    devices:
+      - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
+      #- /dev/vchiq:/dev/vchiq # MMAL/OMX on Raspberry Pi
+    image: amilys/embyserver:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+networks:  
+  baota_net:  
+    external: true

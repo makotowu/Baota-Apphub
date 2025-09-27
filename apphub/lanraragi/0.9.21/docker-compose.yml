@@ -1,0 +1,29 @@
+services:
+  lanraragi:
+    image: "difegue/lanraragi:v.0.9.21"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:3000"
+    volumes:
+      - ${CONTENT_DIRECTORY}:/home/koyomi/lanraragi/content
+      - ${THUMBNAIL_DIRECTORY}:/home/koyomi/lanraragi/content/thumb
+      - ${DATABASE_DIRECTORY}:/home/koyomi/lanraragi/database
+      - ${PLUGIN_DIRECTORY}:/home/koyomi/lanraragi/lib/LANraragi/Plugin
+    environment:
+      - http_proxy=${HTTP_PROXY}
+      - https_proxy=${HTTPS_PROXY}
+      - TZ=${TIME_ZONE}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

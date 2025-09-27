@@ -1,0 +1,40 @@
+services:
+  frigate:
+    image: "ghcr.io/blakeblackshear/frigate:0.15.1"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    privileged: ${PRIVILEGED_MODE}
+    shm_size: "${SHM_SIZE}"
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+      - /dev/apex_0:/dev/apex_0
+      - /dev/video11:/dev/video11
+      - /dev/dri/renderD128:/dev/dri/renderD128
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${CONFIG_PATH}:/config
+      - ${STORAGE_PATH}:/media/frigate
+      - type: tmpfs
+        target: /tmp/cache
+        tmpfs:
+          size: "${TMPFS_SIZE}"
+    ports:
+      - "${HOST_IP}:${PANEL_APP_PORT_HTTPS}:8971"
+      - "${HOST_IP}:${RTSP_PORT}:8554"
+      - "${HOST_IP}:${WEBRTC_TCP_PORT}:8555/tcp"
+      - "${HOST_IP}:${WEBRTC_UDP_PORT}:8555/udp"
+    environment:
+      - FRIGATE_RTSP_PASSWORD=${FRIGATE_RTSP_PASSWORD}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

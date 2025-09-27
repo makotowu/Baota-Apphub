@@ -1,0 +1,26 @@
+services:
+  icat_lite:
+    image: "bluesdo/icat_lite_public:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    volumes:
+      - ./icat_lite/data:/icat_lite/www/data
+      - ./icat_lite/system:/icat_lite/www/public/statics/system
+      - ./icat_lite/systemBlock:/icat_lite/www/public/statics/systemBlock
+      - ./icat_lite/sticker:/icat_lite/www/public/statics/sticker
+      - ./icat_lite/certs:/icat_lite/certs
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:8095
+    command: "serve.js --host 0.0.0.0 --port 8095 --dbHost ${PANEL_DB_HOST} --dbPort ${PANEL_DB_PORT} --dbName ${PANEL_DB_NAME} --dbUser ${PANEL_DB_USER} --dbPassword ${PANEL_DB_USER_PASSWORD} --pwdKey ${ICAT_PWDKEY} --cookiePwd ${ICAT_COOKIEPWD} --alterAll"
+    labels:
+      createdBy: "bt_apps"
+networks:  
+  baota_net:
+    external: true

@@ -1,0 +1,231 @@
+{
+    "appid": -1,
+    "appname": "redisinsight",
+    "apptitle": "RedisInsight",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "2",
+            "s_version": [
+                "70.0"
+            ]
+        }
+    ],
+    "appdesc": "Redis 图形管理工具",
+    "appstatus": 1,
+    "home": "https://redis.com/redis-enterprise/redis-insight/",
+    "help": "https://docs.redis.com/latest/ri/",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40274",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "ri_app_host",
+            "name": "应用主机",
+            "type": "string",
+            "default": "0.0.0.0",
+            "suffix": "应用主机",
+            "unit": ""
+        },
+        {
+            "attr": "ri_server_tls_key",
+            "name": "TLS 密钥路径",
+            "type": "string",
+            "default": "",
+            "suffix": "TLS 密钥路径",
+            "unit": ""
+        },
+        {
+            "attr": "ri_server_tls_cert",
+            "name": "TLS 证书路径",
+            "type": "string",
+            "default": "",
+            "suffix": "TLS 证书路径",
+            "unit": ""
+        },
+        {
+            "attr": "ri_encryption_key",
+            "name": "加密密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "加密密钥",
+            "unit": ""
+        },
+        {
+            "attr": "ri_log_level",
+            "name": "日志级别",
+            "type": "string",
+            "default": "info",
+            "suffix": "日志级别",
+            "unit": ""
+        },
+        {
+            "attr": "ri_files_logger",
+            "name": "文件日志",
+            "type": "string",
+            "default": "true",
+            "suffix": "文件日志",
+            "unit": ""
+        },
+        {
+            "attr": "ri_stdout_logger",
+            "name": "标准输出日志",
+            "type": "string",
+            "default": "true",
+            "suffix": "标准输出日志",
+            "unit": ""
+        },
+        {
+            "attr": "ri_proxy_path",
+            "name": "代理路径",
+            "type": "string",
+            "default": "",
+            "suffix": "代理路径",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据路径"
+        },
+        {
+            "key": "ri_app_host",
+            "type": "string",
+            "default": null,
+            "desc": "应用主机"
+        },
+        {
+            "key": "ri_server_tls_key",
+            "type": "string",
+            "default": null,
+            "desc": "TLS 密钥路径"
+        },
+        {
+            "key": "ri_server_tls_cert",
+            "type": "string",
+            "default": null,
+            "desc": "TLS 证书路径"
+        },
+        {
+            "key": "ri_encryption_key",
+            "type": "string",
+            "default": null,
+            "desc": "加密密钥"
+        },
+        {
+            "key": "ri_log_level",
+            "type": "string",
+            "default": null,
+            "desc": "日志级别"
+        },
+        {
+            "key": "ri_files_logger",
+            "type": "string",
+            "default": null,
+            "desc": "文件日志"
+        },
+        {
+            "key": "ri_stdout_logger",
+            "type": "string",
+            "default": null,
+            "desc": "标准输出日志"
+        },
+        {
+            "key": "ri_proxy_path",
+            "type": "string",
+            "default": null,
+            "desc": "代理路径"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

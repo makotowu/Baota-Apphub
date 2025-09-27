@@ -1,0 +1,282 @@
+{
+    "appid": -1,
+    "appname": "slink",
+    "apptitle": "Slink",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "5.0"
+            ]
+        }
+    ],
+    "appdesc": "图像共享平台（图床）",
+    "appstatus": 1,
+    "home": "https://github.com/andrii-kryvoviaz/slink",
+    "help": "https://github.com/andrii-kryvoviaz/slink",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40236,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "origin",
+            "name": "外部访问地址 (只有 https 环境才能注册登录，需要反向代理)",
+            "type": "string",
+            "default": "https://your-domain.com",
+            "suffix": "外部访问地址 (只有 https 环境才能注册登录，需要反向代理)",
+            "unit": ""
+        },
+        {
+            "attr": "user_approval_required",
+            "name": "是否需要用户批准才能上传图像",
+            "type": "string",
+            "default": "true",
+            "suffix": "是否需要用户批准才能上传图像",
+            "unit": ""
+        },
+        {
+            "attr": "user_allow_unauthenticated_access",
+            "name": "允许未认证访问",
+            "type": "string",
+            "default": "true",
+            "suffix": "允许未认证访问",
+            "unit": ""
+        },
+        {
+            "attr": "user_password_min_length",
+            "name": "用户密码最小长度",
+            "type": "number",
+            "default": "6",
+            "suffix": "用户密码最小长度",
+            "unit": ""
+        },
+        {
+            "attr": "user_password_requirements",
+            "name": "用户密码要求 (以下选项的总和：1-数字、2-小写、4-大写、8-特殊字符)",
+            "type": "number",
+            "default": "15",
+            "suffix": "用户密码要求 (以下选项的总和：1-数字、2-小写、4-大写、8-特殊字符)",
+            "unit": ""
+        },
+        {
+            "attr": "image_max_size",
+            "name": "图片最大尺寸(不超过50M)",
+            "type": "string",
+            "default": "15M",
+            "suffix": "图片最大尺寸(不超过50M)",
+            "unit": ""
+        },
+        {
+            "attr": "image_strip_exif_metadata",
+            "name": "剥离 EXIF 元数据",
+            "type": "string",
+            "default": "true",
+            "suffix": "剥离 EXIF 元数据",
+            "unit": ""
+        },
+        {
+            "attr": "storage_provider",
+            "name": "存储提供商",
+            "type": "string",
+            "default": "local",
+            "suffix": "存储提供商",
+            "unit": ""
+        },
+        {
+            "attr": "smb_host",
+            "name": "SMB 主机",
+            "type": "string",
+            "default": "",
+            "suffix": "SMB 主机",
+            "unit": ""
+        },
+        {
+            "attr": "smb_username",
+            "name": "SMB 用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "SMB 用户名",
+            "unit": ""
+        },
+        {
+            "attr": "smb_password",
+            "name": "SMB 密码",
+            "type": "string",
+            "default": "",
+            "suffix": "SMB 密码",
+            "unit": ""
+        },
+        {
+            "attr": "smb_share",
+            "name": "SMB 共享",
+            "type": "string",
+            "default": "",
+            "suffix": "SMB 共享",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "origin",
+            "type": "string",
+            "default": null,
+            "desc": "外部访问地址 (只有 https 环境才能注册登录，需要反向代理)"
+        },
+        {
+            "key": "user_approval_required",
+            "type": "string",
+            "default": null,
+            "desc": "是否需要用户批准才能上传图像"
+        },
+        {
+            "key": "user_allow_unauthenticated_access",
+            "type": "string",
+            "default": null,
+            "desc": "允许未认证访问"
+        },
+        {
+            "key": "user_password_min_length",
+            "type": "string",
+            "default": null,
+            "desc": "用户密码最小长度"
+        },
+        {
+            "key": "user_password_requirements",
+            "type": "string",
+            "default": null,
+            "desc": "用户密码要求 (以下选项的总和：1-数字、2-小写、4-大写、8-特殊字符)"
+        },
+        {
+            "key": "image_max_size",
+            "type": "string",
+            "default": null,
+            "desc": "图片最大尺寸(不超过50M)"
+        },
+        {
+            "key": "image_strip_exif_metadata",
+            "type": "string",
+            "default": null,
+            "desc": "剥离 EXIF 元数据"
+        },
+        {
+            "key": "storage_provider",
+            "type": "string",
+            "default": null,
+            "desc": "存储提供商"
+        },
+        {
+            "key": "smb_host",
+            "type": "string",
+            "default": null,
+            "desc": "SMB 主机"
+        },
+        {
+            "key": "smb_username",
+            "type": "string",
+            "default": null,
+            "desc": "SMB 用户名"
+        },
+        {
+            "key": "smb_password",
+            "type": "string",
+            "default": null,
+            "desc": "SMB 密码"
+        },
+        {
+            "key": "smb_share",
+            "type": "string",
+            "default": null,
+            "desc": "SMB 共享"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

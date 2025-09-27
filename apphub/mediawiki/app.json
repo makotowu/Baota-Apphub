@@ -1,0 +1,156 @@
+{
+    "appid": -1,
+    "appname": "mediawiki",
+    "apptitle": "MediaWiki",
+    "apptype": "BuildWebsite",
+    "appTypeCN": "建站",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "44.0"
+            ]
+        }
+    ],
+    "appdesc": "开源百科引擎",
+    "appstatus": 1,
+    "home": "https://www.mediawiki.org",
+    "help": "https://www.mediawiki.org/wiki/Manual:Installation_guide",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40315",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "mediawiki_images_path",
+            "name": "MediaWiki 图片路径",
+            "type": "string",
+            "default": "./data/images",
+            "suffix": "MediaWiki 图片路径",
+            "unit": ""
+        },
+        {
+            "attr": "mediawiki_data_path",
+            "name": "MediaWiki 数据路径",
+            "type": "string",
+            "default": "./data/data",
+            "suffix": "MediaWiki 数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "internal_data_path",
+            "name": "容器内部数据路径",
+            "type": "string",
+            "default": "/var/www/data",
+            "suffix": "容器内部数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "local_settings_path",
+            "name": "LocalSettings.php 路径 (【必要】编辑 compose.yml 关闭映射可重新生成配置文件)",
+            "type": "string",
+            "default": "./data/LocalSettings.php",
+            "suffix": "LocalSettings.php 路径 (【必要】编辑 compose.yml 关闭映射可重新生成配置文件)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "mediawiki_images_path",
+            "type": "string",
+            "default": null,
+            "desc": "MediaWiki 图片路径"
+        },
+        {
+            "key": "mediawiki_data_path",
+            "type": "string",
+            "default": null,
+            "desc": "MediaWiki 数据路径"
+        },
+        {
+            "key": "internal_data_path",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部数据路径"
+        },
+        {
+            "key": "local_settings_path",
+            "type": "string",
+            "default": null,
+            "desc": "LocalSettings.php 路径 (【必要】编辑 compose.yml 关闭映射可重新生成配置文件)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

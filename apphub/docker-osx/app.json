@@ -1,0 +1,206 @@
+{
+    "appid": -1,
+    "appname": "docker-osx",
+    "apptitle": "Docker-OSX",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "在 Docker 中运行 macOS",
+    "appstatus": 1,
+    "home": "https://github.com/sickcodes/Docker-OSX",
+    "help": "https://github.com/sickcodes/Docker-OSX",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "display",
+            "name": "显示",
+            "type": "string",
+            "default": ":0.0",
+            "suffix": "显示",
+            "unit": ""
+        },
+        {
+            "attr": "ssh",
+            "name": "SSH 端口",
+            "type": "number",
+            "default": "40287",
+            "suffix": "SSH 端口",
+            "unit": ""
+        },
+        {
+            "attr": "restart_policy",
+            "name": "重启策略",
+            "type": "string",
+            "default": "unless-stopped",
+            "suffix": "重启策略",
+            "unit": ""
+        },
+        {
+            "attr": "image_file",
+            "name": "系统镜像文件路径",
+            "type": "string",
+            "default": "",
+            "suffix": "系统镜像文件路径",
+            "unit": ""
+        },
+        {
+            "attr": "disk_size",
+            "name": "磁盘大小",
+            "type": "string",
+            "default": "50G",
+            "suffix": "磁盘大小",
+            "unit": ""
+        },
+        {
+            "attr": "ram_size",
+            "name": "内存大小",
+            "type": "number",
+            "default": "4",
+            "suffix": "内存大小",
+            "unit": ""
+        },
+        {
+            "attr": "cpu_cores",
+            "name": "CPU 核心数",
+            "type": "number",
+            "default": "2",
+            "suffix": "CPU 核心数",
+            "unit": ""
+        },
+        {
+            "attr": "username",
+            "name": "登录用户名",
+            "type": "string",
+            "default": "docker",
+            "suffix": "登录用户名",
+            "unit": ""
+        },
+        {
+            "attr": "password",
+            "name": "登录密码",
+            "type": "string",
+            "default": "password",
+            "suffix": "登录密码",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "display",
+            "type": "string",
+            "default": null,
+            "desc": "显示"
+        },
+        {
+            "key": "ssh",
+            "type": "string",
+            "default": null,
+            "desc": "SSH 端口"
+        },
+        {
+            "key": "restart_policy",
+            "type": "string",
+            "default": null,
+            "desc": "重启策略"
+        },
+        {
+            "key": "image_file",
+            "type": "string",
+            "default": null,
+            "desc": "系统镜像文件路径"
+        },
+        {
+            "key": "disk_size",
+            "type": "string",
+            "default": null,
+            "desc": "磁盘大小"
+        },
+        {
+            "key": "ram_size",
+            "type": "string",
+            "default": null,
+            "desc": "内存大小"
+        },
+        {
+            "key": "cpu_cores",
+            "type": "string",
+            "default": null,
+            "desc": "CPU 核心数"
+        },
+        {
+            "key": "username",
+            "type": "string",
+            "default": null,
+            "desc": "登录用户名"
+        },
+        {
+            "key": "password",
+            "type": "string",
+            "default": null,
+            "desc": "登录密码"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

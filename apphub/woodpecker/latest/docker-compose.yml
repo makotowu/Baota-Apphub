@@ -1,0 +1,82 @@
+services:
+  woodpecker-server:
+    container_name: ${APP_NAME}-server
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:8000
+    volumes:
+      - ${APP_PATH}/data/server/woodpecker:/var/lib/woodpecker/
+    environment:
+      - WOODPECKER_OPEN=${REGISTER_SWITCH}
+      - WOODPECKER_HOST=${WOODPECKER_HOST}
+      - WOODPECKER_AGENT_SECRET=${WOODPECKER_AGENT_SECRET}
+      # GitHub
+      - WOODPECKER_GITHUB=${GITHUB_ENABLE_SWITCH}
+      - WOODPECKER_GITHUB_URL=${WOODPECKER_GITHUB_URL}
+      - WOODPECKER_GITHUB_CLIENT=${WOODPECKER_GITHUB_CLIENT}
+      - WOODPECKER_GITHUB_SECRET=${WOODPECKER_GITHUB_SECRET}
+      # Gitea / Forgejo
+      - WOODPECKER_GITEA=${GITEA_ENABLE_SWITCH}
+      - WOODPECKER_GITEA_URL=${WOODPECKER_GITEA_URL}
+      - WOODPECKER_GITEA_CLIENT=${WOODPECKER_GITEA_CLIENT}
+      - WOODPECKER_GITEA_SECRET=${WOODPECKER_GITEA_SECRET}
+      - WOODPECKER_GITEA_SKIP_VERIFY=true
+      # GitLab
+      - WOODPECKER_GITLAB=${GITLAB_ENABLE_SWITCH}
+      - WOODPECKER_GITLAB_URL=${WOODPECKER_GITLAB_URL}
+      - WOODPECKER_GITLAB_CLIENT=${WOODPECKER_GITLAB_CLIENT}
+      - WOODPECKER_GITLAB_SECRET=${WOODPECKER_GITLAB_SECRET}
+      - WOODPECKER_GITLAB_SKIP_VERIFY=true
+      # Bitbucket
+      - WOODPECKER_BITBUCKET=${BITBUCKET_ENABLE_SWITCH}
+      - WOODPECKER_BITBUCKET_CLIENT=${WOODPECKER_BITBUCKET_CLIENT}
+      - WOODPECKER_BITBUCKET_SECRET=${WOODPECKER_BITBUCKET_SECRET}
+      #
+      #- WOODPECKER_GRPC_ADDR=:9000
+      #- WOODPECKER_SERVER_ADDR=
+      #- WOODPECKER_GRPC_SECURE=true # defaults to false
+      #- WOODPECKER_GRPC_VERIFY=true # default
+      #
+      # MySQL
+      #- WOODPECKER_DATABASE_DRIVER=mysql
+      #- WOODPECKER_DATABASE_DATASOURCE=root:password@tcp(1.2.3.4:3306)/woodpecker?parseTime=true
+      # Postgres
+      #- WOODPECKER_DATABASE_DRIVER=postgres
+      #- WOODPECKER_DATABASE_DATASOURCE=postgres://root:password@1.2.3.4:5432/postgres?sslmode=disable
+    image: woodpeckerci/woodpecker-server:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+  woodpecker-agent:
+    container_name: ${APP_NAME}-agent
+    restart: always
+    networks:
+      - baota_net
+    command: agent
+    depends_on:
+      - woodpecker-server
+    volumes:
+      - ${APP_PATH}/data/agent/woodpecker:/etc/woodpecker
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WOODPECKER_SERVER=woodpecker-server:9000
+      - WOODPECKER_AGENT_SECRET=${WOODPECKER_AGENT_SECRET}
+    image: woodpeckerci/woodpecker-agent:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

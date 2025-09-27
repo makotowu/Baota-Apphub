@@ -1,0 +1,198 @@
+{
+    "appid": -1,
+    "appname": "icat_lite",
+    "apptitle": "icat_lite",
+    "apptype": "BuildWebsite",
+    "appTypeCN": "建站",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "1"
+            ]
+        }
+    ],
+    "appdesc": "喵空间社区程序 Lite 版",
+    "appstatus": 1,
+    "home": "https://miao.o-o.zone",
+    "help": "https://github.com/0ui0/icat_lite_public",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_host",
+            "name": "数据库服务",
+            "type": "string",
+            "default": "",
+            "suffix": "数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_port",
+            "name": "数据库端口",
+            "type": "number",
+            "default": 5432,
+            "suffix": "数据库端口",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_name",
+            "name": "数据库名",
+            "type": "string",
+            "default": "icat_lite",
+            "suffix": "数据库名",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "icat_lite",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "icat_bbs",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 8095,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "icat_pwdkey",
+            "name": "用于加密的密码的密钥 (丢失无法登录)",
+            "type": "string",
+            "default": "nevovltregopezeminatisejlbojudos",
+            "suffix": "用于加密的密码的密钥 (丢失无法登录)",
+            "unit": ""
+        },
+        {
+            "attr": "icat_cookiepwd",
+            "name": "登录状态加密密码 (至少32位)",
+            "type": "string",
+            "default": "fibowrlnidazotocrichechotechovad",
+            "suffix": "登录状态加密密码 (至少32位)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "panel_db_host",
+            "type": "string",
+            "default": null,
+            "desc": "数据库服务"
+        },
+        {
+            "key": "panel_db_port",
+            "type": "port",
+            "default": null,
+            "desc": "数据库端口"
+        },
+        {
+            "key": "panel_db_name",
+            "type": "string",
+            "default": null,
+            "desc": "数据库名"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "icat_pwdkey",
+            "type": "string",
+            "default": null,
+            "desc": "用于加密的密码的密钥 (丢失无法登录)"
+        },
+        {
+            "key": "icat_cookiepwd",
+            "type": "string",
+            "default": null,
+            "desc": "登录状态加密密码 (至少32位)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

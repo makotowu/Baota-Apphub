@@ -1,0 +1,24 @@
+services:
+  tianji:
+    container_name: ${APP_NAME}
+    restart: always
+    image: moonrailgun/tianji:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    networks:
+      - baota_net
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:12345
+    environment:
+      - DATABASE_URL=postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
+      - JWT_SECRET=${JWT_SECRET}
+      - ALLOW_REGISTER=${ALLOW_REGISTER}
+      - ALLOW_OPENAPI=${ALLOW_OPENAPI}
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

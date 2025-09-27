@@ -1,0 +1,203 @@
+{
+    "appid": -1,
+    "appname": "autobangumi",
+    "apptitle": "AutoBangumi",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "3",
+            "s_version": [
+                "1.18"
+            ]
+        }
+    ],
+    "appdesc": "全自动追番工具",
+    "appstatus": 1,
+    "home": "https://www.autobangumi.org",
+    "help": "https://www.autobangumi.org",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40298",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据路径",
+            "type": "string",
+            "default": "./data/data",
+            "suffix": "数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "puid",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "0",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "pgid",
+            "name": "组 ID",
+            "type": "number",
+            "default": "0",
+            "suffix": "组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "umask",
+            "name": "掩码权限",
+            "type": "string",
+            "default": "022",
+            "suffix": "掩码权限",
+            "unit": ""
+        },
+        {
+            "attr": "dns_server",
+            "name": "DNS 服务器",
+            "type": "string",
+            "default": "223.5.5.5",
+            "suffix": "DNS 服务器",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据路径"
+        },
+        {
+            "key": "puid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "pgid",
+            "type": "string",
+            "default": null,
+            "desc": "组 ID"
+        },
+        {
+            "key": "umask",
+            "type": "string",
+            "default": null,
+            "desc": "掩码权限"
+        },
+        {
+            "key": "dns_server",
+            "type": "string",
+            "default": null,
+            "desc": "DNS 服务器"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

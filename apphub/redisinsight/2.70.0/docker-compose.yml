@@ -1,0 +1,32 @@
+services:
+  redisinsight:
+    image: "redis/redisinsight:2.70.0"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - ${APP_PATH}/data:/data
+    environment:
+      - RI_APP_PORT=${WEB_PORT}
+      - RI_APP_HOST=${RI_APP_HOST}
+      - RI_SERVER_TLS_KEY=${RI_SERVER_TLS_KEY}
+      - RI_SERVER_TLS_CERT=${RI_SERVER_TLS_CERT}
+      - RI_ENCRYPTION_KEY=${RI_ENCRYPTION_KEY}
+      - RI_LOG_LEVEL=${RI_LOG_LEVEL}
+      - RI_FILES_LOGGER=${RI_FILES_LOGGER}
+      - RI_STDOUT_LOGGER=${RI_STDOUT_LOGGER}
+      - RI_PROXY_PATH=${RI_PROXY_PATH}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

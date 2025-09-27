@@ -1,0 +1,23 @@
+services:
+  mt-photos-ai:
+    image: "mtphotos/mt-photos-ai:latest"
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8060"
+    environment:
+      - API_AUTH_KEY=${API_AUTH_KEY}
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

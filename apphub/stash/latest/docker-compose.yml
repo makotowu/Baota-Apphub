@@ -1,0 +1,35 @@
+services:
+  stash:
+    image: "stashapp/stash:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    environment:
+      - STASH_STASH=${STASH_DATA_INTERNAL}
+      - STASH_GENERATED=${STASH_GENERATED_INTERNAL}
+      - STASH_METADATA=${STASH_METADATA_INTERNAL}
+      - STASH_CACHE=${STASH_CACHE_INTERNAL}
+      - STASH_PORT=${WEB_PORT}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - "${CONFIG_PATH}:/root/.stash"
+      - "${STASH_DATA}:${STASH_DATA_INTERNAL}"
+      - "${STASH_GENERATED}:${STASH_GENERATED_INTERNAL}"
+      - "${STASH_METADATA}:${STASH_METADATA_INTERNAL}"
+      - "${STASH_CACHE}:${STASH_CACHE_INTERNAL}"
+      - "${STASH_BLOBS}:${STASH_BLOBS_INTERNAL}"
+    labels:
+      createdBy: "bt_apps"
+
+
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,37 @@
+services:
+  windows:
+    image: "dockurr/windows:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: ${RESTART_POLICY}
+    networks:
+      - baota_net
+    environment:
+      MANUAL: ${MANUAL}
+      DISK_SIZE: ${DISK_SIZE}
+      RAM_SIZE: ${RAM_SIZE}
+      CPU_CORES: ${CPU_CORES}
+      USERNAME: ${USERNAME}
+      PASSWORD: ${PASSWORD}
+    volumes:
+      - ${APP_PATH}/data:/storage
+      - ${IMAGE_ISO_FILE}:/custom.iso
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:8006
+      - ${HOST_IP}:${RDP_PORT}:3389/tcp
+      - ${HOST_IP}:${RDP_PORT}:3389/udp
+    stop_grace_period: 2m
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

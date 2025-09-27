@@ -1,0 +1,318 @@
+{
+    "appid": -1,
+    "appname": "metube",
+    "apptitle": "MeTube",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "媒体下载工具",
+    "appstatus": 1,
+    "home": "https://github.com/alexta69/metube",
+    "help": "https://github.com/alexta69/metube",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40289",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "download_dir",
+            "name": "下载目录",
+            "type": "string",
+            "default": "./data",
+            "suffix": "下载目录",
+            "unit": ""
+        },
+        {
+            "attr": "uid",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "gid",
+            "name": "用户组 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "default_theme",
+            "name": "默认主题",
+            "type": "string",
+            "default": "auto",
+            "suffix": "默认主题",
+            "unit": ""
+        },
+        {
+            "attr": "audio_download_dir",
+            "name": "音频下载目录",
+            "type": "string",
+            "default": "/downloads/audio",
+            "suffix": "音频下载目录",
+            "unit": ""
+        },
+        {
+            "attr": "state_dir",
+            "name": "状态目录",
+            "type": "string",
+            "default": "/downloads/.metube",
+            "suffix": "状态目录",
+            "unit": ""
+        },
+        {
+            "attr": "temp_dir",
+            "name": "临时目录",
+            "type": "string",
+            "default": "/downloads/temp",
+            "suffix": "临时目录",
+            "unit": ""
+        },
+        {
+            "attr": "download_dirs_indexable",
+            "name": "目录可索引",
+            "type": "string",
+            "default": "false",
+            "suffix": "目录可索引",
+            "unit": ""
+        },
+        {
+            "attr": "custom_dirs",
+            "name": "自定义目录",
+            "type": "string",
+            "default": "true",
+            "suffix": "自定义目录",
+            "unit": ""
+        },
+        {
+            "attr": "create_custom_dirs",
+            "name": "创建自定义目录",
+            "type": "string",
+            "default": "true",
+            "suffix": "创建自定义目录",
+            "unit": ""
+        },
+        {
+            "attr": "delete_file_on_trashcan",
+            "name": "删除文件",
+            "type": "string",
+            "default": "false",
+            "suffix": "删除文件",
+            "unit": ""
+        },
+        {
+            "attr": "url_prefix",
+            "name": "URL 前缀",
+            "type": "string",
+            "default": "/",
+            "suffix": "URL 前缀",
+            "unit": ""
+        },
+        {
+            "attr": "public_host_url",
+            "name": "公共主机URL",
+            "type": "string",
+            "default": "",
+            "suffix": "公共主机URL",
+            "unit": ""
+        },
+        {
+            "attr": "public_host_audio_url",
+            "name": "公共音频主机URL",
+            "type": "string",
+            "default": "",
+            "suffix": "公共音频主机URL",
+            "unit": ""
+        },
+        {
+            "attr": "default_option_playlist_strict_mode",
+            "name": "严格播放列表模式",
+            "type": "string",
+            "default": "false",
+            "suffix": "严格播放列表模式",
+            "unit": ""
+        },
+        {
+            "attr": "default_option_playlist_item_limit",
+            "name": "播放列表项限制",
+            "type": "number",
+            "default": "0",
+            "suffix": "播放列表项限制",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "download_dir",
+            "type": "string",
+            "default": null,
+            "desc": "下载目录"
+        },
+        {
+            "key": "uid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "gid",
+            "type": "string",
+            "default": null,
+            "desc": "用户组 ID"
+        },
+        {
+            "key": "default_theme",
+            "type": "string",
+            "default": null,
+            "desc": "默认主题"
+        },
+        {
+            "key": "audio_download_dir",
+            "type": "string",
+            "default": null,
+            "desc": "音频下载目录"
+        },
+        {
+            "key": "state_dir",
+            "type": "string",
+            "default": null,
+            "desc": "状态目录"
+        },
+        {
+            "key": "temp_dir",
+            "type": "string",
+            "default": null,
+            "desc": "临时目录"
+        },
+        {
+            "key": "download_dirs_indexable",
+            "type": "string",
+            "default": null,
+            "desc": "目录可索引"
+        },
+        {
+            "key": "custom_dirs",
+            "type": "string",
+            "default": null,
+            "desc": "自定义目录"
+        },
+        {
+            "key": "create_custom_dirs",
+            "type": "string",
+            "default": null,
+            "desc": "创建自定义目录"
+        },
+        {
+            "key": "delete_file_on_trashcan",
+            "type": "string",
+            "default": null,
+            "desc": "删除文件"
+        },
+        {
+            "key": "url_prefix",
+            "type": "string",
+            "default": null,
+            "desc": "URL 前缀"
+        },
+        {
+            "key": "public_host_url",
+            "type": "string",
+            "default": null,
+            "desc": "公共主机URL"
+        },
+        {
+            "key": "public_host_audio_url",
+            "type": "string",
+            "default": null,
+            "desc": "公共音频主机URL"
+        },
+        {
+            "key": "default_option_playlist_strict_mode",
+            "type": "string",
+            "default": null,
+            "desc": "严格播放列表模式"
+        },
+        {
+            "key": "default_option_playlist_item_limit",
+            "type": "string",
+            "default": null,
+            "desc": "播放列表项限制"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

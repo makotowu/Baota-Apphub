@@ -1,0 +1,27 @@
+services:
+  dweebui:
+    image: "lllllllillllllillll/dweebui:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - ${APP_PATH}/data:/app/config
+      - ${DB_PATH}:/app/database/db.sqlite
+      - ${DOCKER_SOCK_PATH}:/var/run/docker.sock
+    environment:
+      - PORT=${WEB_PORT}
+      - SECRET=${SECRET_KEY}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

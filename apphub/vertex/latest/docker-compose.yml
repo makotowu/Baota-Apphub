@@ -1,0 +1,25 @@
+services:
+  vertex:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - "${APP_PATH}/data:/vertex"
+    environment:
+      - TZ=Asia/Shanghai
+      - PORT=${WEB_PORT}
+    image: lswl/vertex:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

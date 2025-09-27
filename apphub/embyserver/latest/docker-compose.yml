@@ -1,0 +1,33 @@
+services:
+  emby:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8096"
+      - "${HOST_IP}:${PANEL_APP_PORT_HTTPS}:8920"
+    volumes:
+      - "${APP_PATH}/data:/config"
+      - "${APP_PATH}/mnt:/mnt/share1"
+      - "${MOUNT_PATH2}:/mnt/share2"
+    environment:
+      - UID=1000
+      - GID=100
+      - GIDLIST=100
+    #runtime: nvidia # Expose NVIDIA GPUs
+    devices:
+      - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
+      #- /dev/vchiq:/dev/vchiq # MMAL/OMX on Raspberry Pi
+    image: emby/embyserver:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

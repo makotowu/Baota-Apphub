@@ -1,0 +1,31 @@
+services:
+  sscms:
+    image: sscms/core:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8080"
+    volumes:
+      - ./data:/app/wwwroot
+    environment:
+      - SSCMS_SECURITY_KEY=${SSCMS_SECURITY_KEY}
+      - SSCMS_DATABASE_TYPE=${PANEL_DB_TYPE}
+      - SSCMS_DATABASE_HOST=${PANEL_DB_HOST}
+      - SSCMS_DATABASE_PORT=${PANEL_DB_PORT}
+      - SSCMS_DATABASE_NAME=${PANEL_DB_NAME}
+      - SSCMS_DATABASE_USER=${PANEL_DB_USER}
+      - SSCMS_DATABASE_PASSWORD=${PANEL_DB_USER_PASSWORD}
+      - SSCMS_REDIS_CONNECTION_STRING=${SSCMS_REDIS_CONNECTION_STRING}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

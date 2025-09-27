@@ -1,0 +1,25 @@
+services:
+  docker-android:
+    image: ${IMAGE}
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: ${RESTART_POLICY}
+    networks:
+      - baota_net
+    devices:
+      - /dev/kvm
+    environment:
+      - EMULATOR_DEVICE=${EMULATOR_DEVICE}
+      - WEB_VNC=${WEB_VNC}
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:6080
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

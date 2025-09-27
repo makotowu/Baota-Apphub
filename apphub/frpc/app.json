@@ -1,0 +1,128 @@
+{
+    "appid": -1,
+    "appname": "frpc",
+    "apptitle": "frpc-frp 客户端",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "0",
+            "s_version": [
+                "63.0"
+            ]
+        }
+    ],
+    "appdesc": "frp 是一种反向代理工具，常用于内网穿透(客户端)",
+    "appstatus": 1,
+    "home": "https://github.com/fatedier/frp",
+    "help": "https://github.com/fatedier/frp/blob/dev/README_zh.md",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "config_file_path",
+            "name": "配置文件路径",
+            "type": "string",
+            "default": "./data/frpc.toml",
+            "suffix": "配置文件路径",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口 (由配置文件决定)",
+            "type": "number",
+            "default": 6000,
+            "suffix": "端口 (由配置文件决定)",
+            "unit": ""
+        },
+        {
+            "attr": "ssl_folder_path",
+            "name": "证书文件夹路径 (对应容器内 \"/etc/frp/ssl\")",
+            "type": "string",
+            "default": "./data/ssl",
+            "suffix": "证书文件夹路径 (对应容器内 \"/etc/frp/ssl\")",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "config_file_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置文件路径"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口 (由配置文件决定)"
+        },
+        {
+            "key": "ssl_folder_path",
+            "type": "string",
+            "default": null,
+            "desc": "证书文件夹路径 (对应容器内 \"/etc/frp/ssl\")"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

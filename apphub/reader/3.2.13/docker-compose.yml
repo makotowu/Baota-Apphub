@@ -1,0 +1,33 @@
+services:
+  reader:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8080"
+    volumes:
+      - "${APP_PATH}/data/log:/log"
+      - "${APP_PATH}/data/storage:/storage"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - READER_APP_USERLIMIT=${USER_LIMIT}
+      - READER_APP_USERBOOKLIMIT=${BOOK_LIMIT}
+      - READER_APP_CACHECHAPTERCONTENT=true
+      # 如果启用远程webview，需要取消注释下面的 remote-webview 服务
+      # - READER_APP_REMOTEWEBVIEWAPI=http://remote-webview:8050 #开启远程webview
+      - READER_APP_SECURE=true
+      - READER_APP_SECUREKEY=${PASSWORD}
+      - READER_APP_INVITECODE=${INVITE_CODE}
+    image: hectorqin/reader:3.2.13
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

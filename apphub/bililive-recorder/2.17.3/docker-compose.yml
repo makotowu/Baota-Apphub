@@ -1,0 +1,28 @@
+services:
+  recorder:
+    image: "bililive/recorder:2.17.3"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    volumes:
+      - "${WORK_SPACE_PATH}:/rec"
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:2356"
+    environment:
+      - BREC_HTTP_BASIC_USER=${USER_NAME}
+      - BREC_HTTP_BASIC_PASS=${USER_PASSWORD}
+      - UMASK=${UMASK}
+      - PUID=${PUID}
+      - PGID=${PGID}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

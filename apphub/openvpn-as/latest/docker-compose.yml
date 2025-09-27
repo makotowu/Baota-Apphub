@@ -1,0 +1,25 @@
+services:
+  openvpn-as:
+    image: openvpn/openvpn-as:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${PANEL_APP_PORT_CONSOLE}:943"
+      - "${HOST_IP}:${PANEL_APP_PORT_HTTPS}:443"
+      - "${HOST_IP}:${PANEL_APP_PORT_UDP}:1194/udp"
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - "./data:/openvpn"
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

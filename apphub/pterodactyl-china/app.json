@@ -1,0 +1,450 @@
+{
+    "appid": -1,
+    "appname": "pterodactyl-china",
+    "apptitle": "Pterodactyl (翼龙中国版)",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "11.11.0"
+            ]
+        }
+    ],
+    "appdesc": "一个免费的开源游戏服务器管理面板（前端）",
+    "appstatus": 1,
+    "home": "https://pterodactyl.top/",
+    "help": "https://pterodactyl.top/",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "user_uid",
+            "name": "用户 UID",
+            "type": "string",
+            "default": 1000,
+            "suffix": "用户 UID",
+            "unit": ""
+        },
+        {
+            "attr": "user_gid",
+            "name": "用户 GID",
+            "type": "string",
+            "default": 1000,
+            "suffix": "用户 GID",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_type",
+            "name": "数据库服务",
+            "type": "string",
+            "default": "mysql",
+            "suffix": "数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_name",
+            "name": "数据库名",
+            "type": "string",
+            "default": "pterodactyl",
+            "suffix": "数据库名",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "pterodactyl",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "pterodactyl",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "HTTP 端口",
+            "type": "number",
+            "default": 40222,
+            "suffix": "HTTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "panel_app_url",
+            "name": "外部访问地址",
+            "type": "string",
+            "default": "http://localhost:40222",
+            "suffix": "外部访问地址",
+            "unit": ""
+        },
+        {
+            "attr": "panel_redis_db_host",
+            "name": "缓存服务服务",
+            "type": "string",
+            "default": "",
+            "suffix": "缓存服务服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_redis_root_password",
+            "name": "缓存服务服务密码",
+            "type": "string",
+            "default": "",
+            "suffix": "缓存服务服务密码",
+            "unit": ""
+        },
+        {
+            "attr": "mail_from",
+            "name": "预设作者邮箱",
+            "type": "string",
+            "default": "noreply@example.com",
+            "suffix": "预设作者邮箱",
+            "unit": ""
+        },
+        {
+            "attr": "panel_recaptcha_enabled",
+            "name": "谷歌人机验证",
+            "type": "string",
+            "default": "true",
+            "suffix": "谷歌人机验证",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "app_service_author",
+            "name": "应用服务作者",
+            "type": "string",
+            "default": "noreply@example.com",
+            "suffix": "应用服务作者",
+            "unit": ""
+        },
+        {
+            "attr": "mail_driver",
+            "name": "邮件驱动",
+            "type": "string",
+            "default": "smtp",
+            "suffix": "邮件驱动",
+            "unit": ""
+        },
+        {
+            "attr": "mail_host",
+            "name": "邮件主机",
+            "type": "string",
+            "default": "mail",
+            "suffix": "邮件主机",
+            "unit": ""
+        },
+        {
+            "attr": "mail_port",
+            "name": "邮件端口",
+            "type": "number",
+            "default": 1025,
+            "suffix": "邮件端口",
+            "unit": ""
+        },
+        {
+            "attr": "mail_username",
+            "name": "邮件用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "邮件用户名",
+            "unit": ""
+        },
+        {
+            "attr": "mail_encryption",
+            "name": "邮件加密",
+            "type": "string",
+            "default": "true",
+            "suffix": "邮件加密",
+            "unit": ""
+        },
+        {
+            "attr": "app_env",
+            "name": "应用环境",
+            "type": "string",
+            "default": "production",
+            "suffix": "应用环境",
+            "unit": ""
+        },
+        {
+            "attr": "app_environment_only",
+            "name": "仅应用环境",
+            "type": "string",
+            "default": "false",
+            "suffix": "仅应用环境",
+            "unit": ""
+        },
+        {
+            "attr": "cache_driver",
+            "name": "缓存驱动",
+            "type": "string",
+            "default": "redis",
+            "suffix": "缓存驱动",
+            "unit": ""
+        },
+        {
+            "attr": "session_driver",
+            "name": "会话驱动",
+            "type": "string",
+            "default": "redis",
+            "suffix": "会话驱动",
+            "unit": ""
+        },
+        {
+            "attr": "queue_driver",
+            "name": "队列驱动",
+            "type": "string",
+            "default": "redis",
+            "suffix": "队列驱动",
+            "unit": ""
+        },
+        {
+            "attr": "redis_host",
+            "name": "Redis 服务",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis 服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_redis_root_password",
+            "name": "Redis 服务密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis 服务密码",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "user_uid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 UID"
+        },
+        {
+            "key": "user_gid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 GID"
+        },
+        {
+            "key": "panel_db_type",
+            "type": "string",
+            "default": null,
+            "desc": "数据库服务"
+        },
+        {
+            "key": "panel_db_name",
+            "type": "string",
+            "default": null,
+            "desc": "数据库名"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTP 端口"
+        },
+        {
+            "key": "panel_app_url",
+            "type": "string",
+            "default": null,
+            "desc": "外部访问地址"
+        },
+        {
+            "key": "panel_redis_db_host",
+            "type": "string",
+            "default": null,
+            "desc": "缓存服务服务"
+        },
+        {
+            "key": "panel_redis_root_password",
+            "type": "string",
+            "default": null,
+            "desc": "缓存服务服务密码"
+        },
+        {
+            "key": "mail_from",
+            "type": "string",
+            "default": null,
+            "desc": "预设作者邮箱"
+        },
+        {
+            "key": "panel_recaptcha_enabled",
+            "type": "string",
+            "default": null,
+            "desc": "谷歌人机验证"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "app_service_author",
+            "type": "string",
+            "default": null,
+            "desc": "应用服务作者"
+        },
+        {
+            "key": "mail_driver",
+            "type": "string",
+            "default": null,
+            "desc": "邮件驱动"
+        },
+        {
+            "key": "mail_host",
+            "type": "string",
+            "default": null,
+            "desc": "邮件主机"
+        },
+        {
+            "key": "mail_port",
+            "type": "port",
+            "default": null,
+            "desc": "邮件端口"
+        },
+        {
+            "key": "mail_username",
+            "type": "string",
+            "default": null,
+            "desc": "邮件用户名"
+        },
+        {
+            "key": "mail_encryption",
+            "type": "string",
+            "default": null,
+            "desc": "邮件加密"
+        },
+        {
+            "key": "app_env",
+            "type": "string",
+            "default": null,
+            "desc": "应用环境"
+        },
+        {
+            "key": "app_environment_only",
+            "type": "string",
+            "default": null,
+            "desc": "仅应用环境"
+        },
+        {
+            "key": "cache_driver",
+            "type": "string",
+            "default": null,
+            "desc": "缓存驱动"
+        },
+        {
+            "key": "session_driver",
+            "type": "string",
+            "default": null,
+            "desc": "会话驱动"
+        },
+        {
+            "key": "queue_driver",
+            "type": "string",
+            "default": null,
+            "desc": "队列驱动"
+        },
+        {
+            "key": "redis_host",
+            "type": "string",
+            "default": null,
+            "desc": "Redis 服务"
+        },
+        {
+            "key": "panel_redis_root_password",
+            "type": "string",
+            "default": null,
+            "desc": "Redis 服务密码"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

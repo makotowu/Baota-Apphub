@@ -1,0 +1,226 @@
+{
+    "appid": -1,
+    "appname": "librespeed",
+    "apptitle": "LibreSpeed",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "5",
+            "s_version": [
+                "4.1"
+            ]
+        }
+    ],
+    "appdesc": "开源速度测试工具",
+    "appstatus": 1,
+    "home": "https://librespeed.org/",
+    "help": "https://github.com/librespeed/speedtest",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40262,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "mode",
+            "name": "模式",
+            "type": "string",
+            "default": "standalone",
+            "suffix": "模式",
+            "unit": ""
+        },
+        {
+            "attr": "title",
+            "name": "标题",
+            "type": "string",
+            "default": "LibreSpeed",
+            "suffix": "标题",
+            "unit": ""
+        },
+        {
+            "attr": "telemetry",
+            "name": "遥测",
+            "type": "string",
+            "default": "false",
+            "suffix": "遥测",
+            "unit": ""
+        },
+        {
+            "attr": "enable_id_obfuscation",
+            "name": "启用 ID 混淆",
+            "type": "string",
+            "default": "true",
+            "suffix": "启用 ID 混淆",
+            "unit": ""
+        },
+        {
+            "attr": "redact_ip_addresses",
+            "name": "隐藏 IP 地址",
+            "type": "string",
+            "default": "false",
+            "suffix": "隐藏 IP 地址",
+            "unit": ""
+        },
+        {
+            "attr": "password",
+            "name": "密码",
+            "type": "string",
+            "default": "password",
+            "suffix": "密码",
+            "unit": ""
+        },
+        {
+            "attr": "email",
+            "name": "GDPR 请求的电子邮件地址 (启用遥测时必须指定)",
+            "type": "string",
+            "default": "",
+            "suffix": "GDPR 请求的电子邮件地址 (启用遥测时必须指定)",
+            "unit": ""
+        },
+        {
+            "attr": "disable_ipinfo",
+            "name": "禁用 IPInfo",
+            "type": "string",
+            "default": "false",
+            "suffix": "禁用 IPInfo",
+            "unit": ""
+        },
+        {
+            "attr": "distance",
+            "name": "距离",
+            "type": "string",
+            "default": "km",
+            "suffix": "距离",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "mode",
+            "type": "string",
+            "default": null,
+            "desc": "模式"
+        },
+        {
+            "key": "title",
+            "type": "string",
+            "default": null,
+            "desc": "标题"
+        },
+        {
+            "key": "telemetry",
+            "type": "string",
+            "default": null,
+            "desc": "遥测"
+        },
+        {
+            "key": "enable_id_obfuscation",
+            "type": "string",
+            "default": null,
+            "desc": "启用 ID 混淆"
+        },
+        {
+            "key": "redact_ip_addresses",
+            "type": "string",
+            "default": null,
+            "desc": "隐藏 IP 地址"
+        },
+        {
+            "key": "password",
+            "type": "string",
+            "default": null,
+            "desc": "密码"
+        },
+        {
+            "key": "email",
+            "type": "string",
+            "default": null,
+            "desc": "GDPR 请求的电子邮件地址 (启用遥测时必须指定)"
+        },
+        {
+            "key": "disable_ipinfo",
+            "type": "string",
+            "default": null,
+            "desc": "禁用 IPInfo"
+        },
+        {
+            "key": "distance",
+            "type": "string",
+            "default": null,
+            "desc": "距离"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

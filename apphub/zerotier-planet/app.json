@@ -1,0 +1,156 @@
+{
+    "appid": -1,
+    "appname": "zerotier-planet",
+    "apptitle": "ZeroTier-Planet",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "2.18"
+            ]
+        }
+    ],
+    "appdesc": "具有 Web UI 的 ZeroTier 网络控制器",
+    "appstatus": 1,
+    "home": "https://github.com/Jonnyan404/zerotier-planet",
+    "help": "https://github.com/Jonnyan404/zerotier-planet",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "控制台端口",
+            "type": "number",
+            "default": 40119,
+            "suffix": "控制台端口",
+            "unit": ""
+        },
+        {
+            "attr": "server",
+            "name": "ZeroTier服务端口",
+            "type": "number",
+            "default": 9993,
+            "suffix": "ZeroTier服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "download",
+            "name": "planet/moon文件在线下载端口",
+            "type": "number",
+            "default": 40120,
+            "suffix": "planet/moon文件在线下载端口",
+            "unit": ""
+        },
+        {
+            "attr": "host_ip_addr",
+            "name": "本机IP地址",
+            "type": "string",
+            "default": "",
+            "suffix": "本机IP地址",
+            "unit": ""
+        },
+        {
+            "attr": "password",
+            "name": "密码",
+            "type": "string",
+            "default": "zerotier",
+            "suffix": "密码",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "控制台端口"
+        },
+        {
+            "key": "server",
+            "type": "string",
+            "default": null,
+            "desc": "ZeroTier服务端口"
+        },
+        {
+            "key": "download",
+            "type": "string",
+            "default": null,
+            "desc": "planet/moon文件在线下载端口"
+        },
+        {
+            "key": "host_ip_addr",
+            "type": "string",
+            "default": null,
+            "desc": "本机IP地址"
+        },
+        {
+            "key": "password",
+            "type": "string",
+            "default": null,
+            "desc": "密码"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,31 @@
+services:
+  clouddrive:
+    image: "cloudnas/clouddrive2:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:19798"
+    environment:
+      - TZ=${TZ}
+      - CLOUDDRIVE_HOME=${CLOUDDRIVE_HOME}
+    volumes:
+      - ${CLOUD_MOUNTS_PATH}:/CloudNAS:shared
+      - ${APP_DATA_PATH}:${CLOUDDRIVE_HOME}
+      - ${SHARED_MEDIA_PATH}:/media:shared
+    devices:
+      - /dev/fuse:/dev/fuse
+    pid: "host"
+    privileged: ${PRIVILEGED_MODE}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

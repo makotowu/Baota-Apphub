@@ -1,0 +1,268 @@
+{
+    "appid": -1,
+    "appname": "nps",
+    "apptitle": "NPS",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "0",
+            "s_version": [
+                "27.01"
+            ]
+        }
+    ],
+    "appdesc": "轻量级、高性能、功能强大的内网穿透代理服务器",
+    "appstatus": 1,
+    "home": "https://ehang-io.github.io/nps",
+    "help": "https://ehang-io.github.io/nps",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "web 管理端口",
+            "type": "number",
+            "default": 40209,
+            "suffix": "web 管理端口",
+            "unit": ""
+        },
+        {
+            "attr": "nps_bridge_port",
+            "name": "服务端客户端通信端口",
+            "type": "number",
+            "default": 8024,
+            "suffix": "服务端客户端通信端口",
+            "unit": ""
+        },
+        {
+            "attr": "nps_bridge_tls_port",
+            "name": "服务端客户端 TLS 通信端口",
+            "type": "number",
+            "default": 8025,
+            "suffix": "服务端客户端 TLS 通信端口",
+            "unit": ""
+        },
+        {
+            "attr": "tls_enable_switch",
+            "name": "服务端与客户端的通信是否启用 TLS",
+            "type": "string",
+            "default": "true",
+            "suffix": "服务端与客户端的通信是否启用 TLS",
+            "unit": ""
+        },
+        {
+            "attr": "nps_web_host",
+            "name": "外部访问地址(若默认地址请替换 localhost 为当前服务 IP)",
+            "type": "string",
+            "default": "http://localhost:40209",
+            "suffix": "外部访问地址(若默认地址请替换 localhost 为当前服务 IP)",
+            "unit": ""
+        },
+        {
+            "attr": "nps_web_username",
+            "name": "web 界面管理账号",
+            "type": "string",
+            "default": "admin",
+            "suffix": "web 界面管理账号",
+            "unit": ""
+        },
+        {
+            "attr": "nps_web_password",
+            "name": "web 界面管理密码",
+            "type": "string",
+            "default": "123",
+            "suffix": "web 界面管理密码",
+            "unit": ""
+        },
+        {
+            "attr": "nps_web_open_ssl",
+            "name": "web 界面开启 https 访问",
+            "type": "string",
+            "default": "false",
+            "suffix": "web 界面开启 https 访问",
+            "unit": ""
+        },
+        {
+            "attr": "nps_public_vkey",
+            "name": "客户端以配置文件模式启动时的密钥",
+            "type": "string",
+            "default": "xly7traGe3r0t6UWltristuh1",
+            "suffix": "客户端以配置文件模式启动时的密钥",
+            "unit": ""
+        },
+        {
+            "attr": "nps_auth_crypt_key",
+            "name": "16 位 AES 加密密钥",
+            "type": "string",
+            "default": "gl8r0tujikih7br5",
+            "suffix": "16 位 AES 加密密钥",
+            "unit": ""
+        },
+        {
+            "attr": "nps_http_proxy_ip",
+            "name": "域名代理 http 代理监听地址",
+            "type": "string",
+            "default": "0.0.0.0",
+            "suffix": "域名代理 http 代理监听地址",
+            "unit": ""
+        },
+        {
+            "attr": "nps_http_proxy_port",
+            "name": "域名代理 http 代理监听端口",
+            "type": "number",
+            "default": 50080,
+            "suffix": "域名代理 http 代理监听端口",
+            "unit": ""
+        },
+        {
+            "attr": "nps_https_proxy_port",
+            "name": "域名代理 https 代理监听端口",
+            "type": "number",
+            "default": 50443,
+            "suffix": "域名代理 https 代理监听端口",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "web 管理端口"
+        },
+        {
+            "key": "nps_bridge_port",
+            "type": "port",
+            "default": null,
+            "desc": "服务端客户端通信端口"
+        },
+        {
+            "key": "nps_bridge_tls_port",
+            "type": "port",
+            "default": null,
+            "desc": "服务端客户端 TLS 通信端口"
+        },
+        {
+            "key": "tls_enable_switch",
+            "type": "string",
+            "default": null,
+            "desc": "服务端与客户端的通信是否启用 TLS"
+        },
+        {
+            "key": "nps_web_host",
+            "type": "string",
+            "default": null,
+            "desc": "外部访问地址(若默认地址请替换 localhost 为当前服务 IP)"
+        },
+        {
+            "key": "nps_web_username",
+            "type": "string",
+            "default": null,
+            "desc": "web 界面管理账号"
+        },
+        {
+            "key": "nps_web_password",
+            "type": "string",
+            "default": null,
+            "desc": "web 界面管理密码"
+        },
+        {
+            "key": "nps_web_open_ssl",
+            "type": "string",
+            "default": null,
+            "desc": "web 界面开启 https 访问"
+        },
+        {
+            "key": "nps_public_vkey",
+            "type": "string",
+            "default": null,
+            "desc": "客户端以配置文件模式启动时的密钥"
+        },
+        {
+            "key": "nps_auth_crypt_key",
+            "type": "string",
+            "default": null,
+            "desc": "16 位 AES 加密密钥"
+        },
+        {
+            "key": "nps_http_proxy_ip",
+            "type": "string",
+            "default": null,
+            "desc": "域名代理 http 代理监听地址"
+        },
+        {
+            "key": "nps_http_proxy_port",
+            "type": "port",
+            "default": null,
+            "desc": "域名代理 http 代理监听端口"
+        },
+        {
+            "key": "nps_https_proxy_port",
+            "type": "port",
+            "default": null,
+            "desc": "域名代理 https 代理监听端口"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,184 @@
+{
+    "appid": -1,
+    "appname": "hivision-id-photo",
+    "apptitle": "HivisionIDPhoto",
+    "apptype": "AI",
+    "appTypeCN": "AI/大模型",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "3.1"
+            ]
+        }
+    ],
+    "appdesc": "一个轻量级的 AI 证件照制作工具",
+    "appstatus": 1,
+    "home": "https://github.com/Zeyi-Lin/HivisionIDPhotos",
+    "help": "https://github.com/Zeyi-Lin/HivisionIDPhotos",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40330",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "内部端口",
+            "type": "number",
+            "default": "7860",
+            "suffix": "内部端口",
+            "unit": ""
+        },
+        {
+            "attr": "command",
+            "name": "启动命令",
+            "type": "string",
+            "default": "python3 -u app.py --host 0.0.0.0 --port 7860",
+            "suffix": "启动命令",
+            "unit": ""
+        },
+        {
+            "attr": "face_plus_api_key",
+            "name": "FACE Plus API 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "FACE Plus API 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "face_plus_api_secret",
+            "name": "FACE Plus API 密钥 Secret",
+            "type": "string",
+            "default": "",
+            "suffix": "FACE Plus API 密钥 Secret",
+            "unit": ""
+        },
+        {
+            "attr": "run_mode",
+            "name": "运行模式",
+            "type": "string",
+            "default": "",
+            "suffix": "运行模式",
+            "unit": ""
+        },
+        {
+            "attr": "default_lang",
+            "name": "默认语言",
+            "type": "string",
+            "default": "zh",
+            "suffix": "默认语言",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "内部端口"
+        },
+        {
+            "key": "command",
+            "type": "string",
+            "default": null,
+            "desc": "启动命令"
+        },
+        {
+            "key": "face_plus_api_key",
+            "type": "string",
+            "default": null,
+            "desc": "FACE Plus API 密钥"
+        },
+        {
+            "key": "face_plus_api_secret",
+            "type": "string",
+            "default": null,
+            "desc": "FACE Plus API 密钥 Secret"
+        },
+        {
+            "key": "run_mode",
+            "type": "string",
+            "default": null,
+            "desc": "运行模式"
+        },
+        {
+            "key": "default_lang",
+            "type": "string",
+            "default": null,
+            "desc": "默认语言"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

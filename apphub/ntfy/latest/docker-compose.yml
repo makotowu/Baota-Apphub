@@ -1,0 +1,34 @@
+services:
+  ntfy:
+    image: "binwiederhier/ntfy:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    command:
+      - serve
+    environment:
+      - TZ=${TIME_ZONE}
+    user: ${PUID}:${PGID}
+    volumes:
+      - ./data/cache/ntfy:/var/cache/ntfy
+      - ./data/ntfy:/etc/ntfy
+    ports:
+      - "${WEB_PORT}:${APP_PORT_INTERNAL}"
+    restart: always
+    networks:
+      - baota_net
+    healthcheck:
+        test: ["CMD-SHELL", "wget -q --tries=1 http://localhost:${APP_PORT_INTERNAL}/v1/health -O - | grep -Eo '\"healthy\"\\s*:\\s*true' || exit 1"]
+        interval: 60s
+        timeout: 10s
+        retries: 3
+        start_period: 40s
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

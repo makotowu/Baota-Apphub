@@ -1,0 +1,276 @@
+{
+    "appid": -1,
+    "appname": "photoprism",
+    "apptitle": "PhotoPrism",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "去中心化网络的人工智能照片应用程序",
+    "appstatus": 1,
+    "home": "https://www.photoprism.app",
+    "help": "https://docs.photoprism.app",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_host",
+            "name": "MariaDB数据库服务",
+            "type": "string",
+            "default": "",
+            "suffix": "MariaDB数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "photoprism_db_port",
+            "name": "MariaDB数据库服务端口",
+            "type": "number",
+            "default": "3306",
+            "suffix": "MariaDB数据库服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "photoprism",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "photoprism",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40101,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "uid",
+            "name": "UID",
+            "type": "number",
+            "default": 1000,
+            "suffix": "UID",
+            "unit": ""
+        },
+        {
+            "attr": "gid",
+            "name": "GID",
+            "type": "number",
+            "default": 1000,
+            "suffix": "GID",
+            "unit": ""
+        },
+        {
+            "attr": "admin_user",
+            "name": "管理员用户名",
+            "type": "string",
+            "default": "admin",
+            "suffix": "管理员用户名",
+            "unit": ""
+        },
+        {
+            "attr": "admin_password",
+            "name": "管理员密码",
+            "type": "string",
+            "default": "photoprism",
+            "suffix": "管理员密码",
+            "unit": ""
+        },
+        {
+            "attr": "photoprism_external_url",
+            "name": "外部访问地址",
+            "type": "string",
+            "default": "http://localhost:40101/",
+            "suffix": "外部访问地址",
+            "unit": ""
+        },
+        {
+            "attr": "site_description",
+            "name": "网站描述",
+            "type": "string",
+            "default": "",
+            "suffix": "网站描述",
+            "unit": ""
+        },
+        {
+            "attr": "site_author",
+            "name": "网站作者",
+            "type": "string",
+            "default": "",
+            "suffix": "网站作者",
+            "unit": ""
+        },
+        {
+            "attr": "site_caption",
+            "name": "网站标题",
+            "type": "string",
+            "default": "AI-Powered Photos App",
+            "suffix": "网站标题",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "panel_db_host",
+            "type": "string",
+            "default": null,
+            "desc": "MariaDB数据库服务"
+        },
+        {
+            "key": "photoprism_db_port",
+            "type": "port",
+            "default": null,
+            "desc": "MariaDB数据库服务端口"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "uid",
+            "type": "string",
+            "default": null,
+            "desc": "UID"
+        },
+        {
+            "key": "gid",
+            "type": "string",
+            "default": null,
+            "desc": "GID"
+        },
+        {
+            "key": "admin_user",
+            "type": "string",
+            "default": null,
+            "desc": "管理员用户名"
+        },
+        {
+            "key": "admin_password",
+            "type": "string",
+            "default": null,
+            "desc": "管理员密码"
+        },
+        {
+            "key": "photoprism_external_url",
+            "type": "string",
+            "default": null,
+            "desc": "外部访问地址"
+        },
+        {
+            "key": "site_description",
+            "type": "string",
+            "default": null,
+            "desc": "网站描述"
+        },
+        {
+            "key": "site_author",
+            "type": "string",
+            "default": null,
+            "desc": "网站作者"
+        },
+        {
+            "key": "site_caption",
+            "type": "string",
+            "default": null,
+            "desc": "网站标题"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

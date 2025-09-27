@@ -1,0 +1,268 @@
+{
+    "appid": -1,
+    "appname": "palworld-server",
+    "apptitle": "Palworld Dedicated Server (幻兽帕鲁)",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "4.3"
+            ]
+        }
+    ],
+    "appdesc": "幻兽帕鲁服务端",
+    "appstatus": 1,
+    "home": "https://hub.docker.com/r/kagurazakanyaa/palworld",
+    "help": "https://github.com/KagurazakaNyaa/palworld-docker",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 8211,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "rcon",
+            "name": "RCON 端口",
+            "type": "number",
+            "default": 25575,
+            "suffix": "RCON 端口",
+            "unit": ""
+        },
+        {
+            "attr": "max_players",
+            "name": "玩家数量限制",
+            "type": "number",
+            "default": 32,
+            "suffix": "玩家数量限制",
+            "unit": ""
+        },
+        {
+            "attr": "multithread_switch",
+            "name": "是否启用 CPU 多线程优化 (true / false)",
+            "type": "string",
+            "default": "true",
+            "suffix": "是否启用 CPU 多线程优化 (true / false)",
+            "unit": ""
+        },
+        {
+            "attr": "public_switch",
+            "name": "是否将服务器设置为社区服务器 (true / false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否将服务器设置为社区服务器 (true / false)",
+            "unit": ""
+        },
+        {
+            "attr": "public_ip",
+            "name": "服务器 IP (留空自动检测)",
+            "type": "string",
+            "default": "",
+            "suffix": "服务器 IP (留空自动检测)",
+            "unit": ""
+        },
+        {
+            "attr": "public",
+            "name": "服务器端口 (留空自动检测)",
+            "type": "number",
+            "default": "",
+            "suffix": "服务器端口 (留空自动检测)",
+            "unit": ""
+        },
+        {
+            "attr": "update_switch",
+            "name": "是否每次启动都更新服务器 (true / false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否每次启动都更新服务器 (true / false)",
+            "unit": ""
+        },
+        {
+            "attr": "server_name",
+            "name": "服务器名",
+            "type": "string",
+            "default": "Default Palworld Server",
+            "suffix": "服务器名",
+            "unit": ""
+        },
+        {
+            "attr": "server_desc",
+            "name": "服务器说明",
+            "type": "string",
+            "default": "Default Palworld Server",
+            "suffix": "服务器说明",
+            "unit": ""
+        },
+        {
+            "attr": "admin_password",
+            "name": "管理员密码",
+            "type": "string",
+            "default": "palworld",
+            "suffix": "管理员密码",
+            "unit": ""
+        },
+        {
+            "attr": "server_password",
+            "name": "服务器密码",
+            "type": "string",
+            "default": "",
+            "suffix": "服务器密码",
+            "unit": ""
+        },
+        {
+            "attr": "rcon_switch",
+            "name": "是否启用 RCON (true / false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否启用 RCON (true / false)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "rcon",
+            "type": "string",
+            "default": null,
+            "desc": "RCON 端口"
+        },
+        {
+            "key": "max_players",
+            "type": "string",
+            "default": null,
+            "desc": "玩家数量限制"
+        },
+        {
+            "key": "multithread_switch",
+            "type": "string",
+            "default": null,
+            "desc": "是否启用 CPU 多线程优化 (true / false)"
+        },
+        {
+            "key": "public_switch",
+            "type": "string",
+            "default": null,
+            "desc": "是否将服务器设置为社区服务器 (true / false)"
+        },
+        {
+            "key": "public_ip",
+            "type": "string",
+            "default": null,
+            "desc": "服务器 IP (留空自动检测)"
+        },
+        {
+            "key": "public",
+            "type": "string",
+            "default": null,
+            "desc": "服务器端口 (留空自动检测)"
+        },
+        {
+            "key": "update_switch",
+            "type": "string",
+            "default": null,
+            "desc": "是否每次启动都更新服务器 (true / false)"
+        },
+        {
+            "key": "server_name",
+            "type": "string",
+            "default": null,
+            "desc": "服务器名"
+        },
+        {
+            "key": "server_desc",
+            "type": "string",
+            "default": null,
+            "desc": "服务器说明"
+        },
+        {
+            "key": "admin_password",
+            "type": "string",
+            "default": null,
+            "desc": "管理员密码"
+        },
+        {
+            "key": "server_password",
+            "type": "string",
+            "default": null,
+            "desc": "服务器密码"
+        },
+        {
+            "key": "rcon_switch",
+            "type": "string",
+            "default": null,
+            "desc": "是否启用 RCON (true / false)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,226 @@
+{
+    "appid": -1,
+    "appname": "resilio-sync",
+    "apptitle": "Resilio Sync",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "3",
+            "s_version": [
+                "0.3"
+            ]
+        }
+    ],
+    "appdesc": "文件同步工具",
+    "appstatus": 1,
+    "home": "https://www.resilio.com",
+    "help": "https://help.resilio.com",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40237",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "sync",
+            "name": "同步端口",
+            "type": "number",
+            "default": "55555",
+            "suffix": "同步端口",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "downloads_path",
+            "name": "下载路径",
+            "type": "string",
+            "default": "./data/downloads",
+            "suffix": "下载路径",
+            "unit": ""
+        },
+        {
+            "attr": "sync_path",
+            "name": "同步路径",
+            "type": "string",
+            "default": "./data/sync",
+            "suffix": "同步路径",
+            "unit": ""
+        },
+        {
+            "attr": "external_mount_path",
+            "name": "外部挂载路径",
+            "type": "string",
+            "default": "./data/mnt",
+            "suffix": "外部挂载路径",
+            "unit": ""
+        },
+        {
+            "attr": "internal_mount_path",
+            "name": "内部挂载路径",
+            "type": "string",
+            "default": "/mnt",
+            "suffix": "内部挂载路径",
+            "unit": ""
+        },
+        {
+            "attr": "user_id",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "group_id",
+            "name": "用户组 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "sync",
+            "type": "string",
+            "default": null,
+            "desc": "同步端口"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "downloads_path",
+            "type": "string",
+            "default": null,
+            "desc": "下载路径"
+        },
+        {
+            "key": "sync_path",
+            "type": "string",
+            "default": null,
+            "desc": "同步路径"
+        },
+        {
+            "key": "external_mount_path",
+            "type": "string",
+            "default": null,
+            "desc": "外部挂载路径"
+        },
+        {
+            "key": "internal_mount_path",
+            "type": "string",
+            "default": null,
+            "desc": "内部挂载路径"
+        },
+        {
+            "key": "user_id",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "group_id",
+            "type": "string",
+            "default": null,
+            "desc": "用户组 ID"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

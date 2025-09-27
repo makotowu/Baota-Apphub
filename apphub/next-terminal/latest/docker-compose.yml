@@ -1,0 +1,46 @@
+services:
+  nt-guacd:
+    container_name: ${APP_NAME}-guacd
+    restart: always
+    networks:
+      - baota_net
+    volumes:
+      - "${APP_PATH}/data:/usr/local/next-terminal/data"
+    image: dushixiang/guacd:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+  next-terminal:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8088"
+      - "${HOST_IP}:${PANEL_APP_PORT_SSH}:8089"
+    volumes:
+      - "${APP_PATH}/data:/usr/local/next-terminal/data"
+      - "/etc/localtime:/etc/localtime"
+      - "${SSH_KEY_PATH}:/root/.ssh/id_rsa"
+    environment:
+      DB: sqlite
+      GUACD_HOSTNAME: nt-guacd
+      GUACD_PORT: 4822
+      SSHD_ENABLE: ${SSHD_SWITCH}
+    image: dushixiang/next-terminal:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

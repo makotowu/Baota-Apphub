@@ -1,0 +1,155 @@
+{
+    "appid": -1,
+    "appname": "sub-store",
+    "apptitle": "Sub-Store",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "适用于 QX、Loon、Surge、Stash 和 Shadowrocket 的高级订阅管理器",
+    "appstatus": 1,
+    "home": "https://hub.docker.com/r/xream/sub-store",
+    "help": "https://www.notion.so/Sub-Store-6259586994d34c11a4ced5c406264b46",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40232,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "sub_store_push_service",
+            "name": "推送服务 URL",
+            "type": "string",
+            "default": "https://api.day.app/XXXXXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive&icon=https%3A%2F%2Fraw.githubusercontent.com%2F58xinian%2Ficon%2Fmaster%2FSub-Store1.png",
+            "suffix": "推送服务 URL",
+            "unit": ""
+        },
+        {
+            "attr": "sub_store_cron",
+            "name": "Cron 定时任务",
+            "type": "string",
+            "default": "55 23 * * *",
+            "suffix": "Cron 定时任务",
+            "unit": ""
+        },
+        {
+            "attr": "sub_store_frontend_backend_path",
+            "name": "前端后端路径",
+            "type": "string",
+            "default": "/2cXaAxRGfddmGz2yx1wA",
+            "suffix": "前端后端路径",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据目录",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据目录",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "sub_store_push_service",
+            "type": "string",
+            "default": null,
+            "desc": "推送服务 URL"
+        },
+        {
+            "key": "sub_store_cron",
+            "type": "string",
+            "default": null,
+            "desc": "Cron 定时任务"
+        },
+        {
+            "key": "sub_store_frontend_backend_path",
+            "type": "string",
+            "default": null,
+            "desc": "前端后端路径"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据目录"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

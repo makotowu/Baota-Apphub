@@ -1,0 +1,40 @@
+services:
+  bark:
+    image: "finab/bark-server:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - ${APP_PATH}/data:/data
+    environment:
+      - BARK_SERVER_ADDRESS=${BARK_SERVER_ADDRESS}:${WEB_PORT}
+      - BARK_SERVER_URL_PREFIX=${BARK_SERVER_URL_PREFIX}
+      - BARK_SERVER_DATA_DIR=${BARK_SERVER_DATA_DIR}
+      - BARK_SERVER_DSN=${BARK_SERVER_DSN}
+      - BARK_SERVER_SERVERLESS=${BARK_SERVER_SERVERLESS}
+      - BARK_SERVER_CERT=${BARK_SERVER_CERT}
+      - BARK_SERVER_KEY=${BARK_SERVER_KEY}
+      - BARK_SERVER_CASE_SENSITIVE=${BARK_SERVER_CASE_SENSITIVE}
+      - BARK_SERVER_STRICT_ROUTING=${BARK_SERVER_STRICT_ROUTING}
+      - BARK_SERVER_REDUCE_MEMORY_USAGE=${BARK_SERVER_REDUCE_MEMORY_USAGE}
+      - BARK_SERVER_BASIC_AUTH_USER=${BARK_SERVER_BASIC_AUTH_USER}
+      - BARK_SERVER_BASIC_AUTH_PASSWORD=${BARK_SERVER_BASIC_AUTH_PASSWORD}
+      - BARK_SERVER_PROXY_HEADER=${BARK_SERVER_PROXY_HEADER}
+      - BARK_SERVER_CONCURRENCY=${BARK_SERVER_CONCURRENCY}
+      - BARK_SERVER_READ_TIMEOUT=${BARK_SERVER_READ_TIMEOUT}
+      - BARK_SERVER_WRITE_TIMEOUT=${BARK_SERVER_WRITE_TIMEOUT}
+      - BARK_SERVER_IDLE_TIMEOUT=${BARK_SERVER_IDLE_TIMEOUT}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

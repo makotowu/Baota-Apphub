@@ -1,0 +1,486 @@
+{
+    "appid": -1,
+    "appname": "nitter",
+    "apptitle": "Nitter",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "匿名浏览 Twitter 的开源工具",
+    "appstatus": 1,
+    "home": "https://nitter.net",
+    "help": "https://github.com/zedeus/nitter",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "hostname",
+            "name": "主机名",
+            "type": "string",
+            "default": "nitter.net",
+            "suffix": "主机名",
+            "unit": ""
+        },
+        {
+            "attr": "title",
+            "name": "标题",
+            "type": "string",
+            "default": "nitter",
+            "suffix": "标题",
+            "unit": ""
+        },
+        {
+            "attr": "address",
+            "name": "监听地址 (容器内)",
+            "type": "string",
+            "default": "0.0.0.0",
+            "suffix": "监听地址 (容器内)",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "HTTP 端口",
+            "type": "number",
+            "default": "40238",
+            "suffix": "HTTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "https",
+            "name": "启用 HTTPS",
+            "type": "string",
+            "default": "false",
+            "suffix": "启用 HTTPS",
+            "unit": ""
+        },
+        {
+            "attr": "http_max_connections",
+            "name": "最大 HTTP 连接数",
+            "type": "number",
+            "default": "100",
+            "suffix": "最大 HTTP 连接数",
+            "unit": ""
+        },
+        {
+            "attr": "static_dir",
+            "name": "静态文件目录",
+            "type": "string",
+            "default": "./public",
+            "suffix": "静态文件目录",
+            "unit": ""
+        },
+        {
+            "attr": "list_minutes",
+            "name": "列表缓存分钟数",
+            "type": "number",
+            "default": "240",
+            "suffix": "列表缓存分钟数",
+            "unit": ""
+        },
+        {
+            "attr": "rss_minutes",
+            "name": "RSS 缓存分钟数",
+            "type": "number",
+            "default": "10",
+            "suffix": "RSS 缓存分钟数",
+            "unit": ""
+        },
+        {
+            "attr": "redis_host",
+            "name": "Redis服务",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis服务",
+            "unit": ""
+        },
+        {
+            "attr": "redis_port",
+            "name": "Redis服务端口",
+            "type": "number",
+            "default": "6379",
+            "suffix": "Redis服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "panel_redis_root_password",
+            "name": "Redis 密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis 密码",
+            "unit": ""
+        },
+        {
+            "attr": "redis_connections",
+            "name": "Redis 连接数",
+            "type": "number",
+            "default": "20",
+            "suffix": "Redis 连接数",
+            "unit": ""
+        },
+        {
+            "attr": "redis_max_connections",
+            "name": "Redis 最大连接数",
+            "type": "number",
+            "default": "30",
+            "suffix": "Redis 最大连接数",
+            "unit": ""
+        },
+        {
+            "attr": "hmac_key",
+            "name": "用于视频网址加密签名的随机密钥",
+            "type": "string",
+            "default": "C7PPBcaNCL5B5Zkt6uHU",
+            "suffix": "用于视频网址加密签名的随机密钥",
+            "unit": ""
+        },
+        {
+            "attr": "base64_media",
+            "name": "Base64 媒体",
+            "type": "string",
+            "default": "false",
+            "suffix": "Base64 媒体",
+            "unit": ""
+        },
+        {
+            "attr": "enable_rss",
+            "name": "启用 RSS",
+            "type": "string",
+            "default": "true",
+            "suffix": "启用 RSS",
+            "unit": ""
+        },
+        {
+            "attr": "enable_debug",
+            "name": "启用调试",
+            "type": "string",
+            "default": "false",
+            "suffix": "启用调试",
+            "unit": ""
+        },
+        {
+            "attr": "proxy",
+            "name": "代理",
+            "type": "string",
+            "default": "",
+            "suffix": "代理",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_auth",
+            "name": "代理认证",
+            "type": "string",
+            "default": "",
+            "suffix": "代理认证",
+            "unit": ""
+        },
+        {
+            "attr": "token_count",
+            "name": "Token 数量",
+            "type": "number",
+            "default": "10",
+            "suffix": "Token 数量",
+            "unit": ""
+        },
+        {
+            "attr": "theme",
+            "name": "主题",
+            "type": "string",
+            "default": "Nitter",
+            "suffix": "主题",
+            "unit": ""
+        },
+        {
+            "attr": "replace_twitter",
+            "name": "替换 Twitter",
+            "type": "string",
+            "default": "nitter.net",
+            "suffix": "替换 Twitter",
+            "unit": ""
+        },
+        {
+            "attr": "replace_youtube",
+            "name": "替换 YouTube",
+            "type": "string",
+            "default": "piped.video",
+            "suffix": "替换 YouTube",
+            "unit": ""
+        },
+        {
+            "attr": "replace_reddit",
+            "name": "替换 Reddit",
+            "type": "string",
+            "default": "teddit.net",
+            "suffix": "替换 Reddit",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_videos",
+            "name": "代理视频",
+            "type": "string",
+            "default": "true",
+            "suffix": "代理视频",
+            "unit": ""
+        },
+        {
+            "attr": "hls_playback",
+            "name": "HLS 播放",
+            "type": "string",
+            "default": "false",
+            "suffix": "HLS 播放",
+            "unit": ""
+        },
+        {
+            "attr": "infinite_scroll",
+            "name": "无限滚动",
+            "type": "string",
+            "default": "false",
+            "suffix": "无限滚动",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "hostname",
+            "type": "string",
+            "default": null,
+            "desc": "主机名"
+        },
+        {
+            "key": "title",
+            "type": "string",
+            "default": null,
+            "desc": "标题"
+        },
+        {
+            "key": "address",
+            "type": "string",
+            "default": null,
+            "desc": "监听地址 (容器内)"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTP 端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "https",
+            "type": "string",
+            "default": null,
+            "desc": "启用 HTTPS"
+        },
+        {
+            "key": "http_max_connections",
+            "type": "string",
+            "default": null,
+            "desc": "最大 HTTP 连接数"
+        },
+        {
+            "key": "static_dir",
+            "type": "string",
+            "default": null,
+            "desc": "静态文件目录"
+        },
+        {
+            "key": "list_minutes",
+            "type": "string",
+            "default": null,
+            "desc": "列表缓存分钟数"
+        },
+        {
+            "key": "rss_minutes",
+            "type": "string",
+            "default": null,
+            "desc": "RSS 缓存分钟数"
+        },
+        {
+            "key": "redis_host",
+            "type": "string",
+            "default": null,
+            "desc": "Redis服务"
+        },
+        {
+            "key": "redis_port",
+            "type": "port",
+            "default": null,
+            "desc": "Redis服务端口"
+        },
+        {
+            "key": "panel_redis_root_password",
+            "type": "string",
+            "default": null,
+            "desc": "Redis 密码"
+        },
+        {
+            "key": "redis_connections",
+            "type": "string",
+            "default": null,
+            "desc": "Redis 连接数"
+        },
+        {
+            "key": "redis_max_connections",
+            "type": "string",
+            "default": null,
+            "desc": "Redis 最大连接数"
+        },
+        {
+            "key": "hmac_key",
+            "type": "string",
+            "default": null,
+            "desc": "用于视频网址加密签名的随机密钥"
+        },
+        {
+            "key": "base64_media",
+            "type": "string",
+            "default": null,
+            "desc": "Base64 媒体"
+        },
+        {
+            "key": "enable_rss",
+            "type": "string",
+            "default": null,
+            "desc": "启用 RSS"
+        },
+        {
+            "key": "enable_debug",
+            "type": "string",
+            "default": null,
+            "desc": "启用调试"
+        },
+        {
+            "key": "proxy",
+            "type": "string",
+            "default": null,
+            "desc": "代理"
+        },
+        {
+            "key": "proxy_auth",
+            "type": "string",
+            "default": null,
+            "desc": "代理认证"
+        },
+        {
+            "key": "token_count",
+            "type": "string",
+            "default": null,
+            "desc": "Token 数量"
+        },
+        {
+            "key": "theme",
+            "type": "string",
+            "default": null,
+            "desc": "主题"
+        },
+        {
+            "key": "replace_twitter",
+            "type": "string",
+            "default": null,
+            "desc": "替换 Twitter"
+        },
+        {
+            "key": "replace_youtube",
+            "type": "string",
+            "default": null,
+            "desc": "替换 YouTube"
+        },
+        {
+            "key": "replace_reddit",
+            "type": "string",
+            "default": null,
+            "desc": "替换 Reddit"
+        },
+        {
+            "key": "proxy_videos",
+            "type": "string",
+            "default": null,
+            "desc": "代理视频"
+        },
+        {
+            "key": "hls_playback",
+            "type": "string",
+            "default": null,
+            "desc": "HLS 播放"
+        },
+        {
+            "key": "infinite_scroll",
+            "type": "string",
+            "default": null,
+            "desc": "无限滚动"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

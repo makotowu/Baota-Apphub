@@ -1,0 +1,29 @@
+services:
+  upsnap:
+    image: "seriousm4x/upsnap:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    network_mode: host
+    restart: always
+    volumes:
+      - ${APP_PATH}/data:/app/pb_data
+    environment:
+      - TZ=${TIME_ZONE}
+      - UPSNAP_INTERVAL=${UPSNAP_INTERVAL}
+      - UPSNAP_SCAN_RANGE=${UPSNAP_SCAN_RANGE}
+      - UPSNAP_SCAN_TIMEOUT=${UPSNAP_SCAN_TIMEOUT}
+      - UPSNAP_PING_PRIVILEGED=${UPSNAP_PING_PRIVILEGED}
+      - UPSNAP_WEBSITE_TITLE=${UPSNAP_WEBSITE_TITLE}
+    healthcheck:
+      test: curl -fs "http://localhost:${WEB_PORT}/api/health" || exit 1
+      interval: 10s
+    dns:
+      - ${DNS_SERVER_1}
+      - ${DNS_SERVER_2}
+    entrypoint: /bin/sh -c "./upsnap serve --http ${LISTEN_ADDR}:${WEB_PORT}"
+    labels:
+      createdBy: "bt_apps"

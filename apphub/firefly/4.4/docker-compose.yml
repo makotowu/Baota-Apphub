@@ -1,0 +1,27 @@
+services:
+  firefly:
+    image: "uusec/firefly:4.4"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    devices:
+      - /dev/net/tun
+    network_mode: host
+    volumes:
+      - /lib/modules:/lib/modules
+      - ./data:/firefly/conf
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - TZ=${TIME_ZONE}
+      - FIREFLY_DEVICE=${FIREFLY_DEVICE}
+      - FIREFLY_PASSWORD=${FIREFLY_PASSWORD}
+      - FIREFLY_AUTO_SSL=${FIREFLY_AUTO_SSL}
+      - FIREFLY_PORT=${WEB_PORT}
+    labels:  
+      createdBy: "bt_apps"

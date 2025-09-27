@@ -1,0 +1,24 @@
+services:
+  minichat:
+    image: "okhanyu/minichat:0.0.9"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8080"
+    volumes:
+      - "${CONFIG_PATH}:/app/config.yaml"
+    environment:
+      - TEMPLATE_NAME=${TEMPLATE_NAME}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

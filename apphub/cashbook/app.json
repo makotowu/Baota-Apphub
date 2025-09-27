@@ -1,0 +1,175 @@
+{
+    "appid": -1,
+    "appname": "cashbook",
+    "apptitle": "Cashbook",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "4",
+            "s_version": [
+                "3.0"
+            ]
+        }
+    ],
+    "appdesc": "个人记账工具",
+    "appstatus": 1,
+    "home": "https://cashbook.oldmoon.top",
+    "help": "https://github.com/dingdangdog/cashbook-web",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40291",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据存放文件夹",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据存放文件夹",
+            "unit": ""
+        },
+        {
+            "attr": "token_salt",
+            "name": "Token Salt",
+            "type": "string",
+            "default": "spend-money-like-water",
+            "suffix": "Token Salt",
+            "unit": ""
+        },
+        {
+            "attr": "environment",
+            "name": "环境",
+            "type": "string",
+            "default": "PRO",
+            "suffix": "环境",
+            "unit": ""
+        },
+        {
+            "attr": "server_key",
+            "name": "服务密钥",
+            "type": "string",
+            "default": "08cc0348-061d-4193-af05-b6cc02df28ea",
+            "suffix": "服务密钥",
+            "unit": ""
+        },
+        {
+            "attr": "default_password",
+            "name": "默认密码",
+            "type": "string",
+            "default": "cashbook",
+            "suffix": "默认密码",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据存放文件夹"
+        },
+        {
+            "key": "token_salt",
+            "type": "string",
+            "default": null,
+            "desc": "Token Salt"
+        },
+        {
+            "key": "environment",
+            "type": "string",
+            "default": null,
+            "desc": "环境"
+        },
+        {
+            "key": "server_key",
+            "type": "string",
+            "default": null,
+            "desc": "服务密钥"
+        },
+        {
+            "key": "default_password",
+            "type": "string",
+            "default": null,
+            "desc": "默认密码"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

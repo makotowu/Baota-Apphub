@@ -1,0 +1,27 @@
+services:
+  jellyfin:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+        - "${HOST_IP}:${WEB_PORT}:8096"
+    volumes:
+        - "./data/config:/config"
+        - "${CACHE_FOLDER_PATH}:/cache"
+        - "${MEDIA_FOLDER_PATH}:/media/media"
+    devices:
+      - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
+      #- /dev/vchiq:/dev/vchiq # MMAL/OMX on Raspberry Pi
+    image: "jellyfin/jellyfin:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+   
+networks:  
+  baota_net:  
+    external: true

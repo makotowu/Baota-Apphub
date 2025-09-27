@@ -1,0 +1,192 @@
+{
+    "appid": -1,
+    "appname": "linkstack",
+    "apptitle": "LinkStack",
+    "apptype": "BuildWebsite",
+    "appTypeCN": "建站",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "高度可定制的链接共享平台，用户界面直观易用",
+    "appstatus": 1,
+    "home": "https://linkstack.org",
+    "help": "https://docs.linkstack.org",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "应用 HTTP 端口",
+            "type": "number",
+            "default": 40225,
+            "suffix": "应用 HTTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "应用 HTTPS 端口",
+            "type": "number",
+            "default": 40226,
+            "suffix": "应用 HTTPS 端口",
+            "unit": ""
+        },
+        {
+            "attr": "http_server_name",
+            "name": "HTTP 服务器名称",
+            "type": "string",
+            "default": "www.example.xyz",
+            "suffix": "HTTP 服务器名称",
+            "unit": ""
+        },
+        {
+            "attr": "https_server_name",
+            "name": "HTTPS 服务器名称",
+            "type": "string",
+            "default": "www.example.xyz",
+            "suffix": "HTTPS 服务器名称",
+            "unit": ""
+        },
+        {
+            "attr": "server_admin",
+            "name": "服务器管理员",
+            "type": "string",
+            "default": "admin@example.xyz",
+            "suffix": "服务器管理员",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "php_memory_limit",
+            "name": "PHP 内存限制",
+            "type": "string",
+            "default": "512M",
+            "suffix": "PHP 内存限制",
+            "unit": ""
+        },
+        {
+            "attr": "upload_max_filesize",
+            "name": "上传文件最大限制",
+            "type": "string",
+            "default": "8M",
+            "suffix": "上传文件最大限制",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "应用 HTTP 端口"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "应用 HTTPS 端口"
+        },
+        {
+            "key": "http_server_name",
+            "type": "string",
+            "default": null,
+            "desc": "HTTP 服务器名称"
+        },
+        {
+            "key": "https_server_name",
+            "type": "string",
+            "default": null,
+            "desc": "HTTPS 服务器名称"
+        },
+        {
+            "key": "server_admin",
+            "type": "string",
+            "default": null,
+            "desc": "服务器管理员"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "php_memory_limit",
+            "type": "string",
+            "default": null,
+            "desc": "PHP 内存限制"
+        },
+        {
+            "key": "upload_max_filesize",
+            "type": "string",
+            "default": null,
+            "desc": "上传文件最大限制"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

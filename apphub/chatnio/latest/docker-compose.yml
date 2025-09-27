@@ -1,0 +1,38 @@
+services:
+  chatnio:
+    image: programzmh/chatnio:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8094"
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    environment:
+      MYSQL_HOST: "${PANEL_DB_HOST}"
+      MYSQL_USER: "${PANEL_DB_USER}"
+      MYSQL_PASSWORD: "${PANEL_DB_USER_PASSWORD}"
+      MYSQL_DB: "${PANEL_DB_NAME}"
+      REDIS_HOST: "${REDIS_HOST}"
+      REDIS_PORT: "${REDIS_PORT}"
+      REDIS_PASSWORD: "${PANEL_REDIS_ROOT_PASSWORD}"
+      REDIS_DB: "${REDIS_DB}"
+      SERVE_STATIC: "${SERVE_STATIC}"
+    volumes:
+      - ./data/config:/config
+      - ./data/logs:/logs
+      - ./data/storage:/storage
+    networks:
+      - baota_net
+    labels:  
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true
