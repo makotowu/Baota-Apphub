@@ -1,0 +1,338 @@
+{
+    "appid": -1,
+    "appname": "mattermost",
+    "apptitle": "Mattermost",
+    "apptype": "BuildWebsite",
+    "appTypeCN": "建站",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "10",
+            "s_version": [
+                "9.2"
+            ]
+        }
+    ],
+    "appdesc": "开源团队协作平台",
+    "appstatus": 1,
+    "home": "https://mattermost.com",
+    "help": "https://docs.mattermost.com",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40271,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "calls",
+            "name": "RTC 服务端口",
+            "type": "number",
+            "default": 40272,
+            "suffix": "RTC 服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "mattermost_container_readonly",
+            "name": "只读容器",
+            "type": "string",
+            "default": "false",
+            "suffix": "只读容器",
+            "unit": ""
+        },
+        {
+            "attr": "mattermost_config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "mattermost_data_path",
+            "name": "数据路径",
+            "type": "string",
+            "default": "./data/data",
+            "suffix": "数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "mattermost_logs_path",
+            "name": "日志路径",
+            "type": "string",
+            "default": "./data/logs",
+            "suffix": "日志路径",
+            "unit": ""
+        },
+        {
+            "attr": "mattermost_plugins_path",
+            "name": "插件路径",
+            "type": "string",
+            "default": "./data/plugins",
+            "suffix": "插件路径",
+            "unit": ""
+        },
+        {
+            "attr": "mattermost_client_plugins_path",
+            "name": "客户端插件路径",
+            "type": "string",
+            "default": "./data/client/plugins",
+            "suffix": "客户端插件路径",
+            "unit": ""
+        },
+        {
+            "attr": "gitlab_pki_chain_path",
+            "name": "GitLab PKI 链路径 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "GitLab PKI 链路径 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "mattermost_bleve_indexes_path",
+            "name": "Bleve 索引路径",
+            "type": "string",
+            "default": "./data/bleve/indexes",
+            "suffix": "Bleve 索引路径",
+            "unit": ""
+        },
+        {
+            "attr": "tz",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "mm_sqlsettings_drivername",
+            "name": "SQL 驱动名称",
+            "type": "string",
+            "default": "postgres",
+            "suffix": "SQL 驱动名称",
+            "unit": ""
+        },
+        {
+            "attr": "mm_blevesettings_indexdir",
+            "name": "Bleve 索引目录",
+            "type": "string",
+            "default": "/mattermost/bleve-indexes",
+            "suffix": "Bleve 索引目录",
+            "unit": ""
+        },
+        {
+            "attr": "mm_servicesettings_siteurl",
+            "name": "站点 URL",
+            "type": "string",
+            "default": "http://localhost:40271",
+            "suffix": "站点 URL",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_type",
+            "name": "数据库服务",
+            "type": "string",
+            "default": "postgresql",
+            "suffix": "数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_name",
+            "name": "数据库名",
+            "type": "string",
+            "default": "mattermost",
+            "suffix": "数据库名",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "mattermost",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "mattermost",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "calls",
+            "type": "string",
+            "default": null,
+            "desc": "RTC 服务端口"
+        },
+        {
+            "key": "mattermost_container_readonly",
+            "type": "string",
+            "default": null,
+            "desc": "只读容器"
+        },
+        {
+            "key": "mattermost_config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "mattermost_data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据路径"
+        },
+        {
+            "key": "mattermost_logs_path",
+            "type": "string",
+            "default": null,
+            "desc": "日志路径"
+        },
+        {
+            "key": "mattermost_plugins_path",
+            "type": "string",
+            "default": null,
+            "desc": "插件路径"
+        },
+        {
+            "key": "mattermost_client_plugins_path",
+            "type": "string",
+            "default": null,
+            "desc": "客户端插件路径"
+        },
+        {
+            "key": "gitlab_pki_chain_path",
+            "type": "string",
+            "default": null,
+            "desc": "GitLab PKI 链路径 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "mattermost_bleve_indexes_path",
+            "type": "string",
+            "default": null,
+            "desc": "Bleve 索引路径"
+        },
+        {
+            "key": "tz",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "mm_sqlsettings_drivername",
+            "type": "string",
+            "default": null,
+            "desc": "SQL 驱动名称"
+        },
+        {
+            "key": "mm_blevesettings_indexdir",
+            "type": "string",
+            "default": null,
+            "desc": "Bleve 索引目录"
+        },
+        {
+            "key": "mm_servicesettings_siteurl",
+            "type": "string",
+            "default": null,
+            "desc": "站点 URL"
+        },
+        {
+            "key": "panel_db_type",
+            "type": "string",
+            "default": null,
+            "desc": "数据库服务"
+        },
+        {
+            "key": "panel_db_name",
+            "type": "string",
+            "default": null,
+            "desc": "数据库名"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,212 @@
+{
+    "appid": -1,
+    "appname": "nas-tools",
+    "apptitle": "NAS-Tools",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "3",
+            "s_version": [
+                "4.1"
+            ]
+        }
+    ],
+    "appdesc": "NAS 媒体库管理工具",
+    "appstatus": 1,
+    "home": "https://github.com/hsuyelin/nas-tools",
+    "help": "https://github.com/hsuyelin/nas-tools",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "hostname",
+            "name": "主机名",
+            "type": "string",
+            "default": "nas-tools",
+            "suffix": "主机名",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40296",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "media_path",
+            "name": "媒体路径",
+            "type": "string",
+            "default": "./data/media",
+            "suffix": "媒体路径",
+            "unit": ""
+        },
+        {
+            "attr": "puid",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "0",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "pgid",
+            "name": "组 ID",
+            "type": "number",
+            "default": "0",
+            "suffix": "组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "umask",
+            "name": "掩码权限",
+            "type": "string",
+            "default": "000",
+            "suffix": "掩码权限",
+            "unit": ""
+        },
+        {
+            "attr": "nastool_auto_update",
+            "name": "自动更新",
+            "type": "string",
+            "default": "false",
+            "suffix": "自动更新",
+            "unit": ""
+        },
+        {
+            "attr": "nastool_cn_update",
+            "name": "国内更新",
+            "type": "string",
+            "default": "false",
+            "suffix": "国内更新",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "hostname",
+            "type": "string",
+            "default": null,
+            "desc": "主机名"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "media_path",
+            "type": "string",
+            "default": null,
+            "desc": "媒体路径"
+        },
+        {
+            "key": "puid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "pgid",
+            "type": "string",
+            "default": null,
+            "desc": "组 ID"
+        },
+        {
+            "key": "umask",
+            "type": "string",
+            "default": null,
+            "desc": "掩码权限"
+        },
+        {
+            "key": "nastool_auto_update",
+            "type": "string",
+            "default": null,
+            "desc": "自动更新"
+        },
+        {
+            "key": "nastool_cn_update",
+            "type": "string",
+            "default": null,
+            "desc": "国内更新"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

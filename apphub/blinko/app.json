@@ -1,0 +1,212 @@
+{
+    "appid": -1,
+    "appname": "blinko",
+    "apptitle": "Blinko",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "1.2"
+            ]
+        }
+    ],
+    "appdesc": "一款开源、自托管的个人笔记工具",
+    "appstatus": 1,
+    "home": "https://blinko-demo.vercel.app",
+    "help": "https://blinko-doc.vercel.app/intro.html",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "HTTP 端口",
+            "type": "number",
+            "default": "1111",
+            "suffix": "HTTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "nextauth_url",
+            "name": "基本 URL",
+            "type": "string",
+            "default": "http://1.2.3.4:1111",
+            "suffix": "基本 URL",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_base_url",
+            "name": "公共基本 URL",
+            "type": "string",
+            "default": "http://1.2.3.4:1111",
+            "suffix": "公共基本 URL",
+            "unit": ""
+        },
+        {
+            "attr": "nextauth_secret",
+            "name": "NextAuth 密钥",
+            "type": "string",
+            "default": "my_ultra_secure_nextauth_secret",
+            "suffix": "NextAuth 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_host",
+            "name": "PostgreSQL 数据库服务",
+            "type": "string",
+            "default": "",
+            "suffix": "PostgreSQL 数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_port",
+            "name": "数据库端口号",
+            "type": "number",
+            "default": "5432",
+            "suffix": "数据库端口号",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_name",
+            "name": "数据库名",
+            "type": "string",
+            "default": "blinko",
+            "suffix": "数据库名",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "blinko",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "blinko",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTP 端口"
+        },
+        {
+            "key": "nextauth_url",
+            "type": "string",
+            "default": null,
+            "desc": "基本 URL"
+        },
+        {
+            "key": "next_public_base_url",
+            "type": "string",
+            "default": null,
+            "desc": "公共基本 URL"
+        },
+        {
+            "key": "nextauth_secret",
+            "type": "string",
+            "default": null,
+            "desc": "NextAuth 密钥"
+        },
+        {
+            "key": "panel_db_host",
+            "type": "string",
+            "default": null,
+            "desc": "PostgreSQL 数据库服务"
+        },
+        {
+            "key": "panel_db_port",
+            "type": "port",
+            "default": null,
+            "desc": "数据库端口号"
+        },
+        {
+            "key": "panel_db_name",
+            "type": "string",
+            "default": null,
+            "desc": "数据库名"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

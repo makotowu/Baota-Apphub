@@ -1,0 +1,183 @@
+{
+    "appid": -1,
+    "appname": "sd-comfyui",
+    "apptitle": "Stable Diffusion ComfyUI",
+    "apptype": "AI",
+    "appTypeCN": "AI/大模型",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "最强大、模块化的 stable diffusion GUI，具有图形/节点界面",
+    "appstatus": 1,
+    "home": "https://github.com/thirdscam/SD-WebUI-Docker",
+    "help": "https://github.com/thirdscam/SD-WebUI-Docker",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40187,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "sd_console_cli_comfy",
+            "name": "ComfyUI 的 CLI_ARGS 参数",
+            "type": "string",
+            "default": "--listen 0.0.0.0 --port 8188",
+            "suffix": "ComfyUI 的 CLI_ARGS 参数",
+            "unit": ""
+        },
+        {
+            "attr": "sd_console_apt_comfy",
+            "name": "想安装的软件包 (等同 apt-get install -y)",
+            "type": "string",
+            "default": "",
+            "suffix": "想安装的软件包 (等同 apt-get install -y)",
+            "unit": ""
+        },
+        {
+            "attr": "sd_console_pip_comfy",
+            "name": "想安装的 pip 包 (等同 pip install)",
+            "type": "string",
+            "default": "",
+            "suffix": "想安装的 pip 包 (等同 pip install)",
+            "unit": ""
+        },
+        {
+            "attr": "sd_console_device_ids",
+            "name": "SD 运行指定的 GPU 设备 ID",
+            "type": "number",
+            "default": 0,
+            "suffix": "SD 运行指定的 GPU 设备 ID",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据存放文件夹",
+            "type": "string",
+            "default": "./data/data",
+            "suffix": "数据存放文件夹",
+            "unit": ""
+        },
+        {
+            "attr": "output_path",
+            "name": "图片输出文件夹",
+            "type": "string",
+            "default": "./data/output",
+            "suffix": "图片输出文件夹",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "sd_console_cli_comfy",
+            "type": "string",
+            "default": null,
+            "desc": "ComfyUI 的 CLI_ARGS 参数"
+        },
+        {
+            "key": "sd_console_apt_comfy",
+            "type": "string",
+            "default": null,
+            "desc": "想安装的软件包 (等同 apt-get install -y)"
+        },
+        {
+            "key": "sd_console_pip_comfy",
+            "type": "string",
+            "default": null,
+            "desc": "想安装的 pip 包 (等同 pip install)"
+        },
+        {
+            "key": "sd_console_device_ids",
+            "type": "string",
+            "default": null,
+            "desc": "SD 运行指定的 GPU 设备 ID"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据存放文件夹"
+        },
+        {
+            "key": "output_path",
+            "type": "string",
+            "default": null,
+            "desc": "图片输出文件夹"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

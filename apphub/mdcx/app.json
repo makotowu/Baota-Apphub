@@ -1,0 +1,304 @@
+{
+    "appid": -1,
+    "appname": "mdcx",
+    "apptitle": "MDCX",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "电影元数据搜刮器",
+    "appstatus": 1,
+    "home": "https://hub.docker.com/r/stainless403/mdcx-builtin-gui-base",
+    "help": "https://github.com/northsea4/mdcx-docker",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40301",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "vnc_port",
+            "name": "VNC 端口",
+            "type": "number",
+            "default": "40302",
+            "suffix": "VNC 端口",
+            "unit": ""
+        },
+        {
+            "attr": "display_width",
+            "name": "显示宽度",
+            "type": "number",
+            "default": "1200",
+            "suffix": "显示宽度",
+            "unit": ""
+        },
+        {
+            "attr": "display_height",
+            "name": "显示高度",
+            "type": "number",
+            "default": "750",
+            "suffix": "显示高度",
+            "unit": ""
+        },
+        {
+            "attr": "vnc_password",
+            "name": "VNC 密码",
+            "type": "string",
+            "default": "password",
+            "suffix": "VNC 密码",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data/data",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "mdcx_config_path",
+            "name": "MDCx 配置路径",
+            "type": "string",
+            "default": "./data/mdcx-config",
+            "suffix": "MDCx 配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "mdcx_config_file",
+            "name": "MDCx 配置文件",
+            "type": "string",
+            "default": "./data/mdcx-config/MDCx.config",
+            "suffix": "MDCx 配置文件",
+            "unit": ""
+        },
+        {
+            "attr": "logs_path",
+            "name": "日志路径",
+            "type": "string",
+            "default": "./data/logs",
+            "suffix": "日志路径",
+            "unit": ""
+        },
+        {
+            "attr": "media_path",
+            "name": "媒体路径",
+            "type": "string",
+            "default": "./data/media",
+            "suffix": "媒体路径",
+            "unit": ""
+        },
+        {
+            "attr": "media_path_internal",
+            "name": "容器内部媒体路径",
+            "type": "string",
+            "default": "/media",
+            "suffix": "容器内部媒体路径",
+            "unit": ""
+        },
+        {
+            "attr": "media_path_2",
+            "name": "媒体路径 2",
+            "type": "string",
+            "default": "./data/media2",
+            "suffix": "媒体路径 2",
+            "unit": ""
+        },
+        {
+            "attr": "media_path_internal_2",
+            "name": "容器内部媒体路径 2",
+            "type": "string",
+            "default": "/media2",
+            "suffix": "容器内部媒体路径 2",
+            "unit": ""
+        },
+        {
+            "attr": "user_id",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "group_id",
+            "name": "用户组 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "vnc_port",
+            "type": "port",
+            "default": null,
+            "desc": "VNC 端口"
+        },
+        {
+            "key": "display_width",
+            "type": "string",
+            "default": null,
+            "desc": "显示宽度"
+        },
+        {
+            "key": "display_height",
+            "type": "string",
+            "default": null,
+            "desc": "显示高度"
+        },
+        {
+            "key": "vnc_password",
+            "type": "string",
+            "default": null,
+            "desc": "VNC 密码"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "mdcx_config_path",
+            "type": "string",
+            "default": null,
+            "desc": "MDCx 配置路径"
+        },
+        {
+            "key": "mdcx_config_file",
+            "type": "string",
+            "default": null,
+            "desc": "MDCx 配置文件"
+        },
+        {
+            "key": "logs_path",
+            "type": "string",
+            "default": null,
+            "desc": "日志路径"
+        },
+        {
+            "key": "media_path",
+            "type": "string",
+            "default": null,
+            "desc": "媒体路径"
+        },
+        {
+            "key": "media_path_internal",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部媒体路径"
+        },
+        {
+            "key": "media_path_2",
+            "type": "string",
+            "default": null,
+            "desc": "媒体路径 2"
+        },
+        {
+            "key": "media_path_internal_2",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部媒体路径 2"
+        },
+        {
+            "key": "user_id",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "group_id",
+            "type": "string",
+            "default": null,
+            "desc": "用户组 ID"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

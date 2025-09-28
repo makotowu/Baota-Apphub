@@ -1,0 +1,34 @@
+services:
+  puter:
+    image: "ghcr.io/heyputer/puter:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${PANEL_APP_PORT_INTERNAL}"
+    environment:
+      - TZ=${TIME_ZONE}
+      - CONFIG_PATH=${CONFIG_PATH}
+      - PUID=${PUID}
+      - PGID=${PGID}
+    volumes:
+      - "${APP_PATH}/data/config:${CONFIG_PATH}"
+      - "${APP_PATH}/data/data:/var/puter"
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://127.0.0.1:${PANEL_APP_PORT_INTERNAL}/test || exit 1
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+    labels:  
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

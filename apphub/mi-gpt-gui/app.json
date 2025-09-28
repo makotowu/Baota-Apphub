@@ -1,0 +1,128 @@
+{
+    "appid": -1,
+    "appname": "mi-gpt-gui",
+    "apptitle": "MiGPT GUI",
+    "apptype": "AI",
+    "appTypeCN": "AI/大模型",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "12.0"
+            ]
+        }
+    ],
+    "appdesc": "安全、快速的给你的小爱音箱接入人工智能",
+    "appstatus": 1,
+    "home": "https://migptgui.com",
+    "help": "https://migptgui.com",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40305",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "login_user",
+            "name": "用户名",
+            "type": "string",
+            "default": "admin",
+            "suffix": "用户名",
+            "unit": ""
+        },
+        {
+            "attr": "login_password",
+            "name": "密码",
+            "type": "string",
+            "default": "password",
+            "suffix": "密码",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "login_user",
+            "type": "string",
+            "default": null,
+            "desc": "用户名"
+        },
+        {
+            "key": "login_password",
+            "type": "string",
+            "default": null,
+            "desc": "密码"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

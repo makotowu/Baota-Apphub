@@ -1,0 +1,175 @@
+{
+    "appid": -1,
+    "appname": "bitwarden",
+    "apptitle": "Bitwarden",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "34.1-alpine"
+            ]
+        }
+    ],
+    "appdesc": "一个开源的密码管理服务",
+    "appstatus": 1,
+    "home": "https://bitwarden.com/",
+    "help": "https://github.com/dani-garcia/vaultwarden/wiki",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40031",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "signups_allowed",
+            "name": "允许注册",
+            "type": "string",
+            "default": "true",
+            "suffix": "允许注册",
+            "unit": ""
+        },
+        {
+            "attr": "invitations_allowed",
+            "name": "允许邀请",
+            "type": "string",
+            "default": "true",
+            "suffix": "允许邀请",
+            "unit": ""
+        },
+        {
+            "attr": "websocket_enabled",
+            "name": "启用 WebSocket",
+            "type": "string",
+            "default": "false",
+            "suffix": "启用 WebSocket",
+            "unit": ""
+        },
+        {
+            "attr": "admin_token",
+            "name": "管理员令牌",
+            "type": "string",
+            "default": "",
+            "suffix": "管理员令牌",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "signups_allowed",
+            "type": "string",
+            "default": null,
+            "desc": "允许注册"
+        },
+        {
+            "key": "invitations_allowed",
+            "type": "string",
+            "default": null,
+            "desc": "允许邀请"
+        },
+        {
+            "key": "websocket_enabled",
+            "type": "string",
+            "default": null,
+            "desc": "启用 WebSocket"
+        },
+        {
+            "key": "admin_token",
+            "type": "string",
+            "default": null,
+            "desc": "管理员令牌"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

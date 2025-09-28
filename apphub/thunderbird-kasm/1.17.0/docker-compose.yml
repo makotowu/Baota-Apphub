@@ -1,0 +1,29 @@
+services:
+  thunderbird-kasm:
+    image: "kasmweb/thunderbird:1.17.0"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${PANEL_APP_PORT_HTTPS}:6901"
+    volumes:
+      - "thunderbird_data:/home/kasm-user"
+    environment:
+      - VNC_PW=${HTTP_PWD}
+    shm_size: ${MEM_USE}
+    labels:
+      createdBy: "bt_apps"
+
+volumes:
+  thunderbird_data:
+    name: thunderbird_data
+
+networks:
+  baota_net:
+    external: true

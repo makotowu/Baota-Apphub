@@ -1,0 +1,164 @@
+{
+    "appid": -1,
+    "appname": "aaPanel",
+    "apptitle": "aaPanel",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "宝塔面板国际版，开源的Linux面板",
+    "appstatus": 1,
+    "home": "https://www.aapanel.com/new/index.html",
+    "help": "https://github.com/aaPanel/aaPanel",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "面板端口",
+            "type": "number",
+            "default": 7200,
+            "suffix": "面板端口",
+            "unit": ""
+        },
+        {
+            "attr": "http_port",
+            "name": "HTTP端口",
+            "type": "number",
+            "default": 10080,
+            "suffix": "HTTP端口",
+            "unit": ""
+        },
+        {
+            "attr": "https_port",
+            "name": "HTTPS端口",
+            "type": "number",
+            "default": 10443,
+            "suffix": "HTTPS端口",
+            "unit": ""
+        },
+        {
+            "attr": "phpmyadmin_port",
+            "name": "phpMyAdmin端口",
+            "type": "number",
+            "default": 10888,
+            "suffix": "phpMyAdmin端口",
+            "unit": ""
+        },
+        {
+            "attr": "ssh_port",
+            "name": "面板内SSH端口",
+            "type": "number",
+            "default": 20022,
+            "suffix": "面板内SSH端口",
+            "unit": ""
+        },
+        {
+            "attr": "ftp_port",
+            "name": "面板内FTP端口",
+            "type": "number",
+            "default": 20021,
+            "suffix": "面板内FTP端口",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "面板端口"
+        },
+        {
+            "key": "http_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTP端口"
+        },
+        {
+            "key": "https_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTPS端口"
+        },
+        {
+            "key": "phpmyadmin_port",
+            "type": "port",
+            "default": null,
+            "desc": "phpMyAdmin端口"
+        },
+        {
+            "key": "ssh_port",
+            "type": "port",
+            "default": null,
+            "desc": "面板内SSH端口"
+        },
+        {
+            "key": "ftp_port",
+            "type": "port",
+            "default": null,
+            "desc": "面板内FTP端口"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

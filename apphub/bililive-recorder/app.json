@@ -1,0 +1,184 @@
+{
+    "appid": -1,
+    "appname": "bililive-recorder",
+    "apptitle": "BililiveRecorder",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "2",
+            "s_version": [
+                "17.3"
+            ]
+        }
+    ],
+    "appdesc": "哔哩哔哩直播录制工具",
+    "appstatus": 1,
+    "home": "https://rec.danmuji.org",
+    "help": "https://rec.danmuji.org/install/versions/",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40278",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "user_name",
+            "name": "WebUI 的用户名",
+            "type": "string",
+            "default": "admin",
+            "suffix": "WebUI 的用户名",
+            "unit": ""
+        },
+        {
+            "attr": "user_password",
+            "name": "WebUI 的访问密码",
+            "type": "string",
+            "default": "admin",
+            "suffix": "WebUI 的访问密码",
+            "unit": ""
+        },
+        {
+            "attr": "work_space_path",
+            "name": "工作目录路径 (注意文件夹权限)",
+            "type": "string",
+            "default": "./data",
+            "suffix": "工作目录路径 (注意文件夹权限)",
+            "unit": ""
+        },
+        {
+            "attr": "umask",
+            "name": "文件权限掩码",
+            "type": "string",
+            "default": "022",
+            "suffix": "文件权限掩码",
+            "unit": ""
+        },
+        {
+            "attr": "puid",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "pgid",
+            "name": "用户组 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "user_name",
+            "type": "string",
+            "default": null,
+            "desc": "WebUI 的用户名"
+        },
+        {
+            "key": "user_password",
+            "type": "string",
+            "default": null,
+            "desc": "WebUI 的访问密码"
+        },
+        {
+            "key": "work_space_path",
+            "type": "string",
+            "default": null,
+            "desc": "工作目录路径 (注意文件夹权限)"
+        },
+        {
+            "key": "umask",
+            "type": "string",
+            "default": null,
+            "desc": "文件权限掩码"
+        },
+        {
+            "key": "puid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "pgid",
+            "type": "string",
+            "default": null,
+            "desc": "用户组 ID"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

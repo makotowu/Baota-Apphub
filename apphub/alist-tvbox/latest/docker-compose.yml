@@ -1,0 +1,25 @@
+services:
+  alist-tvbox:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:4567"
+      - "${HOST_IP}:${PANEL_APP_PORT_XIAOYA}:80"
+    volumes:
+      - "${APP_PATH}/data:/data"
+    environment:
+      - ALIST_PORT=${PANEL_APP_PORT_XIAOYA}
+    image: haroldli/xiaoya-tvbox:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

@@ -1,0 +1,18 @@
+services:
+  beszel-agent:
+    image: "henrygd/beszel-agent:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+      - ${DOCKER_SOCK_PATH}:/var/run/docker.sock
+    environment:
+      - PORT=${WEB_PORT}
+      - KEY=${KEY}
+    labels:
+      createdBy: "bt_apps"

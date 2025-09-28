@@ -1,0 +1,34 @@
+services:
+  chemex:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    volumes:
+      - "${ENV_PATH}:/var/www/html/laravel/.env"
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8000"
+    environment:
+      - "DB_CONNECTION=mysql"
+      - "DB_HOST=${PANEL_DB_HOST}"
+      - "DB_PORT=${CHEMEX_DB_PORT}"
+      - "DB_DATABASE=${PANEL_DB_NAME}"
+      - "DB_USERNAME=${PANEL_DB_USER}"
+      - "DB_PASSWORD=${PANEL_DB_USER_PASSWORD}"
+      - "REDIS_HOST=${PANEL_REDIS_DB_HOST}"
+      - "REDIS_PORT=${REDIS_DB_PORT}"
+      - "REDIS_PASSWORD=${PANEL_DB_ROOT_PASSWORD}"
+    tty: true
+    image: celaraze/chemex:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true
+

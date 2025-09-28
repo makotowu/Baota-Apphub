@@ -1,0 +1,310 @@
+{
+    "appid": -1,
+    "appname": "plex",
+    "apptitle": "Plex Media Server",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "41.8"
+            ]
+        }
+    ],
+    "appdesc": "Plex 媒体服务器",
+    "appstatus": 1,
+    "home": "https://www.plex.tv",
+    "help": "https://support.plex.tv",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口 32400 (TCP)",
+            "type": "number",
+            "default": "32400",
+            "suffix": "端口 32400 (TCP)",
+            "unit": ""
+        },
+        {
+            "attr": "tcp_3005",
+            "name": "端口 3005 (TCP)",
+            "type": "number",
+            "default": "3005",
+            "suffix": "端口 3005 (TCP)",
+            "unit": ""
+        },
+        {
+            "attr": "tcp_8324",
+            "name": "端口 8324 (TCP)",
+            "type": "number",
+            "default": "8324",
+            "suffix": "端口 8324 (TCP)",
+            "unit": ""
+        },
+        {
+            "attr": "tcp_32469",
+            "name": "端口 32469 (TCP)",
+            "type": "number",
+            "default": "32469",
+            "suffix": "端口 32469 (TCP)",
+            "unit": ""
+        },
+        {
+            "attr": "udp_1900",
+            "name": "端口 1900 (UDP)",
+            "type": "number",
+            "default": "1900",
+            "suffix": "端口 1900 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "udp_32410",
+            "name": "端口 32410 (UDP)",
+            "type": "number",
+            "default": "32410",
+            "suffix": "端口 32410 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "udp_32412",
+            "name": "端口 32412 (UDP)",
+            "type": "number",
+            "default": "32412",
+            "suffix": "端口 32412 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "udp_32413",
+            "name": "端口 32413 (UDP)",
+            "type": "number",
+            "default": "32413",
+            "suffix": "端口 32413 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "udp_32414",
+            "name": "端口 32414 (UDP)",
+            "type": "number",
+            "default": "32414",
+            "suffix": "端口 32414 (UDP)",
+            "unit": ""
+        },
+        {
+            "attr": "timezone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "plex_claim",
+            "name": "Plex 认证令牌",
+            "type": "string",
+            "default": "",
+            "suffix": "Plex 认证令牌",
+            "unit": ""
+        },
+        {
+            "attr": "puid",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "pgid",
+            "name": "组 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "library_path",
+            "name": "Library 路径",
+            "type": "string",
+            "default": "./data/library",
+            "suffix": "Library 路径",
+            "unit": ""
+        },
+        {
+            "attr": "tvseries_path",
+            "name": "电视剧路径",
+            "type": "string",
+            "default": "./data/tv",
+            "suffix": "电视剧路径",
+            "unit": ""
+        },
+        {
+            "attr": "movies_path",
+            "name": "电影路径",
+            "type": "string",
+            "default": "./data/movies",
+            "suffix": "电影路径",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口 32400 (TCP)"
+        },
+        {
+            "key": "tcp_3005",
+            "type": "string",
+            "default": null,
+            "desc": "端口 3005 (TCP)"
+        },
+        {
+            "key": "tcp_8324",
+            "type": "string",
+            "default": null,
+            "desc": "端口 8324 (TCP)"
+        },
+        {
+            "key": "tcp_32469",
+            "type": "string",
+            "default": null,
+            "desc": "端口 32469 (TCP)"
+        },
+        {
+            "key": "udp_1900",
+            "type": "string",
+            "default": null,
+            "desc": "端口 1900 (UDP)"
+        },
+        {
+            "key": "udp_32410",
+            "type": "string",
+            "default": null,
+            "desc": "端口 32410 (UDP)"
+        },
+        {
+            "key": "udp_32412",
+            "type": "string",
+            "default": null,
+            "desc": "端口 32412 (UDP)"
+        },
+        {
+            "key": "udp_32413",
+            "type": "string",
+            "default": null,
+            "desc": "端口 32413 (UDP)"
+        },
+        {
+            "key": "udp_32414",
+            "type": "string",
+            "default": null,
+            "desc": "端口 32414 (UDP)"
+        },
+        {
+            "key": "timezone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "plex_claim",
+            "type": "string",
+            "default": null,
+            "desc": "Plex 认证令牌"
+        },
+        {
+            "key": "puid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "pgid",
+            "type": "string",
+            "default": null,
+            "desc": "组 ID"
+        },
+        {
+            "key": "library_path",
+            "type": "string",
+            "default": null,
+            "desc": "Library 路径"
+        },
+        {
+            "key": "tvseries_path",
+            "type": "string",
+            "default": null,
+            "desc": "电视剧路径"
+        },
+        {
+            "key": "movies_path",
+            "type": "string",
+            "default": null,
+            "desc": "电影路径"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

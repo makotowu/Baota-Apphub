@@ -1,0 +1,184 @@
+{
+    "appid": -1,
+    "appname": "sonarr",
+    "apptitle": "Sonarr",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "4",
+            "s_version": [
+                "0.15"
+            ]
+        }
+    ],
+    "appdesc": "面向新闻组和 Bittorrent 流媒体用户的智能 PVR",
+    "appstatus": 1,
+    "home": "https://sonarr.tv",
+    "help": "https://wiki.servarr.com",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40317",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "puid",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "pgid",
+            "name": "组 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "sonarr_config_path",
+            "name": "Sonarr 配置路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "Sonarr 配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "tv_series_path",
+            "name": "电视剧路径",
+            "type": "string",
+            "default": "./data/tv",
+            "suffix": "电视剧路径",
+            "unit": ""
+        },
+        {
+            "attr": "downloads_path",
+            "name": "下载路径",
+            "type": "string",
+            "default": "./data/downloads",
+            "suffix": "下载路径",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "puid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "pgid",
+            "type": "string",
+            "default": null,
+            "desc": "组 ID"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "sonarr_config_path",
+            "type": "string",
+            "default": null,
+            "desc": "Sonarr 配置路径"
+        },
+        {
+            "key": "tv_series_path",
+            "type": "string",
+            "default": null,
+            "desc": "电视剧路径"
+        },
+        {
+            "key": "downloads_path",
+            "type": "string",
+            "default": null,
+            "desc": "下载路径"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

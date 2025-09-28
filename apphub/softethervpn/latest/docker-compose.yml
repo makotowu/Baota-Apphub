@@ -1,0 +1,35 @@
+services:
+  softether:
+    image: "softethervpn/vpnserver:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    cap_add:
+      - NET_ADMIN
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - ${HOST_IP}:${VPN_PORT_53}:53
+      - ${HOST_IP}:${VPN_PORT_443}:443
+      - ${HOST_IP}:${VPN_PORT_992}:992
+      - ${HOST_IP}:${VPN_PORT_1194_UDP}:1194/udp
+      - ${HOST_IP}:${VPN_PORT_5555}:5555
+      - ${HOST_IP}:${VPN_PORT_500_UDP}:500/udp
+      - ${HOST_IP}:${VPN_PORT_4500_UDP}:4500/udp
+      - ${HOST_IP}:${VPN_PORT_1701_UDP}:1701/udp
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+      - ${SOFTETHER_DATA_PATH}:/mnt
+      - ${SOFTETHER_LOG_PATH}:/root/server_log
+      - ${SOFTETHER_PACKETLOG_PATH}:/root/packet_log
+      - ${SOFTETHER_SECURITYLOG_PATH}:/root/security_log
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,352 @@
+{
+    "appid": -1,
+    "appname": "ais-ninja",
+    "apptitle": "ais-ninja",
+    "apptype": "AI",
+    "appTypeCN": "AI/大模型",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "0.8"
+            ]
+        }
+    ],
+    "appdesc": "基于 ChatGPT 的 Web 应用程序",
+    "appstatus": 1,
+    "home": "https://github.com/jarvis2f/ais-ninja",
+    "help": "https://github.com/jarvis2f/ais-ninja",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "ais_platform",
+            "name": "数据库服务",
+            "type": "string",
+            "default": "mysql",
+            "suffix": "数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_name",
+            "name": "数据库名",
+            "type": "string",
+            "default": "ais-ninja",
+            "suffix": "数据库名",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "ais-ninja",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "ais-ninja",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "redis_host",
+            "name": "Redis服务",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis服务",
+            "unit": ""
+        },
+        {
+            "attr": "redis_port",
+            "name": "Redis服务端口",
+            "type": "number",
+            "default": "6379",
+            "suffix": "Redis服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "redis_pass",
+            "name": "Redis服务密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Redis服务密码",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40043,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "smtp_host",
+            "name": "SMTP 主机",
+            "type": "string",
+            "default": "",
+            "suffix": "SMTP 主机",
+            "unit": ""
+        },
+        {
+            "attr": "smtp_port",
+            "name": "SMTP 端口",
+            "type": "number",
+            "default": "587",
+            "suffix": "SMTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "email_sender",
+            "name": "邮箱服务发送方邮箱地址",
+            "type": "string",
+            "default": "",
+            "suffix": "邮箱服务发送方邮箱地址",
+            "unit": ""
+        },
+        {
+            "attr": "smtp_user",
+            "name": "邮箱服务用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "邮箱服务用户名",
+            "unit": ""
+        },
+        {
+            "attr": "smtp_password",
+            "name": "邮箱服务密码",
+            "type": "string",
+            "default": "",
+            "suffix": "邮箱服务密码",
+            "unit": ""
+        },
+        {
+            "attr": "google_client_id",
+            "name": "谷歌登录的client_id",
+            "type": "string",
+            "default": "",
+            "suffix": "谷歌登录的client_id",
+            "unit": ""
+        },
+        {
+            "attr": "ali_access_id",
+            "name": "阿里云accessKey ID",
+            "type": "string",
+            "default": "",
+            "suffix": "阿里云accessKey ID",
+            "unit": ""
+        },
+        {
+            "attr": "ali_access_secret",
+            "name": "阿里云 accessKeySecret",
+            "type": "string",
+            "default": "",
+            "suffix": "阿里云 accessKeySecret",
+            "unit": ""
+        },
+        {
+            "attr": "ali_sms_permit",
+            "name": "启用手机登录注册(true or false)",
+            "type": "string",
+            "default": "",
+            "suffix": "启用手机登录注册(true or false)",
+            "unit": ""
+        },
+        {
+            "attr": "ali_sms_sign",
+            "name": "阿里云短信验证码服务签名",
+            "type": "string",
+            "default": "",
+            "suffix": "阿里云短信验证码服务签名",
+            "unit": ""
+        },
+        {
+            "attr": "ali_sms_template",
+            "name": "阿里云验证码短信模板，需要包含 {code}",
+            "type": "string",
+            "default": "",
+            "suffix": "阿里云验证码短信模板，需要包含 {code}",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "ais_platform",
+            "type": "string",
+            "default": null,
+            "desc": "数据库服务"
+        },
+        {
+            "key": "panel_db_name",
+            "type": "string",
+            "default": null,
+            "desc": "数据库名"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "redis_host",
+            "type": "string",
+            "default": null,
+            "desc": "Redis服务"
+        },
+        {
+            "key": "redis_port",
+            "type": "port",
+            "default": null,
+            "desc": "Redis服务端口"
+        },
+        {
+            "key": "redis_pass",
+            "type": "string",
+            "default": null,
+            "desc": "Redis服务密码"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "smtp_host",
+            "type": "string",
+            "default": null,
+            "desc": "SMTP 主机"
+        },
+        {
+            "key": "smtp_port",
+            "type": "port",
+            "default": null,
+            "desc": "SMTP 端口"
+        },
+        {
+            "key": "email_sender",
+            "type": "string",
+            "default": null,
+            "desc": "邮箱服务发送方邮箱地址"
+        },
+        {
+            "key": "smtp_user",
+            "type": "string",
+            "default": null,
+            "desc": "邮箱服务用户名"
+        },
+        {
+            "key": "smtp_password",
+            "type": "string",
+            "default": null,
+            "desc": "邮箱服务密码"
+        },
+        {
+            "key": "google_client_id",
+            "type": "string",
+            "default": null,
+            "desc": "谷歌登录的client_id"
+        },
+        {
+            "key": "ali_access_id",
+            "type": "string",
+            "default": null,
+            "desc": "阿里云accessKey ID"
+        },
+        {
+            "key": "ali_access_secret",
+            "type": "string",
+            "default": null,
+            "desc": "阿里云 accessKeySecret"
+        },
+        {
+            "key": "ali_sms_permit",
+            "type": "string",
+            "default": null,
+            "desc": "启用手机登录注册(true or false)"
+        },
+        {
+            "key": "ali_sms_sign",
+            "type": "string",
+            "default": null,
+            "desc": "阿里云短信验证码服务签名"
+        },
+        {
+            "key": "ali_sms_template",
+            "type": "string",
+            "default": null,
+            "desc": "阿里云验证码短信模板，需要包含 {code}"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

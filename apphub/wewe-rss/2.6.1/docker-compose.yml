@@ -1,0 +1,29 @@
+services:
+  wewe-rss:
+    image: "cooderl/wewe-rss-sqlite:v2.6.1"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:4000"
+    environment:
+      - DATABASE_TYPE=${DATABASE_TYPE}
+      - AUTH_CODE=${AUTH_CODE}
+      - FEED_MODE=${FEED_MODE}
+      - CRON_EXPRESSION=${CRON_EXPRESSION}
+      - MAX_REQUEST_PER_MINUTE=${MAX_REQUEST_PER_MINUTE}
+      - SERVER_ORIGIN_URL=${SERVER_ORIGIN_URL}
+    volumes:
+      - ${APP_PATH}/data:/app/data
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,36 @@
+services:
+  slink:
+    image: anirdev/slink:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:3000"
+    volumes:
+      - ${APP_PATH}/data/var/data:/app/var/data
+      - ${APP_PATH}/data/images:/app/slink/images
+    environment:
+      - ORIGIN=${ORIGIN}
+      - USER_APPROVAL_REQUIRED=${USER_APPROVAL_REQUIRED}
+      - USER_ALLOW_UNAUTHENTICATED_ACCESS=${USER_ALLOW_UNAUTHENTICATED_ACCESS}
+      - USER_PASSWORD_MIN_LENGTH=${USER_PASSWORD_MIN_LENGTH}
+      - USER_PASSWORD_REQUIREMENTS=${USER_PASSWORD_REQUIREMENTS}
+      - IMAGE_MAX_SIZE=${IMAGE_MAX_SIZE}
+      - IMAGE_STRIP_EXIF_METADATA=${IMAGE_STRIP_EXIF_METADATA}
+      - STORAGE_PROVIDER=${STORAGE_PROVIDER}
+      - SMB_HOST=${SMB_HOST}
+      - SMB_USERNAME=${SMB_USERNAME}
+      - SMB_PASSWORD=${SMB_PASSWORD}
+      - SMB_SHARE=${SMB_SHARE}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

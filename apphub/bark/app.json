@@ -1,0 +1,357 @@
+{
+    "appid": -1,
+    "appname": "bark",
+    "apptitle": "Bark",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "2",
+            "s_version": [
+                "2.1"
+            ]
+        }
+    ],
+    "appdesc": "iOS 消息推送工具",
+    "appstatus": 1,
+    "home": "https://bark.day.app",
+    "help": "https://bark.day.app",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40280",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_address",
+            "name": "Bark 服务器地址",
+            "type": "string",
+            "default": "0.0.0.0",
+            "suffix": "Bark 服务器地址",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_url_prefix",
+            "name": "Bark 服务器 URL 前缀",
+            "type": "string",
+            "default": "/",
+            "suffix": "Bark 服务器 URL 前缀",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_data_dir",
+            "name": "Bark 服务器数据目录",
+            "type": "string",
+            "default": "/data",
+            "suffix": "Bark 服务器数据目录",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_dsn",
+            "name": "Bark 服务器 DSN",
+            "type": "string",
+            "default": "",
+            "suffix": "Bark 服务器 DSN",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_serverless",
+            "name": "Bark 服务器无服务器",
+            "type": "string",
+            "default": "false",
+            "suffix": "Bark 服务器无服务器",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_cert",
+            "name": "Bark 服务器证书",
+            "type": "string",
+            "default": "",
+            "suffix": "Bark 服务器证书",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_key",
+            "name": "Bark 服务器密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "Bark 服务器密钥",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_case_sensitive",
+            "name": "Bark 服务器区分大小写",
+            "type": "string",
+            "default": "false",
+            "suffix": "Bark 服务器区分大小写",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_strict_routing",
+            "name": "Bark 服务器严格路由",
+            "type": "string",
+            "default": "false",
+            "suffix": "Bark 服务器严格路由",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_reduce_memory_usage",
+            "name": "Bark 服务器减少内存使用",
+            "type": "string",
+            "default": "false",
+            "suffix": "Bark 服务器减少内存使用",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_basic_auth_user",
+            "name": "Bark 服务器基本身份验证用户",
+            "type": "string",
+            "default": "",
+            "suffix": "Bark 服务器基本身份验证用户",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_basic_auth_password",
+            "name": "Bark 服务器基本身份验证密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Bark 服务器基本身份验证密码",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_proxy_header",
+            "name": "Bark 服务器代理头",
+            "type": "string",
+            "default": "",
+            "suffix": "Bark 服务器代理头",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_concurrency",
+            "name": "Bark 服务器并发",
+            "type": "number",
+            "default": "262144",
+            "suffix": "Bark 服务器并发",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_read_timeout",
+            "name": "Bark 服务器读取超时",
+            "type": "string",
+            "default": "3s",
+            "suffix": "Bark 服务器读取超时",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_write_timeout",
+            "name": "Bark 服务器写入超时",
+            "type": "string",
+            "default": "3s",
+            "suffix": "Bark 服务器写入超时",
+            "unit": ""
+        },
+        {
+            "attr": "bark_server_idle_timeout",
+            "name": "Bark 服务器空闲超时",
+            "type": "string",
+            "default": "10s",
+            "suffix": "Bark 服务器空闲超时",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据路径"
+        },
+        {
+            "key": "bark_server_address",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器地址"
+        },
+        {
+            "key": "bark_server_url_prefix",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器 URL 前缀"
+        },
+        {
+            "key": "bark_server_data_dir",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器数据目录"
+        },
+        {
+            "key": "bark_server_dsn",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器 DSN"
+        },
+        {
+            "key": "bark_server_serverless",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器无服务器"
+        },
+        {
+            "key": "bark_server_cert",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器证书"
+        },
+        {
+            "key": "bark_server_key",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器密钥"
+        },
+        {
+            "key": "bark_server_case_sensitive",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器区分大小写"
+        },
+        {
+            "key": "bark_server_strict_routing",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器严格路由"
+        },
+        {
+            "key": "bark_server_reduce_memory_usage",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器减少内存使用"
+        },
+        {
+            "key": "bark_server_basic_auth_user",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器基本身份验证用户"
+        },
+        {
+            "key": "bark_server_basic_auth_password",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器基本身份验证密码"
+        },
+        {
+            "key": "bark_server_proxy_header",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器代理头"
+        },
+        {
+            "key": "bark_server_concurrency",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器并发"
+        },
+        {
+            "key": "bark_server_read_timeout",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器读取超时"
+        },
+        {
+            "key": "bark_server_write_timeout",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器写入超时"
+        },
+        {
+            "key": "bark_server_idle_timeout",
+            "type": "string",
+            "default": null,
+            "desc": "Bark 服务器空闲超时"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

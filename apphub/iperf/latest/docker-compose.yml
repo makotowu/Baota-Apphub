@@ -1,0 +1,25 @@
+services:
+  iperf:
+    image: "networkstatic/iperf3:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:5201"
+    environment:
+      - TZ=${TIME_ZONE}
+    command: ${IPERF_COMMAND}
+    stdin_open: true
+    tty: true
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

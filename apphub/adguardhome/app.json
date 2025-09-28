@@ -1,0 +1,254 @@
+{
+    "appid": -1,
+    "appname": "adguardhome",
+    "apptitle": "AdGuardHome",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "0",
+            "s_version": [
+                "107.63"
+            ]
+        }
+    ],
+    "appdesc": "自由且开源的，功能强大的网络广告和跟踪器屏蔽DNS服务器",
+    "appstatus": 1,
+    "home": "https://hub.docker.com/r/adguard/adguardhome",
+    "help": "https://github.com/AdguardTeam/AdGuardHome/wiki",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "plain_dns_port",
+            "name": "普通DNS端口",
+            "type": "number",
+            "default": 20053,
+            "suffix": "普通DNS端口",
+            "unit": ""
+        },
+        {
+            "attr": "dhcp_port1",
+            "name": "DHCP服务端口1",
+            "type": "number",
+            "default": 20067,
+            "suffix": "DHCP服务端口1",
+            "unit": ""
+        },
+        {
+            "attr": "dhcp_port2",
+            "name": "DHCP服务端口2",
+            "type": "number",
+            "default": 20068,
+            "suffix": "DHCP服务端口2",
+            "unit": ""
+        },
+        {
+            "attr": "http_port",
+            "name": "HTTP网页端口",
+            "type": "number",
+            "default": 23000,
+            "suffix": "HTTP网页端口",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "初始设置网页端口",
+            "type": "number",
+            "default": 23001,
+            "suffix": "初始设置网页端口",
+            "unit": ""
+        },
+        {
+            "attr": "doh_port",
+            "name": "DOH服务端口",
+            "type": "number",
+            "default": 20443,
+            "suffix": "DOH服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "dot_port",
+            "name": "DOT服务端口",
+            "type": "number",
+            "default": 853,
+            "suffix": "DOT服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "quic_port1",
+            "name": "QUIC服务端口1",
+            "type": "number",
+            "default": 20784,
+            "suffix": "QUIC服务端口1",
+            "unit": ""
+        },
+        {
+            "attr": "quic_port2",
+            "name": "QUIC服务端口2",
+            "type": "number",
+            "default": 8853,
+            "suffix": "QUIC服务端口2",
+            "unit": ""
+        },
+        {
+            "attr": "dns_crypt_port",
+            "name": "DNS Crypt服务端口",
+            "type": "number",
+            "default": 5443,
+            "suffix": "DNS Crypt服务端口",
+            "unit": ""
+        },
+        {
+            "attr": "work_path",
+            "name": "工作数据文件夹路径",
+            "type": "string",
+            "default": "./data/work",
+            "suffix": "工作数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置文件夹路径",
+            "type": "string",
+            "default": "./data/conf",
+            "suffix": "配置文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "plain_dns_port",
+            "type": "port",
+            "default": null,
+            "desc": "普通DNS端口"
+        },
+        {
+            "key": "dhcp_port1",
+            "type": "port",
+            "default": null,
+            "desc": "DHCP服务端口1"
+        },
+        {
+            "key": "dhcp_port2",
+            "type": "port",
+            "default": null,
+            "desc": "DHCP服务端口2"
+        },
+        {
+            "key": "http_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTP网页端口"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "初始设置网页端口"
+        },
+        {
+            "key": "doh_port",
+            "type": "port",
+            "default": null,
+            "desc": "DOH服务端口"
+        },
+        {
+            "key": "dot_port",
+            "type": "port",
+            "default": null,
+            "desc": "DOT服务端口"
+        },
+        {
+            "key": "quic_port1",
+            "type": "port",
+            "default": null,
+            "desc": "QUIC服务端口1"
+        },
+        {
+            "key": "quic_port2",
+            "type": "port",
+            "default": null,
+            "desc": "QUIC服务端口2"
+        },
+        {
+            "key": "dns_crypt_port",
+            "type": "port",
+            "default": null,
+            "desc": "DNS Crypt服务端口"
+        },
+        {
+            "key": "work_path",
+            "type": "string",
+            "default": null,
+            "desc": "工作数据文件夹路径"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置文件夹路径"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

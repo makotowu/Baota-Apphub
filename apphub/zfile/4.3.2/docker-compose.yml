@@ -1,0 +1,24 @@
+services:
+  zfile:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8080"
+    volumes:
+      - "${APP_PATH}/data/db:/root/.zfile-v4/db"
+      - "${APP_PATH}/data/logs:/root/.zfile-v4/logs"
+      - "${APP_PATH}/mnt:/data/file"
+    image: zhaojun1998/zfile:4.3.2
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

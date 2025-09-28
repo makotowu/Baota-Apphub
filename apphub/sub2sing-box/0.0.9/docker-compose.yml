@@ -1,0 +1,20 @@
+services:
+  sub2sing-box:
+    image: nite07/sub2sing-box:0.0.9
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8080"
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

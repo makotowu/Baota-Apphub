@@ -1,0 +1,287 @@
+{
+    "appid": -1,
+    "appname": "xunlei",
+    "apptitle": "迅雷",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "3",
+            "s_version": [
+                "20.2"
+            ]
+        }
+    ],
+    "appdesc": "提取自群晖平台的迅雷下载套件",
+    "appstatus": 1,
+    "home": "https://www.xunlei.com",
+    "help": "https://github.com/cnk3x/xunlei/tree/docker",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40163",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据路径",
+            "type": "string",
+            "default": "./data/data",
+            "suffix": "数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "download_path",
+            "name": "下载路径",
+            "type": "string",
+            "default": "./data/downloads",
+            "suffix": "下载路径",
+            "unit": ""
+        },
+        {
+            "attr": "xl_dashboard_ip",
+            "name": "控制台 IP",
+            "type": "string",
+            "default": "0.0.0.0",
+            "suffix": "控制台 IP",
+            "unit": ""
+        },
+        {
+            "attr": "xl_dashboard_username",
+            "name": "控制台用户名",
+            "type": "string",
+            "default": "user",
+            "suffix": "控制台用户名",
+            "unit": ""
+        },
+        {
+            "attr": "xl_dashboard_password",
+            "name": "控制台密码",
+            "type": "string",
+            "default": "xunlei",
+            "suffix": "控制台密码",
+            "unit": ""
+        },
+        {
+            "attr": "xl_dir_download",
+            "name": "下载目录 (容器内)",
+            "type": "string",
+            "default": "/xunlei/downloads",
+            "suffix": "下载目录 (容器内)",
+            "unit": ""
+        },
+        {
+            "attr": "xl_dir_data",
+            "name": "数据目录 (容器内)",
+            "type": "string",
+            "default": "/xunlei/data",
+            "suffix": "数据目录 (容器内)",
+            "unit": ""
+        },
+        {
+            "attr": "xl_uid",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "xl_gid",
+            "name": "用户组 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "xl_prevent_update",
+            "name": "阻止更新",
+            "type": "string",
+            "default": "true",
+            "suffix": "阻止更新",
+            "unit": ""
+        },
+        {
+            "attr": "xl_debug",
+            "name": "调试模式",
+            "type": "string",
+            "default": "false",
+            "suffix": "调试模式",
+            "unit": ""
+        },
+        {
+            "attr": "hostname",
+            "name": "主机名",
+            "type": "string",
+            "default": "mynas",
+            "suffix": "主机名",
+            "unit": ""
+        },
+        {
+            "attr": "privileged_mode",
+            "name": "特权模式开关",
+            "type": "string",
+            "default": "true",
+            "suffix": "特权模式开关",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据路径"
+        },
+        {
+            "key": "download_path",
+            "type": "string",
+            "default": null,
+            "desc": "下载路径"
+        },
+        {
+            "key": "xl_dashboard_ip",
+            "type": "string",
+            "default": null,
+            "desc": "控制台 IP"
+        },
+        {
+            "key": "xl_dashboard_username",
+            "type": "string",
+            "default": null,
+            "desc": "控制台用户名"
+        },
+        {
+            "key": "xl_dashboard_password",
+            "type": "string",
+            "default": null,
+            "desc": "控制台密码"
+        },
+        {
+            "key": "xl_dir_download",
+            "type": "string",
+            "default": null,
+            "desc": "下载目录 (容器内)"
+        },
+        {
+            "key": "xl_dir_data",
+            "type": "string",
+            "default": null,
+            "desc": "数据目录 (容器内)"
+        },
+        {
+            "key": "xl_uid",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "xl_gid",
+            "type": "string",
+            "default": null,
+            "desc": "用户组 ID"
+        },
+        {
+            "key": "xl_prevent_update",
+            "type": "string",
+            "default": null,
+            "desc": "阻止更新"
+        },
+        {
+            "key": "xl_debug",
+            "type": "string",
+            "default": null,
+            "desc": "调试模式"
+        },
+        {
+            "key": "hostname",
+            "type": "string",
+            "default": null,
+            "desc": "主机名"
+        },
+        {
+            "key": "privileged_mode",
+            "type": "string",
+            "default": null,
+            "desc": "特权模式开关"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

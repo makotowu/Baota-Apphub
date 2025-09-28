@@ -1,0 +1,21 @@
+services:
+  rembg:
+    image: "danielgatis/rembg:2.0.66"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:7000"
+    command: "${COMMAND}"
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

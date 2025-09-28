@@ -1,0 +1,22 @@
+services:
+  mt-photos-deepface:
+    image: "mtphotos/mt-photos-deepface:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8066"
+    environment:
+      - API_AUTH_KEY=${API_AUTH_KEY}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

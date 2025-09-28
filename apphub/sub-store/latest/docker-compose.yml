@@ -1,0 +1,26 @@
+services:
+  sub-store:
+    image: xream/sub-store:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:3001"
+    environment:
+      - SUB_STORE_PUSH_SERVICE=${SUB_STORE_PUSH_SERVICE}
+      - SUB_STORE_CRON=${SUB_STORE_CRON}
+      - SUB_STORE_FRONTEND_BACKEND_PATH=${SUB_STORE_FRONTEND_BACKEND_PATH}
+    volumes:
+      - ${APP_PATH}/data:/opt/app/data
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

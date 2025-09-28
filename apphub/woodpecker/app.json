@@ -1,0 +1,366 @@
+{
+    "appid": -1,
+    "appname": "woodpecker",
+    "apptitle": "Woodpecker CI",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "3",
+            "s_version": [
+                "7.0"
+            ]
+        }
+    ],
+    "appdesc": "具有极强可扩展性的简单 CI 引擎",
+    "appstatus": 1,
+    "home": "https://woodpecker-ci.org",
+    "help": "https://woodpecker-ci.org/docs/intro",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40122,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "register_switch",
+            "name": "启用注册(true/false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "启用注册(true/false)",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_host",
+            "name": "外部访问地址",
+            "type": "string",
+            "default": "http://ci.example.com",
+            "suffix": "外部访问地址",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_agent_secret",
+            "name": "Github Agent Secret 值",
+            "type": "string",
+            "default": "",
+            "suffix": "Github Agent Secret 值",
+            "unit": ""
+        },
+        {
+            "attr": "github_enable_switch",
+            "name": "启用Github(true/false)",
+            "type": "string",
+            "default": "true",
+            "suffix": "启用Github(true/false)",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_github_url",
+            "name": "Github地址",
+            "type": "string",
+            "default": "https://github.com",
+            "suffix": "Github地址",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_github_client",
+            "name": "Github CLIENT 值",
+            "type": "string",
+            "default": "",
+            "suffix": "Github CLIENT 值",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_github_secret",
+            "name": "Github SECRET 值",
+            "type": "string",
+            "default": "",
+            "suffix": "Github SECRET 值",
+            "unit": ""
+        },
+        {
+            "attr": "gitea_enable_switch",
+            "name": "启用Gitea(true/false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "启用Gitea(true/false)",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_gitea_url",
+            "name": "Gitea地址",
+            "type": "string",
+            "default": "https://try.gitea.io",
+            "suffix": "Gitea地址",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_gitea_client",
+            "name": "Gitea CLIENT 值",
+            "type": "string",
+            "default": "",
+            "suffix": "Gitea CLIENT 值",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_gitea_secret",
+            "name": "Gitea SECRET 值",
+            "type": "string",
+            "default": "",
+            "suffix": "Gitea SECRET 值",
+            "unit": ""
+        },
+        {
+            "attr": "gitlab_enable_switch",
+            "name": "启用GitLab (true/false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "启用GitLab (true/false)",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_gitlab_url",
+            "name": "GitLab 地址",
+            "type": "string",
+            "default": "https://gitlab.com",
+            "suffix": "GitLab 地址",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_gitlab_client",
+            "name": "GitLab CLIENT 值",
+            "type": "string",
+            "default": "",
+            "suffix": "GitLab CLIENT 值",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_gitlab_secret",
+            "name": "GitLab SECRET 值",
+            "type": "string",
+            "default": "",
+            "suffix": "GitLab SECRET 值",
+            "unit": ""
+        },
+        {
+            "attr": "bitbucket_enable_switch",
+            "name": "启用 Bitbucket (true/false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "启用 Bitbucket (true/false)",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_bitbucket_client",
+            "name": "Bitbucket CLIENT 值",
+            "type": "string",
+            "default": "",
+            "suffix": "Bitbucket CLIENT 值",
+            "unit": ""
+        },
+        {
+            "attr": "woodpecker_bitbucket_secret",
+            "name": "Bitbucket SECRET 值",
+            "type": "string",
+            "default": "",
+            "suffix": "Bitbucket SECRET 值",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "register_switch",
+            "type": "string",
+            "default": null,
+            "desc": "启用注册(true/false)"
+        },
+        {
+            "key": "woodpecker_host",
+            "type": "string",
+            "default": null,
+            "desc": "外部访问地址"
+        },
+        {
+            "key": "woodpecker_agent_secret",
+            "type": "string",
+            "default": null,
+            "desc": "Github Agent Secret 值"
+        },
+        {
+            "key": "github_enable_switch",
+            "type": "string",
+            "default": null,
+            "desc": "启用Github(true/false)"
+        },
+        {
+            "key": "woodpecker_github_url",
+            "type": "string",
+            "default": null,
+            "desc": "Github地址"
+        },
+        {
+            "key": "woodpecker_github_client",
+            "type": "string",
+            "default": null,
+            "desc": "Github CLIENT 值"
+        },
+        {
+            "key": "woodpecker_github_secret",
+            "type": "string",
+            "default": null,
+            "desc": "Github SECRET 值"
+        },
+        {
+            "key": "gitea_enable_switch",
+            "type": "string",
+            "default": null,
+            "desc": "启用Gitea(true/false)"
+        },
+        {
+            "key": "woodpecker_gitea_url",
+            "type": "string",
+            "default": null,
+            "desc": "Gitea地址"
+        },
+        {
+            "key": "woodpecker_gitea_client",
+            "type": "string",
+            "default": null,
+            "desc": "Gitea CLIENT 值"
+        },
+        {
+            "key": "woodpecker_gitea_secret",
+            "type": "string",
+            "default": null,
+            "desc": "Gitea SECRET 值"
+        },
+        {
+            "key": "gitlab_enable_switch",
+            "type": "string",
+            "default": null,
+            "desc": "启用GitLab (true/false)"
+        },
+        {
+            "key": "woodpecker_gitlab_url",
+            "type": "string",
+            "default": null,
+            "desc": "GitLab 地址"
+        },
+        {
+            "key": "woodpecker_gitlab_client",
+            "type": "string",
+            "default": null,
+            "desc": "GitLab CLIENT 值"
+        },
+        {
+            "key": "woodpecker_gitlab_secret",
+            "type": "string",
+            "default": null,
+            "desc": "GitLab SECRET 值"
+        },
+        {
+            "key": "bitbucket_enable_switch",
+            "type": "string",
+            "default": null,
+            "desc": "启用 Bitbucket (true/false)"
+        },
+        {
+            "key": "woodpecker_bitbucket_client",
+            "type": "string",
+            "default": null,
+            "desc": "Bitbucket CLIENT 值"
+        },
+        {
+            "key": "woodpecker_bitbucket_secret",
+            "type": "string",
+            "default": null,
+            "desc": "Bitbucket SECRET 值"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

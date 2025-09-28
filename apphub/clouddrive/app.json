@@ -1,0 +1,184 @@
+{
+    "appid": -1,
+    "appname": "clouddrive",
+    "apptitle": "CloudDrive",
+    "apptype": "Storage",
+    "appTypeCN": "存储/网盘",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "0",
+            "s_version": [
+                "9.1"
+            ]
+        }
+    ],
+    "appdesc": "一个强大的多云盘管理工具",
+    "appstatus": 1,
+    "home": "https://www.clouddrive2.com",
+    "help": "https://www.clouddrive2.com",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40275",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "tz",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "clouddrive_home",
+            "name": "CloudDrive 根目录",
+            "type": "string",
+            "default": "/Config",
+            "suffix": "CloudDrive 根目录",
+            "unit": ""
+        },
+        {
+            "attr": "cloud_mounts_path",
+            "name": "云挂载路径",
+            "type": "string",
+            "default": "./data/CloudNAS",
+            "suffix": "云挂载路径",
+            "unit": ""
+        },
+        {
+            "attr": "app_data_path",
+            "name": "应用数据路径",
+            "type": "string",
+            "default": "./data/Config",
+            "suffix": "应用数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "shared_media_path",
+            "name": "共享媒体路径",
+            "type": "string",
+            "default": "./data/media",
+            "suffix": "共享媒体路径",
+            "unit": ""
+        },
+        {
+            "attr": "privileged_mode",
+            "name": "特权模式",
+            "type": "string",
+            "default": "true",
+            "suffix": "特权模式",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "tz",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "clouddrive_home",
+            "type": "string",
+            "default": null,
+            "desc": "CloudDrive 根目录"
+        },
+        {
+            "key": "cloud_mounts_path",
+            "type": "string",
+            "default": null,
+            "desc": "云挂载路径"
+        },
+        {
+            "key": "app_data_path",
+            "type": "string",
+            "default": null,
+            "desc": "应用数据路径"
+        },
+        {
+            "key": "shared_media_path",
+            "type": "string",
+            "default": null,
+            "desc": "共享媒体路径"
+        },
+        {
+            "key": "privileged_mode",
+            "type": "string",
+            "default": null,
+            "desc": "特权模式"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,31 @@
+
+services:
+  mysql:
+    image: mysql:5.6.51
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}
+    networks:
+      - baota_net
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:3306
+    volumes:
+      - ./data/:/var/lib/mysql
+      - ./conf/my.cnf:/etc/mysql/my.cnf
+      - ./log:/var/log/mysql
+    command:
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

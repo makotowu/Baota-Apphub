@@ -1,0 +1,259 @@
+{
+    "appid": -1,
+    "appname": "samba",
+    "apptitle": "Samba",
+    "apptype": "Storage",
+    "appTypeCN": "存储/网盘",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "4",
+            "s_version": [
+                "18.9"
+            ]
+        }
+    ],
+    "appdesc": "多架构 Samba 镜像构建",
+    "appstatus": 1,
+    "home": "https://deft.work/samba",
+    "help": "https://github.com/DeftWork/samba",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 139,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "smb",
+            "name": "端口",
+            "type": "number",
+            "default": 445,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "hostname",
+            "name": "主机名",
+            "type": "string",
+            "default": "samba",
+            "suffix": "主机名",
+            "unit": ""
+        },
+        {
+            "attr": "tz",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "外部数据路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "外部数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "internal_data_path",
+            "name": "容器内部数据路径",
+            "type": "string",
+            "default": "/share/data",
+            "suffix": "容器内部数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "user_1",
+            "name": "用户 1",
+            "type": "string",
+            "default": "1000:1000:pirate:pirate:put-any-password-here",
+            "suffix": "用户 1",
+            "unit": ""
+        },
+        {
+            "attr": "share_1",
+            "name": "共享 1",
+            "type": "string",
+            "default": "SmbShare:/share/folder:rw:pirate",
+            "suffix": "共享 1",
+            "unit": ""
+        },
+        {
+            "attr": "user_2",
+            "name": "用户 2 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "用户 2 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "share_2",
+            "name": "共享 2 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "共享 2 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "user_3",
+            "name": "用户 3 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "用户 3 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "share_3",
+            "name": "共享 3 (编辑去除compose.yml里的注释生效)",
+            "type": "string",
+            "default": "",
+            "suffix": "共享 3 (编辑去除compose.yml里的注释生效)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "smb",
+            "type": "string",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "hostname",
+            "type": "string",
+            "default": null,
+            "desc": "主机名"
+        },
+        {
+            "key": "tz",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "外部数据路径"
+        },
+        {
+            "key": "internal_data_path",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部数据路径"
+        },
+        {
+            "key": "user_1",
+            "type": "string",
+            "default": null,
+            "desc": "用户 1"
+        },
+        {
+            "key": "share_1",
+            "type": "string",
+            "default": null,
+            "desc": "共享 1"
+        },
+        {
+            "key": "user_2",
+            "type": "string",
+            "default": null,
+            "desc": "用户 2 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "share_2",
+            "type": "string",
+            "default": null,
+            "desc": "共享 2 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "user_3",
+            "type": "string",
+            "default": null,
+            "desc": "用户 3 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "share_3",
+            "type": "string",
+            "default": null,
+            "desc": "共享 3 (编辑去除compose.yml里的注释生效)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

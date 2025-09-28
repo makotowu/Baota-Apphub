@@ -1,0 +1,128 @@
+{
+    "appid": -1,
+    "appname": "pgadmin4",
+    "apptitle": "PGAdmin4",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "9",
+            "s_version": [
+                "5"
+            ]
+        }
+    ],
+    "appdesc": "PostgreSQL 的开源管理和开发平台",
+    "appstatus": 1,
+    "home": "https://www.pgadmin.org",
+    "help": "https://www.pgadmin.org/docs",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40084,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "pgadmin_email",
+            "name": "管理员邮箱",
+            "type": "string",
+            "default": "admin@example.com",
+            "suffix": "管理员邮箱",
+            "unit": ""
+        },
+        {
+            "attr": "pgadmin_password",
+            "name": "管理员密码",
+            "type": "string",
+            "default": "pgadmin4",
+            "suffix": "管理员密码",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "pgadmin_email",
+            "type": "string",
+            "default": null,
+            "desc": "管理员邮箱"
+        },
+        {
+            "key": "pgadmin_password",
+            "type": "string",
+            "default": null,
+            "desc": "管理员密码"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

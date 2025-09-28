@@ -1,0 +1,76 @@
+services:
+  mixspace:
+    container_name: ${APP_NAME}
+    image: innei/mx-server:8
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    command: bash ./docker-run.sh
+    environment:
+      - TZ=${TIME_ZONE}
+      - NODE_ENV=production
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS}
+      - JWT_SECRET=${JWT_SECRET}
+      - ENCRYPT_KEY=${ENCRYPT_KEY}
+      - ENCRYPT_ENABLE=${ENCRYPT_ENABLE}
+    volumes:
+      - ./data/mx-space:/root/.mx-space
+    ports:
+      - '${HOST_IP}:${WEB_PORT}:2333'
+    networks:
+      - mixspace-network
+    restart: always
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://127.0.0.1:2333/api/v2/ping']
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      - mongo
+      - redis
+    links:
+      - mongo
+      - redis
+    labels:  
+      createdBy: "bt_apps" 
+
+  mongo:
+    container_name: ${APP_NAME}-mongo
+    image: mongo
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    volumes:
+      - ./data/db:/data/db
+    networks:
+      - mixspace-network
+    restart: always
+    labels:  
+      createdBy: "bt_apps" 
+
+  redis:
+    image: redis
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}-redis
+    networks:
+      - mixspace-network
+    restart: always
+    labels:  
+      createdBy: "bt_apps" 
+
+networks:
+  mixspace-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET_PREFIX}.0/16

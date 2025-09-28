@@ -1,0 +1,22 @@
+services:
+  proxy_pool:
+    image: "jhao104/proxy_pool:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:5010"
+    environment:
+      - "DB_CONN=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${REDIS_HOST}:${REDIS_PORT}/${REDIS_DB_NUMBER}"
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,24 @@
+services:
+  music-tag-web:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8001"
+    volumes:
+      - "${APP_PATH}/data:/app/media:rw"
+      - "./config:/app/data"
+    command: /start
+    image: xhongc/music_tag_web:2.4.8
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

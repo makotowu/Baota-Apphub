@@ -1,0 +1,34 @@
+services:
+  synapse:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    volumes:
+      - synapse-data:/data
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8008"
+    environment:
+      - TZ=Asia/Shanghai
+      - UID=1000
+      - GID=1000
+    image: matrixdotorg/synapse:v1.133.0
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    logging:
+      options:
+        max-size: "10m"
+    command: run -m synapse.app.homeserver --config-path=/data/homeserver.yaml
+    labels:  
+      createdBy: "bt_apps"
+
+volumes:
+  synapse-data:
+    external: true
+
+networks:  
+  baota_net:  
+    external: true

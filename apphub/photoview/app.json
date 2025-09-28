@@ -1,0 +1,189 @@
+{
+    "appid": -1,
+    "appname": "photoview",
+    "apptitle": "Photoview",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "2",
+            "s_version": [
+                "4.0"
+            ]
+        }
+    ],
+    "appdesc": "自托管个人服务器的照片库",
+    "appstatus": 1,
+    "home": "https://github.com/photoview/photoview",
+    "help": "https://github.com/photoview/photoview",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "",
+            "name": "数据库服务",
+            "type": "string",
+            "default": "mysql",
+            "suffix": "数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_name",
+            "name": "数据库名(要求MySQL8)",
+            "type": "string",
+            "default": "photoview",
+            "suffix": "数据库名(要求MySQL8)",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "photoview",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "photoview",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40100,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "照片文件夹路径(容器内部\"/photos\")",
+            "type": "string",
+            "default": "./data/photos",
+            "suffix": "照片文件夹路径(容器内部\"/photos\")",
+            "unit": ""
+        },
+        {
+            "attr": "cache_path",
+            "name": "缓存文件夹路径",
+            "type": "string",
+            "default": "./data/cache",
+            "suffix": "缓存文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "",
+            "type": "string",
+            "default": null,
+            "desc": "数据库服务"
+        },
+        {
+            "key": "panel_db_name",
+            "type": "string",
+            "default": null,
+            "desc": "数据库名(要求MySQL8)"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "照片文件夹路径(容器内部\"/photos\")"
+        },
+        {
+            "key": "cache_path",
+            "type": "string",
+            "default": null,
+            "desc": "缓存文件夹路径"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

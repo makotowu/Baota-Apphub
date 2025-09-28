@@ -1,0 +1,225 @@
+{
+    "appid": -1,
+    "appname": "wireguard-easy",
+    "apptitle": "WireGuard Easy",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "运行 WireGuard VPN + 基于 Web 的管理 UI 的最简单方法",
+    "appstatus": 1,
+    "home": "https://www.wireguard.com/",
+    "help": "https://www.wireguard.com/",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "网页端口",
+            "type": "number",
+            "default": "40074",
+            "suffix": "网页端口",
+            "unit": ""
+        },
+        {
+            "attr": "wireguard_port",
+            "name": "Wireguard 端口",
+            "type": "number",
+            "default": "51820",
+            "suffix": "Wireguard 端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "password_hash",
+            "name": "网页密码 hash (注意查看说明文档，默认为`PAssw00rd`)",
+            "type": "string",
+            "default": "$$2a$$12$$0AL3hGeedv8fOfsNtfZY5OO3mMvBqlnZA8QmeBGfWPAQEoZ7LZ/7a",
+            "suffix": "网页密码 hash (注意查看说明文档，默认为`PAssw00rd`)",
+            "unit": ""
+        },
+        {
+            "attr": "host_address",
+            "name": "本机地址(必改项)",
+            "type": "string",
+            "default": "172.17.0.1",
+            "suffix": "本机地址(必改项)",
+            "unit": ""
+        },
+        {
+            "attr": "wg_default_address",
+            "name": "默认 Wireguard 网段",
+            "type": "string",
+            "default": "10.0.8.x",
+            "suffix": "默认 Wireguard 网段",
+            "unit": ""
+        },
+        {
+            "attr": "wg_default_dns",
+            "name": "默认 Wireguard DNS",
+            "type": "string",
+            "default": "119.29.29.29,1.1.1.1",
+            "suffix": "默认 Wireguard DNS",
+            "unit": ""
+        },
+        {
+            "attr": "wg_mtu",
+            "name": "Wireguard MTU",
+            "type": "number",
+            "default": "1420",
+            "suffix": "Wireguard MTU",
+            "unit": ""
+        },
+        {
+            "attr": "wg_allowed_ips",
+            "name": "Wireguard 允许的 IP 段",
+            "type": "string",
+            "default": "10.0.8.0/24",
+            "suffix": "Wireguard 允许的 IP 段",
+            "unit": ""
+        },
+        {
+            "attr": "wg_persistent_keepalive",
+            "name": "Wireguard 保活间隔",
+            "type": "number",
+            "default": "25",
+            "suffix": "Wireguard 保活间隔",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "网页端口"
+        },
+        {
+            "key": "wireguard_port",
+            "type": "port",
+            "default": null,
+            "desc": "Wireguard 端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "password_hash",
+            "type": "string",
+            "default": null,
+            "desc": "网页密码 hash (注意查看说明文档，默认为`PAssw00rd`)"
+        },
+        {
+            "key": "host_address",
+            "type": "string",
+            "default": null,
+            "desc": "本机地址(必改项)"
+        },
+        {
+            "key": "wg_default_address",
+            "type": "string",
+            "default": null,
+            "desc": "默认 Wireguard 网段"
+        },
+        {
+            "key": "wg_default_dns",
+            "type": "string",
+            "default": null,
+            "desc": "默认 Wireguard DNS"
+        },
+        {
+            "key": "wg_mtu",
+            "type": "string",
+            "default": null,
+            "desc": "Wireguard MTU"
+        },
+        {
+            "key": "wg_allowed_ips",
+            "type": "string",
+            "default": null,
+            "desc": "Wireguard 允许的 IP 段"
+        },
+        {
+            "key": "wg_persistent_keepalive",
+            "type": "string",
+            "default": null,
+            "desc": "Wireguard 保活间隔"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+services:
+  zdir:
+    image: helloz/zdir:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:6080"
+    volumes:
+      - "${APP_PATH}/data:/data/apps/zdir/data"
+      - "${APP_PATH}/mnt:/data/apps/zdir/data/public"
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

@@ -1,0 +1,53 @@
+services:
+  wukongim: # WuKongIM服务
+    container_name: ${APP_NAME}-wukongim
+    image: "registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:v2.0.5-20240925"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    environment:
+      - "WK_CLUSTER_NODEID=1001"
+      - "WK_CLUSTER_SERVERADDR=${EXTERNAL_IP}:${PANEL_APP_PORT_COMM}" # 节点内部通信请求地址
+      - "WK_TRACE_PROMETHEUSAPIURL=http://wukongim-prometheus:9090" # prometheus监控地址
+      - "WK_MODE=release" # release模式
+      - "WK_EXTERNAL_IP=${EXTERNAL_IP}" # 服务器外网ip
+    healthcheck:
+      test: "wget -q -Y off -O /dev/null http://localhost:5001/health > /dev/null 2>&1"
+      interval: 10s
+      timeout: 10s
+      retries: 3
+    restart: always
+    volumes:
+      - ./wukongim_data:/root/wukongim # 数据挂载到物理机的目录
+    ports:
+      - ${HOST_IP}:${PANEL_APP_PORT_WK_API}:5001 # http api 端口
+      - ${HOST_IP}:${PANEL_APP_PORT_WK_TCP}:5100 # tcp端口
+      - ${HOST_IP}:${PANEL_APP_PORT_WK_WS}:5200 # websocket端口
+      - ${HOST_IP}:${WEB_PORT}:5300 # 管理端端口
+      - ${HOST_IP}:${PANEL_APP_PORT_WK_DEMO_SERVER}:5172 # demo端口
+      - ${HOST_IP}:${PANEL_APP_PORT_COMM}:11110 # 分布式节点通讯端口
+    networks:
+      - baota_net
+    labels:  
+      createdBy: "bt_apps"
+  wukongim-prometheus:  # 监控服务
+    container_name: ${APP_NAME}-prometheus
+    image: "registry.cn-shanghai.aliyuncs.com/wukongim/prometheus:v2.53.1"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+    ports:
+      - "${HOST_IP}:${PANEL_APP_PORT_STATS}:9090"
+    networks:
+      - baota_net
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,276 @@
+{
+    "appid": -1,
+    "appname": "chatgpt-web",
+    "apptitle": "ChatGPT Web",
+    "apptype": "AI",
+    "appTypeCN": "AI/大模型",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "使用 express 和 vue3 搭建的支持 ChatGPT 双模型演示网页",
+    "appstatus": 1,
+    "home": "https://github.com/Chanzhaoyu/chatgpt-web",
+    "help": "https://github.com/Chanzhaoyu/chatgpt-web",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "网页端口",
+            "type": "number",
+            "default": 40021,
+            "suffix": "网页端口",
+            "unit": ""
+        },
+        {
+            "attr": "access_token",
+            "name": "OPENAI ACCESS TOKEN(与OPENAI API KEY至少填一个)(https://chat.openai.com/api/auth/session)",
+            "type": "string",
+            "default": "",
+            "suffix": "OPENAI ACCESS TOKEN(与OPENAI API KEY至少填一个)(https://chat.openai.com/api/auth/session)",
+            "unit": ""
+        },
+        {
+            "attr": "reverse_proxy",
+            "name": "API反向代理，可选(OPENAI ACCESS TOKEN时默认启用,需要注意可用性)",
+            "type": "string",
+            "default": "https://bypass.duti.tech/api/conversation",
+            "suffix": "API反向代理，可选(OPENAI ACCESS TOKEN时默认启用,需要注意可用性)",
+            "unit": ""
+        },
+        {
+            "attr": "api_key",
+            "name": "OPENAI API KEY(与OPENAI ACCESS TOKEN至少填一个)",
+            "type": "string",
+            "default": "",
+            "suffix": "OPENAI API KEY(与OPENAI ACCESS TOKEN至少填一个)",
+            "unit": ""
+        },
+        {
+            "attr": "api_model",
+            "name": "API模型，可选，设置OPENAI API KEY时可用(https://platform.openai.com/docs/models)",
+            "type": "string",
+            "default": "gpt-3.5-turbo",
+            "suffix": "API模型，可选，设置OPENAI API KEY时可用(https://platform.openai.com/docs/models)",
+            "unit": ""
+        },
+        {
+            "attr": "api_base_url",
+            "name": "API接口地址，可选，设置OPENAI API KEY时可用",
+            "type": "string",
+            "default": "https://api.openai.com",
+            "suffix": "API接口地址，可选，设置OPENAI API KEY时可用",
+            "unit": ""
+        },
+        {
+            "attr": "secret_key",
+            "name": "访问权限密钥，可选(强烈建议填写)",
+            "type": "string",
+            "default": "chatgptweb",
+            "suffix": "访问权限密钥，可选(强烈建议填写)",
+            "unit": ""
+        },
+        {
+            "attr": "request_limit",
+            "name": "每小时最大请求次数，可选，默认无限",
+            "type": "string",
+            "default": "0",
+            "suffix": "每小时最大请求次数，可选，默认无限",
+            "unit": ""
+        },
+        {
+            "attr": "timeout",
+            "name": "超时，单位毫秒，可选",
+            "type": "string",
+            "default": "60000",
+            "suffix": "超时，单位毫秒，可选",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_host",
+            "name": "Socks代理地址，可选，和Socks代理端口一起时生效",
+            "type": "string",
+            "default": "",
+            "suffix": "Socks代理地址，可选，和Socks代理端口一起时生效",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_port",
+            "name": "Socks代理端口，可选，和Socks代理地址一起时生效",
+            "type": "number",
+            "default": "",
+            "suffix": "Socks代理端口，可选，和Socks代理地址一起时生效",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_username",
+            "name": "Socks代理用户名，可选，和Socks代理地址一起时生效",
+            "type": "string",
+            "default": "",
+            "suffix": "Socks代理用户名，可选，和Socks代理地址一起时生效",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_password",
+            "name": "Socks代理密码，可选，和Socks代理地址一起时生效",
+            "type": "string",
+            "default": "",
+            "suffix": "Socks代理密码，可选，和Socks代理地址一起时生效",
+            "unit": ""
+        },
+        {
+            "attr": "https_proxy",
+            "name": "HTTPS代理，可选，支持http，https，socks5",
+            "type": "string",
+            "default": "",
+            "suffix": "HTTPS代理，可选，支持http，https，socks5",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "网页端口"
+        },
+        {
+            "key": "access_token",
+            "type": "string",
+            "default": null,
+            "desc": "OPENAI ACCESS TOKEN(与OPENAI API KEY至少填一个)(https://chat.openai.com/api/auth/session)"
+        },
+        {
+            "key": "reverse_proxy",
+            "type": "string",
+            "default": null,
+            "desc": "API反向代理，可选(OPENAI ACCESS TOKEN时默认启用,需要注意可用性)"
+        },
+        {
+            "key": "api_key",
+            "type": "string",
+            "default": null,
+            "desc": "OPENAI API KEY(与OPENAI ACCESS TOKEN至少填一个)"
+        },
+        {
+            "key": "api_model",
+            "type": "string",
+            "default": null,
+            "desc": "API模型，可选，设置OPENAI API KEY时可用(https://platform.openai.com/docs/models)"
+        },
+        {
+            "key": "api_base_url",
+            "type": "string",
+            "default": null,
+            "desc": "API接口地址，可选，设置OPENAI API KEY时可用"
+        },
+        {
+            "key": "secret_key",
+            "type": "string",
+            "default": null,
+            "desc": "访问权限密钥，可选(强烈建议填写)"
+        },
+        {
+            "key": "request_limit",
+            "type": "string",
+            "default": null,
+            "desc": "每小时最大请求次数，可选，默认无限"
+        },
+        {
+            "key": "timeout",
+            "type": "string",
+            "default": null,
+            "desc": "超时，单位毫秒，可选"
+        },
+        {
+            "key": "proxy_host",
+            "type": "string",
+            "default": null,
+            "desc": "Socks代理地址，可选，和Socks代理端口一起时生效"
+        },
+        {
+            "key": "proxy_port",
+            "type": "port",
+            "default": null,
+            "desc": "Socks代理端口，可选，和Socks代理地址一起时生效"
+        },
+        {
+            "key": "proxy_username",
+            "type": "string",
+            "default": null,
+            "desc": "Socks代理用户名，可选，和Socks代理地址一起时生效"
+        },
+        {
+            "key": "proxy_password",
+            "type": "string",
+            "default": null,
+            "desc": "Socks代理密码，可选，和Socks代理地址一起时生效"
+        },
+        {
+            "key": "https_proxy",
+            "type": "string",
+            "default": null,
+            "desc": "HTTPS代理，可选，支持http，https，socks5"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,178 @@
+{
+    "appid": -1,
+    "appname": "115pc",
+    "apptitle": "115网盘",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "115网盘是115科技推出的云存储服务",
+    "appstatus": 1,
+    "home": "https://115.com",
+    "help": "https://www.github.com/funcman/docker_115pc",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "网页端口",
+            "type": "number",
+            "default": 40088,
+            "suffix": "网页端口",
+            "unit": ""
+        },
+        {
+            "attr": "vnc_password",
+            "name": "访问密码",
+            "type": "string",
+            "default": "VNCPassword",
+            "suffix": "访问密码",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置文件所在路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置文件所在路径",
+            "unit": ""
+        },
+        {
+            "attr": "download_path",
+            "name": "下载文件夹路径",
+            "type": "string",
+            "default": "./data/downloads",
+            "suffix": "下载文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "apt_source",
+            "name": "apt 源",
+            "type": "string",
+            "default": "mirrors.ustc.edu.cn",
+            "suffix": "apt 源",
+            "unit": ""
+        },
+        {
+            "attr": "vnc_display_width",
+            "name": "VNC显示宽度",
+            "type": "number",
+            "default": 1920,
+            "suffix": "VNC显示宽度",
+            "unit": ""
+        },
+        {
+            "attr": "vnc_display_height",
+            "name": "VNC显示高度",
+            "type": "number",
+            "default": 1080,
+            "suffix": "VNC显示高度",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "网页端口"
+        },
+        {
+            "key": "vnc_password",
+            "type": "string",
+            "default": null,
+            "desc": "访问密码"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置文件所在路径"
+        },
+        {
+            "key": "download_path",
+            "type": "string",
+            "default": null,
+            "desc": "下载文件夹路径"
+        },
+        {
+            "key": "apt_source",
+            "type": "string",
+            "default": null,
+            "desc": "apt 源"
+        },
+        {
+            "key": "vnc_display_width",
+            "type": "string",
+            "default": null,
+            "desc": "VNC显示宽度"
+        },
+        {
+            "key": "vnc_display_height",
+            "type": "string",
+            "default": null,
+            "desc": "VNC显示高度"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

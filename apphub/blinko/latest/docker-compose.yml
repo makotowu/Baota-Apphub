@@ -1,0 +1,34 @@
+services:
+  blinko:
+    image: "blinkospace/blinko:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    environment:
+      NODE_ENV: production
+      NEXTAUTH_URL: ${NEXTAUTH_URL}
+      NEXT_PUBLIC_BASE_URL: ${NEXT_PUBLIC_BASE_URL}
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
+      DATABASE_URL: postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
+    volumes:
+      - "./data:/app/.blinko"
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:1111"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:1111/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

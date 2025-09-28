@@ -1,0 +1,39 @@
+services:
+  metube:
+    image: "alexta69/metube:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:8081
+    volumes:
+      - ${DOWNLOAD_DIR}:/downloads
+    environment:
+      - UID=${UID}
+      - GID=${GID}
+      - UMASK=022
+      - DEFAULT_THEME=${DEFAULT_THEME}
+      - AUDIO_DOWNLOAD_DIR=${AUDIO_DOWNLOAD_DIR}
+      - DOWNLOAD_DIRS_INDEXABLE=${DOWNLOAD_DIRS_INDEXABLE}
+      - CUSTOM_DIRS=${CUSTOM_DIRS}
+      - CREATE_CUSTOM_DIRS=${CREATE_CUSTOM_DIRS}
+      - STATE_DIR=${STATE_DIR}
+      - TEMP_DIR=${TEMP_DIR}
+      - DELETE_FILE_ON_TRASHCAN=${DELETE_FILE_ON_TRASHCAN}
+      - URL_PREFIX=${URL_PREFIX}
+      - PUBLIC_HOST_URL=${PUBLIC_HOST_URL}
+      - PUBLIC_HOST_AUDIO_URL=${PUBLIC_HOST_AUDIO_URL}
+      - DEFAULT_OPTION_PLAYLIST_STRICT_MODE=${DEFAULT_OPTION_PLAYLIST_STRICT_MODE}
+      - DEFAULT_OPTION_PLAYLIST_ITEM_LIMIT=${DEFAULT_OPTION_PLAYLIST_ITEM_LIMIT}
+    labels:
+      createdBy: "bt_apps"
+      
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,198 @@
+{
+    "appid": -1,
+    "appname": "lanraragi",
+    "apptitle": "LANraragi",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "0",
+            "s_version": [
+                "9.21"
+            ]
+        }
+    ],
+    "appdesc": "一个开源的漫画存档服务",
+    "appstatus": 1,
+    "home": "https://lrr.tvc-16.science",
+    "help": "https://sugoi.gitbook.io/lanraragi/v/dev",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40290",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "content_directory",
+            "name": "媒体库目录",
+            "type": "string",
+            "default": "./data/content",
+            "suffix": "媒体库目录",
+            "unit": ""
+        },
+        {
+            "attr": "thumbnail_directory",
+            "name": "缩略图目录",
+            "type": "string",
+            "default": "./data/thumb",
+            "suffix": "缩略图目录",
+            "unit": ""
+        },
+        {
+            "attr": "database_directory",
+            "name": "数据库目录",
+            "type": "string",
+            "default": "./data/database",
+            "suffix": "数据库目录",
+            "unit": ""
+        },
+        {
+            "attr": "plugin_directory",
+            "name": "插件目录",
+            "type": "string",
+            "default": "./data/plugin",
+            "suffix": "插件目录",
+            "unit": ""
+        },
+        {
+            "attr": "http_proxy",
+            "name": "HTTP 代理",
+            "type": "string",
+            "default": "",
+            "suffix": "HTTP 代理",
+            "unit": ""
+        },
+        {
+            "attr": "https_proxy",
+            "name": "HTTPS 代理",
+            "type": "string",
+            "default": "",
+            "suffix": "HTTPS 代理",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "content_directory",
+            "type": "string",
+            "default": null,
+            "desc": "媒体库目录"
+        },
+        {
+            "key": "thumbnail_directory",
+            "type": "string",
+            "default": null,
+            "desc": "缩略图目录"
+        },
+        {
+            "key": "database_directory",
+            "type": "string",
+            "default": null,
+            "desc": "数据库目录"
+        },
+        {
+            "key": "plugin_directory",
+            "type": "string",
+            "default": null,
+            "desc": "插件目录"
+        },
+        {
+            "key": "http_proxy",
+            "type": "string",
+            "default": null,
+            "desc": "HTTP 代理"
+        },
+        {
+            "key": "https_proxy",
+            "type": "string",
+            "default": null,
+            "desc": "HTTPS 代理"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

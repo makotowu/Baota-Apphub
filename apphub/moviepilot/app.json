@@ -1,0 +1,1752 @@
+{
+    "appid": -1,
+    "appname": "moviepilot",
+    "apptitle": "MoviePilot",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "9.19"
+            ]
+        }
+    ],
+    "appdesc": "NAS 媒体库自动化管理工具",
+    "appstatus": 1,
+    "home": "https://github.com/jxxghp/MoviePilot",
+    "help": "https://github.com/jxxghp/MoviePilot",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "core_path",
+            "name": "核心路径",
+            "type": "string",
+            "default": "./data/core",
+            "suffix": "核心路径",
+            "unit": ""
+        },
+        {
+            "attr": "docker_sock_path",
+            "name": "Docker套接字路径",
+            "type": "string",
+            "default": "/var/run/docker.sock",
+            "suffix": "Docker套接字路径",
+            "unit": ""
+        },
+        {
+            "attr": "media_path",
+            "name": "媒体路径",
+            "type": "string",
+            "default": "./data/media",
+            "suffix": "媒体路径",
+            "unit": ""
+        },
+        {
+            "attr": "hostname",
+            "name": "主机名",
+            "type": "string",
+            "default": "moviepilot",
+            "suffix": "主机名",
+            "unit": ""
+        },
+        {
+            "attr": "umask",
+            "name": "文件掩码",
+            "type": "string",
+            "default": "022",
+            "suffix": "文件掩码",
+            "unit": ""
+        },
+        {
+            "attr": "user_id",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "0",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "group_id",
+            "name": "用户组 ID",
+            "type": "number",
+            "default": "0",
+            "suffix": "用户组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "tz",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "moviepilot_auto_update",
+            "name": "MoviePilot 自动更新",
+            "type": "string",
+            "default": "release",
+            "suffix": "MoviePilot 自动更新",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "面板 HTTP 端口",
+            "type": "number",
+            "default": "40241",
+            "suffix": "面板 HTTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "api",
+            "name": "API 端口",
+            "type": "number",
+            "default": "40242",
+            "suffix": "API 端口",
+            "unit": ""
+        },
+        {
+            "attr": "superuser",
+            "name": "超级管理员用户名",
+            "type": "string",
+            "default": "admin",
+            "suffix": "超级管理员用户名",
+            "unit": ""
+        },
+        {
+            "attr": "superuser_password",
+            "name": "超级管理员密码",
+            "type": "string",
+            "default": "password",
+            "suffix": "超级管理员密码",
+            "unit": ""
+        },
+        {
+            "attr": "wallpaper",
+            "name": "登录首页电影海报",
+            "type": "string",
+            "default": "tmdb",
+            "suffix": "登录首页电影海报",
+            "unit": ""
+        },
+        {
+            "attr": "api_token",
+            "name": "API 密钥",
+            "type": "string",
+            "default": "roduqib1o8ldrl8uyax7",
+            "suffix": "API 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_host",
+            "name": "网络代理",
+            "type": "string",
+            "default": "",
+            "suffix": "网络代理",
+            "unit": ""
+        },
+        {
+            "attr": "tmdb_api_domain",
+            "name": "TMDB API 地址",
+            "type": "string",
+            "default": "api.themoviedb.org",
+            "suffix": "TMDB API 地址",
+            "unit": ""
+        },
+        {
+            "attr": "download_path",
+            "name": "下载保存目录 (容器内)",
+            "type": "string",
+            "default": "/media/downloads",
+            "suffix": "下载保存目录 (容器内)",
+            "unit": ""
+        },
+        {
+            "attr": "download_movie_path",
+            "name": "电影下载目录 (容器内)",
+            "type": "string",
+            "default": "/media/downloads/movies",
+            "suffix": "电影下载目录 (容器内)",
+            "unit": ""
+        },
+        {
+            "attr": "download_tv_path",
+            "name": "电视剧下载目录 (容器内)",
+            "type": "string",
+            "default": "/media/downloads/tv",
+            "suffix": "电视剧下载目录 (容器内)",
+            "unit": ""
+        },
+        {
+            "attr": "download_anime_path",
+            "name": "动漫下载目录 (容器内)",
+            "type": "string",
+            "default": "/media/downloads/anime",
+            "suffix": "动漫下载目录 (容器内)",
+            "unit": ""
+        },
+        {
+            "attr": "download_subtitle",
+            "name": "下载字幕",
+            "type": "string",
+            "default": "false",
+            "suffix": "下载字幕",
+            "unit": ""
+        },
+        {
+            "attr": "download_category",
+            "name": "下载二级分类",
+            "type": "string",
+            "default": "false",
+            "suffix": "下载二级分类",
+            "unit": ""
+        },
+        {
+            "attr": "downloader_monitor",
+            "name": "下载器监控",
+            "type": "string",
+            "default": "true",
+            "suffix": "下载器监控",
+            "unit": ""
+        },
+        {
+            "attr": "subscribe_mode",
+            "name": "订阅模式",
+            "type": "string",
+            "default": "spider",
+            "suffix": "订阅模式",
+            "unit": ""
+        },
+        {
+            "attr": "subscribe_rss_interval",
+            "name": "订阅 RSS 间隔",
+            "type": "number",
+            "default": "30",
+            "suffix": "订阅 RSS 间隔",
+            "unit": ""
+        },
+        {
+            "attr": "scrap_metadata",
+            "name": "刮削入库",
+            "type": "string",
+            "default": "true",
+            "suffix": "刮削入库",
+            "unit": ""
+        },
+        {
+            "attr": "scrap_follow_tmdb",
+            "name": "刮削跟随 TMDB",
+            "type": "string",
+            "default": "true",
+            "suffix": "刮削跟随 TMDB",
+            "unit": ""
+        },
+        {
+            "attr": "torrent_tag",
+            "name": "种子标签",
+            "type": "string",
+            "default": "MOVIEPILOT",
+            "suffix": "种子标签",
+            "unit": ""
+        },
+        {
+            "attr": "library_path",
+            "name": "媒体库路径 (容器内)",
+            "type": "string",
+            "default": "/media",
+            "suffix": "媒体库路径 (容器内)",
+            "unit": ""
+        },
+        {
+            "attr": "library_movie_name",
+            "name": "电影媒体库名称",
+            "type": "string",
+            "default": "movies",
+            "suffix": "电影媒体库名称",
+            "unit": ""
+        },
+        {
+            "attr": "library_tv_name",
+            "name": "电视剧媒体库名称",
+            "type": "string",
+            "default": "tv",
+            "suffix": "电视剧媒体库名称",
+            "unit": ""
+        },
+        {
+            "attr": "library_anime_name",
+            "name": "动漫媒体库名称",
+            "type": "string",
+            "default": "anime",
+            "suffix": "动漫媒体库名称",
+            "unit": ""
+        },
+        {
+            "attr": "library_category",
+            "name": "媒体库二级分类",
+            "type": "string",
+            "default": "false",
+            "suffix": "媒体库二级分类",
+            "unit": ""
+        },
+        {
+            "attr": "transfer_type",
+            "name": "转移方式",
+            "type": "string",
+            "default": "link",
+            "suffix": "转移方式",
+            "unit": ""
+        },
+        {
+            "attr": "overwrite_mode",
+            "name": "转移覆盖模式",
+            "type": "string",
+            "default": "size",
+            "suffix": "转移覆盖模式",
+            "unit": ""
+        },
+        {
+            "attr": "cookiecloud_host",
+            "name": "CookieCloud 服务器地址",
+            "type": "string",
+            "default": "",
+            "suffix": "CookieCloud 服务器地址",
+            "unit": ""
+        },
+        {
+            "attr": "cookiecloud_key",
+            "name": "CookieCloud 用户 KEY",
+            "type": "string",
+            "default": "",
+            "suffix": "CookieCloud 用户 KEY",
+            "unit": ""
+        },
+        {
+            "attr": "cookiecloud_password",
+            "name": "CookieCloud 密码",
+            "type": "string",
+            "default": "",
+            "suffix": "CookieCloud 密码",
+            "unit": ""
+        },
+        {
+            "attr": "cookiecloud_interval",
+            "name": "CookieCloud 同步间隔（分钟）",
+            "type": "number",
+            "default": "20",
+            "suffix": "CookieCloud 同步间隔（分钟）",
+            "unit": ""
+        },
+        {
+            "attr": "user_agent",
+            "name": "用户代理",
+            "type": "string",
+            "default": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "suffix": "用户代理",
+            "unit": ""
+        },
+        {
+            "attr": "subscribe_search",
+            "name": "订阅搜索",
+            "type": "string",
+            "default": "false",
+            "suffix": "订阅搜索",
+            "unit": ""
+        },
+        {
+            "attr": "auto_download_user",
+            "name": "自动下载用户",
+            "type": "string",
+            "default": "",
+            "suffix": "自动下载用户",
+            "unit": ""
+        },
+        {
+            "attr": "plugin_market",
+            "name": "插件市场仓库地址",
+            "type": "string",
+            "default": "https://raw.githubusercontent.com/jxxghp/MoviePilot-Plugins/main/",
+            "suffix": "插件市场仓库地址",
+            "unit": ""
+        },
+        {
+            "attr": "messager",
+            "name": "消息通知渠道",
+            "type": "string",
+            "default": "telegram",
+            "suffix": "消息通知渠道",
+            "unit": ""
+        },
+        {
+            "attr": "telegram_token",
+            "name": "Telegram Token",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram Token",
+            "unit": ""
+        },
+        {
+            "attr": "telegram_chat_id",
+            "name": "Telegram Chat ID",
+            "type": "string",
+            "default": "",
+            "suffix": "Telegram Chat ID",
+            "unit": ""
+        },
+        {
+            "attr": "telegram_users",
+            "name": "电报用户",
+            "type": "string",
+            "default": "",
+            "suffix": "电报用户",
+            "unit": ""
+        },
+        {
+            "attr": "telegram_admins",
+            "name": "电报管理员",
+            "type": "string",
+            "default": "",
+            "suffix": "电报管理员",
+            "unit": ""
+        },
+        {
+            "attr": "wechat_corpid",
+            "name": "微信企业ID",
+            "type": "string",
+            "default": "",
+            "suffix": "微信企业ID",
+            "unit": ""
+        },
+        {
+            "attr": "wechat_app_secret",
+            "name": "微信应用密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "微信应用密钥",
+            "unit": ""
+        },
+        {
+            "attr": "wechat_app_id",
+            "name": "微信应用ID",
+            "type": "string",
+            "default": "",
+            "suffix": "微信应用ID",
+            "unit": ""
+        },
+        {
+            "attr": "wechat_token",
+            "name": "微信令牌",
+            "type": "string",
+            "default": "",
+            "suffix": "微信令牌",
+            "unit": ""
+        },
+        {
+            "attr": "wechat_encoding_aeskey",
+            "name": "微信编码 AES 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "微信编码 AES 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "wechat_admins",
+            "name": "微信管理员",
+            "type": "string",
+            "default": "",
+            "suffix": "微信管理员",
+            "unit": ""
+        },
+        {
+            "attr": "wechat_proxy",
+            "name": "微信代理",
+            "type": "string",
+            "default": "",
+            "suffix": "微信代理",
+            "unit": ""
+        },
+        {
+            "attr": "slack_oauth_token",
+            "name": "Slack OAuth 令牌",
+            "type": "string",
+            "default": "",
+            "suffix": "Slack OAuth 令牌",
+            "unit": ""
+        },
+        {
+            "attr": "slack_app_token",
+            "name": "Slack 应用令牌",
+            "type": "string",
+            "default": "",
+            "suffix": "Slack 应用令牌",
+            "unit": ""
+        },
+        {
+            "attr": "slack_channel",
+            "name": "Slack 频道",
+            "type": "string",
+            "default": "",
+            "suffix": "Slack 频道",
+            "unit": ""
+        },
+        {
+            "attr": "synologychat_webhook",
+            "name": "群晖聊天 Webhook",
+            "type": "string",
+            "default": "",
+            "suffix": "群晖聊天 Webhook",
+            "unit": ""
+        },
+        {
+            "attr": "synologychat_token",
+            "name": "群晖聊天令牌",
+            "type": "string",
+            "default": "",
+            "suffix": "群晖聊天令牌",
+            "unit": ""
+        },
+        {
+            "attr": "downloader",
+            "name": "下载器",
+            "type": "string",
+            "default": "qbittorrent",
+            "suffix": "下载器",
+            "unit": ""
+        },
+        {
+            "attr": "qb_host",
+            "name": "qBittorrent 主机地址",
+            "type": "string",
+            "default": "",
+            "suffix": "qBittorrent 主机地址",
+            "unit": ""
+        },
+        {
+            "attr": "qb_user",
+            "name": "qBittorrent 用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "qBittorrent 用户名",
+            "unit": ""
+        },
+        {
+            "attr": "qb_password",
+            "name": "qBittorrent 密码",
+            "type": "string",
+            "default": "",
+            "suffix": "qBittorrent 密码",
+            "unit": ""
+        },
+        {
+            "attr": "qb_sequential",
+            "name": "qBittorrent 顺序下载",
+            "type": "string",
+            "default": "true",
+            "suffix": "qBittorrent 顺序下载",
+            "unit": ""
+        },
+        {
+            "attr": "qb_force_resume",
+            "name": "qBittorrent 强制继续下载",
+            "type": "string",
+            "default": "false",
+            "suffix": "qBittorrent 强制继续下载",
+            "unit": ""
+        },
+        {
+            "attr": "tr_host",
+            "name": "Transmission 主机",
+            "type": "string",
+            "default": "",
+            "suffix": "Transmission 主机",
+            "unit": ""
+        },
+        {
+            "attr": "tr_user",
+            "name": "Transmission 用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "Transmission 用户名",
+            "unit": ""
+        },
+        {
+            "attr": "tr_password",
+            "name": "Transmission 密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Transmission 密码",
+            "unit": ""
+        },
+        {
+            "attr": "mediaserver",
+            "name": "媒体服务器",
+            "type": "string",
+            "default": "emby",
+            "suffix": "媒体服务器",
+            "unit": ""
+        },
+        {
+            "attr": "emby_host",
+            "name": "Emby 主机地址",
+            "type": "string",
+            "default": "",
+            "suffix": "Emby 主机地址",
+            "unit": ""
+        },
+        {
+            "attr": "emby_api_key",
+            "name": "Emby API 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "Emby API 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "jellyfin_host",
+            "name": "Jellyfin 主机",
+            "type": "string",
+            "default": "",
+            "suffix": "Jellyfin 主机",
+            "unit": ""
+        },
+        {
+            "attr": "jellyfin_api_key",
+            "name": "Jellyfin API 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "Jellyfin API 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "plex_host",
+            "name": "Plex 主机",
+            "type": "string",
+            "default": "",
+            "suffix": "Plex 主机",
+            "unit": ""
+        },
+        {
+            "attr": "plex_token",
+            "name": "Plex 令牌",
+            "type": "string",
+            "default": "",
+            "suffix": "Plex 令牌",
+            "unit": ""
+        },
+        {
+            "attr": "mediaserver_sync_interval",
+            "name": "媒体服务器同步间隔（小时）",
+            "type": "number",
+            "default": "6",
+            "suffix": "媒体服务器同步间隔（小时）",
+            "unit": ""
+        },
+        {
+            "attr": "mediaserver_sync_blacklist",
+            "name": "媒体服务器同步黑名单",
+            "type": "string",
+            "default": "",
+            "suffix": "媒体服务器同步黑名单",
+            "unit": ""
+        },
+        {
+            "attr": "auth_site",
+            "name": "认证站点",
+            "type": "string",
+            "default": "audiences",
+            "suffix": "认证站点",
+            "unit": ""
+        },
+        {
+            "attr": "iyuu_sign",
+            "name": "IYUU 登录令牌",
+            "type": "string",
+            "default": "",
+            "suffix": "IYUU 登录令牌",
+            "unit": ""
+        },
+        {
+            "attr": "hhclub_username",
+            "name": "HHClub 用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "HHClub 用户名",
+            "unit": ""
+        },
+        {
+            "attr": "hhclub_passkey",
+            "name": "HHClub 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "HHClub 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "audiences_uid",
+            "name": "Audiences 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "Audiences 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "audiences_passkey",
+            "name": "Audiences 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "Audiences 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "hddolby_id",
+            "name": "HDDolby 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "HDDolby 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "hddolby_passkey",
+            "name": "HDDolby 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "HDDolby 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "zmpt_uid",
+            "name": "ZMPT 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "ZMPT 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "zmpt_passkey",
+            "name": "ZMPT 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "ZMPT 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "freefarm_uid",
+            "name": "FreeFarm 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "FreeFarm 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "freefarm_passkey",
+            "name": "FreeFarm 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "FreeFarm 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "hdfans_uid",
+            "name": "HDFans 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "HDFans 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "hdfans_passkey",
+            "name": "HDFans 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "HDFans 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "wintersakura_uid",
+            "name": "WinterSakura 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "WinterSakura 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "wintersakura_passkey",
+            "name": "WinterSakura 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "WinterSakura 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "leaves_uid",
+            "name": "Leaves 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "Leaves 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "leaves_passkey",
+            "name": "Leaves 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "Leaves 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "ptba_uid",
+            "name": "PTBA 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "PTBA 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "ptba_passkey",
+            "name": "PTBA 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "PTBA 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "icc2022_uid",
+            "name": "ICC2022 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "ICC2022 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "icc2022_passkey",
+            "name": "ICC2022 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "ICC2022 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "ptlsp_uid",
+            "name": "PTLSP 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "PTLSP 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "ptlsp_passkey",
+            "name": "PTLSP 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "PTLSP 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "xingtan_uid",
+            "name": "XINGTAN 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "XINGTAN 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "xingtan_passkey",
+            "name": "XINGTAN 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "XINGTAN 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "ptvicomo_uid",
+            "name": "PTVICOMO 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "PTVICOMO 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "ptvicomo_passkey",
+            "name": "PTVICOMO 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "PTVICOMO 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "agsvpt_uid",
+            "name": "AGSVPT 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "AGSVPT 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "agsvpt_passkey",
+            "name": "AGSVPT 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "AGSVPT 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "hdkyl_uid",
+            "name": "HDKYL 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "HDKYL 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "hdkyl_passkey",
+            "name": "HDKYL 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "HDKYL 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "qingwa_uid",
+            "name": "QINGWA 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "QINGWA 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "qingwa_passkey",
+            "name": "QINGWA 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "QINGWA 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "discfan_uid",
+            "name": "DISCFAN 用户ID",
+            "type": "string",
+            "default": "",
+            "suffix": "DISCFAN 用户ID",
+            "unit": ""
+        },
+        {
+            "attr": "discfan_passkey",
+            "name": "DISCFAN 密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "DISCFAN 密钥",
+            "unit": ""
+        },
+        {
+            "attr": "big_memory_mode",
+            "name": "大内存模式",
+            "type": "string",
+            "default": "false",
+            "suffix": "大内存模式",
+            "unit": ""
+        },
+        {
+            "attr": "movie_rename_format",
+            "name": "电影重命名格式",
+            "type": "string",
+            "default": "{{title}}{% if year %} ({{year}}){% endif %}/{{title}}{% if year %} ({{year}}){% endif %}{% if part %}-{{part}}{% endif %}{% if videoFormat %} - {{videoFormat}}{% endif %}{{fileExt}}",
+            "suffix": "电影重命名格式",
+            "unit": ""
+        },
+        {
+            "attr": "tv_rename_format",
+            "name": "电视剧重命名格式",
+            "type": "string",
+            "default": "{{title}}{% if year %} ({{year}}){% endif %}/Season {{season}}/{{title}} - {{season_episode}}{% if part %}-{{part}}{% endif %}{% if episode %} - 第 {{episode}} 集{% endif %}{{fileExt}}",
+            "suffix": "电视剧重命名格式",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "core_path",
+            "type": "string",
+            "default": null,
+            "desc": "核心路径"
+        },
+        {
+            "key": "docker_sock_path",
+            "type": "string",
+            "default": null,
+            "desc": "Docker套接字路径"
+        },
+        {
+            "key": "media_path",
+            "type": "string",
+            "default": null,
+            "desc": "媒体路径"
+        },
+        {
+            "key": "hostname",
+            "type": "string",
+            "default": null,
+            "desc": "主机名"
+        },
+        {
+            "key": "umask",
+            "type": "string",
+            "default": null,
+            "desc": "文件掩码"
+        },
+        {
+            "key": "user_id",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "group_id",
+            "type": "string",
+            "default": null,
+            "desc": "用户组 ID"
+        },
+        {
+            "key": "tz",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "moviepilot_auto_update",
+            "type": "string",
+            "default": null,
+            "desc": "MoviePilot 自动更新"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "面板 HTTP 端口"
+        },
+        {
+            "key": "api",
+            "type": "string",
+            "default": null,
+            "desc": "API 端口"
+        },
+        {
+            "key": "superuser",
+            "type": "string",
+            "default": null,
+            "desc": "超级管理员用户名"
+        },
+        {
+            "key": "superuser_password",
+            "type": "string",
+            "default": null,
+            "desc": "超级管理员密码"
+        },
+        {
+            "key": "wallpaper",
+            "type": "string",
+            "default": null,
+            "desc": "登录首页电影海报"
+        },
+        {
+            "key": "api_token",
+            "type": "string",
+            "default": null,
+            "desc": "API 密钥"
+        },
+        {
+            "key": "proxy_host",
+            "type": "string",
+            "default": null,
+            "desc": "网络代理"
+        },
+        {
+            "key": "tmdb_api_domain",
+            "type": "string",
+            "default": null,
+            "desc": "TMDB API 地址"
+        },
+        {
+            "key": "download_path",
+            "type": "string",
+            "default": null,
+            "desc": "下载保存目录 (容器内)"
+        },
+        {
+            "key": "download_movie_path",
+            "type": "string",
+            "default": null,
+            "desc": "电影下载目录 (容器内)"
+        },
+        {
+            "key": "download_tv_path",
+            "type": "string",
+            "default": null,
+            "desc": "电视剧下载目录 (容器内)"
+        },
+        {
+            "key": "download_anime_path",
+            "type": "string",
+            "default": null,
+            "desc": "动漫下载目录 (容器内)"
+        },
+        {
+            "key": "download_subtitle",
+            "type": "string",
+            "default": null,
+            "desc": "下载字幕"
+        },
+        {
+            "key": "download_category",
+            "type": "string",
+            "default": null,
+            "desc": "下载二级分类"
+        },
+        {
+            "key": "downloader_monitor",
+            "type": "string",
+            "default": null,
+            "desc": "下载器监控"
+        },
+        {
+            "key": "subscribe_mode",
+            "type": "string",
+            "default": null,
+            "desc": "订阅模式"
+        },
+        {
+            "key": "subscribe_rss_interval",
+            "type": "string",
+            "default": null,
+            "desc": "订阅 RSS 间隔"
+        },
+        {
+            "key": "scrap_metadata",
+            "type": "string",
+            "default": null,
+            "desc": "刮削入库"
+        },
+        {
+            "key": "scrap_follow_tmdb",
+            "type": "string",
+            "default": null,
+            "desc": "刮削跟随 TMDB"
+        },
+        {
+            "key": "torrent_tag",
+            "type": "string",
+            "default": null,
+            "desc": "种子标签"
+        },
+        {
+            "key": "library_path",
+            "type": "string",
+            "default": null,
+            "desc": "媒体库路径 (容器内)"
+        },
+        {
+            "key": "library_movie_name",
+            "type": "string",
+            "default": null,
+            "desc": "电影媒体库名称"
+        },
+        {
+            "key": "library_tv_name",
+            "type": "string",
+            "default": null,
+            "desc": "电视剧媒体库名称"
+        },
+        {
+            "key": "library_anime_name",
+            "type": "string",
+            "default": null,
+            "desc": "动漫媒体库名称"
+        },
+        {
+            "key": "library_category",
+            "type": "string",
+            "default": null,
+            "desc": "媒体库二级分类"
+        },
+        {
+            "key": "transfer_type",
+            "type": "string",
+            "default": null,
+            "desc": "转移方式"
+        },
+        {
+            "key": "overwrite_mode",
+            "type": "string",
+            "default": null,
+            "desc": "转移覆盖模式"
+        },
+        {
+            "key": "cookiecloud_host",
+            "type": "string",
+            "default": null,
+            "desc": "CookieCloud 服务器地址"
+        },
+        {
+            "key": "cookiecloud_key",
+            "type": "string",
+            "default": null,
+            "desc": "CookieCloud 用户 KEY"
+        },
+        {
+            "key": "cookiecloud_password",
+            "type": "string",
+            "default": null,
+            "desc": "CookieCloud 密码"
+        },
+        {
+            "key": "cookiecloud_interval",
+            "type": "string",
+            "default": null,
+            "desc": "CookieCloud 同步间隔（分钟）"
+        },
+        {
+            "key": "user_agent",
+            "type": "string",
+            "default": null,
+            "desc": "用户代理"
+        },
+        {
+            "key": "subscribe_search",
+            "type": "string",
+            "default": null,
+            "desc": "订阅搜索"
+        },
+        {
+            "key": "auto_download_user",
+            "type": "string",
+            "default": null,
+            "desc": "自动下载用户"
+        },
+        {
+            "key": "plugin_market",
+            "type": "string",
+            "default": null,
+            "desc": "插件市场仓库地址"
+        },
+        {
+            "key": "messager",
+            "type": "string",
+            "default": null,
+            "desc": "消息通知渠道"
+        },
+        {
+            "key": "telegram_token",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram Token"
+        },
+        {
+            "key": "telegram_chat_id",
+            "type": "string",
+            "default": null,
+            "desc": "Telegram Chat ID"
+        },
+        {
+            "key": "telegram_users",
+            "type": "string",
+            "default": null,
+            "desc": "电报用户"
+        },
+        {
+            "key": "telegram_admins",
+            "type": "string",
+            "default": null,
+            "desc": "电报管理员"
+        },
+        {
+            "key": "wechat_corpid",
+            "type": "string",
+            "default": null,
+            "desc": "微信企业ID"
+        },
+        {
+            "key": "wechat_app_secret",
+            "type": "string",
+            "default": null,
+            "desc": "微信应用密钥"
+        },
+        {
+            "key": "wechat_app_id",
+            "type": "string",
+            "default": null,
+            "desc": "微信应用ID"
+        },
+        {
+            "key": "wechat_token",
+            "type": "string",
+            "default": null,
+            "desc": "微信令牌"
+        },
+        {
+            "key": "wechat_encoding_aeskey",
+            "type": "string",
+            "default": null,
+            "desc": "微信编码 AES 密钥"
+        },
+        {
+            "key": "wechat_admins",
+            "type": "string",
+            "default": null,
+            "desc": "微信管理员"
+        },
+        {
+            "key": "wechat_proxy",
+            "type": "string",
+            "default": null,
+            "desc": "微信代理"
+        },
+        {
+            "key": "slack_oauth_token",
+            "type": "string",
+            "default": null,
+            "desc": "Slack OAuth 令牌"
+        },
+        {
+            "key": "slack_app_token",
+            "type": "string",
+            "default": null,
+            "desc": "Slack 应用令牌"
+        },
+        {
+            "key": "slack_channel",
+            "type": "string",
+            "default": null,
+            "desc": "Slack 频道"
+        },
+        {
+            "key": "synologychat_webhook",
+            "type": "string",
+            "default": null,
+            "desc": "群晖聊天 Webhook"
+        },
+        {
+            "key": "synologychat_token",
+            "type": "string",
+            "default": null,
+            "desc": "群晖聊天令牌"
+        },
+        {
+            "key": "downloader",
+            "type": "string",
+            "default": null,
+            "desc": "下载器"
+        },
+        {
+            "key": "qb_host",
+            "type": "string",
+            "default": null,
+            "desc": "qBittorrent 主机地址"
+        },
+        {
+            "key": "qb_user",
+            "type": "string",
+            "default": null,
+            "desc": "qBittorrent 用户名"
+        },
+        {
+            "key": "qb_password",
+            "type": "string",
+            "default": null,
+            "desc": "qBittorrent 密码"
+        },
+        {
+            "key": "qb_sequential",
+            "type": "string",
+            "default": null,
+            "desc": "qBittorrent 顺序下载"
+        },
+        {
+            "key": "qb_force_resume",
+            "type": "string",
+            "default": null,
+            "desc": "qBittorrent 强制继续下载"
+        },
+        {
+            "key": "tr_host",
+            "type": "string",
+            "default": null,
+            "desc": "Transmission 主机"
+        },
+        {
+            "key": "tr_user",
+            "type": "string",
+            "default": null,
+            "desc": "Transmission 用户名"
+        },
+        {
+            "key": "tr_password",
+            "type": "string",
+            "default": null,
+            "desc": "Transmission 密码"
+        },
+        {
+            "key": "mediaserver",
+            "type": "string",
+            "default": null,
+            "desc": "媒体服务器"
+        },
+        {
+            "key": "emby_host",
+            "type": "string",
+            "default": null,
+            "desc": "Emby 主机地址"
+        },
+        {
+            "key": "emby_api_key",
+            "type": "string",
+            "default": null,
+            "desc": "Emby API 密钥"
+        },
+        {
+            "key": "jellyfin_host",
+            "type": "string",
+            "default": null,
+            "desc": "Jellyfin 主机"
+        },
+        {
+            "key": "jellyfin_api_key",
+            "type": "string",
+            "default": null,
+            "desc": "Jellyfin API 密钥"
+        },
+        {
+            "key": "plex_host",
+            "type": "string",
+            "default": null,
+            "desc": "Plex 主机"
+        },
+        {
+            "key": "plex_token",
+            "type": "string",
+            "default": null,
+            "desc": "Plex 令牌"
+        },
+        {
+            "key": "mediaserver_sync_interval",
+            "type": "string",
+            "default": null,
+            "desc": "媒体服务器同步间隔（小时）"
+        },
+        {
+            "key": "mediaserver_sync_blacklist",
+            "type": "string",
+            "default": null,
+            "desc": "媒体服务器同步黑名单"
+        },
+        {
+            "key": "auth_site",
+            "type": "string",
+            "default": null,
+            "desc": "认证站点"
+        },
+        {
+            "key": "iyuu_sign",
+            "type": "string",
+            "default": null,
+            "desc": "IYUU 登录令牌"
+        },
+        {
+            "key": "hhclub_username",
+            "type": "string",
+            "default": null,
+            "desc": "HHClub 用户名"
+        },
+        {
+            "key": "hhclub_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "HHClub 密钥"
+        },
+        {
+            "key": "audiences_uid",
+            "type": "string",
+            "default": null,
+            "desc": "Audiences 用户ID"
+        },
+        {
+            "key": "audiences_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "Audiences 密钥"
+        },
+        {
+            "key": "hddolby_id",
+            "type": "string",
+            "default": null,
+            "desc": "HDDolby 用户ID"
+        },
+        {
+            "key": "hddolby_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "HDDolby 密钥"
+        },
+        {
+            "key": "zmpt_uid",
+            "type": "string",
+            "default": null,
+            "desc": "ZMPT 用户ID"
+        },
+        {
+            "key": "zmpt_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "ZMPT 密钥"
+        },
+        {
+            "key": "freefarm_uid",
+            "type": "string",
+            "default": null,
+            "desc": "FreeFarm 用户ID"
+        },
+        {
+            "key": "freefarm_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "FreeFarm 密钥"
+        },
+        {
+            "key": "hdfans_uid",
+            "type": "string",
+            "default": null,
+            "desc": "HDFans 用户ID"
+        },
+        {
+            "key": "hdfans_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "HDFans 密钥"
+        },
+        {
+            "key": "wintersakura_uid",
+            "type": "string",
+            "default": null,
+            "desc": "WinterSakura 用户ID"
+        },
+        {
+            "key": "wintersakura_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "WinterSakura 密钥"
+        },
+        {
+            "key": "leaves_uid",
+            "type": "string",
+            "default": null,
+            "desc": "Leaves 用户ID"
+        },
+        {
+            "key": "leaves_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "Leaves 密钥"
+        },
+        {
+            "key": "ptba_uid",
+            "type": "string",
+            "default": null,
+            "desc": "PTBA 用户ID"
+        },
+        {
+            "key": "ptba_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "PTBA 密钥"
+        },
+        {
+            "key": "icc2022_uid",
+            "type": "string",
+            "default": null,
+            "desc": "ICC2022 用户ID"
+        },
+        {
+            "key": "icc2022_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "ICC2022 密钥"
+        },
+        {
+            "key": "ptlsp_uid",
+            "type": "string",
+            "default": null,
+            "desc": "PTLSP 用户ID"
+        },
+        {
+            "key": "ptlsp_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "PTLSP 密钥"
+        },
+        {
+            "key": "xingtan_uid",
+            "type": "string",
+            "default": null,
+            "desc": "XINGTAN 用户ID"
+        },
+        {
+            "key": "xingtan_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "XINGTAN 密钥"
+        },
+        {
+            "key": "ptvicomo_uid",
+            "type": "string",
+            "default": null,
+            "desc": "PTVICOMO 用户ID"
+        },
+        {
+            "key": "ptvicomo_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "PTVICOMO 密钥"
+        },
+        {
+            "key": "agsvpt_uid",
+            "type": "string",
+            "default": null,
+            "desc": "AGSVPT 用户ID"
+        },
+        {
+            "key": "agsvpt_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "AGSVPT 密钥"
+        },
+        {
+            "key": "hdkyl_uid",
+            "type": "string",
+            "default": null,
+            "desc": "HDKYL 用户ID"
+        },
+        {
+            "key": "hdkyl_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "HDKYL 密钥"
+        },
+        {
+            "key": "qingwa_uid",
+            "type": "string",
+            "default": null,
+            "desc": "QINGWA 用户ID"
+        },
+        {
+            "key": "qingwa_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "QINGWA 密钥"
+        },
+        {
+            "key": "discfan_uid",
+            "type": "string",
+            "default": null,
+            "desc": "DISCFAN 用户ID"
+        },
+        {
+            "key": "discfan_passkey",
+            "type": "string",
+            "default": null,
+            "desc": "DISCFAN 密钥"
+        },
+        {
+            "key": "big_memory_mode",
+            "type": "string",
+            "default": null,
+            "desc": "大内存模式"
+        },
+        {
+            "key": "movie_rename_format",
+            "type": "string",
+            "default": null,
+            "desc": "电影重命名格式"
+        },
+        {
+            "key": "tv_rename_format",
+            "type": "string",
+            "default": null,
+            "desc": "电视剧重命名格式"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

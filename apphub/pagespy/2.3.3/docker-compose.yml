@@ -1,0 +1,22 @@
+services:
+  pageSpy:
+    container_name: ${APP_NAME}
+    image: "ghcr.io/huolalatech/page-spy-web:v2.3.3"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:6752"
+    volumes:
+      - ./log:/app/log
+      - ./data:/app/data
+    restart: always
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

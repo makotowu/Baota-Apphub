@@ -1,0 +1,217 @@
+{
+    "appid": -1,
+    "appname": "seafile",
+    "apptitle": "Seafile",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "12",
+            "s_version": [
+                "0.14"
+            ]
+        }
+    ],
+    "appdesc": "具有隐私保护和团队合作功能的开源云存储系统",
+    "appstatus": 1,
+    "home": "https://www.seafile.com",
+    "help": "https://manual.seafile.com",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_type",
+            "name": "数据库服务",
+            "type": "string",
+            "default": "mysql",
+            "suffix": "数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_root_password",
+            "name": "数据库 root 密码",
+            "type": "string",
+            "default": "mysql_root_password",
+            "suffix": "数据库 root 密码",
+            "unit": ""
+        },
+        {
+            "attr": "admin_email",
+            "name": "管理员邮箱",
+            "type": "string",
+            "default": "admin@localhost.com",
+            "suffix": "管理员邮箱",
+            "unit": ""
+        },
+        {
+            "attr": "admin_password",
+            "name": "管理员密码",
+            "type": "string",
+            "default": "seafile",
+            "suffix": "管理员密码",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "HTTP端口",
+            "type": "number",
+            "default": 40130,
+            "suffix": "HTTP端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "memcached_type",
+            "name": "Memcached 服务",
+            "type": "string",
+            "default": "memcached",
+            "suffix": "Memcached 服务",
+            "unit": ""
+        },
+        {
+            "attr": "server_hostname",
+            "name": "服务端主机名 (域名 或 IP)",
+            "type": "string",
+            "default": "localhost.com",
+            "suffix": "服务端主机名 (域名 或 IP)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "panel_db_type",
+            "type": "string",
+            "default": null,
+            "desc": "数据库服务"
+        },
+        {
+            "key": "panel_db_root_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库 root 密码"
+        },
+        {
+            "key": "admin_email",
+            "type": "string",
+            "default": null,
+            "desc": "管理员邮箱"
+        },
+        {
+            "key": "admin_password",
+            "type": "string",
+            "default": null,
+            "desc": "管理员密码"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTP端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "memcached_type",
+            "type": "string",
+            "default": null,
+            "desc": "Memcached 服务"
+        },
+        {
+            "key": "server_hostname",
+            "type": "string",
+            "default": null,
+            "desc": "服务端主机名 (域名 或 IP)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

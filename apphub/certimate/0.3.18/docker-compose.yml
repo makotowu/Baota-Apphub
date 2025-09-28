@@ -1,0 +1,22 @@
+services:
+  certimate:
+    image: "usual2970/certimate:v0.3.18"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8090"
+    volumes:
+      - "${APP_PATH}/data:/app/pb_data"
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

@@ -1,0 +1,34 @@
+services:
+  samba:
+    image: "elswork/samba:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    hostname: ${HOSTNAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:139"
+      - "${HOST_IP}:${PANEL_APP_PORT_SMB}:445"
+    environment:
+      - TZ=${TZ}
+    volumes:
+      - "${APP_PATH}/data:${INTERNAL_DATA_PATH}"
+    command:
+      -u "${USER_1}"
+      -s "${SHARE_1}"
+      #-u "${USER_2}"
+      #-s "${SHARE_2}"
+      #-u "${USER_3}"
+      #-s "${SHARE_3}"
+      
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

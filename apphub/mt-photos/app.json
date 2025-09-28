@@ -1,0 +1,198 @@
+{
+    "appid": -1,
+    "appname": "mt-photos",
+    "apptitle": "MT Photos",
+    "apptype": "Media",
+    "appTypeCN": "多媒体",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "38.1"
+            ]
+        }
+    ],
+    "appdesc": "一款简单、好用的照片管理系统",
+    "appstatus": 1,
+    "home": "https://mtmt.tech",
+    "help": "https://mtmt.tech",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40319",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data/config",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "upload_path",
+            "name": "上传路径",
+            "type": "string",
+            "default": "./data/upload",
+            "suffix": "上传路径",
+            "unit": ""
+        },
+        {
+            "attr": "media_path",
+            "name": "媒体路径",
+            "type": "string",
+            "default": "./data/media-1",
+            "suffix": "媒体路径",
+            "unit": ""
+        },
+        {
+            "attr": "media_path_internal",
+            "name": "容器内部媒体路径",
+            "type": "string",
+            "default": "/media-1",
+            "suffix": "容器内部媒体路径",
+            "unit": ""
+        },
+        {
+            "attr": "media_path_2",
+            "name": "媒体路径 2",
+            "type": "string",
+            "default": "./data/media-2",
+            "suffix": "媒体路径 2",
+            "unit": ""
+        },
+        {
+            "attr": "media_path_internal_2",
+            "name": "容器内部媒体路径 2",
+            "type": "string",
+            "default": "/media-2",
+            "suffix": "容器内部媒体路径 2",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "upload_path",
+            "type": "string",
+            "default": null,
+            "desc": "上传路径"
+        },
+        {
+            "key": "media_path",
+            "type": "string",
+            "default": null,
+            "desc": "媒体路径"
+        },
+        {
+            "key": "media_path_internal",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部媒体路径"
+        },
+        {
+            "key": "media_path_2",
+            "type": "string",
+            "default": null,
+            "desc": "媒体路径 2"
+        },
+        {
+            "key": "media_path_internal_2",
+            "type": "string",
+            "default": null,
+            "desc": "容器内部媒体路径 2"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

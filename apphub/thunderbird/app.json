@@ -1,0 +1,450 @@
+{
+    "appid": -1,
+    "appname": "thunderbird",
+    "apptitle": "Thunderbird",
+    "apptype": "Email",
+    "appTypeCN": "邮件/邮局",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "25",
+            "s_version": [
+                "07.1"
+            ]
+        }
+    ],
+    "appdesc": "开源的电子邮件客户端",
+    "appstatus": 1,
+    "home": "https://www.thunderbird.net",
+    "help": "https://support.mozilla.org/en-US/products/thunderbird",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "Web 端口",
+            "type": "number",
+            "default": "40327",
+            "suffix": "Web 端口",
+            "unit": ""
+        },
+        {
+            "attr": "vnc_port",
+            "name": "VNC 端口",
+            "type": "number",
+            "default": "40328",
+            "suffix": "VNC 端口",
+            "unit": ""
+        },
+        {
+            "attr": "vnc_password",
+            "name": "VNC 密码",
+            "type": "string",
+            "default": "password",
+            "suffix": "VNC 密码",
+            "unit": ""
+        },
+        {
+            "attr": "config_path",
+            "name": "配置路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "user_id",
+            "name": "用户 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户 ID",
+            "unit": ""
+        },
+        {
+            "attr": "group_id",
+            "name": "用户组 ID",
+            "type": "number",
+            "default": "1000",
+            "suffix": "用户组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "sup_group_ids",
+            "name": "补充用户组 ID",
+            "type": "string",
+            "default": "",
+            "suffix": "补充用户组 ID",
+            "unit": ""
+        },
+        {
+            "attr": "umask",
+            "name": "文件创建权限掩码",
+            "type": "string",
+            "default": "0022",
+            "suffix": "文件创建权限掩码",
+            "unit": ""
+        },
+        {
+            "attr": "lang",
+            "name": "语言环境",
+            "type": "string",
+            "default": "en_US.UTF-8",
+            "suffix": "语言环境",
+            "unit": ""
+        },
+        {
+            "attr": "tz",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "keep_app_running",
+            "name": "保持应用运行",
+            "type": "string",
+            "default": "0",
+            "suffix": "保持应用运行",
+            "unit": ""
+        },
+        {
+            "attr": "app_niceness",
+            "name": "应用优先级",
+            "type": "string",
+            "default": "0",
+            "suffix": "应用优先级",
+            "unit": ""
+        },
+        {
+            "attr": "install_packages",
+            "name": "安装包",
+            "type": "string",
+            "default": "",
+            "suffix": "安装包",
+            "unit": ""
+        },
+        {
+            "attr": "packages_mirror",
+            "name": "软件包镜像",
+            "type": "string",
+            "default": "",
+            "suffix": "软件包镜像",
+            "unit": ""
+        },
+        {
+            "attr": "container_debug",
+            "name": "容器调试",
+            "type": "string",
+            "default": "0",
+            "suffix": "容器调试",
+            "unit": ""
+        },
+        {
+            "attr": "display_width",
+            "name": "显示宽度",
+            "type": "number",
+            "default": "1920",
+            "suffix": "显示宽度",
+            "unit": ""
+        },
+        {
+            "attr": "display_height",
+            "name": "显示高度",
+            "type": "number",
+            "default": "1080",
+            "suffix": "显示高度",
+            "unit": ""
+        },
+        {
+            "attr": "dark_mode",
+            "name": "暗黑模式",
+            "type": "string",
+            "default": "0",
+            "suffix": "暗黑模式",
+            "unit": ""
+        },
+        {
+            "attr": "web_audio",
+            "name": "Web 音频",
+            "type": "string",
+            "default": "0",
+            "suffix": "Web 音频",
+            "unit": ""
+        },
+        {
+            "attr": "web_authentication",
+            "name": "Web 身份验证",
+            "type": "string",
+            "default": "0",
+            "suffix": "Web 身份验证",
+            "unit": ""
+        },
+        {
+            "attr": "web_authentication_username",
+            "name": "Web 身份验证用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "Web 身份验证用户名",
+            "unit": ""
+        },
+        {
+            "attr": "web_authentication_password",
+            "name": "Web 身份验证密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Web 身份验证密码",
+            "unit": ""
+        },
+        {
+            "attr": "secure_connection",
+            "name": "安全连接",
+            "type": "string",
+            "default": "1",
+            "suffix": "安全连接",
+            "unit": ""
+        },
+        {
+            "attr": "secure_connection_vnc_method",
+            "name": "安全 VNC 方法",
+            "type": "string",
+            "default": "SSL",
+            "suffix": "安全 VNC 方法",
+            "unit": ""
+        },
+        {
+            "attr": "secure_connection_certs_check_interval",
+            "name": "安全连接证书检查间隔",
+            "type": "number",
+            "default": "60",
+            "suffix": "安全连接证书检查间隔",
+            "unit": ""
+        },
+        {
+            "attr": "enable_cjk_font",
+            "name": "启用 CJK 字体",
+            "type": "string",
+            "default": "0",
+            "suffix": "启用 CJK 字体",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "Web 端口"
+        },
+        {
+            "key": "vnc_port",
+            "type": "port",
+            "default": null,
+            "desc": "VNC 端口"
+        },
+        {
+            "key": "vnc_password",
+            "type": "string",
+            "default": null,
+            "desc": "VNC 密码"
+        },
+        {
+            "key": "config_path",
+            "type": "string",
+            "default": null,
+            "desc": "配置路径"
+        },
+        {
+            "key": "user_id",
+            "type": "string",
+            "default": null,
+            "desc": "用户 ID"
+        },
+        {
+            "key": "group_id",
+            "type": "string",
+            "default": null,
+            "desc": "用户组 ID"
+        },
+        {
+            "key": "sup_group_ids",
+            "type": "string",
+            "default": null,
+            "desc": "补充用户组 ID"
+        },
+        {
+            "key": "umask",
+            "type": "string",
+            "default": null,
+            "desc": "文件创建权限掩码"
+        },
+        {
+            "key": "lang",
+            "type": "string",
+            "default": null,
+            "desc": "语言环境"
+        },
+        {
+            "key": "tz",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "keep_app_running",
+            "type": "string",
+            "default": null,
+            "desc": "保持应用运行"
+        },
+        {
+            "key": "app_niceness",
+            "type": "string",
+            "default": null,
+            "desc": "应用优先级"
+        },
+        {
+            "key": "install_packages",
+            "type": "string",
+            "default": null,
+            "desc": "安装包"
+        },
+        {
+            "key": "packages_mirror",
+            "type": "string",
+            "default": null,
+            "desc": "软件包镜像"
+        },
+        {
+            "key": "container_debug",
+            "type": "string",
+            "default": null,
+            "desc": "容器调试"
+        },
+        {
+            "key": "display_width",
+            "type": "string",
+            "default": null,
+            "desc": "显示宽度"
+        },
+        {
+            "key": "display_height",
+            "type": "string",
+            "default": null,
+            "desc": "显示高度"
+        },
+        {
+            "key": "dark_mode",
+            "type": "string",
+            "default": null,
+            "desc": "暗黑模式"
+        },
+        {
+            "key": "web_audio",
+            "type": "string",
+            "default": null,
+            "desc": "Web 音频"
+        },
+        {
+            "key": "web_authentication",
+            "type": "string",
+            "default": null,
+            "desc": "Web 身份验证"
+        },
+        {
+            "key": "web_authentication_username",
+            "type": "string",
+            "default": null,
+            "desc": "Web 身份验证用户名"
+        },
+        {
+            "key": "web_authentication_password",
+            "type": "string",
+            "default": null,
+            "desc": "Web 身份验证密码"
+        },
+        {
+            "key": "secure_connection",
+            "type": "string",
+            "default": null,
+            "desc": "安全连接"
+        },
+        {
+            "key": "secure_connection_vnc_method",
+            "type": "string",
+            "default": null,
+            "desc": "安全 VNC 方法"
+        },
+        {
+            "key": "secure_connection_certs_check_interval",
+            "type": "string",
+            "default": null,
+            "desc": "安全连接证书检查间隔"
+        },
+        {
+            "key": "enable_cjk_font",
+            "type": "string",
+            "default": null,
+            "desc": "启用 CJK 字体"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

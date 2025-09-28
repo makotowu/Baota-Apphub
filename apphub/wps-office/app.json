@@ -1,0 +1,183 @@
+{
+    "appid": -1,
+    "appname": "wps-office",
+    "apptitle": "WPS Office",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "多功能免费办公套件",
+    "appstatus": 1,
+    "home": "https://www.wps.com",
+    "help": "https://www.wps.com",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "HTTP端口",
+            "type": "number",
+            "default": 40134,
+            "suffix": "HTTP端口",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "HTTPS端口",
+            "type": "number",
+            "default": 40135,
+            "suffix": "HTTPS端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "http_user",
+            "name": "HTTP 用户",
+            "type": "string",
+            "default": "user",
+            "suffix": "HTTP 用户",
+            "unit": ""
+        },
+        {
+            "attr": "http_pwd",
+            "name": "HTTP 密码",
+            "type": "string",
+            "default": "password",
+            "suffix": "HTTP 密码",
+            "unit": ""
+        },
+        {
+            "attr": "mem_use",
+            "name": "共享内存占用(512m)",
+            "type": "string",
+            "default": "1gb",
+            "suffix": "共享内存占用(512m)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTP端口"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTPS端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "http_user",
+            "type": "string",
+            "default": null,
+            "desc": "HTTP 用户"
+        },
+        {
+            "key": "http_pwd",
+            "type": "string",
+            "default": null,
+            "desc": "HTTP 密码"
+        },
+        {
+            "key": "mem_use",
+            "type": "string",
+            "default": null,
+            "desc": "共享内存占用(512m)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

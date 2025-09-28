@@ -1,0 +1,33 @@
+
+networks:
+    baota_net:
+        external: true
+
+services:
+  blossom:
+    image: jasminexzzz/blossom:1.16.0
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    volumes:
+      - ./bl/:/home/bl/
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:${PANEL_DB_TYPE}://${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}?useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true&allowMultiQueries=true&useSSL=false&&serverTimezone=GMT%2B8
+      SPRING_DATASOURCE_USERNAME: ${PANEL_DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${PANEL_DB_USER_PASSWORD} 
+    ports:
+      - ${HOST_IP}:${WEB_PORT}:9999
+    networks:
+      - baota_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9999/sys/alive"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    restart: always
+    labels:  
+      createdBy: "bt_apps"

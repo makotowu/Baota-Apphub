@@ -1,0 +1,30 @@
+services:
+  warp:
+    image: caomingjun/warp:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - '${HOST_IP}:${WEB_PORT}:1080'
+    environment:
+      - WARP_SLEEP=${WARP_SLEEP}
+      - WARP_LICENSE_KEY=${WARP_LICENSE_KEY}
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+      - net.ipv4.conf.all.src_valid_mark=1
+    volumes:
+      - '${APP_PATH}/data:/var/lib/cloudflare-warp'
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

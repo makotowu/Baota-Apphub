@@ -1,0 +1,23 @@
+services:
+  picimpact:
+    image: besscroft/picimpact:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:3000"
+    environment:
+      - DATABASE_URL=postgres://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}
+      - AUTH_SECRET=${AUTH_SECRET}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

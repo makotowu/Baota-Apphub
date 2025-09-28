@@ -1,0 +1,49 @@
+services:
+  hbbs:
+    container_name: ${APP_NAME}_hbbs
+    restart: always
+    ports:
+      - "${HOST_IP}:${NAT_TEST_PORT}:21115" #NAT类型测试
+      - "${HOST_IP}:${HBBS_PORT}:21116" # 自定义 hbbs 映射端口
+      - "${HOST_IP}:${HBBS_PORT}:21116/udp" #自定义 hbbs 映射端口
+      - "${HOST_IP}:${WEB_CLIENT_PORT1}:21118" #网页客户端支持端口
+    command: hbbs -r ${HOST_ADDRESS}:${HBBS_PORT} -k _ # 填入个人域名或 IP +  暴露端口
+    volumes:
+      - "./data:/root" # 自定义挂载目录
+    networks:
+      - baota_net
+    depends_on:
+      - hbbr
+#    deploy:
+#      resources:
+#        limits:
+#          memory: 64M
+    image: rustdesk/rustdesk-server:latest
+#    image: rustdesk/rustdesk-server:latest-arm64v8 # 镜像选用 arm64 版
+    labels:  
+      createdBy: "bt_apps"
+
+  hbbr:
+    container_name: ${APP_NAME}_hbbr
+    restart: always
+    ports:
+      - "${HOST_IP}:${HBBR_PORT}:21117" # 自定义 hbbr 映射端口
+      - "${HOST_IP}:${WEB_CLIENT_PORT2}:21119" #网页客户端支持端口
+    command: hbbr -k _
+    volumes:
+      - "./data:/root" # 自定义挂载目录
+    networks:
+      - baota_net
+#    deploy:
+#      resources:
+#        limits:
+#          memory: 64M
+    image: rustdesk/rustdesk-server:latest
+#    image: rustdesk/rustdesk-server:latest-arm64v8 # 镜像选用 arm64 版
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true
+

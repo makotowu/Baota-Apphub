@@ -1,0 +1,584 @@
+{
+    "appid": -1,
+    "appname": "neko",
+    "apptitle": "Neko",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "自托管虚拟浏览器",
+    "appstatus": 1,
+    "home": "https://neko.m1k1o.net",
+    "help": "https://neko.m1k1o.net",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "image_name",
+            "name": "镜像名称",
+            "type": "string",
+            "default": "m1k1o/neko:firefox",
+            "suffix": "镜像名称",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40277",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "neko_screen",
+            "name": "屏幕分辨率",
+            "type": "string",
+            "default": "1920x1080@30",
+            "suffix": "屏幕分辨率",
+            "unit": ""
+        },
+        {
+            "attr": "neko_password",
+            "name": "用户密码",
+            "type": "string",
+            "default": "neko",
+            "suffix": "用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "neko_password_admin",
+            "name": "管理员密码",
+            "type": "string",
+            "default": "admin",
+            "suffix": "管理员密码",
+            "unit": ""
+        },
+        {
+            "attr": "neko_epr",
+            "name": "WebRTC UDP 端口范围",
+            "type": "string",
+            "default": "52000-52100",
+            "suffix": "WebRTC UDP 端口范围",
+            "unit": ""
+        },
+        {
+            "attr": "neko_icelite",
+            "name": "ICELite 模式",
+            "type": "number",
+            "default": "1",
+            "suffix": "ICELite 模式",
+            "unit": ""
+        },
+        {
+            "attr": "mem_use",
+            "name": "共享内存占用 (1gb)",
+            "type": "string",
+            "default": "2048m",
+            "suffix": "共享内存占用 (1gb)",
+            "unit": ""
+        },
+        {
+            "attr": "download_path",
+            "name": "下载文件路径 (注意文件夹权限)",
+            "type": "string",
+            "default": "./data/Downloads",
+            "suffix": "下载文件路径 (注意文件夹权限)",
+            "unit": ""
+        },
+        {
+            "attr": "neko_control_protection",
+            "name": "控制保护",
+            "type": "string",
+            "default": "false",
+            "suffix": "控制保护",
+            "unit": ""
+        },
+        {
+            "attr": "neko_implicit_control",
+            "name": "隐式控制",
+            "type": "string",
+            "default": "false",
+            "suffix": "隐式控制",
+            "unit": ""
+        },
+        {
+            "attr": "neko_locks",
+            "name": "锁定",
+            "type": "string",
+            "default": "",
+            "suffix": "锁定",
+            "unit": ""
+        },
+        {
+            "attr": "neko_nat1to1",
+            "name": "NAT1to1 IP",
+            "type": "string",
+            "default": "",
+            "suffix": "NAT1to1 IP",
+            "unit": ""
+        },
+        {
+            "attr": "neko_ipfetch",
+            "name": "IP 获取URL",
+            "type": "string",
+            "default": "",
+            "suffix": "IP 获取URL",
+            "unit": ""
+        },
+        {
+            "attr": "neko_iceserver",
+            "name": "ICE 服务器",
+            "type": "string",
+            "default": "",
+            "suffix": "ICE 服务器",
+            "unit": ""
+        },
+        {
+            "attr": "neko_iceservers",
+            "name": "ICE 服务器组",
+            "type": "string",
+            "default": "",
+            "suffix": "ICE 服务器组",
+            "unit": ""
+        },
+        {
+            "attr": "neko_video_codec",
+            "name": "视频编解码器",
+            "type": "string",
+            "default": "vp8",
+            "suffix": "视频编解码器",
+            "unit": ""
+        },
+        {
+            "attr": "neko_video_bitrate",
+            "name": "视频比特率",
+            "type": "number",
+            "default": "3500",
+            "suffix": "视频比特率",
+            "unit": ""
+        },
+        {
+            "attr": "neko_max_fps",
+            "name": "最大FPS",
+            "type": "number",
+            "default": "0",
+            "suffix": "最大FPS",
+            "unit": ""
+        },
+        {
+            "attr": "neko_hwenc",
+            "name": "硬件编码器",
+            "type": "string",
+            "default": "none",
+            "suffix": "硬件编码器",
+            "unit": ""
+        },
+        {
+            "attr": "neko_audio_codec",
+            "name": "音频编解码器",
+            "type": "string",
+            "default": "opus",
+            "suffix": "音频编解码器",
+            "unit": ""
+        },
+        {
+            "attr": "neko_audio_bitrate",
+            "name": "音频比特率",
+            "type": "number",
+            "default": 196,
+            "suffix": "音频比特率",
+            "unit": ""
+        },
+        {
+            "attr": "neko_broadcast_pipeline",
+            "name": "广播管道",
+            "type": "string",
+            "default": "",
+            "suffix": "广播管道",
+            "unit": ""
+        },
+        {
+            "attr": "neko_broadcast_url",
+            "name": "广播URL",
+            "type": "string",
+            "default": "",
+            "suffix": "广播URL",
+            "unit": ""
+        },
+        {
+            "attr": "neko_broadcast_autostart",
+            "name": "广播自动启动",
+            "type": "string",
+            "default": "false",
+            "suffix": "广播自动启动",
+            "unit": ""
+        },
+        {
+            "attr": "neko_bind",
+            "name": "绑定地址",
+            "type": "number",
+            "default": "8080",
+            "suffix": "绑定地址",
+            "unit": ""
+        },
+        {
+            "attr": "neko_cert",
+            "name": "SSL证书路径",
+            "type": "string",
+            "default": "",
+            "suffix": "SSL证书路径",
+            "unit": ""
+        },
+        {
+            "attr": "neko_key",
+            "name": "SSL 密钥路径",
+            "type": "string",
+            "default": "",
+            "suffix": "SSL 密钥路径",
+            "unit": ""
+        },
+        {
+            "attr": "neko_proxy",
+            "name": "代理模式",
+            "type": "string",
+            "default": "false",
+            "suffix": "代理模式",
+            "unit": ""
+        },
+        {
+            "attr": "neko_path_prefix",
+            "name": "路径前缀",
+            "type": "string",
+            "default": "",
+            "suffix": "路径前缀",
+            "unit": ""
+        },
+        {
+            "attr": "neko_cors",
+            "name": "跨域资源共享",
+            "type": "string",
+            "default": "",
+            "suffix": "跨域资源共享",
+            "unit": ""
+        },
+        {
+            "attr": "neko_file_transfer_enabled",
+            "name": "文件传输已启用",
+            "type": "string",
+            "default": "true",
+            "suffix": "文件传输已启用",
+            "unit": ""
+        },
+        {
+            "attr": "neko_file_transfer_path",
+            "name": "文件传输路径",
+            "type": "string",
+            "default": "/home/neko/Downloads",
+            "suffix": "文件传输路径",
+            "unit": ""
+        },
+        {
+            "attr": "neko_display",
+            "name": "显示",
+            "type": "string",
+            "default": "",
+            "suffix": "显示",
+            "unit": ""
+        },
+        {
+            "attr": "neko_device",
+            "name": "设备",
+            "type": "string",
+            "default": "",
+            "suffix": "设备",
+            "unit": ""
+        },
+        {
+            "attr": "neko_static",
+            "name": "静态文件路径",
+            "type": "string",
+            "default": "",
+            "suffix": "静态文件路径",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "image_name",
+            "type": "string",
+            "default": null,
+            "desc": "镜像名称"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "neko_screen",
+            "type": "string",
+            "default": null,
+            "desc": "屏幕分辨率"
+        },
+        {
+            "key": "neko_password",
+            "type": "string",
+            "default": null,
+            "desc": "用户密码"
+        },
+        {
+            "key": "neko_password_admin",
+            "type": "string",
+            "default": null,
+            "desc": "管理员密码"
+        },
+        {
+            "key": "neko_epr",
+            "type": "string",
+            "default": null,
+            "desc": "WebRTC UDP 端口范围"
+        },
+        {
+            "key": "neko_icelite",
+            "type": "string",
+            "default": null,
+            "desc": "ICELite 模式"
+        },
+        {
+            "key": "mem_use",
+            "type": "string",
+            "default": null,
+            "desc": "共享内存占用 (1gb)"
+        },
+        {
+            "key": "download_path",
+            "type": "string",
+            "default": null,
+            "desc": "下载文件路径 (注意文件夹权限)"
+        },
+        {
+            "key": "neko_control_protection",
+            "type": "string",
+            "default": null,
+            "desc": "控制保护"
+        },
+        {
+            "key": "neko_implicit_control",
+            "type": "string",
+            "default": null,
+            "desc": "隐式控制"
+        },
+        {
+            "key": "neko_locks",
+            "type": "string",
+            "default": null,
+            "desc": "锁定"
+        },
+        {
+            "key": "neko_nat1to1",
+            "type": "string",
+            "default": null,
+            "desc": "NAT1to1 IP"
+        },
+        {
+            "key": "neko_ipfetch",
+            "type": "string",
+            "default": null,
+            "desc": "IP 获取URL"
+        },
+        {
+            "key": "neko_iceserver",
+            "type": "string",
+            "default": null,
+            "desc": "ICE 服务器"
+        },
+        {
+            "key": "neko_iceservers",
+            "type": "string",
+            "default": null,
+            "desc": "ICE 服务器组"
+        },
+        {
+            "key": "neko_video_codec",
+            "type": "string",
+            "default": null,
+            "desc": "视频编解码器"
+        },
+        {
+            "key": "neko_video_bitrate",
+            "type": "string",
+            "default": null,
+            "desc": "视频比特率"
+        },
+        {
+            "key": "neko_max_fps",
+            "type": "string",
+            "default": null,
+            "desc": "最大FPS"
+        },
+        {
+            "key": "neko_hwenc",
+            "type": "string",
+            "default": null,
+            "desc": "硬件编码器"
+        },
+        {
+            "key": "neko_audio_codec",
+            "type": "string",
+            "default": null,
+            "desc": "音频编解码器"
+        },
+        {
+            "key": "neko_audio_bitrate",
+            "type": "string",
+            "default": null,
+            "desc": "音频比特率"
+        },
+        {
+            "key": "neko_broadcast_pipeline",
+            "type": "string",
+            "default": null,
+            "desc": "广播管道"
+        },
+        {
+            "key": "neko_broadcast_url",
+            "type": "string",
+            "default": null,
+            "desc": "广播URL"
+        },
+        {
+            "key": "neko_broadcast_autostart",
+            "type": "string",
+            "default": null,
+            "desc": "广播自动启动"
+        },
+        {
+            "key": "neko_bind",
+            "type": "string",
+            "default": null,
+            "desc": "绑定地址"
+        },
+        {
+            "key": "neko_cert",
+            "type": "string",
+            "default": null,
+            "desc": "SSL证书路径"
+        },
+        {
+            "key": "neko_key",
+            "type": "string",
+            "default": null,
+            "desc": "SSL 密钥路径"
+        },
+        {
+            "key": "neko_proxy",
+            "type": "string",
+            "default": null,
+            "desc": "代理模式"
+        },
+        {
+            "key": "neko_path_prefix",
+            "type": "string",
+            "default": null,
+            "desc": "路径前缀"
+        },
+        {
+            "key": "neko_cors",
+            "type": "string",
+            "default": null,
+            "desc": "跨域资源共享"
+        },
+        {
+            "key": "neko_file_transfer_enabled",
+            "type": "string",
+            "default": null,
+            "desc": "文件传输已启用"
+        },
+        {
+            "key": "neko_file_transfer_path",
+            "type": "string",
+            "default": null,
+            "desc": "文件传输路径"
+        },
+        {
+            "key": "neko_display",
+            "type": "string",
+            "default": null,
+            "desc": "显示"
+        },
+        {
+            "key": "neko_device",
+            "type": "string",
+            "default": null,
+            "desc": "设备"
+        },
+        {
+            "key": "neko_static",
+            "type": "string",
+            "default": null,
+            "desc": "静态文件路径"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

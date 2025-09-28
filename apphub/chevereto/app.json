@@ -1,0 +1,268 @@
+{
+    "appid": -1,
+    "appname": "chevereto",
+    "apptitle": "Chevereto",
+    "apptype": "BuildWebsite",
+    "appTypeCN": "建站",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "4",
+            "s_version": [
+                "3.6"
+            ]
+        }
+    ],
+    "appdesc": "一个图像托管平台",
+    "appstatus": 1,
+    "home": "https://chevereto.com",
+    "help": "https://chevereto.com/docs",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_type",
+            "name": "数据库服务",
+            "type": "string",
+            "default": "mysql",
+            "suffix": "数据库服务",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_name",
+            "name": "数据库名",
+            "type": "string",
+            "default": "chevereto",
+            "suffix": "数据库名",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user",
+            "name": "数据库用户",
+            "type": "string",
+            "default": "chevereto",
+            "suffix": "数据库用户",
+            "unit": ""
+        },
+        {
+            "attr": "panel_db_user_password",
+            "name": "数据库用户密码",
+            "type": "string",
+            "default": "chevereto",
+            "suffix": "数据库用户密码",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "HTTP 端口",
+            "type": "number",
+            "default": "40328",
+            "suffix": "HTTP 端口",
+            "unit": ""
+        },
+        {
+            "attr": "chevereto_max_post_size",
+            "name": "最大 POST 大小",
+            "type": "string",
+            "default": "2G",
+            "suffix": "最大 POST 大小",
+            "unit": ""
+        },
+        {
+            "attr": "chevereto_max_upload_size",
+            "name": "最大上传大小",
+            "type": "string",
+            "default": "2G",
+            "suffix": "最大上传大小",
+            "unit": ""
+        },
+        {
+            "attr": "chevereto_servicing",
+            "name": "服务模式",
+            "type": "string",
+            "default": "docker",
+            "suffix": "服务模式",
+            "unit": ""
+        },
+        {
+            "attr": "chevereto_images_path",
+            "name": "图片路径",
+            "type": "string",
+            "default": "./data/images",
+            "suffix": "图片路径",
+            "unit": ""
+        },
+        {
+            "attr": "chevereto_hostname",
+            "name": "主机名",
+            "type": "string",
+            "default": "hostname.com",
+            "suffix": "主机名",
+            "unit": ""
+        },
+        {
+            "attr": "chevereto_hostname_path",
+            "name": "主机名路径",
+            "type": "string",
+            "default": "/",
+            "suffix": "主机名路径",
+            "unit": ""
+        },
+        {
+            "attr": "chevereto_header_client_ip",
+            "name": "客户端 IP 标头",
+            "type": "string",
+            "default": "X-Real-IP",
+            "suffix": "客户端 IP 标头",
+            "unit": ""
+        },
+        {
+            "attr": "encryption_key",
+            "name": "加密密钥",
+            "type": "string",
+            "default": "",
+            "suffix": "加密密钥",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "panel_db_type",
+            "type": "string",
+            "default": null,
+            "desc": "数据库服务"
+        },
+        {
+            "key": "panel_db_name",
+            "type": "string",
+            "default": null,
+            "desc": "数据库名"
+        },
+        {
+            "key": "panel_db_user",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户"
+        },
+        {
+            "key": "panel_db_user_password",
+            "type": "string",
+            "default": null,
+            "desc": "数据库用户密码"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "HTTP 端口"
+        },
+        {
+            "key": "chevereto_max_post_size",
+            "type": "string",
+            "default": null,
+            "desc": "最大 POST 大小"
+        },
+        {
+            "key": "chevereto_max_upload_size",
+            "type": "string",
+            "default": null,
+            "desc": "最大上传大小"
+        },
+        {
+            "key": "chevereto_servicing",
+            "type": "string",
+            "default": null,
+            "desc": "服务模式"
+        },
+        {
+            "key": "chevereto_images_path",
+            "type": "string",
+            "default": null,
+            "desc": "图片路径"
+        },
+        {
+            "key": "chevereto_hostname",
+            "type": "string",
+            "default": null,
+            "desc": "主机名"
+        },
+        {
+            "key": "chevereto_hostname_path",
+            "type": "string",
+            "default": null,
+            "desc": "主机名路径"
+        },
+        {
+            "key": "chevereto_header_client_ip",
+            "type": "string",
+            "default": null,
+            "desc": "客户端 IP 标头"
+        },
+        {
+            "key": "encryption_key",
+            "type": "string",
+            "default": null,
+            "desc": "加密密钥"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

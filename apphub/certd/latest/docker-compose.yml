@@ -1,0 +1,31 @@
+services:
+  certd:
+    image: "greper/certd:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    volumes:
+      - ${APP_PATH}/data:/app/data
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:7001"
+    dns:
+      - ${DNS_1}
+      - ${DNS_2}
+    environment:
+      - TZ=${TIME_ZONE}
+      - HTTPS_PROXY=${HTTPS_PROXY}
+      - HTTP_PROXY=${HTTP_PROXY}
+      - certd_system_resetAdminPasswd=${RESET_ADMIN_PASSWD}
+      - certd_cron_immediateTriggerOnce=${IMMEDIATE_TRIGGER}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

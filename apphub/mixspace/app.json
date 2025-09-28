@@ -1,0 +1,178 @@
+{
+    "appid": -1,
+    "appname": "mixspace",
+    "apptitle": "MixSpace",
+    "apptype": "BuildWebsite",
+    "appTypeCN": "建站",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "开源自部署个人前后端分离博客系统",
+    "appstatus": 1,
+    "home": "https://mx-space.js.org",
+    "help": "https://mx-space.js.org/docs",
+    "updateat": 1758961229,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40203,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "allowed_origins",
+            "name": "被允许的域名 (多个使用英文逗号分割)",
+            "type": "string",
+            "default": "example.com",
+            "suffix": "被允许的域名 (多个使用英文逗号分割)",
+            "unit": ""
+        },
+        {
+            "attr": "jwt_secret",
+            "name": "JWT 密钥 (16 到 32 位字符)",
+            "type": "string",
+            "default": "Np2qgqtiUayA857a",
+            "suffix": "JWT 密钥 (16 到 32 位字符)",
+            "unit": ""
+        },
+        {
+            "attr": "encrypt_key",
+            "name": "加密密钥 (非特殊需求不建议填写,终端执行 \"openssl rand -hex 32\" 获取)",
+            "type": "string",
+            "default": "",
+            "suffix": "加密密钥 (非特殊需求不建议填写,终端执行 \"openssl rand -hex 32\" 获取)",
+            "unit": ""
+        },
+        {
+            "attr": "encrypt_enable",
+            "name": "是否开启加密 (true或false,开启则需要填写加密密钥)",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否开启加密 (true或false,开启则需要填写加密密钥)",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "subnet_prefix",
+            "name": "新 docker 网络子网前缀",
+            "type": "string",
+            "default": "172.19.0",
+            "suffix": "新 docker 网络子网前缀",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "allowed_origins",
+            "type": "string",
+            "default": null,
+            "desc": "被允许的域名 (多个使用英文逗号分割)"
+        },
+        {
+            "key": "jwt_secret",
+            "type": "string",
+            "default": null,
+            "desc": "JWT 密钥 (16 到 32 位字符)"
+        },
+        {
+            "key": "encrypt_key",
+            "type": "string",
+            "default": null,
+            "desc": "加密密钥 (非特殊需求不建议填写,终端执行 \"openssl rand -hex 32\" 获取)"
+        },
+        {
+            "key": "encrypt_enable",
+            "type": "string",
+            "default": null,
+            "desc": "是否开启加密 (true或false,开启则需要填写加密密钥)"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "subnet_prefix",
+            "type": "string",
+            "default": null,
+            "desc": "新 docker 网络子网前缀"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,30 @@
+services:
+  verdaccio:
+    image: "verdaccio/verdaccio:6.1.5"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    environment:
+      - VERDACCIO_APPDIR=${VERDACCIO_APPDIR}
+      - VERDACCIO_USER_NAME=${VERDACCIO_USER_NAME}
+      - VERDACCIO_USER_UID=${VERDACCIO_USER_UID}
+      - VERDACCIO_PORT=${WEB_PORT}
+      - VERDACCIO_PROTOCOL=${VERDACCIO_PROTOCOL}
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - ${STORAGE_PATH}:/verdaccio/storage
+      - ${CONFIG_PATH}:/verdaccio/conf
+      - ${PLUGINS_PATH}:/verdaccio/plugins
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

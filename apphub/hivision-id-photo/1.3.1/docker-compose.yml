@@ -1,0 +1,26 @@
+services:
+  hivision-id-photo:
+    image: "linzeyi/hivision_idphotos:v1.3.1"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${PANEL_APP_PORT_HTTP_INTERNAL}"
+    environment:
+      - FACE_PLUS_API_KEY=${FACE_PLUS_API_KEY}
+      - FACE_PLUS_API_SECRET=${FACE_PLUS_API_SECRET}
+      - RUN_MODE=${RUN_MODE}
+      - DEFAULT_LANG=${DEFAULT_LANG}
+    command: ${COMMAND}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

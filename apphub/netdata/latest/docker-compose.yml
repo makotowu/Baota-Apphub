@@ -1,0 +1,39 @@
+services:
+  netdata:
+    image: "netdata/netdata:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:19999"
+    hostname: ${HOSTNAME}
+    cap_add:
+      - SYS_PTRACE
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - ./data/netdataconfig:/etc/netdata
+      - ./data/netdatalib:/var/lib/netdata
+      - ./data/netdatacache:/var/cache/netdata
+      - /:/host/root:ro,rslave
+      - /etc/passwd:/host/etc/passwd:ro
+      - /etc/group:/host/etc/group:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /etc/os-release:/host/etc/os-release:ro
+      - /var/log:/host/var/log:ro
+      - ${DOCKER_SOCK_PATH}:/var/run/docker.sock:ro
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

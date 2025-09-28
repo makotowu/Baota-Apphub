@@ -1,0 +1,40 @@
+services:
+  palworld-server:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - ${WEB_PORT}:${WEB_PORT}/udp
+      - ${PANEL_APP_PORT_RCON}:${PANEL_APP_PORT_RCON}/tcp
+      - ${PANEL_APP_PORT_QUERY}:${PANEL_APP_PORT_QUERY}/udp
+    volumes:
+      - ${APP_PATH}/data:/palworld/
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - PORT=${WEB_PORT}
+      - PLAYERS=${MAX_PLAYERS}
+      - MULTITHREADING=${MULTITHREAD_SWITCH}
+      - COMMUNITY=${PUBLIC_SWITCH}
+      - PUBLIC_IP=${PUBLIC_IP}
+      - PUBLIC_PORT=${PANEL_APP_PORT_PUBLIC}
+      - UPDATE_ON_BOOT=${UPDATE_SWITCH}
+      - SERVER_NAME=${SERVER_NAME}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - SERVER_PASSWORD=${SERVER_PASSWORD}
+      - RCON_ENABLED=${RCON_SWITCH}
+      - RCON_PORT=${PANEL_APP_PORT_RCON}
+      - QUERY_PORT=${PANEL_APP_PORT_QUERY}
+    image: thijsvanloef/palworld-server-docker:v1.4.3
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

@@ -1,0 +1,217 @@
+{
+    "appid": -1,
+    "appname": "certd",
+    "apptitle": "Certd",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "28.3"
+            ]
+        }
+    ],
+    "appdesc": "开源 SSL 证书管理工具",
+    "appstatus": 1,
+    "home": "https://certd.docmirror.cn",
+    "help": "https://certd.docmirror.cn",
+    "updateat": 1758961228,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40311",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据路径",
+            "unit": ""
+        },
+        {
+            "attr": "dns_1",
+            "name": "主 DNS",
+            "type": "string",
+            "default": "223.5.5.5",
+            "suffix": "主 DNS",
+            "unit": ""
+        },
+        {
+            "attr": "dns_2",
+            "name": "次 DNS",
+            "type": "string",
+            "default": "119.29.29.29",
+            "suffix": "次 DNS",
+            "unit": ""
+        },
+        {
+            "attr": "time_zone",
+            "name": "时区",
+            "type": "string",
+            "default": "Asia/Shanghai",
+            "suffix": "时区",
+            "unit": ""
+        },
+        {
+            "attr": "https_proxy",
+            "name": "HTTPS 代理",
+            "type": "string",
+            "default": "",
+            "suffix": "HTTPS 代理",
+            "unit": ""
+        },
+        {
+            "attr": "http_proxy",
+            "name": "HTTP 代理",
+            "type": "string",
+            "default": "",
+            "suffix": "HTTP 代理",
+            "unit": ""
+        },
+        {
+            "attr": "reset_admin_passwd",
+            "name": "重置管理员密码",
+            "type": "string",
+            "default": "false",
+            "suffix": "重置管理员密码",
+            "unit": ""
+        },
+        {
+            "attr": "immediate_trigger",
+            "name": "立即触发定时任务",
+            "type": "string",
+            "default": "false",
+            "suffix": "立即触发定时任务",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据路径"
+        },
+        {
+            "key": "dns_1",
+            "type": "string",
+            "default": null,
+            "desc": "主 DNS"
+        },
+        {
+            "key": "dns_2",
+            "type": "string",
+            "default": null,
+            "desc": "次 DNS"
+        },
+        {
+            "key": "time_zone",
+            "type": "string",
+            "default": null,
+            "desc": "时区"
+        },
+        {
+            "key": "https_proxy",
+            "type": "string",
+            "default": null,
+            "desc": "HTTPS 代理"
+        },
+        {
+            "key": "http_proxy",
+            "type": "string",
+            "default": null,
+            "desc": "HTTP 代理"
+        },
+        {
+            "key": "reset_admin_passwd",
+            "type": "string",
+            "default": null,
+            "desc": "重置管理员密码"
+        },
+        {
+            "key": "immediate_trigger",
+            "type": "string",
+            "default": null,
+            "desc": "立即触发定时任务"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

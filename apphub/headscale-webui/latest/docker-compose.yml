@@ -1,0 +1,32 @@
+services:
+  headscale-webui:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:5000"
+    volumes:
+      - ${APP_PATH}/data:/data
+      - ${HEADSCALE_PATH}:/etc/headscale/:ro
+    environment:
+      - TZ=${TIME_ZONE}
+      - HS_SERVER=${HS_SERVER}
+      - DOMAIN_NAME=${External_URL}
+      - SCRIPT_NAME=${URL_PATH}
+      - AUTH_TYPE=${AUTH_TYPE}
+      - BASIC_AUTH_USER=${HTTP_USER}
+      - BASIC_AUTH_PASS=${HTTP_PWD}
+      - KEY=${SECRET_KEY}
+    image: ifargle/headscale-webui:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

@@ -1,0 +1,18 @@
+
+services:
+  rathole:
+    image: "rapiz1/rathole:v0.5.0"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    network_mode: "host"
+    volumes:
+      - "${CONFIG_PATH}:/app/config.toml"
+      - "./data/tls/:/app/tls/"
+    command: --${SERVICE_MODE} /app/config.toml
+    labels:
+      createdBy: "bt_apps"

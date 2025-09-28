@@ -1,0 +1,22 @@
+services:
+  ${SERVICE_NAME}:
+    image: "nattertool/natter:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    command: ${COMMAND}
+    volumes:
+      - ${EXTERNAL_DATA_PATH}:${INTERNAL_DATA_PATH}
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    environment:
+      - TZ=${TIME_ZONE}
+    network_mode: host
+    restart: always
+    labels:
+      createdBy: "bt_apps"
+

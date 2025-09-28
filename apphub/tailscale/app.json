@@ -1,0 +1,268 @@
+{
+    "appid": -1,
+    "appname": "tailscale",
+    "apptitle": "Tailscale",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "84"
+            ]
+        }
+    ],
+    "appdesc": "使用 WireGuard 和 2FA 的最简单、最安全的方式",
+    "appstatus": 1,
+    "home": "https://tailscale.com",
+    "help": "https://tailscale.com/kb/1017/install",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "ts_authkey",
+            "name": "Tailscale 认证密钥",
+            "type": "string",
+            "default": "tskey-auth-ab1CDE2CNTRL-0123456789abcdef",
+            "suffix": "Tailscale 认证密钥",
+            "unit": ""
+        },
+        {
+            "attr": "ts_routes",
+            "name": "广播子网路由",
+            "type": "string",
+            "default": "192.168.1.0/24,10.0.0.0/16",
+            "suffix": "广播子网路由",
+            "unit": ""
+        },
+        {
+            "attr": "ts_accept_dns",
+            "name": "是否接受 DNS 配置 (true/false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否接受 DNS 配置 (true/false)",
+            "unit": ""
+        },
+        {
+            "attr": "ts_auth_once",
+            "name": "尝试仅登录一次 (true/false)",
+            "type": "string",
+            "default": "false",
+            "suffix": "尝试仅登录一次 (true/false)",
+            "unit": ""
+        },
+        {
+            "attr": "ts_dest_ip",
+            "name": "目标 IP",
+            "type": "string",
+            "default": "",
+            "suffix": "目标 IP",
+            "unit": ""
+        },
+        {
+            "attr": "ts_kube_secret",
+            "name": "Kubernetes 密钥名称",
+            "type": "string",
+            "default": "tailscale",
+            "suffix": "Kubernetes 密钥名称",
+            "unit": ""
+        },
+        {
+            "attr": "ts_hostname",
+            "name": "节点主机名",
+            "type": "string",
+            "default": "my-tailscale-node",
+            "suffix": "节点主机名",
+            "unit": ""
+        },
+        {
+            "attr": "ts_outbound_http_proxy_listen",
+            "name": "HTTP代理地址和端口 (127.0.0.1:1081)",
+            "type": "string",
+            "default": "",
+            "suffix": "HTTP代理地址和端口 (127.0.0.1:1081)",
+            "unit": ""
+        },
+        {
+            "attr": "ts_socket",
+            "name": "Tailscale Socket 路径",
+            "type": "string",
+            "default": "/var/run/tailscale/tailscaled.sock",
+            "suffix": "Tailscale Socket 路径",
+            "unit": ""
+        },
+        {
+            "attr": "ts_socks5_server",
+            "name": "SOCKS5代理地址和端口 (127.0.0.1:1080)",
+            "type": "string",
+            "default": "",
+            "suffix": "SOCKS5代理地址和端口 (127.0.0.1:1080)",
+            "unit": ""
+        },
+        {
+            "attr": "ts_state_dir",
+            "name": "Tailscale 状态目录",
+            "type": "string",
+            "default": "/var/lib/tailscale",
+            "suffix": "Tailscale 状态目录",
+            "unit": ""
+        },
+        {
+            "attr": "ts_userspace",
+            "name": "启用用户空间网络 (true/false)",
+            "type": "string",
+            "default": "true",
+            "suffix": "启用用户空间网络 (true/false)",
+            "unit": ""
+        },
+        {
+            "attr": "ts_extra_args",
+            "name": "更多命令参数 (--login-server=https://login.example.com)",
+            "type": "string",
+            "default": "",
+            "suffix": "更多命令参数 (--login-server=https://login.example.com)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "ts_authkey",
+            "type": "string",
+            "default": null,
+            "desc": "Tailscale 认证密钥"
+        },
+        {
+            "key": "ts_routes",
+            "type": "string",
+            "default": null,
+            "desc": "广播子网路由"
+        },
+        {
+            "key": "ts_accept_dns",
+            "type": "string",
+            "default": null,
+            "desc": "是否接受 DNS 配置 (true/false)"
+        },
+        {
+            "key": "ts_auth_once",
+            "type": "string",
+            "default": null,
+            "desc": "尝试仅登录一次 (true/false)"
+        },
+        {
+            "key": "ts_dest_ip",
+            "type": "string",
+            "default": null,
+            "desc": "目标 IP"
+        },
+        {
+            "key": "ts_kube_secret",
+            "type": "string",
+            "default": null,
+            "desc": "Kubernetes 密钥名称"
+        },
+        {
+            "key": "ts_hostname",
+            "type": "string",
+            "default": null,
+            "desc": "节点主机名"
+        },
+        {
+            "key": "ts_outbound_http_proxy_listen",
+            "type": "string",
+            "default": null,
+            "desc": "HTTP代理地址和端口 (127.0.0.1:1081)"
+        },
+        {
+            "key": "ts_socket",
+            "type": "string",
+            "default": null,
+            "desc": "Tailscale Socket 路径"
+        },
+        {
+            "key": "ts_socks5_server",
+            "type": "string",
+            "default": null,
+            "desc": "SOCKS5代理地址和端口 (127.0.0.1:1080)"
+        },
+        {
+            "key": "ts_state_dir",
+            "type": "string",
+            "default": null,
+            "desc": "Tailscale 状态目录"
+        },
+        {
+            "key": "ts_userspace",
+            "type": "string",
+            "default": null,
+            "desc": "启用用户空间网络 (true/false)"
+        },
+        {
+            "key": "ts_extra_args",
+            "type": "string",
+            "default": null,
+            "desc": "更多命令参数 (--login-server=https://login.example.com)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

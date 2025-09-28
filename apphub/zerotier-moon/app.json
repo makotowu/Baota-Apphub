@@ -1,0 +1,128 @@
+{
+    "appid": -1,
+    "appname": "zerotier-moon",
+    "apptitle": "ZeroTier-Moon",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "8.4"
+            ]
+        }
+    ],
+    "appdesc": "多点虚拟化网络解决方案",
+    "appstatus": 1,
+    "home": "https://www.zerotier.com",
+    "help": "https://docs.zerotier.com",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 9993,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "host_ipv4",
+            "name": "本机IPV4地址",
+            "type": "string",
+            "default": "",
+            "suffix": "本机IPV4地址",
+            "unit": ""
+        },
+        {
+            "attr": "host_ipv6",
+            "name": "本机IPV6地址",
+            "type": "string",
+            "default": "",
+            "suffix": "本机IPV6地址",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "host_ipv4",
+            "type": "string",
+            "default": null,
+            "desc": "本机IPV4地址"
+        },
+        {
+            "key": "host_ipv6",
+            "type": "string",
+            "default": null,
+            "desc": "本机IPV6地址"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,30 @@
+services:
+  trilium-cn:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8080"
+    volumes:
+      - "${APP_PATH}/data:/root/trilium-data"
+    environment:
+      - TRILIUM_DATA_DIR=/root/trilium-data
+    # 可选功能: 健康检查。需要启用的话，把下面的注释去掉
+    #healthcheck:
+    #  test: ["CMD-SHELL", "curl --fail http://localhost:8080/api/health-check | jq -e '.status == "ok"' || exit 1"]
+    #  interval: 30s
+    #  timeout: 10s
+    #  retries: 3
+    image: nriver/trilium-cn:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

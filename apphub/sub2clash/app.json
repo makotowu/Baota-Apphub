@@ -1,0 +1,212 @@
+{
+    "appid": -1,
+    "appname": "sub2clash",
+    "apptitle": "sub2clash",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "0",
+            "s_version": [
+                "1.0-alpha.3"
+            ]
+        }
+    ],
+    "appdesc": "将节点和订阅转换为 clash(meta) 配置",
+    "appstatus": 1,
+    "home": "https://www.nite07.com/sub",
+    "help": "https://github.com/nitezs/sub2clash",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40223,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "meta_template",
+            "name": "默认 meta 模板文件名",
+            "type": "string",
+            "default": "template_meta.yaml",
+            "suffix": "默认 meta 模板文件名",
+            "unit": ""
+        },
+        {
+            "attr": "proxy_template",
+            "name": "默认 clash 模板文件名",
+            "type": "string",
+            "default": "template_clash.yaml",
+            "suffix": "默认 clash 模板文件名",
+            "unit": ""
+        },
+        {
+            "attr": "clash_template",
+            "name": "默认 clash 模板文件名",
+            "type": "string",
+            "default": "template_clash.yaml",
+            "suffix": "默认 clash 模板文件名",
+            "unit": ""
+        },
+        {
+            "attr": "request_retry_times",
+            "name": "Get 请求重试次数",
+            "type": "number",
+            "default": "3",
+            "suffix": "Get 请求重试次数",
+            "unit": ""
+        },
+        {
+            "attr": "request_max_file_size",
+            "name": "Get 请求订阅文件最大大小（byte）",
+            "type": "number",
+            "default": "1048576",
+            "suffix": "Get 请求订阅文件最大大小（byte）",
+            "unit": ""
+        },
+        {
+            "attr": "cache_expire",
+            "name": "订阅缓存时间（秒）",
+            "type": "number",
+            "default": "300",
+            "suffix": "订阅缓存时间（秒）",
+            "unit": ""
+        },
+        {
+            "attr": "log_level",
+            "name": "日志等级",
+            "type": "string",
+            "default": "info",
+            "suffix": "日志等级",
+            "unit": ""
+        },
+        {
+            "attr": "short_link_length",
+            "name": "短链长度",
+            "type": "number",
+            "default": "6",
+            "suffix": "短链长度",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "meta_template",
+            "type": "string",
+            "default": null,
+            "desc": "默认 meta 模板文件名"
+        },
+        {
+            "key": "proxy_template",
+            "type": "string",
+            "default": null,
+            "desc": "默认 clash 模板文件名"
+        },
+        {
+            "key": "clash_template",
+            "type": "string",
+            "default": null,
+            "desc": "默认 clash 模板文件名"
+        },
+        {
+            "key": "request_retry_times",
+            "type": "string",
+            "default": null,
+            "desc": "Get 请求重试次数"
+        },
+        {
+            "key": "request_max_file_size",
+            "type": "string",
+            "default": null,
+            "desc": "Get 请求订阅文件最大大小（byte）"
+        },
+        {
+            "key": "cache_expire",
+            "type": "string",
+            "default": null,
+            "desc": "订阅缓存时间（秒）"
+        },
+        {
+            "key": "log_level",
+            "type": "string",
+            "default": null,
+            "desc": "日志等级"
+        },
+        {
+            "key": "short_link_length",
+            "type": "string",
+            "default": null,
+            "desc": "短链长度"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

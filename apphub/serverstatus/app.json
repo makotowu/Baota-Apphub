@@ -1,0 +1,142 @@
+{
+    "appid": -1,
+    "appname": "serverstatus",
+    "apptitle": "ServerStatus",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "1",
+            "s_version": [
+                "1.5"
+            ]
+        }
+    ],
+    "appdesc": "多服务器状态监控",
+    "appstatus": 1,
+    "home": "https://github.com/cppla/ServerStatus",
+    "help": "https://github.com/cppla/ServerStatus",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "serverstatus_config_path",
+            "name": "服务器状态配置路径",
+            "type": "string",
+            "default": "./data/server/config.json",
+            "suffix": "服务器状态配置路径",
+            "unit": ""
+        },
+        {
+            "attr": "serverstatus_json_path",
+            "name": "探针月流量状态路径",
+            "type": "string",
+            "default": "./data/web/json",
+            "suffix": "探针月流量状态路径",
+            "unit": ""
+        },
+        {
+            "attr": "comm",
+            "name": "通信端口",
+            "type": "number",
+            "default": "35601",
+            "suffix": "通信端口",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "Web 端口",
+            "type": "number",
+            "default": "40269",
+            "suffix": "Web 端口",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "serverstatus_config_path",
+            "type": "string",
+            "default": null,
+            "desc": "服务器状态配置路径"
+        },
+        {
+            "key": "serverstatus_json_path",
+            "type": "string",
+            "default": null,
+            "desc": "探针月流量状态路径"
+        },
+        {
+            "key": "comm",
+            "type": "string",
+            "default": null,
+            "desc": "通信端口"
+        },
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "Web 端口"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

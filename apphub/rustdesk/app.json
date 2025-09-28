@@ -1,0 +1,164 @@
+{
+    "appid": -1,
+    "appname": "rustdesk",
+    "apptitle": "RustDesk",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "RustDesk是一款开源的远程桌面软件",
+    "appstatus": 1,
+    "home": "https://rustdesk.com/zh/",
+    "help": "https://rustdesk.com/docs/zh-cn/",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "nat_test_port",
+            "name": "NAT类型测试端口",
+            "type": "number",
+            "default": 21115,
+            "suffix": "NAT类型测试端口",
+            "unit": ""
+        },
+        {
+            "attr": "hbbs_port",
+            "name": "hbbs端口(配合IP/域名使用)",
+            "type": "number",
+            "default": 21116,
+            "suffix": "hbbs端口(配合IP/域名使用)",
+            "unit": ""
+        },
+        {
+            "attr": "hbbr_port",
+            "name": "hbbr端口(客户端中继服务器端口)",
+            "type": "number",
+            "default": 21117,
+            "suffix": "hbbr端口(客户端中继服务器端口)",
+            "unit": ""
+        },
+        {
+            "attr": "web_client_port1",
+            "name": "网页客户端支持端口1",
+            "type": "number",
+            "default": 21118,
+            "suffix": "网页客户端支持端口1",
+            "unit": ""
+        },
+        {
+            "attr": "web_client_port2",
+            "name": "网页客户端支持端口2",
+            "type": "number",
+            "default": 21119,
+            "suffix": "网页客户端支持端口2",
+            "unit": ""
+        },
+        {
+            "attr": "host_address",
+            "name": "IP地址或域名(必改项)",
+            "type": "string",
+            "default": "172.17.0.1",
+            "suffix": "IP地址或域名(必改项)",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "nat_test_port",
+            "type": "port",
+            "default": null,
+            "desc": "NAT类型测试端口"
+        },
+        {
+            "key": "hbbs_port",
+            "type": "port",
+            "default": null,
+            "desc": "hbbs端口(配合IP/域名使用)"
+        },
+        {
+            "key": "hbbr_port",
+            "type": "port",
+            "default": null,
+            "desc": "hbbr端口(客户端中继服务器端口)"
+        },
+        {
+            "key": "web_client_port1",
+            "type": "port",
+            "default": null,
+            "desc": "网页客户端支持端口1"
+        },
+        {
+            "key": "web_client_port2",
+            "type": "port",
+            "default": null,
+            "desc": "网页客户端支持端口2"
+        },
+        {
+            "key": "host_address",
+            "type": "string",
+            "default": null,
+            "desc": "IP地址或域名(必改项)"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

@@ -1,0 +1,26 @@
+services:
+  peerbanhelper:
+    image: "ghostchu/peerbanhelper:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:9898"
+    volumes:
+      - "${APP_PATH}/data:/app/data"
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIME_ZONE}
+    stop_grace_period: ${STOP_GRACE_PERIOD}
+    labels:
+      createdBy: "bt_apps"
+networks:
+  baota_net:
+    external: true

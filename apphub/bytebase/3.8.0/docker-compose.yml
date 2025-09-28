@@ -1,0 +1,34 @@
+services:
+  bytebase:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8080"
+    volumes:
+      - "${APP_PATH}/data:/var/opt/bytebase"
+    init: true
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:5678/healthz", "||", "exit", "1"]
+      interval: 5m
+      timeout: 60s
+    command:
+      - "--data"
+      - "/var/opt/bytebase"
+      - "--port"
+      - "8080"
+      - "--pg"
+      - "postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${PANEL_DB_NAME}"
+    image: bytebase/bytebase:3.8.0
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

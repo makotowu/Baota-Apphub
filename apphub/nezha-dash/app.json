@@ -1,0 +1,282 @@
+{
+    "appid": -1,
+    "appname": "nezha-dash",
+    "apptitle": "NezhaDash",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "2",
+            "s_version": [
+                "9.6"
+            ]
+        }
+    ],
+    "appdesc": "一个基于 Next.js 和 哪吒监控 的仪表盘",
+    "appstatus": 1,
+    "home": "https://nezha-cf.buycoffee.top",
+    "help": "https://github.com/hamster1963/nezha-dash",
+    "updateat": 1758961230,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": "40309",
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "nezha_base_url",
+            "name": "哪吒面板地址",
+            "type": "string",
+            "default": "",
+            "suffix": "哪吒面板地址",
+            "unit": ""
+        },
+        {
+            "attr": "nezha_auth",
+            "name": "哪吒面板 API Token",
+            "type": "string",
+            "default": "",
+            "suffix": "哪吒面板 API Token",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_nezhafetchinterval",
+            "name": "获取数据间隔（毫秒）",
+            "type": "number",
+            "default": "2000",
+            "suffix": "获取数据间隔（毫秒）",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_customlogo",
+            "name": "自定义 Logo",
+            "type": "string",
+            "default": "https://nezha-cf.buycoffee.top/apple-touch-icon.png",
+            "suffix": "自定义 Logo",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_customtitle",
+            "name": "自定义标题",
+            "type": "string",
+            "default": "Nezha-Dash",
+            "suffix": "自定义标题",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_customdescription",
+            "name": "自定义描述",
+            "type": "string",
+            "default": "Nezha-Dash",
+            "suffix": "自定义描述",
+            "unit": ""
+        },
+        {
+            "attr": "default_locale",
+            "name": "默认语言",
+            "type": "string",
+            "default": "zh",
+            "suffix": "默认语言",
+            "unit": ""
+        },
+        {
+            "attr": "forceshowallservers",
+            "name": "是否强制显示所有服务器",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否强制显示所有服务器",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_showflag",
+            "name": "是否显示旗帜",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否显示旗帜",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_disablecartoon",
+            "name": "是否禁用卡通人物",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否禁用卡通人物",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_showtag",
+            "name": "是否显示标签",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否显示标签",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_shownettransfer",
+            "name": "是否显示流量信息",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否显示流量信息",
+            "unit": ""
+        },
+        {
+            "attr": "next_public_forceusesvgflag",
+            "name": "是否强制使用 SVG 旗帜",
+            "type": "string",
+            "default": "false",
+            "suffix": "是否强制使用 SVG 旗帜",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "nezha_base_url",
+            "type": "string",
+            "default": null,
+            "desc": "哪吒面板地址"
+        },
+        {
+            "key": "nezha_auth",
+            "type": "string",
+            "default": null,
+            "desc": "哪吒面板 API Token"
+        },
+        {
+            "key": "next_public_nezhafetchinterval",
+            "type": "string",
+            "default": null,
+            "desc": "获取数据间隔（毫秒）"
+        },
+        {
+            "key": "next_public_customlogo",
+            "type": "string",
+            "default": null,
+            "desc": "自定义 Logo"
+        },
+        {
+            "key": "next_public_customtitle",
+            "type": "string",
+            "default": null,
+            "desc": "自定义标题"
+        },
+        {
+            "key": "next_public_customdescription",
+            "type": "string",
+            "default": null,
+            "desc": "自定义描述"
+        },
+        {
+            "key": "default_locale",
+            "type": "string",
+            "default": null,
+            "desc": "默认语言"
+        },
+        {
+            "key": "forceshowallservers",
+            "type": "string",
+            "default": null,
+            "desc": "是否强制显示所有服务器"
+        },
+        {
+            "key": "next_public_showflag",
+            "type": "string",
+            "default": null,
+            "desc": "是否显示旗帜"
+        },
+        {
+            "key": "next_public_disablecartoon",
+            "type": "string",
+            "default": null,
+            "desc": "是否禁用卡通人物"
+        },
+        {
+            "key": "next_public_showtag",
+            "type": "string",
+            "default": null,
+            "desc": "是否显示标签"
+        },
+        {
+            "key": "next_public_shownettransfer",
+            "type": "string",
+            "default": null,
+            "desc": "是否显示流量信息"
+        },
+        {
+            "key": "next_public_forceusesvgflag",
+            "type": "string",
+            "default": null,
+            "desc": "是否强制使用 SVG 旗帜"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

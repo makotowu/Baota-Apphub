@@ -1,0 +1,24 @@
+services:
+  mdserver-web:
+    image: "ddsderek/mdserver-web:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    network_mode: "host"
+    volumes:
+        - mdserver-web-data:/www
+    environment:
+      - CLOSE_ADMIN_PATH=${CLOSE_ADMIN_PATH}
+      - USERNAME=${USERNAME}
+      - PASSWORD=${PASSWORD}
+      - WEB_PORT=${WEB_PORT}
+    labels:  
+      createdBy: "bt_apps"
+
+volumes:
+  mdserver-web-data:
+    name: mdserver-web-data

@@ -1,0 +1,20 @@
+services:
+  wol-go-web:
+    image: "chishin/wol-go-web:latest"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    network_mode: host
+    environment:
+      - PORT=${WEB_PORT}
+      - KEY=${KEY}
+      - USERNAME=${USERNAME}
+      - PASSWORD=${PASSWORD}
+      - WEB=${WEB}
+      - TZ=${TIME_ZONE}
+    labels:
+      createdBy: "bt_apps"

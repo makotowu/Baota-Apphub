@@ -1,0 +1,30 @@
+services:
+  nps:
+    image: yisier1/nps:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    volumes:
+      - ./conf:/conf
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      NPS_WEB_HOST: ${NPS_WEB_HOST}
+      NPS_WEB_PORT: ${WEB_PORT}
+      NPS_WEB_USERNAME: ${NPS_WEB_USERNAME}
+      NPS_WEB_PASSWORD: ${NPS_WEB_PASSWORD}
+      NPS_WEB_OPEN_SSL: ${NPS_WEB_OPEN_SSL}
+      NPS_PUBLIC_VKEY: ${NPS_PUBLIC_VKEY}
+      NPS_BRIDGE_PORT: ${NPS_BRIDGE_PORT}
+      NPS_BRIDGE_TLS_PORT: ${NPS_BRIDGE_TLS_PORT}
+      NPS_AUTH_CRYPT_KEY: ${NPS_AUTH_CRYPT_KEY}
+      NPS_HTTP_PROXY_IP: ${NPS_HTTP_PROXY_IP}
+      NPS_HTTP_PROXY_PORT: ${NPS_HTTP_PROXY_PORT}
+      NPS_HTTPS_PROXY_PORT: ${NPS_HTTPS_PROXY_PORT}
+      TLS_ENABLE_SWITCH: ${TLS_ENABLE_SWITCH}
+    network_mode: "host"
+    labels:
+      createdBy: "bt_apps"

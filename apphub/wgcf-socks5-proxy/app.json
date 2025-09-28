@@ -1,0 +1,183 @@
+{
+    "appid": -1,
+    "appname": "wgcf-socks5-proxy",
+    "apptitle": "wgcf-socks5-proxy",
+    "apptype": "Tools",
+    "appTypeCN": "实用工具",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        }
+    ],
+    "appdesc": "docker 里的 CloudFlare warp socks5",
+    "appstatus": 1,
+    "home": "https://github.com/activeliang/wgcf-socks5-proxy",
+    "help": "https://github.com/activeliang/wgcf-socks5-proxy",
+    "updateat": 1758961231,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "端口",
+            "type": "number",
+            "default": 40055,
+            "suffix": "端口",
+            "unit": ""
+        },
+        {
+            "attr": "data_path",
+            "name": "数据文件夹路径",
+            "type": "string",
+            "default": "./data",
+            "suffix": "数据文件夹路径",
+            "unit": ""
+        },
+        {
+            "attr": "ip_command",
+            "name": "仅IPV4/IPV6(填\"-4\";\"-6\")",
+            "type": "string",
+            "default": "",
+            "suffix": "仅IPV4/IPV6(填\"-4\";\"-6\")",
+            "unit": ""
+        },
+        {
+            "attr": "socks_user",
+            "name": "Socks用户名",
+            "type": "string",
+            "default": "",
+            "suffix": "Socks用户名",
+            "unit": ""
+        },
+        {
+            "attr": "socks_pwd",
+            "name": "Socks密码",
+            "type": "string",
+            "default": "",
+            "suffix": "Socks密码",
+            "unit": ""
+        },
+        {
+            "attr": "socks_port",
+            "name": "内部Socks端口",
+            "type": "number",
+            "default": "1080",
+            "suffix": "内部Socks端口",
+            "unit": ""
+        },
+        {
+            "attr": "socks_host",
+            "name": "内部Socks主机",
+            "type": "string",
+            "default": "0.0.0.0",
+            "suffix": "内部Socks主机",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": null,
+            "desc": "端口"
+        },
+        {
+            "key": "data_path",
+            "type": "string",
+            "default": null,
+            "desc": "数据文件夹路径"
+        },
+        {
+            "key": "ip_command",
+            "type": "string",
+            "default": null,
+            "desc": "仅IPV4/IPV6(填\"-4\";\"-6\")"
+        },
+        {
+            "key": "socks_user",
+            "type": "string",
+            "default": null,
+            "desc": "Socks用户名"
+        },
+        {
+            "key": "socks_pwd",
+            "type": "string",
+            "default": null,
+            "desc": "Socks密码"
+        },
+        {
+            "key": "socks_port",
+            "type": "port",
+            "default": null,
+            "desc": "内部Socks端口"
+        },
+        {
+            "key": "socks_host",
+            "type": "string",
+            "default": null,
+            "desc": "内部Socks主机"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {
+        "data": {
+            "type": "path",
+            "desc": "data目录"
+        }
+    }
+}

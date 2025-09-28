@@ -1,0 +1,32 @@
+services:
+  headscale-derp:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${PANEL_APP_PORT_HTTPS}:${PANEL_APP_PORT_HTTPS}"
+      - "${PANEL_APP_PORT_STUN}:${PANEL_APP_PORT_STUN}/udp"
+    volumes:
+      - "${APP_PATH}/data:/app/certs"
+    environment:
+      - DERP_DOMAIN=${DERP_DOMAIN}
+      - DERP_CERT_MODE=manual
+      - DERP_ADDR=:${PANEL_APP_PORT_HTTPS}
+      - DERP_HTTP_PORT=-1
+      - DERP_STUN=true
+      - DERP_STUN_PORT=${PANEL_APP_PORT_STUN}
+      - DERP_CERT_DIR=/app/certs
+      - DERP_VERIFY_CLIENTS=${CLIENTS_VERIFY_SWITCH}
+    image: fredliang/derper:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+networks:  
+  baota_net:  
+    external: true

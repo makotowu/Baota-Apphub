@@ -1,0 +1,21 @@
+services:
+  nging:
+    image: admpub/nging:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    network_mode: host
+    volumes:
+      - ./data/data/cache:/home/nging_linux_amd64/data/cache
+      - ./data/data/ftpdir:/home/nging_linux_amd64/data/ftpdir
+      - ./data/data/logs:/home/nging_linux_amd64/data/logs
+      - ./data/data/sm2:/home/nging_linux_amd64/data/sm2
+      - ./data/myconfig:/home/nging_linux_amd64/myconfig
+      - ./data/public:/home/nging_linux_amd64/public
+    command: [ "-p", "${WEB_PORT}", "-c", "myconfig/config.yaml" ]
+    labels:  
+      createdBy: "bt_apps"

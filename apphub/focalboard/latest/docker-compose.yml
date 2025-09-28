@@ -1,0 +1,27 @@
+services:
+  focalboard:
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8000"
+    volumes:
+      - "./data/config.json:/opt/focalboard/config.json"   #sqlite
+      #- "./data/postgres-config.json:/opt/focalboard/config.json"   #postgres，需要修改对应数据库信息
+      - fbdata:/opt/focalboard/data
+    image: mattermost/focalboard:latest
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    labels:  
+      createdBy: "bt_apps"
+
+volumes:
+  fbdata:
+
+networks:  
+  baota_net:  
+    external: true

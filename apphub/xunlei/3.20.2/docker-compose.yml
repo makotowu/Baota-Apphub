@@ -1,0 +1,36 @@
+services:
+  xunlei:
+    image: "cnk3x/xunlei:v3.20.2"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    container_name: ${APP_NAME}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${WEB_PORT}"
+    volumes:
+      - "${APP_PATH}/data:${XL_DIR_DATA}"
+      - "${DOWNLOAD_PATH}:${XL_DIR_DOWNLOAD}"
+    environment:
+      - XL_DASHBOARD_PORT=${WEB_PORT}
+      - XL_DASHBOARD_IP=${XL_DASHBOARD_IP}
+      - XL_DASHBOARD_USERNAME=${XL_DASHBOARD_USERNAME}
+      - XL_DASHBOARD_PASSWORD=${XL_DASHBOARD_PASSWORD}
+      - XL_DIR_DOWNLOAD=${XL_DIR_DOWNLOAD}
+      - XL_DIR_DATA=${XL_DIR_DATA}
+      - XL_UID=${XL_UID}
+      - XL_GID=${XL_GID}
+      - XL_PREVENT_UPDATE=${XL_PREVENT_UPDATE}
+      - XL_DEBUG=${XL_DEBUG}
+    hostname: ${HOSTNAME}
+    privileged: ${PRIVILEGED_MODE}
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true
