@@ -135,7 +135,7 @@ apphub/                               # 应用根目录（必须为 apphub）
 ## 📞 技术支持
 
 - **GitHub Issues**：[提交问题和建议](https://github.com/makotowu/Baota-Apphub/issues)
-- **QQ 交流群**：662047798（宝塔 Docker 官方交流群）
+- **QQ 交流群**：1061259740（宝塔 Docker 官方交流群）
 
 ## 📄 开源协议
 
