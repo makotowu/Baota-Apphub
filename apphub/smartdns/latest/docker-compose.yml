@@ -1,6 +1,6 @@
 services:
   smartdns:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-smartdns}
     restart: always
     networks:
       - baota_net

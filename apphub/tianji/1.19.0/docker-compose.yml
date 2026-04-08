@@ -1,6 +1,6 @@
 services:
   tianji:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-tianji}
     restart: always
     image: moonrailgun/tianji:1.19.0
     deploy:

@@ -1,6 +1,6 @@
 services:
   yourls:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-yourls}
     restart: always
     networks:
       - baota_net

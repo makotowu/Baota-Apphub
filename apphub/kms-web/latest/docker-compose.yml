@@ -1,6 +1,6 @@
 services:
   kms-web:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-kms-web}
     restart: always
     networks:
       - baota_net

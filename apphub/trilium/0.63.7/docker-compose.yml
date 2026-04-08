@@ -1,6 +1,6 @@
 services:
   trilium:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-trilium}
     restart: always
     networks:
       - baota_net

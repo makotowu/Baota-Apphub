@@ -1,6 +1,6 @@
 services:
   onedev:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-onedev}
     restart: always
     networks:
       - baota_net

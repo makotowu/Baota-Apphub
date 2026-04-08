@@ -1,6 +1,6 @@
 services:
   wallos:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-wallos}
     restart: always
     networks:
       - baota_net

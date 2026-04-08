@@ -1,6 +1,6 @@
 services:
   photoprism:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-photoprism}
     restart: always
     networks:
       - baota_net

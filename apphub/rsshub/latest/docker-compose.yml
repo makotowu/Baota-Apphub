@@ -1,6 +1,6 @@
 services:
   rsshub:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-rsshub}
     restart: always
     networks:
       - baota_net
@@ -23,7 +23,7 @@ services:
       createdBy: Apps
 
   rsshub-browserless:
-    container_name: ${APP_NAME}-browserless
+    container_name: ${APP_NAME:-rsshub}-browserless
     restart: always
     networks:
       - baota_net

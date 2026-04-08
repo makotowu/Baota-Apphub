@@ -1,6 +1,6 @@
 services:
   it-tools:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-it-tools}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   memcached:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-memcached}
     restart: always
     networks:
       - baota_net

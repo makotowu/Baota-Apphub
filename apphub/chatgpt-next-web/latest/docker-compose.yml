@@ -1,6 +1,6 @@
 services:
   chatgpt-next-web:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-chatgpt-next-web}
     restart: always
     networks:
       - baota_net

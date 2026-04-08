@@ -1,6 +1,6 @@
 services:
   dailyhot-web:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-dailyhot-web}
     restart: always
     networks:
       - baota_net

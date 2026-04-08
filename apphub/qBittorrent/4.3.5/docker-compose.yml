@@ -1,6 +1,6 @@
 services:
   qbittorrent:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-qBittorrent}
     restart: always
     networks:
       - baota_net

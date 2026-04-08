@@ -1,6 +1,6 @@
 services:
   obsidian-zh:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-obsidian-zh}
     restart: always
     networks:
       - baota_net

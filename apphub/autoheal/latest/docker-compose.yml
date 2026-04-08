@@ -1,6 +1,6 @@
 services:
   autoheal:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-autoheal}
     restart: always
     networks:
       - baota_net

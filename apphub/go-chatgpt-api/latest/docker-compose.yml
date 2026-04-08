@@ -1,6 +1,6 @@
 services:
   go-chatgpt-api:
-    container_name: ${APP_NAME}-api
+    container_name: ${APP_NAME:-go-chatgpt-api}-api
     restart: always
     networks:
       - baota_net
@@ -29,7 +29,7 @@ services:
       createdBy: "bt_apps"
 
   chatgpt-proxy-server-warp:
-    container_name: ${APP_NAME}-warp
+    container_name: ${APP_NAME:-go-chatgpt-api}-warp
     restart: always
     networks:
       - baota_net

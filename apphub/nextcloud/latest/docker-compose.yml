@@ -1,6 +1,6 @@
 services:
   nextcloud:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-nextcloud}
     restart: always
     networks:
       - baota_net

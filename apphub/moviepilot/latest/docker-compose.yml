@@ -6,7 +6,7 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-moviepilot}
     restart: always
     networks:
       - baota_net

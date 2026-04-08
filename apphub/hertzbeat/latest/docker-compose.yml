@@ -1,6 +1,6 @@
 services:
   hertzbeat:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-hertzbeat}
     restart: always
     environment:
       - TZ=Asia/Shanghai

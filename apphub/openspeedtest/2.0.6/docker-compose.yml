@@ -1,6 +1,6 @@
 services:
   speedtest:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-openspeedtest}
     restart: always
     networks:
       - baota_net

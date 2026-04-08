@@ -1,6 +1,6 @@
 services:
   frps:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-frps}
     restart: always
     network_mode: "host"
     volumes:

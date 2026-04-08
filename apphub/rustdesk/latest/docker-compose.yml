@@ -1,6 +1,6 @@
 services:
   hbbs:
-    container_name: ${APP_NAME}_hbbs
+    container_name: ${APP_NAME:-rustdesk}_hbbs
     restart: always
     ports:
       - "${HOST_IP}:${NAT_TEST_PORT}:21115" #NAT类型测试
@@ -24,7 +24,7 @@ services:
       createdBy: "bt_apps"
 
   hbbr:
-    container_name: ${APP_NAME}_hbbr
+    container_name: ${APP_NAME:-rustdesk}_hbbr
     restart: always
     ports:
       - "${HOST_IP}:${HBBR_PORT}:21117" # 自定义 hbbr 映射端口

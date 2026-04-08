@@ -1,6 +1,6 @@
 services:
   siyuan:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-siyuan}
     restart: always
     networks:
       - baota_net

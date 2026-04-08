@@ -1,6 +1,6 @@
 services:
   synapse:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-synapse}
     restart: always
     networks:
       - baota_net

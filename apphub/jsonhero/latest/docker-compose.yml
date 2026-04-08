@@ -1,6 +1,6 @@
 services:
   jsonhero:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-jsonhero}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   wps-office:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-wps-office}
     restart: always
     networks:
       - baota_net

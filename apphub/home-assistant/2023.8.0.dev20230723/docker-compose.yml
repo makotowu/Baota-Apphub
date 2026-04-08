@@ -1,6 +1,6 @@
 services:
   homeassistant:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-home-assistant}
     restart: always
     network_mode: "host"
     volumes:

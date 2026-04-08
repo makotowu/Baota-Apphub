@@ -1,6 +1,6 @@
 services:
   bytebase:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-bytebase}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   gopeed:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-gopeed}
     restart: always
     networks:
       - baota_net

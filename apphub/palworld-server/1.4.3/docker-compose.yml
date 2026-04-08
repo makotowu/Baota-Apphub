@@ -1,6 +1,6 @@
 services:
   palworld-server:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-palworld-server}
     restart: always
     networks:
       - baota_net

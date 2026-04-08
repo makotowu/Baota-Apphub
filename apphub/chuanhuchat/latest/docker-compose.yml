@@ -1,6 +1,6 @@
 services:
   chuanhuchat:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-chuanhuchat}
     restart: always
     networks:
       - baota_net

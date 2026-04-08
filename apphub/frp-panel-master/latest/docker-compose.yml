@@ -1,6 +1,6 @@
 services:
   frp-panel-master:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-frp-panel-master}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   artalk:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-artalk}
     restart: always
     networks:
       - baota_net

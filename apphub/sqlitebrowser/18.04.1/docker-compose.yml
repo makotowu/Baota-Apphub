@@ -1,6 +1,6 @@
 services:
   sqlitebrowser:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-sqlitebrowser}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   aria2-pro:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-aria2-pro}
     restart: always
     ports:
       - "${RPC_PORT_VALUE}:${RPC_PORT_VALUE}"

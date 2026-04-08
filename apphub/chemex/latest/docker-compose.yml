@@ -1,6 +1,6 @@
 services:
   chemex:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-chemex}
     restart: always
     networks:
       - baota_net

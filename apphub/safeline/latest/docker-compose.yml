@@ -1,6 +1,6 @@
 services:
   safeline-mgt:
-    container_name: ${APP_NAME}-mgt
+    container_name: ${APP_NAME:-safeline}-mgt
     restart: always
     networks:
       baota_net:
@@ -34,7 +34,7 @@ services:
       createdBy: Apps
 
   safeline-detector:
-    container_name: ${APP_NAME}-detector
+    container_name: ${APP_NAME:-safeline}-detector
     restart: always
     networks:
       baota_net:
@@ -55,7 +55,7 @@ services:
       createdBy: Apps
 
   safeline-tengine:
-    container_name: ${APP_NAME}-tengine
+    container_name: ${APP_NAME:-safeline}-tengine
     restart: always
     image: chaitin/safeline-tengine:latest
     deploy:
@@ -82,7 +82,7 @@ services:
       createdBy: Apps
 
   safeline-luigi:
-    container_name: ${APP_NAME}-luigi
+    container_name: ${APP_NAME:-safeline}-luigi
     restart: always
     networks:
       baota_net:
@@ -109,7 +109,7 @@ services:
       createdBy: Apps
 
   safeline-fvm:
-    container_name: ${APP_NAME}-fvm
+    container_name: ${APP_NAME:-safeline}-fvm
     restart: always
     networks:
       baota_net:
@@ -130,7 +130,7 @@ services:
       createdBy: Apps
 
   safeline-pg:
-    container_name: ${APP_NAME}-pg
+    container_name: ${APP_NAME:-safeline}-pg
     restart: always
     networks:
       baota_net:
@@ -154,7 +154,7 @@ services:
       createdBy: Apps
 
   safeline-chaos:
-    container_name: ${APP_NAME}-chaos
+    container_name: ${APP_NAME:-safeline}-chaos
     restart: always
     networks:
       baota_net:

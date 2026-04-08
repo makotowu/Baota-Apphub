@@ -1,6 +1,6 @@
 services:
   ms365-e5-renew-x:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-ms365-e5-renew-x}
     restart: always
     networks:
       - baota_net

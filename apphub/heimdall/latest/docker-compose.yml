@@ -1,6 +1,6 @@
 services:
   heimdall:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-heimdall}
     restart: always
     networks:
       - baota_net

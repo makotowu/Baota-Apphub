@@ -1,6 +1,6 @@
 services:
   nginxwebui:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-nginxwebui}
     restart: always
     network_mode: host
     volumes:

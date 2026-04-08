@@ -1,6 +1,6 @@
 services:
   homepage:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-homepage}
     restart: always
     networks:
       - baota_net

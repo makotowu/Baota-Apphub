@@ -1,6 +1,6 @@
 services:
   slash:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-slash}
     restart: always
     networks:
       - baota_net

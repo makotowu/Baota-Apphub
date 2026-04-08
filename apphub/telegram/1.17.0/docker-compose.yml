@@ -1,6 +1,6 @@
 services:
   telegram:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-telegram}
     restart: always
     networks:
       - baota_net

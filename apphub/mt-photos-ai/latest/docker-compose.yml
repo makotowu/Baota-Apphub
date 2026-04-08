@@ -1,7 +1,7 @@
 services:
   mt-photos-ai:
     image: "mtphotos/mt-photos-ai:latest"
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-mt-photos-ai}
     restart: always
     networks:
       - baota_net

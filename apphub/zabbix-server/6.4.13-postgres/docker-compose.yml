@@ -1,6 +1,6 @@
 services:
   zabbix-snmptraps:
-    container_name: ${APP_NAME}-snmptraps
+    container_name: ${APP_NAME:-zabbix-server}-snmptraps
     image: zabbix/zabbix-snmptraps:alpine-6.4.13
     deploy:
       resources:
@@ -19,7 +19,7 @@ services:
       createdBy: Apps
 
   zabbix-server-pgsql:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-zabbix-server}
     image: zabbix/zabbix-server-pgsql:alpine-6.4.13
     deploy:
       resources:
@@ -44,7 +44,7 @@ services:
       createdBy: Apps
 
   zabbix-web-nginx-pgsql:
-    container_name: ${APP_NAME}-nginx
+    container_name: ${APP_NAME:-zabbix-server}-nginx
     image: zabbix/zabbix-web-nginx-pgsql:alpine-6.4.13
     deploy:
       resources:

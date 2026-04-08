@@ -1,6 +1,6 @@
 services:
   splayer:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-splayer}
     restart: always
     networks:
       - baota_net

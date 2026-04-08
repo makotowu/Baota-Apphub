@@ -1,6 +1,6 @@
 services:
   raneto:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-raneto}
     restart: always
     networks:
       - baota_net

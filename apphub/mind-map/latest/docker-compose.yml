@@ -1,6 +1,6 @@
 services:
   mind-map:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-mind-map}
     restart: always
     networks:
       - baota_net

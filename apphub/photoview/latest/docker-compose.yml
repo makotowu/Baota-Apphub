@@ -1,6 +1,6 @@
 services:
   photoview:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-photoview}
     restart: always
     networks:
       - baota_net

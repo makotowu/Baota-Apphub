@@ -1,6 +1,6 @@
 services:
   mcsm-daemon:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-mcsmanager-daemon}
     restart: always
     networks:
       - baota_net

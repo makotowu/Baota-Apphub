@@ -1,6 +1,6 @@
 services:
   syncthing:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-syncthing}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   modstartblog:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-modstartblog}
     restart: always
     networks:
       - baota_net

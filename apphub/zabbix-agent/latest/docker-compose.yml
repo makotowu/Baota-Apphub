@@ -1,6 +1,6 @@
 services:
   zabbix-agent:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-zabbix-agent}
     restart: always
     networks:
       - baota_net

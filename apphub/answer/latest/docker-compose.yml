@@ -1,6 +1,6 @@
 services:
   answer:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-answer}
     restart: always
     networks:
       - baota_net

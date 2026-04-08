@@ -1,6 +1,6 @@
 services:
   zerotier-moon:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-zerotier-moon}
     restart: always
     networks:
       - baota_net

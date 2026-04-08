@@ -11,7 +11,7 @@ services:
       nofile:
         soft: 102400
         hard: 102400
-    container_name:  ${APP_NAME}
+    container_name:  ${APP_NAME:-uuwaf}
     restart: always
     networks:
       - baota_net
@@ -38,7 +38,7 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    container_name:  ${APP_NAME}-db
+    container_name:  ${APP_NAME:-uuwaf}-db
     restart: always
     networks:
       - baota_net

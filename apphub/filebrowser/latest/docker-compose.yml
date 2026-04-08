@@ -1,6 +1,6 @@
 services:
   filebrowser:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-filebrowser}
     restart: always
     networks:
       - baota_net

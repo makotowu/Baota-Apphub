@@ -1,6 +1,6 @@
 services:
   als:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-als}
     restart: always
     network_mode: "host"
     environment:

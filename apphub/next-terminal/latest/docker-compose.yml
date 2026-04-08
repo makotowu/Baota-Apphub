@@ -1,6 +1,6 @@
 services:
   nt-guacd:
-    container_name: ${APP_NAME}-guacd
+    container_name: ${APP_NAME:-next-terminal}-guacd
     restart: always
     networks:
       - baota_net
@@ -16,7 +16,7 @@ services:
       createdBy: "bt_apps"
 
   next-terminal:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-next-terminal}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   diosic:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-diosic}
     restart: always
     networks:
       - baota_net

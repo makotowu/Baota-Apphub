@@ -1,6 +1,6 @@
 services:
   xiaoya:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-xiaoya}
     restart: always
     networks:
       - baota_net

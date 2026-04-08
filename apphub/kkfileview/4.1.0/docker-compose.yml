@@ -1,6 +1,6 @@
 services:
   kkfileview:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-kkfileview}
     restart: always
     networks:
       - baota_net

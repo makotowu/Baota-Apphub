@@ -1,6 +1,6 @@
 services:
   changedetection:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-changedetectionio}
     restart: always
     networks:
       - baota_net

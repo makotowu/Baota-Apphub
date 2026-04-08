@@ -1,6 +1,6 @@
 services:
   h5ai:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-h5ai}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   nvpress:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-nvpress}
     restart: always
     networks:
       - baota_net

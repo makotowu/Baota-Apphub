@@ -1,6 +1,6 @@
 services:
   nginx-ui:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-nginx-ui}
     restart: always
     networks:
       - baota_net

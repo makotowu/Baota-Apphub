@@ -1,6 +1,6 @@
 services:
   web-check:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-web-check}
     restart: always
     networks:
       - baota_net

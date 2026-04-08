@@ -1,6 +1,6 @@
 services:
   tsddwukongim:  # 唐僧叨叨通讯服务（悟空IM）
-    container_name: ${APP_NAME}-wukongim
+    container_name: ${APP_NAME:-tangsengdaodao}-wukongim
     image: "registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:v1.2"
     deploy:
       resources:
@@ -27,7 +27,7 @@ services:
     labels:
       createdBy: "bt_apps"
   tangsengdaodaoserver:  # 唐僧叨叨的业务服务
-    container_name: ${APP_NAME}-tsdd-server
+    container_name: ${APP_NAME:-tangsengdaodao}-tsdd-server
     image: "registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaoserver:v1.5"
     deploy:
       resources:
@@ -67,7 +67,7 @@ services:
     labels:
       createdBy: "bt_apps"
   tangsengdaodaoweb:  # 唐僧叨叨的web服务
-    container_name: ${APP_NAME}-tsdd-web
+    container_name: ${APP_NAME:-tangsengdaodao}-tsdd-web
     image: "registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaoweb:latest"
     deploy:
       resources:
@@ -84,7 +84,7 @@ services:
     labels:
       createdBy: "bt_apps"
   tangsengdaodaomanager:  # 唐僧叨叨的后台管理系统
-    container_name: ${APP_NAME}-tsdd-manager
+    container_name: ${APP_NAME:-tangsengdaodao}-tsdd-manager
     image: "registry.cn-shanghai.aliyuncs.com/wukongim/tangsengdaodaomanager:latest"
     deploy:
       resources:

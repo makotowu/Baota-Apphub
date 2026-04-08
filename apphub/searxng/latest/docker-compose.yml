@@ -1,6 +1,6 @@
 services:
   searxng:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-searxng}
     restart: always
     networks:
       - baota_net

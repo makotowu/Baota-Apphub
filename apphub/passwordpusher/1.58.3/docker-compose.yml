@@ -1,6 +1,6 @@
 services:
   passwordpusher:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-passwordpusher}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   zerotier-planet:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-zerotier-planet}
     restart: always
     networks:
       - baota_net

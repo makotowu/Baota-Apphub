@@ -1,6 +1,6 @@
 services:
   myip:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-myip}
     restart: always
     networks:
       - baota_net

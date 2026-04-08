@@ -1,6 +1,6 @@
 services:
   happy-chatgpt:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-happy-chatgpt}
     restart: always
     networks:
       - baota_net

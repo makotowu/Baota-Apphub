@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
       args:
         IMAGE_TAG: latest
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-meowfacts}
     restart: always
     networks:
       - baota_net

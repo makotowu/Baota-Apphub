@@ -1,6 +1,6 @@
 services:
   adguardhome:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-adguardhome}
     restart: always
     networks:
       - baota_net

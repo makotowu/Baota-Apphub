@@ -1,6 +1,6 @@
 services:
   qbittorrent-vnc:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-qbittorrent-vnc}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   frp-panel:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-frp-panel}
     restart: always
     network_mode: host
     command: ${COMMAND_LINE}

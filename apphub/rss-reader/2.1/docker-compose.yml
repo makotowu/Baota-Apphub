@@ -1,6 +1,6 @@
 services:
   rss-reader:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-rss-reader}
     restart: always
     networks:
       - baota_net

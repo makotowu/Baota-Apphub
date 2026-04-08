@@ -1,6 +1,6 @@
 services:
   maddymail:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-maddy-mail}
     restart: always
     networks:
       - baota_net

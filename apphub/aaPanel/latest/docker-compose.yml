@@ -1,6 +1,6 @@
 services:
   aapanel:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-aaPanel}
     restart: always
     networks:
       - baota_net

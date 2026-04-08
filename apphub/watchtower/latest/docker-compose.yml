@@ -1,6 +1,6 @@
 services:
   watchtower:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-watchtower}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
     libretv:
-        container_name: ${APP_NAME}
+        container_name: ${APP_NAME:-libretv}
         image: bestzwei/libretv:latest
         deploy:
           resources:

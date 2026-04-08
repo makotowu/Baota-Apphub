@@ -1,6 +1,6 @@
 services:
   wukongim:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-wukongim}
     image: "registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:v1.2"
     deploy:
       resources:

@@ -1,6 +1,6 @@
 services:
   hasty-paste:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-hasty-paste}
     restart: always
     networks:
       - baota_net

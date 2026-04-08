@@ -1,6 +1,6 @@
 services:
   minipaint:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-minipaint}
     restart: always
     networks:
       - baota_net

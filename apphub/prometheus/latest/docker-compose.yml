@@ -1,6 +1,6 @@
 services:
   prometheus:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-prometheus}
     restart: always
     networks:
       - baota_net

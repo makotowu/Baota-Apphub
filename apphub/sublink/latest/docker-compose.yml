@@ -1,6 +1,6 @@
 services:
   sublink:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-sublink}
     restart: always
     networks:
       - baota_net

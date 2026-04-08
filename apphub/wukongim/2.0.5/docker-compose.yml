@@ -1,6 +1,6 @@
 services:
   wukongim: # WuKongIM服务
-    container_name: ${APP_NAME}-wukongim
+    container_name: ${APP_NAME:-wukongim}-wukongim
     image: "registry.cn-shanghai.aliyuncs.com/wukongim/wukongim:v2.0.5-20240925"
     deploy:
       resources:
@@ -33,7 +33,7 @@ services:
     labels:  
       createdBy: "bt_apps"
   wukongim-prometheus:  # 监控服务
-    container_name: ${APP_NAME}-prometheus
+    container_name: ${APP_NAME:-wukongim}-prometheus
     image: "registry.cn-shanghai.aliyuncs.com/wukongim/prometheus:v2.53.1"
     deploy:
       resources:

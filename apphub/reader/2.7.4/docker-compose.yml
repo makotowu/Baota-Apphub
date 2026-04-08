@@ -1,6 +1,6 @@
 services:
   reader:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-reader}
     restart: always
     networks:
       - baota_net

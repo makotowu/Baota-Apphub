@@ -1,6 +1,6 @@
 services:
   act_runner:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-act_runner}
     restart: always
     networks:
       - baota_net

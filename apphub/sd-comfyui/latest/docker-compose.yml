@@ -2,7 +2,7 @@ services:
   sd-comfyui:
     build: ./comfy
     image: sd-comfyui:latest
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-sd-comfyui}
     restart: always
     runtime: nvidia
     networks:

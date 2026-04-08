@@ -1,6 +1,6 @@
 services:
   rsstgbot:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-rss-to-telegram-bot}
     restart: always
     networks:
       - baota_net

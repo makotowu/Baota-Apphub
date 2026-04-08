@@ -1,6 +1,6 @@
 services:
   wg-easy:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-wireguard-easy}
     restart: always
     networks:
       - baota_net

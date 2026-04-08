@@ -1,6 +1,6 @@
 services:
   wireguard-ui:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-wireguard-ui}
     restart: always
     depends_on:
       - wireguard
@@ -36,7 +36,7 @@ services:
       createdBy: "bt_apps"
 
   wireguard:
-    container_name: ${APP_NAME}-wireguard
+    container_name: ${APP_NAME:-wireguard-ui}-wireguard
     restart: always
     networks:
       - baota_net

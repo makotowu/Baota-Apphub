@@ -1,6 +1,6 @@
 services:
   tldraw:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-tldraw}
     restart: always
     networks:
       - baota_net

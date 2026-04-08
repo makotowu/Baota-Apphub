@@ -1,6 +1,6 @@
 services:
   transmission:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-transmission}
     restart: always
     networks:
       - baota_net

@@ -1,6 +1,6 @@
 services:
   talebook:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-talebook}
     restart: always
     networks:
       - baota_net

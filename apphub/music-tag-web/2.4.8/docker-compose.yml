@@ -1,6 +1,6 @@
 services:
   music-tag-web:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-music-tag-web}
     restart: always
     networks:
       - baota_net

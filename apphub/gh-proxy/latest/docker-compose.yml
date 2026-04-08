@@ -1,6 +1,6 @@
 services:
   gh-proxy:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-gh-proxy}
     restart: always
     networks:
       - baota_net

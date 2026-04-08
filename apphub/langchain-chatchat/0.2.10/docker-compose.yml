@@ -1,6 +1,6 @@
 services:
   langchain-chatchat:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-langchain-chatchat}
     restart: always
     networks:
       - baota_net

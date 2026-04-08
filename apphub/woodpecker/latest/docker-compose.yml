@@ -1,6 +1,6 @@
 services:
   woodpecker-server:
-    container_name: ${APP_NAME}-server
+    container_name: ${APP_NAME:-woodpecker}-server
     restart: always
     networks:
       - baota_net
@@ -55,7 +55,7 @@ services:
       createdBy: "bt_apps"
 
   woodpecker-agent:
-    container_name: ${APP_NAME}-agent
+    container_name: ${APP_NAME:-woodpecker}-agent
     restart: always
     networks:
       - baota_net

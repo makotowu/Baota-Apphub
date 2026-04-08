@@ -1,6 +1,6 @@
 services:
   litespeed:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-openlitespeed}
     restart: always
     networks:
       - baota_net

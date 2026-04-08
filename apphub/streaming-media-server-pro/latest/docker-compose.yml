@@ -1,6 +1,6 @@
 services:
   streaming-media-server-pro:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-streaming-media-server-pro}
     restart: always
     networks:
       - baota_net

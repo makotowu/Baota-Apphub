@@ -1,6 +1,6 @@
 services:
   tailscale:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-tailscale}
     restart: always
     network_mode: host
     volumes:

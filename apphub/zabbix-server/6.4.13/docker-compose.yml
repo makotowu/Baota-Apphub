@@ -1,6 +1,6 @@
 services:
   zabbix-server-mysql:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-zabbix-server}
     restart: always
     networks:
       - baota_net
@@ -25,7 +25,7 @@ services:
       createdBy: Apps
 
   zabbix-java-gateway:
-    container_name: ${APP_NAME}-gateway
+    container_name: ${APP_NAME:-zabbix-server}-gateway
     restart: always
     networks:
       - baota_net
@@ -39,7 +39,7 @@ services:
       createdBy: Apps
 
   zabbix-web-nginx-mysql:
-    container_name: ${APP_NAME}-nginx
+    container_name: ${APP_NAME:-zabbix-server}-nginx
     restart: always
     networks:
       - baota_net

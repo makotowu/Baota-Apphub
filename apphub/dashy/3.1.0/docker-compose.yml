@@ -1,6 +1,6 @@
 services:
   dashy:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-dashy}
     restart: always
     networks:
       - baota_net

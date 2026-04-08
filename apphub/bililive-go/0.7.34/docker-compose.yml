@@ -1,6 +1,6 @@
 services:
   bililive-go:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-bililive-go}
     restart: always
     networks:
       - baota_net

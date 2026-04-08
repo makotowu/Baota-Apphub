@@ -1,6 +1,6 @@
 services:
   matomo:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-matomo}
     restart: always
     networks:
       - baota_net
@@ -24,7 +24,7 @@ services:
       createdBy: Apps
 
   matomo-web:
-    container_name: ${APP_NAME}-web
+    container_name: ${APP_NAME:-matomo}-web
     restart: always
     networks:
       - baota_net

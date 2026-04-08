@@ -1,6 +1,6 @@
 services:
   sun-panel:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-sun-panel}
     restart: always
     networks:
       - baota_net

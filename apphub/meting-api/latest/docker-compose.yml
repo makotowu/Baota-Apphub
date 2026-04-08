@@ -1,6 +1,6 @@
 services:
   meting-api:
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME:-meting-api}
     restart: always
     networks:
       - baota_net
