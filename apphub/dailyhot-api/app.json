@@ -12,9 +12,16 @@
     ],
     "appdesc": "一个聚合了中文热门站点数据的项目 (API)",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hot.imsyy.top",
     "help": "https://github.com/imsyy/DailyHotApi",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,7 +45,7 @@
             "name": "端口",
             "type": "number",
             "default": 40143,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -62,7 +69,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40143,
             "desc": "端口"
         },
         {

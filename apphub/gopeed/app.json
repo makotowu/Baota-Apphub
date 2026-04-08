@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "7.0"
+                "9.3"
             ]
         }
     ],
     "appdesc": "一款现代化的下载器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://gopeed.com",
     "help": "https://docs.gopeed.com",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,15 +51,15 @@
             "name": "端口",
             "type": "number",
             "default": 40126,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "download_path",
             "name": "下载文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/Downloads",
-            "suffix": "下载文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,13 +83,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40126,
             "desc": "端口"
         },
         {
             "key": "download_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/Downloads",
             "desc": "下载文件夹路径"
         },
         {

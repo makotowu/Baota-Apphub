@@ -12,9 +12,16 @@
     ],
     "appdesc": "直播源代理程序",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hub.docker.com/r/youshandefeiyang/allinone",
     "help": "https://hub.docker.com/r/youshandefeiyang/allinone",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,7 +45,7 @@
             "name": "端口",
             "type": "number",
             "default": "40292",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -46,7 +53,7 @@
             "name": "特权模式",
             "type": "string",
             "default": "true",
-            "suffix": "特权模式",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -70,13 +77,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40292",
             "desc": "端口"
         },
         {
             "key": "privileged_mode",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "特权模式"
         },
         {

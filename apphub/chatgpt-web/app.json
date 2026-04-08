@@ -12,9 +12,16 @@
     ],
     "appdesc": "使用 express 和 vue3 搭建的支持 ChatGPT 双模型演示网页",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/Chanzhaoyu/chatgpt-web",
     "help": "https://github.com/Chanzhaoyu/chatgpt-web",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,79 +45,79 @@
             "name": "网页端口",
             "type": "number",
             "default": 40021,
-            "suffix": "网页端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "access_token",
             "name": "OPENAI ACCESS TOKEN(与OPENAI API KEY至少填一个)(https://chat.openai.com/api/auth/session)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "OPENAI ACCESS TOKEN(与OPENAI API KEY至少填一个)(https://chat.openai.com/api/auth/session)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "reverse_proxy",
             "name": "API反向代理，可选(OPENAI ACCESS TOKEN时默认启用,需要注意可用性)",
-            "type": "string",
+            "type": "text",
             "default": "https://bypass.duti.tech/api/conversation",
-            "suffix": "API反向代理，可选(OPENAI ACCESS TOKEN时默认启用,需要注意可用性)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_key",
             "name": "OPENAI API KEY(与OPENAI ACCESS TOKEN至少填一个)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "OPENAI API KEY(与OPENAI ACCESS TOKEN至少填一个)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_model",
             "name": "API模型，可选，设置OPENAI API KEY时可用(https://platform.openai.com/docs/models)",
-            "type": "string",
+            "type": "text",
             "default": "gpt-3.5-turbo",
-            "suffix": "API模型，可选，设置OPENAI API KEY时可用(https://platform.openai.com/docs/models)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_base_url",
             "name": "API接口地址，可选，设置OPENAI API KEY时可用",
-            "type": "string",
+            "type": "text",
             "default": "https://api.openai.com",
-            "suffix": "API接口地址，可选，设置OPENAI API KEY时可用",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "secret_key",
             "name": "访问权限密钥，可选(强烈建议填写)",
-            "type": "string",
+            "type": "password",
             "default": "chatgptweb",
-            "suffix": "访问权限密钥，可选(强烈建议填写)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "request_limit",
             "name": "每小时最大请求次数，可选，默认无限",
-            "type": "string",
+            "type": "text",
             "default": "0",
-            "suffix": "每小时最大请求次数，可选，默认无限",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "timeout",
             "name": "超时，单位毫秒，可选",
-            "type": "string",
+            "type": "text",
             "default": "60000",
-            "suffix": "超时，单位毫秒，可选",
+            "suffix": "",
             "unit": ""
         },
         {
-            "attr": "proxy_host",
+            "attr": "proxy_host_port",
             "name": "Socks代理地址，可选，和Socks代理端口一起时生效",
-            "type": "string",
+            "type": "number",
             "default": "",
-            "suffix": "Socks代理地址，可选，和Socks代理端口一起时生效",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -118,31 +125,31 @@
             "name": "Socks代理端口，可选，和Socks代理地址一起时生效",
             "type": "number",
             "default": "",
-            "suffix": "Socks代理端口，可选，和Socks代理地址一起时生效",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "proxy_username",
             "name": "Socks代理用户名，可选，和Socks代理地址一起时生效",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Socks代理用户名，可选，和Socks代理地址一起时生效",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "proxy_password",
             "name": "Socks代理密码，可选，和Socks代理地址一起时生效",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Socks代理密码，可选，和Socks代理地址一起时生效",
+            "suffix": "",
             "unit": ""
         },
         {
-            "attr": "https_proxy",
+            "attr": "https_proxy_port",
             "name": "HTTPS代理，可选，支持http，https，socks5",
-            "type": "string",
+            "type": "number",
             "default": "",
-            "suffix": "HTTPS代理，可选，支持http，https，socks5",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -166,7 +173,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40021,
             "desc": "网页端口"
         },
         {
@@ -178,7 +185,7 @@
         {
             "key": "reverse_proxy",
             "type": "string",
-            "default": null,
+            "default": "https://bypass.duti.tech/api/conversation",
             "desc": "API反向代理，可选(OPENAI ACCESS TOKEN时默认启用,需要注意可用性)"
         },
         {
@@ -190,36 +197,36 @@
         {
             "key": "api_model",
             "type": "string",
-            "default": null,
+            "default": "gpt-3.5-turbo",
             "desc": "API模型，可选，设置OPENAI API KEY时可用(https://platform.openai.com/docs/models)"
         },
         {
             "key": "api_base_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "https://api.openai.com",
             "desc": "API接口地址，可选，设置OPENAI API KEY时可用"
         },
         {
             "key": "secret_key",
             "type": "string",
-            "default": null,
+            "default": "chatgptweb",
             "desc": "访问权限密钥，可选(强烈建议填写)"
         },
         {
             "key": "request_limit",
             "type": "string",
-            "default": null,
+            "default": "0",
             "desc": "每小时最大请求次数，可选，默认无限"
         },
         {
             "key": "timeout",
             "type": "string",
-            "default": null,
+            "default": "60000",
             "desc": "超时，单位毫秒，可选"
         },
         {
-            "key": "proxy_host",
-            "type": "string",
+            "key": "proxy_host_port",
+            "type": "port",
             "default": null,
             "desc": "Socks代理地址，可选，和Socks代理端口一起时生效"
         },
@@ -231,19 +238,19 @@
         },
         {
             "key": "proxy_username",
-            "type": "string",
+            "type": "username",
             "default": null,
             "desc": "Socks代理用户名，可选，和Socks代理地址一起时生效"
         },
         {
             "key": "proxy_password",
-            "type": "string",
+            "type": "password",
             "default": null,
             "desc": "Socks代理密码，可选，和Socks代理地址一起时生效"
         },
         {
-            "key": "https_proxy",
-            "type": "string",
+            "key": "https_proxy_port",
+            "type": "port",
             "default": null,
             "desc": "HTTPS代理，可选，支持http，https，socks5"
         },

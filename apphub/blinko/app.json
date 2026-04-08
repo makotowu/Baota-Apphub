@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "1.2"
+                "8.6"
             ]
         }
     ],
     "appdesc": "一款开源、自托管的个人笔记工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://blinko-demo.vercel.app",
     "help": "https://blinko-doc.vercel.app/intro.html",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,31 +51,31 @@
             "name": "HTTP 端口",
             "type": "number",
             "default": "1111",
-            "suffix": "HTTP 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "nextauth_url",
             "name": "基本 URL",
-            "type": "string",
+            "type": "text",
             "default": "http://1.2.3.4:1111",
-            "suffix": "基本 URL",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "next_public_base_url",
             "name": "公共基本 URL",
-            "type": "string",
+            "type": "text",
             "default": "http://1.2.3.4:1111",
-            "suffix": "公共基本 URL",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "nextauth_secret",
             "name": "NextAuth 密钥",
-            "type": "string",
+            "type": "password",
             "default": "my_ultra_secure_nextauth_secret",
-            "suffix": "NextAuth 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,7 +83,7 @@
             "name": "PostgreSQL 数据库服务",
             "type": "string",
             "default": "",
-            "suffix": "PostgreSQL 数据库服务",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,31 +91,31 @@
             "name": "数据库端口号",
             "type": "number",
             "default": "5432",
-            "suffix": "数据库端口号",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "blinko",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "blinko",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "blinko",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -132,55 +139,55 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "1111",
             "desc": "HTTP 端口"
         },
         {
             "key": "nextauth_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "http://1.2.3.4:1111",
             "desc": "基本 URL"
         },
         {
             "key": "next_public_base_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "http://1.2.3.4:1111",
             "desc": "公共基本 URL"
         },
         {
             "key": "nextauth_secret",
             "type": "string",
-            "default": null,
+            "default": "my_ultra_secure_nextauth_secret",
             "desc": "NextAuth 密钥"
         },
         {
             "key": "panel_db_host",
-            "type": "string",
+            "type": "db_host",
             "default": null,
             "desc": "PostgreSQL 数据库服务"
         },
         {
             "key": "panel_db_port",
             "type": "port",
-            "default": null,
+            "default": "5432",
             "desc": "数据库端口号"
         },
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "blinko",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "blinko",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "blinko",
             "desc": "数据库用户密码"
         },
         {

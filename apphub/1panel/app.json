@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "10.31-lts"
+                "10.34-lts"
             ]
         }
     ],
     "appdesc": "现代化、开源的 Linux 服务器运维管理面板",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://1panel.cn",
     "help": "https://1panel.cn/docs",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,23 +51,23 @@
             "name": "端口 (由监听端口决定)",
             "type": "number",
             "default": 10086,
-            "suffix": "端口 (由监听端口决定)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据存放文件夹",
-            "type": "string",
+            "type": "text",
             "default": "/opt",
-            "suffix": "数据存放文件夹",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,19 +91,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 10086,
             "desc": "端口 (由监听端口决定)"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/opt",
             "desc": "数据存放文件夹"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {

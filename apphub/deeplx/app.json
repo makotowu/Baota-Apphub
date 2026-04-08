@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "0.7"
+                "1.0"
             ]
         }
     ],
     "appdesc": "DeepL 免费 API（无需 TOKEN）",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/OwO-Network/DeepLX",
     "help": "https://github.com/OwO-Network/DeepLX",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,15 +51,15 @@
             "name": "端口",
             "type": "number",
             "default": 40174,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "token_vaule",
             "name": "密码",
-            "type": "string",
+            "type": "password",
             "default": "deeplx",
-            "suffix": "密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,13 +83,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40174,
             "desc": "端口"
         },
         {
             "key": "token_vaule",
             "type": "string",
-            "default": null,
+            "default": "deeplx",
             "desc": "密码"
         },
         {

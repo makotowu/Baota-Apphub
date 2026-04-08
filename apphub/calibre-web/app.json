@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "6.24"
+                "6.26"
             ]
         }
     ],
     "appdesc": "用于浏览、阅读和下载存储在 Calibre 数据库中的电子书的 Web 应用程序",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://calibre-ebook.com",
     "help": "https://calibre-ebook.com/help",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,23 +51,23 @@
             "name": "HTTP端口",
             "type": "number",
             "default": 40109,
-            "suffix": "HTTP端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "书本文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/books",
-            "suffix": "书本文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,19 +91,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40109,
             "desc": "HTTP端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/books",
             "desc": "书本文件夹路径"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {

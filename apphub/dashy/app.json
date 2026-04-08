@@ -12,15 +12,22 @@
         {
             "m_version": "3",
             "s_version": [
-                "1.0"
+                "1.13"
             ]
         }
     ],
     "appdesc": "专为您打造的可自行托管的个人仪表板",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://dashy.to",
     "help": "https://dashy.to/docs",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口",
             "type": "number",
             "default": 40209,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,7 +75,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40209,
             "desc": "端口"
         },
         {

@@ -12,9 +12,16 @@
     ],
     "appdesc": "在 Docker 中运行 Android",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/budtmo/docker-android",
     "help": "https://github.com/budtmo/docker-android",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -36,9 +43,9 @@
         {
             "attr": "image",
             "name": "容器镜像",
-            "type": "string",
+            "type": "text",
             "default": "budtmo/docker-android:latest",
-            "suffix": "容器镜像",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -46,15 +53,15 @@
             "name": "重启策略",
             "type": "string",
             "default": "always",
-            "suffix": "重启策略",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "emulator_device",
             "name": "模拟的设备",
-            "type": "string",
+            "type": "text",
             "default": "Samsung Galaxy S10",
-            "suffix": "模拟的设备",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -62,7 +69,7 @@
             "name": "Web VNC",
             "type": "string",
             "default": "true",
-            "suffix": "Web VNC",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -70,7 +77,7 @@
             "name": "端口",
             "type": "number",
             "default": "40288",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -94,31 +101,31 @@
         {
             "key": "image",
             "type": "string",
-            "default": null,
+            "default": "budtmo/docker-android:latest",
             "desc": "容器镜像"
         },
         {
             "key": "restart_policy",
             "type": "string",
-            "default": null,
+            "default": "always",
             "desc": "重启策略"
         },
         {
             "key": "emulator_device",
             "type": "string",
-            "default": null,
+            "default": "Samsung Galaxy S10",
             "desc": "模拟的设备"
         },
         {
             "key": "web_vnc",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "Web VNC"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40288",
             "desc": "端口"
         },
         {

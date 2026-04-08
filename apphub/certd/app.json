@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "28.3"
+                "39.6"
             ]
         }
     ],
     "appdesc": "开源 SSL 证书管理工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://certd.docmirror.cn",
     "help": "https://certd.docmirror.cn",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,55 +51,55 @@
             "name": "端口",
             "type": "number",
             "default": "40311",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "dns_1",
             "name": "主 DNS",
-            "type": "string",
+            "type": "text",
             "default": "223.5.5.5",
-            "suffix": "主 DNS",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "dns_2",
             "name": "次 DNS",
-            "type": "string",
+            "type": "text",
             "default": "119.29.29.29",
-            "suffix": "次 DNS",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "https_proxy",
             "name": "HTTPS 代理",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "HTTPS 代理",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "http_proxy",
             "name": "HTTP 代理",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "HTTP 代理",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,7 +107,7 @@
             "name": "重置管理员密码",
             "type": "string",
             "default": "false",
-            "suffix": "重置管理员密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -108,7 +115,7 @@
             "name": "立即触发定时任务",
             "type": "string",
             "default": "false",
-            "suffix": "立即触发定时任务",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -132,31 +139,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40311",
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据路径"
         },
         {
             "key": "dns_1",
             "type": "string",
-            "default": null,
+            "default": "223.5.5.5",
             "desc": "主 DNS"
         },
         {
             "key": "dns_2",
             "type": "string",
-            "default": null,
+            "default": "119.29.29.29",
             "desc": "次 DNS"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
@@ -173,14 +180,14 @@
         },
         {
             "key": "reset_admin_passwd",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "false",
             "desc": "重置管理员密码"
         },
         {
             "key": "immediate_trigger",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "立即触发定时任务"
         },
         {

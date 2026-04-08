@@ -10,17 +10,24 @@
             "s_version": []
         },
         {
-            "m_version": "1",
+            "m_version": "2",
             "s_version": [
-                "7.6"
+                "0.4"
             ]
         }
     ],
     "appdesc": "基于大模型的智能对话机器人",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/zhayujie/chatgpt-on-wechat",
     "help": "https://docs.link-ai.tech/cow",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -42,25 +49,25 @@
         {
             "attr": "open_ai_api_key",
             "name": "OpenAI API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "OpenAI API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "open_ai_api_base",
             "name": "OpenAI API 基础地址",
-            "type": "string",
+            "type": "text",
             "default": "https://api.openai.com/v1",
-            "suffix": "OpenAI API 基础地址",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "model",
             "name": "模型",
-            "type": "string",
+            "type": "text",
             "default": "gpt-3.5-turbo",
-            "suffix": "模型",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,87 +75,87 @@
             "name": "使用 Azure ChatGPT",
             "type": "string",
             "default": "false",
-            "suffix": "使用 Azure ChatGPT",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "azure_deployment_id",
             "name": "Azure 部署 ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Azure 部署 ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "azure_api_version",
             "name": "Azure API 版本",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Azure API 版本",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "proxy",
             "name": "代理",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "代理",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "single_chat_prefix",
             "name": "私聊前缀",
-            "type": "string",
+            "type": "text",
             "default": "[\"bot\", \"@bot\"]",
-            "suffix": "私聊前缀",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "single_chat_reply_prefix",
             "name": "私聊回复前缀",
-            "type": "string",
+            "type": "text",
             "default": "[bot] ",
-            "suffix": "私聊回复前缀",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "single_chat_reply_suffix",
             "name": "私聊回复后缀",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "私聊回复后缀",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "group_chat_prefix",
             "name": "群聊前缀",
-            "type": "string",
+            "type": "text",
             "default": "[\"@bot\"]",
-            "suffix": "群聊前缀",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "group_chat_reply_prefix",
             "name": "群聊回复前缀",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "群聊回复前缀",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "group_chat_reply_suffix",
             "name": "群聊回复后缀",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "群聊回复后缀",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "group_chat_keyword",
             "name": "群聊触发回复的关键词",
-            "type": "string",
+            "type": "text",
             "default": "[]",
-            "suffix": "群聊触发回复的关键词",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -156,47 +163,47 @@
             "name": "关闭群聊@bot触发",
             "type": "string",
             "default": "false",
-            "suffix": "关闭群聊@bot触发",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "group_name_white_list",
             "name": "群名称白名单",
-            "type": "string",
+            "type": "text",
             "default": "[\"ChatGPT测试群\", \"ChatGPT测试群2\"]",
-            "suffix": "群名称白名单",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "group_name_keyword_white_list",
             "name": "群名称关键词白名单",
-            "type": "string",
+            "type": "text",
             "default": "[]",
-            "suffix": "群名称关键词白名单",
+            "suffix": "",
             "unit": ""
         },
         {
-            "attr": "group_chat_in_one_session",
+            "attr": "group_chat_in_one_session_port",
             "name": "支持会话上下文共享的群名称",
-            "type": "string",
+            "type": "number",
             "default": "[\"ChatGPT测试群\"]",
-            "suffix": "支持会话上下文共享的群名称",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "nick_name_black_list",
             "name": "昵称黑名单",
-            "type": "string",
+            "type": "text",
             "default": "[]",
-            "suffix": "昵称黑名单",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "group_welcome_msg",
             "name": "群欢迎信息",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "群欢迎信息",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -204,7 +211,7 @@
             "name": "是否允许机器人触发",
             "type": "string",
             "default": "false",
-            "suffix": "是否允许机器人触发",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -212,7 +219,7 @@
             "name": "图片生成模型",
             "type": "string",
             "default": "dall-e-2",
-            "suffix": "图片生成模型",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -220,7 +227,7 @@
             "name": "Dall-E 3 图片风格",
             "type": "string",
             "default": "vivid",
-            "suffix": "Dall-E 3 图片风格",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -228,31 +235,31 @@
             "name": "Dall-E 3 图片质量",
             "type": "string",
             "default": "hd",
-            "suffix": "Dall-E 3 图片质量",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "azure_openai_dalle_api_base",
             "name": "Azure OpenAI Dall-E API 基础地址",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Azure OpenAI Dall-E API 基础地址",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "azure_openai_dalle_api_key",
             "name": "Azure OpenAI Dall-E API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Azure OpenAI Dall-E API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "azure_openai_dalle_deployment_id",
             "name": "Azure OpenAI Dall-E 部署 ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Azure OpenAI Dall-E 部署 ID",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -260,15 +267,15 @@
             "name": "图片代理",
             "type": "string",
             "default": "true",
-            "suffix": "图片代理",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "image_create_prefix",
             "name": "开启图片回复的前缀",
-            "type": "string",
+            "type": "text",
             "default": "[\"画\", \"看\", \"找\"]",
-            "suffix": "开启图片回复的前缀",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -276,7 +283,7 @@
             "name": "会话并发数",
             "type": "number",
             "default": "1",
-            "suffix": "会话并发数",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -284,7 +291,7 @@
             "name": "图片生成大小",
             "type": "string",
             "default": "256x256",
-            "suffix": "图片生成大小",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -292,7 +299,7 @@
             "name": "退出群聊",
             "type": "string",
             "default": "false",
-            "suffix": "退出群聊",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -300,15 +307,15 @@
             "name": "会话过期时间",
             "type": "number",
             "default": "3600",
-            "suffix": "会话过期时间",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "character_desc",
             "name": "人格描述",
-            "type": "string",
+            "type": "text",
             "default": "你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。",
-            "suffix": "人格描述",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -316,7 +323,7 @@
             "name": "会话最大字符数",
             "type": "number",
             "default": "1000",
-            "suffix": "会话最大字符数",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -324,7 +331,7 @@
             "name": "ChatGPT 调用频率限制",
             "type": "number",
             "default": "20",
-            "suffix": "ChatGPT 调用频率限制",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -332,39 +339,39 @@
             "name": "DALL-E 调用频率限制",
             "type": "number",
             "default": "50",
-            "suffix": "DALL-E 调用频率限制",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "temperature",
             "name": "温度",
-            "type": "string",
+            "type": "text",
             "default": "0.9",
-            "suffix": "温度",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "top_p",
             "name": "Top P",
-            "type": "string",
+            "type": "text",
             "default": "0.9",
-            "suffix": "Top P",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "frequency_penalty",
             "name": "频率惩罚",
-            "type": "string",
+            "type": "text",
             "default": "0.0",
-            "suffix": "频率惩罚",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "presence_penalty",
             "name": "存在惩罚",
-            "type": "string",
+            "type": "text",
             "default": "0.0",
-            "suffix": "存在惩罚",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -372,7 +379,7 @@
             "name": "请求超时时间",
             "type": "number",
             "default": "30",
-            "suffix": "请求超时时间",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -380,135 +387,135 @@
             "name": "超时时间",
             "type": "number",
             "default": "30",
-            "suffix": "超时时间",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_wenxin_model",
             "name": "百度文心模型",
-            "type": "string",
+            "type": "text",
             "default": "eb-instant",
-            "suffix": "百度文心模型",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_wenxin_api_key",
             "name": "百度文心 API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "百度文心 API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_wenxin_secret_key",
             "name": "百度文心 Secret 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "百度文心 Secret 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "xunfei_app_id",
             "name": "讯飞 App ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "讯飞 App ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "xunfei_api_key",
             "name": "讯飞 API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "讯飞 API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "xunfei_api_secret",
             "name": "讯飞 API Secret",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "讯飞 API Secret",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "claude_api_cookie",
             "name": "Claude API Cookie",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Claude API Cookie",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "claude_uuid",
             "name": "Claude UUID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Claude UUID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "claude_api_key",
             "name": "Claude API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Claude API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "qwen_access_key_id",
             "name": "通义千问 Access Key ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "通义千问 Access Key ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "qwen_access_key_secret",
             "name": "通义千问 Access Key Secret",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "通义千问 Access Key Secret",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "qwen_agent_key",
             "name": "通义千问 Agent Key",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "通义千问 Agent Key",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "qwen_app_id",
             "name": "通义千问 App ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "通义千问 App ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "qwen_node_id",
             "name": "通义千问 Node ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "通义千问 Node ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "dashscope_api_key",
             "name": "Dashscope API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Dashscope API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gemini_api_key",
             "name": "Gemini API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Gemini API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -516,7 +523,7 @@
             "name": "WeWork 智能",
             "type": "string",
             "default": "true",
-            "suffix": "WeWork 智能",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -524,7 +531,7 @@
             "name": "语音识别",
             "type": "string",
             "default": "true",
-            "suffix": "语音识别",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -532,7 +539,7 @@
             "name": "群聊语音识别",
             "type": "string",
             "default": "false",
-            "suffix": "群聊语音识别",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -540,7 +547,7 @@
             "name": "语音回复语音",
             "type": "string",
             "default": "false",
-            "suffix": "语音回复语音",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -548,103 +555,103 @@
             "name": "总是语音回复",
             "type": "string",
             "default": "false",
-            "suffix": "总是语音回复",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "voice_to_text",
             "name": "语音识别引擎",
-            "type": "string",
+            "type": "text",
             "default": "openai",
-            "suffix": "语音识别引擎",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "text_to_voice",
             "name": "语音合成引擎",
-            "type": "string",
+            "type": "text",
             "default": "false",
-            "suffix": "语音合成引擎",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "text_to_voice_model",
             "name": "文字转语音模型",
-            "type": "string",
+            "type": "text",
             "default": "tts-1",
-            "suffix": "文字转语音模型",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "tts_voice_id",
             "name": "TTS 语音 ID",
-            "type": "string",
+            "type": "text",
             "default": "alloy",
-            "suffix": "TTS 语音 ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_app_id",
             "name": "百度 App ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "百度 App ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_api_key",
             "name": "百度 API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "百度 API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_secret_key",
             "name": "百度 Secret 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "百度 Secret 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_dev_pid",
             "name": "Baidu Dev PID",
-            "type": "string",
+            "type": "text",
             "default": "1537",
-            "suffix": "Baidu Dev PID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "azure_voice_api_key",
             "name": "Azure 语音 API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Azure 语音 API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "azure_voice_region",
             "name": "Azure 语音区域",
-            "type": "string",
+            "type": "text",
             "default": "japaneast",
-            "suffix": "Azure 语音区域",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "xi_api_key",
             "name": "Elevenlabs API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Elevenlabs API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "xi_voice_id",
             "name": "Elevenlabs 语音 ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Elevenlabs 语音 ID",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -652,47 +659,47 @@
             "name": "服务时间限制",
             "type": "string",
             "default": "false",
-            "suffix": "服务时间限制",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chat_start_time",
             "name": "服务开始时间",
-            "type": "string",
+            "type": "text",
             "default": "00:00",
-            "suffix": "服务开始时间",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chat_stop_time",
             "name": "服务结束时间",
-            "type": "string",
+            "type": "text",
             "default": "24:00",
-            "suffix": "服务结束时间",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "translate",
             "name": "翻译引擎",
-            "type": "string",
+            "type": "text",
             "default": "baidu",
-            "suffix": "翻译引擎",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_translate_app_id",
             "name": "百度翻译 App ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "百度翻译 App ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "baidu_translate_app_key",
             "name": "百度翻译 App 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "百度翻译 App 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -700,23 +707,23 @@
             "name": "热重载",
             "type": "string",
             "default": "false",
-            "suffix": "热重载",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechaty_puppet_service_token",
             "name": "Wechaty 机器人服务 Token",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Wechaty 机器人服务 Token",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatmp_token",
             "name": "微信公众平台 Token",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "微信公众平台 Token",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -724,47 +731,47 @@
             "name": "微信公众平台端口",
             "type": "number",
             "default": "8080",
-            "suffix": "微信公众平台端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatmp_app_id",
             "name": "微信公众平台 App ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "微信公众平台 App ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatmp_app_secret",
             "name": "微信公众平台 App Secret",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "微信公众平台 App Secret",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatmp_aes_key",
             "name": "微信公众平台 AES Key",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "微信公众平台 AES Key",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatcom_corp_id",
             "name": "企业微信公司 Corp ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "企业微信公司 Corp ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatcomapp_token",
             "name": "企业微信 App Token",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "企业微信 App Token",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -772,31 +779,31 @@
             "name": "企业微信 App 端口",
             "type": "number",
             "default": "9898",
-            "suffix": "企业微信 App 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatcomapp_secret",
             "name": "企业微信 App Secret",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "企业微信 App Secret",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatcomapp_agent_id",
             "name": "企业微信 App Agent ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "企业微信 App Agent ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "wechatcomapp_aes_key",
             "name": "企业微信 App AES Key",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "企业微信 App AES Key",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -804,55 +811,55 @@
             "name": "飞书 Bot 监听端口",
             "type": "number",
             "default": "80",
-            "suffix": "飞书 Bot 监听端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "feishu_app_id",
             "name": "飞书机器人应用 App ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "飞书机器人应用 App ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "feishu_app_secret",
             "name": "飞书机器人 App Secret",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "飞书机器人 App Secret",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "feishu_token",
             "name": "飞书 Verification Token",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "飞书 Verification Token",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "feishu_bot_name",
             "name": "飞书机器人名称",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "飞书机器人名称",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "dingtalk_client_id",
             "name": "钉钉机器人 Client ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "钉钉机器人 Client ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "dingtalk_client_secret",
             "name": "钉钉机器人 Client Secret",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "钉钉机器人 Client Secret",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -860,17 +867,17 @@
             "name": "钉钉卡片开启",
             "type": "string",
             "default": "false",
-            "suffix": "钉钉卡片开启",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "clear_memory_commands",
             "name": "清除记忆指令",
-            "type": "string",
+            "type": "text",
             "default": [
                 "#清除记忆"
             ],
-            "suffix": "清除记忆指令",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -878,15 +885,15 @@
             "name": "通道类型",
             "type": "string",
             "default": "wx",
-            "suffix": "通道类型",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "subscribe_msg",
             "name": "订阅消息",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "订阅消息",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -894,23 +901,23 @@
             "name": "调试模式",
             "type": "string",
             "default": "false",
-            "suffix": "调试模式",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "appdata_dir",
             "name": "数据目录",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "数据目录",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "plugin_trigger_prefix",
             "name": "插件触发前缀",
-            "type": "string",
+            "type": "text",
             "default": "$",
-            "suffix": "插件触发前缀",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -918,7 +925,7 @@
             "name": "使用全局插件配置",
             "type": "string",
             "default": "false",
-            "suffix": "使用全局插件配置",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -926,7 +933,7 @@
             "name": "单次最大发送媒体资源数量",
             "type": "number",
             "default": "3",
-            "suffix": "单次最大发送媒体资源数量",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -934,39 +941,39 @@
             "name": "发送图片事件间隔（秒）",
             "type": "number",
             "default": "1",
-            "suffix": "发送图片事件间隔（秒）",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "zhipu_ai_api_key",
             "name": "智谱 AI API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "智谱 AI API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "zhipu_ai_api_base",
             "name": "智谱 AI API 地址",
-            "type": "string",
+            "type": "text",
             "default": "https://open.bigmodel.cn/api/paas/v4",
-            "suffix": "智谱 AI API 地址",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "moonshot_api_key",
             "name": "Moonshot API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Moonshot API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "moonshot_base_url",
             "name": "Moonshot API 地址",
-            "type": "string",
+            "type": "text",
             "default": "https://api.moonshot.cn/v1/chat/completions",
-            "suffix": "Moonshot API 地址",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -974,31 +981,31 @@
             "name": "使用 LinkAI",
             "type": "string",
             "default": "false",
-            "suffix": "使用 LinkAI",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "linkai_api_key",
             "name": "LinkAI API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "LinkAI API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "linkai_app_code",
             "name": "LinkAI App Code",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "LinkAI App Code",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "linkai_api_base",
             "name": "LinkAI API 地址",
-            "type": "string",
+            "type": "text",
             "default": "https://api.link-ai.tech",
-            "suffix": "LinkAI API 地址",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -1028,19 +1035,19 @@
         {
             "key": "open_ai_api_base",
             "type": "string",
-            "default": null,
+            "default": "https://api.openai.com/v1",
             "desc": "OpenAI API 基础地址"
         },
         {
             "key": "model",
             "type": "string",
-            "default": null,
+            "default": "gpt-3.5-turbo",
             "desc": "模型"
         },
         {
             "key": "use_azure_chatgpt",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "使用 Azure ChatGPT"
         },
         {
@@ -1064,13 +1071,13 @@
         {
             "key": "single_chat_prefix",
             "type": "string",
-            "default": null,
+            "default": "[\"bot\", \"@bot\"]",
             "desc": "私聊前缀"
         },
         {
             "key": "single_chat_reply_prefix",
             "type": "string",
-            "default": null,
+            "default": "[bot] ",
             "desc": "私聊回复前缀"
         },
         {
@@ -1082,7 +1089,7 @@
         {
             "key": "group_chat_prefix",
             "type": "string",
-            "default": null,
+            "default": "[\"@bot\"]",
             "desc": "群聊前缀"
         },
         {
@@ -1100,37 +1107,37 @@
         {
             "key": "group_chat_keyword",
             "type": "string",
-            "default": null,
+            "default": "[]",
             "desc": "群聊触发回复的关键词"
         },
         {
             "key": "group_at_off",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "关闭群聊@bot触发"
         },
         {
             "key": "group_name_white_list",
             "type": "string",
-            "default": null,
+            "default": "[\"ChatGPT测试群\", \"ChatGPT测试群2\"]",
             "desc": "群名称白名单"
         },
         {
             "key": "group_name_keyword_white_list",
             "type": "string",
-            "default": null,
+            "default": "[]",
             "desc": "群名称关键词白名单"
         },
         {
-            "key": "group_chat_in_one_session",
-            "type": "string",
-            "default": null,
+            "key": "group_chat_in_one_session_port",
+            "type": "port",
+            "default": "[\"ChatGPT测试群\"]",
             "desc": "支持会话上下文共享的群名称"
         },
         {
             "key": "nick_name_black_list",
             "type": "string",
-            "default": null,
+            "default": "[]",
             "desc": "昵称黑名单"
         },
         {
@@ -1142,25 +1149,25 @@
         {
             "key": "trigger_by_self",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "是否允许机器人触发"
         },
         {
             "key": "text_to_image",
             "type": "string",
-            "default": null,
+            "default": "dall-e-2",
             "desc": "图片生成模型"
         },
         {
             "key": "dalle3_image_style",
             "type": "string",
-            "default": null,
+            "default": "vivid",
             "desc": "Dall-E 3 图片风格"
         },
         {
             "key": "dalle3_image_quality",
             "type": "string",
-            "default": null,
+            "default": "hd",
             "desc": "Dall-E 3 图片质量"
         },
         {
@@ -1184,103 +1191,103 @@
         {
             "key": "image_proxy",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "图片代理"
         },
         {
             "key": "image_create_prefix",
             "type": "string",
-            "default": null,
+            "default": "[\"画\", \"看\", \"找\"]",
             "desc": "开启图片回复的前缀"
         },
         {
             "key": "concurrency_in_session",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "1",
             "desc": "会话并发数"
         },
         {
             "key": "image_create_size",
             "type": "string",
-            "default": null,
+            "default": "256x256",
             "desc": "图片生成大小"
         },
         {
             "key": "group_chat_exit_group",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "退出群聊"
         },
         {
             "key": "expires_in_seconds",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "3600",
             "desc": "会话过期时间"
         },
         {
             "key": "character_desc",
             "type": "string",
-            "default": null,
+            "default": "你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。",
             "desc": "人格描述"
         },
         {
             "key": "conversation_max_tokens",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "1000",
             "desc": "会话最大字符数"
         },
         {
             "key": "rate_limit_chatgpt",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "20",
             "desc": "ChatGPT 调用频率限制"
         },
         {
             "key": "rate_limit_dalle",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "50",
             "desc": "DALL-E 调用频率限制"
         },
         {
             "key": "temperature",
             "type": "string",
-            "default": null,
+            "default": "0.9",
             "desc": "温度"
         },
         {
             "key": "top_p",
             "type": "string",
-            "default": null,
+            "default": "0.9",
             "desc": "Top P"
         },
         {
             "key": "frequency_penalty",
             "type": "string",
-            "default": null,
+            "default": "0.0",
             "desc": "频率惩罚"
         },
         {
             "key": "presence_penalty",
             "type": "string",
-            "default": null,
+            "default": "0.0",
             "desc": "存在惩罚"
         },
         {
             "key": "request_timeout",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "30",
             "desc": "请求超时时间"
         },
         {
             "key": "timeout",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "30",
             "desc": "超时时间"
         },
         {
             "key": "baidu_wenxin_model",
             "type": "string",
-            "default": null,
+            "default": "eb-instant",
             "desc": "百度文心模型"
         },
         {
@@ -1376,55 +1383,55 @@
         {
             "key": "wework_smart",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "WeWork 智能"
         },
         {
             "key": "speech_recognition",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "语音识别"
         },
         {
             "key": "group_speech_recognition",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "群聊语音识别"
         },
         {
             "key": "voice_reply_voice",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "语音回复语音"
         },
         {
             "key": "always_reply_voice",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "总是语音回复"
         },
         {
             "key": "voice_to_text",
             "type": "string",
-            "default": null,
+            "default": "openai",
             "desc": "语音识别引擎"
         },
         {
             "key": "text_to_voice",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "语音合成引擎"
         },
         {
             "key": "text_to_voice_model",
             "type": "string",
-            "default": null,
+            "default": "tts-1",
             "desc": "文字转语音模型"
         },
         {
             "key": "tts_voice_id",
             "type": "string",
-            "default": null,
+            "default": "alloy",
             "desc": "TTS 语音 ID"
         },
         {
@@ -1448,7 +1455,7 @@
         {
             "key": "baidu_dev_pid",
             "type": "string",
-            "default": null,
+            "default": "1537",
             "desc": "Baidu Dev PID"
         },
         {
@@ -1460,7 +1467,7 @@
         {
             "key": "azure_voice_region",
             "type": "string",
-            "default": null,
+            "default": "japaneast",
             "desc": "Azure 语音区域"
         },
         {
@@ -1478,25 +1485,25 @@
         {
             "key": "chat_time_module",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "服务时间限制"
         },
         {
             "key": "chat_start_time",
             "type": "string",
-            "default": null,
+            "default": "00:00",
             "desc": "服务开始时间"
         },
         {
             "key": "chat_stop_time",
             "type": "string",
-            "default": null,
+            "default": "24:00",
             "desc": "服务结束时间"
         },
         {
             "key": "translate",
             "type": "string",
-            "default": null,
+            "default": "baidu",
             "desc": "翻译引擎"
         },
         {
@@ -1514,7 +1521,7 @@
         {
             "key": "hot_reload",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "热重载"
         },
         {
@@ -1532,7 +1539,7 @@
         {
             "key": "wechatmp_port",
             "type": "port",
-            "default": null,
+            "default": "8080",
             "desc": "微信公众平台端口"
         },
         {
@@ -1568,7 +1575,7 @@
         {
             "key": "wechatcomapp_port",
             "type": "port",
-            "default": null,
+            "default": "9898",
             "desc": "企业微信 App 端口"
         },
         {
@@ -1592,7 +1599,7 @@
         {
             "key": "feishu_port",
             "type": "port",
-            "default": null,
+            "default": "80",
             "desc": "飞书 Bot 监听端口"
         },
         {
@@ -1634,19 +1641,21 @@
         {
             "key": "dingtalk_card_enabled",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "钉钉卡片开启"
         },
         {
             "key": "clear_memory_commands",
             "type": "string",
-            "default": null,
+            "default": [
+                "#清除记忆"
+            ],
             "desc": "清除记忆指令"
         },
         {
             "key": "channel_type",
             "type": "string",
-            "default": null,
+            "default": "wx",
             "desc": "通道类型"
         },
         {
@@ -1658,37 +1667,37 @@
         {
             "key": "debug",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "调试模式"
         },
         {
             "key": "appdata_dir",
-            "type": "string",
+            "type": "path",
             "default": null,
             "desc": "数据目录"
         },
         {
             "key": "plugin_trigger_prefix",
             "type": "string",
-            "default": null,
+            "default": "$",
             "desc": "插件触发前缀"
         },
         {
             "key": "use_global_plugin_config",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "使用全局插件配置"
         },
         {
             "key": "max_media_send_count",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "3",
             "desc": "单次最大发送媒体资源数量"
         },
         {
             "key": "media_send_interval",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "1",
             "desc": "发送图片事件间隔（秒）"
         },
         {
@@ -1700,7 +1709,7 @@
         {
             "key": "zhipu_ai_api_base",
             "type": "string",
-            "default": null,
+            "default": "https://open.bigmodel.cn/api/paas/v4",
             "desc": "智谱 AI API 地址"
         },
         {
@@ -1711,14 +1720,14 @@
         },
         {
             "key": "moonshot_base_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "https://api.moonshot.cn/v1/chat/completions",
             "desc": "Moonshot API 地址"
         },
         {
             "key": "use_linkai",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "使用 LinkAI"
         },
         {
@@ -1736,7 +1745,7 @@
         {
             "key": "linkai_api_base",
             "type": "string",
-            "default": null,
+            "default": "https://api.link-ai.tech",
             "desc": "LinkAI API 地址"
         },
         {

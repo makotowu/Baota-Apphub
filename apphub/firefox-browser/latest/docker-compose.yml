@@ -1,6 +1,5 @@
 services:
   firefox:
-    container_name: ${APP_NAME:-firefox-browser}
     restart: always
     networks:
       - baota_net

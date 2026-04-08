@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "50"
+                "54"
             ]
         }
     ],
     "appdesc": "网站更改检测、补货监控和通知。",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://changedetection.io/",
     "help": "https://github.com/dgtlmoon/changedetection.io/wiki",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,15 +51,15 @@
             "name": "端口",
             "type": "number",
             "default": 40097,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,13 +83,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40097,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {

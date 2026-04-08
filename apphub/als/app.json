@@ -12,9 +12,16 @@
     ],
     "appdesc": "Another Looking-glass Server，测速服务端",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/wikihost-opensource/als",
     "help": "https://github.com/wikihost-opensource/als",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,7 +45,7 @@
             "name": "网页端口",
             "type": "number",
             "default": 20080,
-            "suffix": "网页端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -62,7 +69,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 20080,
             "desc": "网页端口"
         },
         {

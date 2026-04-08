@@ -12,16 +12,23 @@
         {
             "m_version": "4",
             "s_version": [
-                "14.6_arm64v8",
-                "17.7"
+                "17.7",
+                "14.6_arm64v8"
             ]
         }
     ],
     "appdesc": "百度网盘是百度推出的一项云存储服务",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://pan.baidu.com/",
     "help": "https://github.com/gshang2017/docker/tree/master/baidunetdisk",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -45,31 +52,31 @@
             "name": "网页端口",
             "type": "number",
             "default": 40035,
-            "suffix": "网页端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "vnc_password",
             "name": "访问密码",
-            "type": "string",
+            "type": "password",
             "default": "VNCPassword",
-            "suffix": "访问密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "config_path",
             "name": "配置文件所在路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/config",
-            "suffix": "配置文件所在路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "download_path",
             "name": "下载文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/downloads",
-            "suffix": "下载文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -93,25 +100,25 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40035,
             "desc": "网页端口"
         },
         {
             "key": "vnc_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "VNCPassword",
             "desc": "访问密码"
         },
         {
             "key": "config_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/config",
             "desc": "配置文件所在路径"
         },
         {
             "key": "download_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/downloads",
             "desc": "下载文件夹路径"
         },
         {

@@ -6,7 +6,6 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    container_name: ${APP_NAME:-discourse}
     restart: always
     networks:
       - baota_net
@@ -67,7 +66,6 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    container_name: ${APP_NAME:-discourse}-sidekiq
     restart: always
     networks:
       - baota_net

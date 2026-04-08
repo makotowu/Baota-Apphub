@@ -1,6 +1,5 @@
 services:
   ddns-go:
-    container_name: ${APP_NAME:-ddns-go}
     restart: always
     network_mode: "host"
     volumes:

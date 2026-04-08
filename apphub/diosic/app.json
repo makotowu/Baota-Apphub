@@ -12,9 +12,16 @@
     ],
     "appdesc": "一个开源的基于网络的音乐收集服务器和流媒体",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/Reknij/diosic",
     "help": "https://reknij.github.io/DiosicDocCN/",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,31 +45,31 @@
             "name": "端口",
             "type": "number",
             "default": 40177,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "music_path",
             "name": "音乐文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/library",
-            "suffix": "音乐文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "library_name",
             "name": "音乐库名称",
-            "type": "string",
+            "type": "text",
             "default": "我的音乐库",
-            "suffix": "音乐库名称",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -86,25 +93,25 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40177,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/data",
             "desc": "数据文件夹路径"
         },
         {
             "key": "music_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/library",
             "desc": "音乐文件夹路径"
         },
         {
             "key": "library_name",
             "type": "string",
-            "default": null,
+            "default": "我的音乐库",
             "desc": "音乐库名称"
         },
         {

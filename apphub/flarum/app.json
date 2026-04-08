@@ -18,9 +18,16 @@
     ],
     "appdesc": "新一代的论坛软件，使在线讨论变得有趣",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://flarum.org/",
     "help": "https://docs.flarum.org/",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -40,43 +47,35 @@
             "unit": ""
         },
         {
-            "attr": "",
-            "name": "数据库服务",
-            "type": "string",
-            "default": "mysql",
-            "suffix": "数据库服务",
-            "unit": ""
-        },
-        {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "flarum",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "flarum",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "flarum",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_prefix",
             "name": "数据库前缀",
-            "type": "string",
+            "type": "text",
             "default": "flarum_",
-            "suffix": "数据库前缀",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,23 +83,23 @@
             "name": "端口",
             "type": "number",
             "default": 40020,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据存放文件夹",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据存放文件夹",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "flarum_external_url",
             "name": "外部访问地址",
-            "type": "string",
+            "type": "text",
             "default": "http://localhost:40020",
-            "suffix": "外部访问地址",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -122,51 +121,45 @@
     ],
     "env": [
         {
-            "key": "",
-            "type": "string",
-            "default": null,
-            "desc": "数据库服务"
-        },
-        {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "flarum",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "flarum",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "flarum",
             "desc": "数据库用户密码"
         },
         {
             "key": "panel_db_prefix",
             "type": "string",
-            "default": null,
+            "default": "flarum_",
             "desc": "数据库前缀"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40020,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据存放文件夹"
         },
         {
             "key": "flarum_external_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "http://localhost:40020",
             "desc": "外部访问地址"
         },
         {

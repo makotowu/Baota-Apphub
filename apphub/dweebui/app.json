@@ -18,9 +18,16 @@
     ],
     "appdesc": "一个用于管理容器的 WebUI",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://www.dweebui.com",
     "help": "https://github.com/lllllllillllllillll/DweebUI",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,39 +51,39 @@
             "name": "端口",
             "type": "number",
             "default": "40285",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/config",
-            "suffix": "数据路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "db_path",
             "name": "数据库文件路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/db.sqlite",
-            "suffix": "数据库文件路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "secret_key",
             "name": "秘钥",
-            "type": "string",
+            "type": "password",
             "default": "MrWiskers",
-            "suffix": "秘钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "docker_sock_path",
             "name": "Docker 套接字路径",
-            "type": "string",
+            "type": "text",
             "default": "/var/run/docker.sock",
-            "suffix": "Docker 套接字路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,31 +107,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40285",
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/config",
             "desc": "数据路径"
         },
         {
             "key": "db_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/db.sqlite",
             "desc": "数据库文件路径"
         },
         {
             "key": "secret_key",
             "type": "string",
-            "default": null,
+            "default": "MrWiskers",
             "desc": "秘钥"
         },
         {
             "key": "docker_sock_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/var/run/docker.sock",
             "desc": "Docker 套接字路径"
         },
         {

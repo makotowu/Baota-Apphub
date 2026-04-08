@@ -1,4 +1,3 @@
-
 networks:
     baota_net:
         external: true
@@ -11,13 +10,12 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    container_name: ${APP_NAME:-blossom}
     volumes:
       - ./bl/:/home/bl/
     environment:
       SPRING_DATASOURCE_URL: jdbc:${PANEL_DB_TYPE}://${PANEL_DB_HOST}:${PANEL_DB_PORT}/${PANEL_DB_NAME}?useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true&allowMultiQueries=true&useSSL=false&&serverTimezone=GMT%2B8
       SPRING_DATASOURCE_USERNAME: ${PANEL_DB_USER}
-      SPRING_DATASOURCE_PASSWORD: ${PANEL_DB_USER_PASSWORD} 
+      SPRING_DATASOURCE_PASSWORD: ${PANEL_DB_USER_PASSWORD}
     ports:
       - ${HOST_IP}:${WEB_PORT}:9999
     networks:
@@ -29,5 +27,5 @@ services:
       retries: 3
       start_period: 5s
     restart: always
-    labels:  
+    labels:
       createdBy: "bt_apps"

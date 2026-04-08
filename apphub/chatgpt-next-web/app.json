@@ -12,15 +12,22 @@
         {
             "m_version": "2",
             "s_version": [
-                "16.0"
+                "16.1"
             ]
         }
     ],
     "appdesc": "一键免费部署你的跨平台私人 ChatGPT 应用",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/Yidadaa/ChatGPT-Next-Web",
     "help": "https://github.com/Yidadaa/ChatGPT-Next-Web",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,39 +51,39 @@
             "name": "端口",
             "type": "number",
             "default": 40042,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_key",
             "name": "OPENAI API KEY",
-            "type": "string",
+            "type": "text",
             "default": "sk-xxx",
-            "suffix": "OPENAI API KEY",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "secret_key",
             "name": "访问权限密钥，可选(强烈建议填写)",
-            "type": "string",
+            "type": "password",
             "default": "chatgptnextweb",
-            "suffix": "访问权限密钥，可选(强烈建议填写)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "proxy",
             "name": "代理地址(例子：http://127.0.0.1:7890 user password)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "代理地址(例子：http://127.0.0.1:7890 user password)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_base_url",
             "name": "API接口地址",
-            "type": "string",
+            "type": "text",
             "default": "https://api.openai.com",
-            "suffix": "API接口地址",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,19 +107,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40042,
             "desc": "端口"
         },
         {
             "key": "api_key",
             "type": "string",
-            "default": null,
+            "default": "sk-xxx",
             "desc": "OPENAI API KEY"
         },
         {
             "key": "secret_key",
             "type": "string",
-            "default": null,
+            "default": "chatgptnextweb",
             "desc": "访问权限密钥，可选(强烈建议填写)"
         },
         {
@@ -123,8 +130,8 @@
         },
         {
             "key": "api_base_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "https://api.openai.com",
             "desc": "API接口地址"
         },
         {

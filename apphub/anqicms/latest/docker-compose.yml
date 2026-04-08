@@ -1,6 +1,5 @@
 services:
   anqicms:
-    container_name: ${APP_NAME:-anqicms}
     restart: always
     networks:
       - baota_net

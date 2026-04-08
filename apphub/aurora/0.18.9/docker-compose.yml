@@ -1,6 +1,5 @@
 services:
   worker:
-    container_name: ${APP_NAME:-aurora}-worker
     restart: always
     networks:
       - aurora-network
@@ -27,7 +26,6 @@ services:
       createdBy: Apps
 
   backend:
-    container_name: ${APP_NAME:-aurora}-backend
     restart: always
     networks:
       - aurora-network
@@ -53,7 +51,6 @@ services:
       createdBy: Apps
 
   nginx:
-    container_name: ${APP_NAME:-aurora}-nginx
     restart: always
     networks:
       - aurora-network
@@ -73,7 +70,6 @@ services:
       createdBy: Apps
 
   redis:
-    container_name: ${APP_NAME:-aurora}-redis
     restart: always
     networks:
       - aurora-network
@@ -89,7 +85,6 @@ services:
       createdBy: Apps
 
   postgres:
-    container_name: ${APP_NAME:-aurora}-postgres
     restart: always
     networks:
       - aurora-network

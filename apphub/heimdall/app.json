@@ -12,15 +12,22 @@
         {
             "m_version": "2",
             "s_version": [
-                "6.3"
+                "7.6"
             ]
         }
     ],
     "appdesc": "应用程序仪表板和启动器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://heimdall.site/",
     "help": "https://github.com/linuxserver/Heimdall",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,23 +51,15 @@
             "name": "HTTP端口",
             "type": "number",
             "default": 40049,
-            "suffix": "HTTP端口",
-            "unit": ""
-        },
-        {
-            "attr": "web_port",
-            "name": "HTTPS端口",
-            "type": "number",
-            "default": 40050,
-            "suffix": "HTTPS端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,19 +83,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40049,
             "desc": "HTTP端口"
         },
         {
-            "key": "web_port",
-            "type": "port",
-            "default": null,
-            "desc": "HTTPS端口"
-        },
-        {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {

@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "3.2"
+                "11.0"
             ]
         }
     ],
     "appdesc": "一个现代的、完全静态的、快速的、安全的、完全代理的、高度可定制的应用程序仪表板",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://gethomepage.dev",
     "help": "https://gethomepage.dev",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口",
             "type": "number",
             "default": 40207,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,7 +75,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40207,
             "desc": "端口"
         },
         {

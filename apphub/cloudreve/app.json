@@ -12,15 +12,22 @@
         {
             "m_version": "4",
             "s_version": [
-                "1.3"
+                "15.0"
             ]
         }
     ],
     "appdesc": "支持多家云存储的云盘系统",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://cloudreve.org/",
     "help": "https://docs.cloudreve.org/",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,23 +51,23 @@
             "name": "端口",
             "type": "number",
             "default": 40033,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "upload_path",
             "name": "上传文件保存路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/uploads",
-            "suffix": "上传文件保存路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "tmp_path",
             "name": "临时文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/data",
-            "suffix": "临时文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,19 +91,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40033,
             "desc": "端口"
         },
         {
             "key": "upload_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/uploads",
             "desc": "上传文件保存路径"
         },
         {
             "key": "tmp_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/data",
             "desc": "临时文件夹路径"
         },
         {

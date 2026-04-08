@@ -12,9 +12,16 @@
     ],
     "appdesc": "一个聚合了中文热门站点数据的项目(前端)",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hot.imsyy.top",
     "help": "https://github.com/imsyy/DailyHot",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,23 +45,23 @@
             "name": "端口",
             "type": "number",
             "default": 40142,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_url",
             "name": "API接口地址 (请自行搭建)",
-            "type": "string",
+            "type": "text",
             "default": "https://hot-api.bbit.fun",
-            "suffix": "API接口地址 (请自行搭建)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "icp_text",
             "name": "ICP地址 (自行填写)",
-            "type": "string",
+            "type": "text",
             "default": "没有备案，这里填写备案ICP",
-            "suffix": "ICP地址 (自行填写)",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -78,19 +85,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40142,
             "desc": "端口"
         },
         {
             "key": "api_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "https://hot-api.bbit.fun",
             "desc": "API接口地址 (请自行搭建)"
         },
         {
             "key": "icp_text",
             "type": "string",
-            "default": null,
+            "default": "没有备案，这里填写备案ICP",
             "desc": "ICP地址 (自行填写)"
         },
         {

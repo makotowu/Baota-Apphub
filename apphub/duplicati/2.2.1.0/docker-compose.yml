@@ -1,0 +1,22 @@
+services:
+  duplicati:
+    image: "duplicati/duplicati:2.2.1.0"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8200"
+    volumes:
+      - ${BACKUPS_PATH}:${INTERNAL_BACKUPS_PATH}
+      - ${APP_PATH}/data:/data
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

@@ -18,9 +18,16 @@
     ],
     "appdesc": "自动化中文字幕下载",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/ChineseSubFinder/ChineseSubFinder",
     "help": "https://github.com/ChineseSubFinder/ChineseSubFinder",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口",
             "type": "number",
             "default": 40158,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -52,31 +59,31 @@
             "name": "webui 视频列表读取图片用的端口 (127.0.0.1:port)",
             "type": "number",
             "default": 40159,
-            "suffix": "webui 视频列表读取图片用的端口 (127.0.0.1:port)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "media_path",
             "name": "媒体文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/media",
-            "suffix": "媒体文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "media_path2",
             "name": "媒体文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/media2",
-            "suffix": "媒体文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,31 +107,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40158,
             "desc": "端口"
         },
         {
             "key": "image",
-            "type": "port",
-            "default": null,
+            "type": "number",
+            "default": 40159,
             "desc": "webui 视频列表读取图片用的端口 (127.0.0.1:port)"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {
             "key": "media_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/media",
             "desc": "媒体文件夹路径"
         },
         {
             "key": "media_path2",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/media2",
             "desc": "媒体文件夹路径"
         },
         {

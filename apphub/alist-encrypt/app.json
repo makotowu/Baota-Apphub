@@ -7,9 +7,16 @@
     "appversion": [],
     "appdesc": "对 Alist 的服务提供 webdav 的加解密功能",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/traceless/alist-encrypt",
     "help": "https://github.com/traceless/alist-encrypt",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {

@@ -1,6 +1,5 @@
 services:
   flarum:
-    container_name: ${APP_NAME:-flarum}
     restart: always
     networks:
       - baota_net

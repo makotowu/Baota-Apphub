@@ -12,15 +12,22 @@
         {
             "m_version": "2",
             "s_version": [
-                "6.3"
+                "9.1"
             ]
         }
     ],
     "appdesc": "自托管通知服务器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://gotify.net",
     "help": "https://gotify.net/docs/",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,31 +51,31 @@
             "name": "端口",
             "type": "number",
             "default": "40266",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_defaultuser_name",
             "name": "默认用户名",
-            "type": "string",
+            "type": "text",
             "default": "admin",
-            "suffix": "默认用户名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_defaultuser_pass",
             "name": "默认用户密码",
-            "type": "string",
+            "type": "password",
             "default": "password",
-            "suffix": "默认用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,7 +83,7 @@
             "name": "允许注册",
             "type": "string",
             "default": "false",
-            "suffix": "允许注册",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,7 +91,7 @@
             "name": "最低密码强度",
             "type": "number",
             "default": 10,
-            "suffix": "最低密码强度",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -92,7 +99,7 @@
             "name": "容器内部端口",
             "type": "number",
             "default": "80",
-            "suffix": "容器内部端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,15 +107,15 @@
             "name": "保持活跃时间（秒）",
             "type": "number",
             "default": 0,
-            "suffix": "保持活跃时间（秒）",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_listenaddr",
             "name": "监听地址",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "监听地址",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -116,7 +123,7 @@
             "name": "启用 SSL",
             "type": "string",
             "default": "false",
-            "suffix": "启用 SSL",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -124,15 +131,15 @@
             "name": "重定向到 HTTPS",
             "type": "string",
             "default": "true",
-            "suffix": "重定向到 HTTPS",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_ssl_listenaddr",
             "name": "SSL 监听地址",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "SSL 监听地址",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -140,23 +147,23 @@
             "name": "SSL 端口",
             "type": "number",
             "default": 443,
-            "suffix": "SSL 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_ssl_certfile",
             "name": "SSL 证书文件 (容器内部)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "SSL 证书文件 (容器内部)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_ssl_certkey",
             "name": "SSL 证书密钥 (容器内部)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "SSL 证书密钥 (容器内部)",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -164,7 +171,7 @@
             "name": "启用 Let's Encrypt",
             "type": "string",
             "default": "false",
-            "suffix": "启用 Let's Encrypt",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -172,63 +179,63 @@
             "name": "接受 Let's Encrypt 条款",
             "type": "string",
             "default": "false",
-            "suffix": "接受 Let's Encrypt 条款",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_ssl_letsencrypt_cache",
             "name": "Let's Encrypt 缓存目录",
-            "type": "string",
+            "type": "text",
             "default": "certs",
-            "suffix": "Let's Encrypt 缓存目录",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_ssl_letsencrypt_hosts",
             "name": "Let's Encrypt 域名",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Let's Encrypt 域名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_responseheaders",
             "name": "响应头",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "响应头",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_cors_alloworigins",
             "name": "允许跨域来源",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "允许跨域来源",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_cors_allowmethods",
             "name": "允许跨域方法",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "允许跨域方法",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_cors_allowheaders",
             "name": "允许跨域头",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "允许跨域头",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_server_stream_allowedorigins",
             "name": "Websocket 连接的允许来源",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Websocket 连接的允许来源",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -236,39 +243,39 @@
             "name": "发送 websocket ping 的时间间隔（秒）",
             "type": "number",
             "default": 45,
-            "suffix": "发送 websocket ping 的时间间隔（秒）",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_database_dialect",
             "name": "数据库方式",
-            "type": "string",
+            "type": "text",
             "default": "sqlite3",
-            "suffix": "数据库方式",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_database_connection",
             "name": "数据库连接",
-            "type": "string",
+            "type": "text",
             "default": "data/gotify.db",
-            "suffix": "数据库连接",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_uploadedimagesdir",
             "name": "上传的图片目录",
-            "type": "string",
+            "type": "text",
             "default": "data/images",
-            "suffix": "上传的图片目录",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gotify_pluginsdir",
             "name": "插件目录",
-            "type": "string",
+            "type": "text",
             "default": "data/plugins",
-            "suffix": "插件目录",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -292,49 +299,49 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40266",
             "desc": "端口"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
             "key": "gotify_defaultuser_name",
-            "type": "string",
-            "default": null,
+            "type": "username",
+            "default": "admin",
             "desc": "默认用户名"
         },
         {
             "key": "gotify_defaultuser_pass",
             "type": "string",
-            "default": null,
+            "default": "password",
             "desc": "默认用户密码"
         },
         {
             "key": "gotify_registration",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "允许注册"
         },
         {
             "key": "gotify_passstrength",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": 10,
             "desc": "最低密码强度"
         },
         {
             "key": "gotify_server_port",
             "type": "port",
-            "default": null,
+            "default": "80",
             "desc": "容器内部端口"
         },
         {
             "key": "gotify_server_keepaliveperiodseconds",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": 0,
             "desc": "保持活跃时间（秒）"
         },
         {
@@ -346,13 +353,13 @@
         {
             "key": "gotify_server_ssl_enabled",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "启用 SSL"
         },
         {
             "key": "gotify_server_ssl_redirecttohttps",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "true",
             "desc": "重定向到 HTTPS"
         },
         {
@@ -364,7 +371,7 @@
         {
             "key": "gotify_server_ssl_port",
             "type": "port",
-            "default": null,
+            "default": 443,
             "desc": "SSL 端口"
         },
         {
@@ -382,19 +389,19 @@
         {
             "key": "gotify_server_ssl_letsencrypt_enabled",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "启用 Let's Encrypt"
         },
         {
             "key": "gotify_server_ssl_letsencrypt_accepttos",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "接受 Let's Encrypt 条款"
         },
         {
             "key": "gotify_server_ssl_letsencrypt_cache",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "certs",
             "desc": "Let's Encrypt 缓存目录"
         },
         {
@@ -435,32 +442,32 @@
         },
         {
             "key": "gotify_server_stream_pingperiodseconds",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": 45,
             "desc": "发送 websocket ping 的时间间隔（秒）"
         },
         {
             "key": "gotify_database_dialect",
             "type": "string",
-            "default": null,
+            "default": "sqlite3",
             "desc": "数据库方式"
         },
         {
             "key": "gotify_database_connection",
             "type": "string",
-            "default": null,
+            "default": "data/gotify.db",
             "desc": "数据库连接"
         },
         {
             "key": "gotify_uploadedimagesdir",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "data/images",
             "desc": "上传的图片目录"
         },
         {
             "key": "gotify_pluginsdir",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "data/plugins",
             "desc": "插件目录"
         },
         {

@@ -12,9 +12,16 @@
     ],
     "appdesc": "115网盘是115科技推出的云存储服务",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://115.com",
     "help": "https://www.github.com/funcman/docker_115pc",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,39 +45,39 @@
             "name": "网页端口",
             "type": "number",
             "default": 40088,
-            "suffix": "网页端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "vnc_password",
             "name": "访问密码",
-            "type": "string",
+            "type": "password",
             "default": "VNCPassword",
-            "suffix": "访问密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "config_path",
             "name": "配置文件所在路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/config",
-            "suffix": "配置文件所在路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "download_path",
             "name": "下载文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/downloads",
-            "suffix": "下载文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "apt_source",
             "name": "apt 源",
-            "type": "string",
+            "type": "text",
             "default": "mirrors.ustc.edu.cn",
-            "suffix": "apt 源",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -78,7 +85,7 @@
             "name": "VNC显示宽度",
             "type": "number",
             "default": 1920,
-            "suffix": "VNC显示宽度",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -86,7 +93,7 @@
             "name": "VNC显示高度",
             "type": "number",
             "default": 1080,
-            "suffix": "VNC显示高度",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -110,43 +117,43 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40088,
             "desc": "网页端口"
         },
         {
             "key": "vnc_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "VNCPassword",
             "desc": "访问密码"
         },
         {
             "key": "config_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/config",
             "desc": "配置文件所在路径"
         },
         {
             "key": "download_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/downloads",
             "desc": "下载文件夹路径"
         },
         {
             "key": "apt_source",
             "type": "string",
-            "default": null,
+            "default": "mirrors.ustc.edu.cn",
             "desc": "apt 源"
         },
         {
             "key": "vnc_display_width",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": 1920,
             "desc": "VNC显示宽度"
         },
         {
             "key": "vnc_display_height",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": 1080,
             "desc": "VNC显示高度"
         },
         {

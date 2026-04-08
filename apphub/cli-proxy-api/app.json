@@ -1,0 +1,191 @@
+{
+    "appid": -1,
+    "appname": "cli-proxy-api",
+    "apptitle": "CLIProxyAPI",
+    "apptype": "AI",
+    "appTypeCN": "AI/大模型",
+    "appversion": [
+        {
+            "m_version": "latest",
+            "s_version": []
+        },
+        {
+            "m_version": "6",
+            "s_version": [
+                "9.1"
+            ]
+        }
+    ],
+    "appdesc": "一个为 CLI 提供 OpenAI 等兼容 API 接口的代理服务器",
+    "appstatus": 1,
+    "icon": "",
+    "sort": 100,
+    "home": "https://help.router-for.me/",
+    "help": "https://help.router-for.me/",
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
+    "depend": null,
+    "field": [
+        {
+            "attr": "domain",
+            "name": "域名",
+            "type": "textarea",
+            "default": "",
+            "suffix": "浏览器访问的域名,非必填",
+            "unit": ""
+        },
+        {
+            "attr": "allow_access",
+            "name": "允许外部访问",
+            "type": "checkbox",
+            "default": true,
+            "suffix": "允许直接通过主机IP+端口访问，如果您设置了域名请不要勾选这里",
+            "unit": ""
+        },
+        {
+            "attr": "web_port",
+            "name": "Web 访问端口 (8317)",
+            "type": "number",
+            "default": 8317,
+            "suffix": "",
+            "unit": ""
+        },
+        {
+            "attr": "cli_proxy_port_8085",
+            "name": "cli_proxy_port_8085",
+            "type": "number",
+            "default": 8085,
+            "suffix": "",
+            "unit": ""
+        },
+        {
+            "attr": "cli_proxy_port_1455",
+            "name": "cli_proxy_port_1455",
+            "type": "number",
+            "default": 1455,
+            "suffix": "",
+            "unit": ""
+        },
+        {
+            "attr": "cli_proxy_port_54545",
+            "name": "cli_proxy_port_54545",
+            "type": "number",
+            "default": 54545,
+            "suffix": "",
+            "unit": ""
+        },
+        {
+            "attr": "cli_proxy_port_51121",
+            "name": "cli_proxy_port_51121",
+            "type": "number",
+            "default": 51121,
+            "suffix": "",
+            "unit": ""
+        },
+        {
+            "attr": "cli_proxy_port_11451",
+            "name": "cli_proxy_port_11451",
+            "type": "number",
+            "default": 11451,
+            "suffix": "",
+            "unit": ""
+        },
+        {
+            "attr": "deploy",
+            "name": "deploy",
+            "type": "text",
+            "default": "",
+            "suffix": "",
+            "unit": ""
+        },
+        {
+            "attr": "cpus",
+            "name": "cpu核心数限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用核心数为: ",
+            "unit": ""
+        },
+        {
+            "attr": "memory_limit",
+            "name": "内存限制",
+            "type": "number",
+            "default": 0,
+            "suffix": "0为不限制,最大可用内存为: ",
+            "unit": ""
+        }
+    ],
+    "env": [
+        {
+            "key": "web_port",
+            "type": "port",
+            "default": 8317,
+            "desc": "Web 访问端口 (8317)"
+        },
+        {
+            "key": "cli_proxy_port_8085",
+            "type": "port",
+            "default": 8085,
+            "desc": "cli_proxy_port_8085"
+        },
+        {
+            "key": "cli_proxy_port_1455",
+            "type": "port",
+            "default": 1455,
+            "desc": "cli_proxy_port_1455"
+        },
+        {
+            "key": "cli_proxy_port_54545",
+            "type": "port",
+            "default": 54545,
+            "desc": "cli_proxy_port_54545"
+        },
+        {
+            "key": "cli_proxy_port_51121",
+            "type": "port",
+            "default": 51121,
+            "desc": "cli_proxy_port_51121"
+        },
+        {
+            "key": "cli_proxy_port_11451",
+            "type": "port",
+            "default": 11451,
+            "desc": "cli_proxy_port_11451"
+        },
+        {
+            "key": "deploy",
+            "type": "string",
+            "default": null,
+            "desc": "deploy"
+        },
+        {
+            "key": "app_path",
+            "type": "path",
+            "default": null,
+            "desc": "应用数据目录"
+        },
+        {
+            "key": "host_ip",
+            "type": "string",
+            "default": null,
+            "desc": "主机IP"
+        },
+        {
+            "key": "cpus",
+            "type": "number",
+            "default": null,
+            "desc": "CPU核心数限制"
+        },
+        {
+            "key": "memory_limit",
+            "type": "number",
+            "default": null,
+            "desc": "内存大小限制"
+        }
+    ],
+    "volumes": {}
+}

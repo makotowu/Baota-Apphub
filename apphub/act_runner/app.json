@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "2.12"
+                "3.0"
             ]
         }
     ],
     "appdesc": "Gitea Actions 的 Runner",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://gitea.com/gitea/act_runner",
     "help": "https://docs.gitea.com/next/usage/actions/act-runner",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -42,41 +49,41 @@
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "gitea_instance_url",
             "name": "Gitea 实例 URL",
-            "type": "string",
+            "type": "text",
             "default": "http://1.2.3.4:567",
-            "suffix": "Gitea 实例 URL",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "runner_registration_token",
             "name": "Gitea runner REGISTRATION TOKEN",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Gitea runner REGISTRATION TOKEN",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "runner_name",
             "name": "Gitea runner name",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Gitea runner name",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "runner_labels",
             "name": "Gitea runner labels",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Gitea runner labels",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -99,14 +106,14 @@
     "env": [
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {
             "key": "gitea_instance_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "http://1.2.3.4:567",
             "desc": "Gitea 实例 URL"
         },
         {

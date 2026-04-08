@@ -1,0 +1,30 @@
+services:
+  cli-proxy-api:
+    image: "eceasy/cli-proxy-api:v6.9.1"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    restart: always
+    networks:
+      - baota_net
+    environment:
+      - DEPLOY=${DEPLOY:-}
+    ports:
+      - "${HOST_IP}:${WEB_PORT}:8317"
+      - "${HOST_IP}:${CLI_PROXY_PORT_8085}:8085"
+      - "${HOST_IP}:${CLI_PROXY_PORT_1455}:1455"
+      - "${HOST_IP}:${CLI_PROXY_PORT_54545}:54545"
+      - "${HOST_IP}:${CLI_PROXY_PORT_51121}:51121"
+      - "${HOST_IP}:${CLI_PROXY_PORT_11451}:11451"
+    volumes:
+      - "./data/config.yaml:/CLIProxyAPI/config.yaml"
+      - "./data/auths:/root/.cli-proxy-api"
+      - "./data/logs:/CLIProxyAPI/logs"
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

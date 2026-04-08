@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "11.1"
+                "18.4"
             ]
         }
     ],
     "appdesc": "一个轻量级服务器资源监控工具 (客户端)",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/henrygd/beszel",
     "help": "https://github.com/henrygd/beszel",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,23 +51,23 @@
             "name": "端口",
             "type": "number",
             "default": "40332",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "docker_sock_path",
             "name": "Docker 套接字路径",
-            "type": "string",
+            "type": "text",
             "default": "/var/run/docker.sock",
-            "suffix": "Docker 套接字路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "key",
             "name": "密钥",
-            "type": "string",
+            "type": "password",
             "default": "ssh-xxx",
-            "suffix": "密钥",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,19 +91,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40332",
             "desc": "端口"
         },
         {
             "key": "docker_sock_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/var/run/docker.sock",
             "desc": "Docker 套接字路径"
         },
         {
             "key": "key",
             "type": "string",
-            "default": null,
+            "default": "ssh-xxx",
             "desc": "密钥"
         },
         {

@@ -18,9 +18,16 @@
     ],
     "appdesc": "跨平台的 BitTorrent 客户端",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://deluge-torrent.org",
     "help": "https://deluge.readthedocs.io",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口",
             "type": "number",
             "default": "40321",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -52,7 +59,7 @@
             "name": "Peer 端口",
             "type": "number",
             "default": "6881",
-            "suffix": "Peer 端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -60,7 +67,7 @@
             "name": "RPC 端口",
             "type": "number",
             "default": "58846",
-            "suffix": "RPC 端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,7 +75,7 @@
             "name": "用户 ID",
             "type": "number",
             "default": "1000",
-            "suffix": "用户 ID",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,39 +83,39 @@
             "name": "组 ID",
             "type": "number",
             "default": "1000",
-            "suffix": "组 ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "deluge_loglevel",
             "name": "Deluge 日志级别",
-            "type": "string",
+            "type": "text",
             "default": "error",
-            "suffix": "Deluge 日志级别",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "config_path",
             "name": "Deluge 配置路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/config",
-            "suffix": "Deluge 配置路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "download_path",
             "name": "下载路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/downloads",
-            "suffix": "下载路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -132,55 +139,55 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40321",
             "desc": "端口"
         },
         {
             "key": "deluge_peer_port",
             "type": "port",
-            "default": null,
+            "default": "6881",
             "desc": "Peer 端口"
         },
         {
             "key": "deluge_port_rpc",
             "type": "port",
-            "default": null,
+            "default": "58846",
             "desc": "RPC 端口"
         },
         {
             "key": "puid",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "1000",
             "desc": "用户 ID"
         },
         {
             "key": "pgid",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "1000",
             "desc": "组 ID"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
             "key": "deluge_loglevel",
             "type": "string",
-            "default": null,
+            "default": "error",
             "desc": "Deluge 日志级别"
         },
         {
             "key": "config_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/config",
             "desc": "Deluge 配置路径"
         },
         {
             "key": "download_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/downloads",
             "desc": "下载路径"
         },
         {

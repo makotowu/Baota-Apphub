@@ -7,9 +7,16 @@
     "appversion": [],
     "appdesc": "一站式代码运维平台",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://arcadia.cool",
     "help": "https://arcadia.cool/docs",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {

@@ -18,9 +18,16 @@
     ],
     "appdesc": "基于 ChatGPT 的 Web 应用程序",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/jarvis2f/ais-ninja",
     "help": "https://github.com/jarvis2f/ais-ninja",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,31 +51,31 @@
             "name": "数据库服务",
             "type": "string",
             "default": "mysql",
-            "suffix": "数据库服务",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "ais-ninja",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "ais-ninja",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "ais-ninja",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,7 +83,7 @@
             "name": "Redis服务",
             "type": "string",
             "default": "",
-            "suffix": "Redis服务",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,15 +91,15 @@
             "name": "Redis服务端口",
             "type": "number",
             "default": "6379",
-            "suffix": "Redis服务端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "redis_pass",
             "name": "Redis服务密码",
-            "type": "string",
+            "type": "password",
             "default": "",
-            "suffix": "Redis服务密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,15 +107,15 @@
             "name": "端口",
             "type": "number",
             "default": 40043,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "smtp_host",
             "name": "SMTP 主机",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "SMTP 主机",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -116,79 +123,79 @@
             "name": "SMTP 端口",
             "type": "number",
             "default": "587",
-            "suffix": "SMTP 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "email_sender",
             "name": "邮箱服务发送方邮箱地址",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "邮箱服务发送方邮箱地址",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "smtp_user",
             "name": "邮箱服务用户名",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "邮箱服务用户名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "smtp_password",
             "name": "邮箱服务密码",
-            "type": "string",
+            "type": "password",
             "default": "",
-            "suffix": "邮箱服务密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "google_client_id",
             "name": "谷歌登录的client_id",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "谷歌登录的client_id",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "ali_access_id",
             "name": "阿里云accessKey ID",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "阿里云accessKey ID",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "ali_access_secret",
             "name": "阿里云 accessKeySecret",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "阿里云 accessKeySecret",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "ali_sms_permit",
             "name": "启用手机登录注册(true or false)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "启用手机登录注册(true or false)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "ali_sms_sign",
             "name": "阿里云短信验证码服务签名",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "阿里云短信验证码服务签名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "ali_sms_template",
             "name": "阿里云验证码短信模板，需要包含 {code}",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "阿里云验证码短信模板，需要包含 {code}",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -212,25 +219,25 @@
         {
             "key": "ais_platform",
             "type": "string",
-            "default": null,
+            "default": "mysql",
             "desc": "数据库服务"
         },
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "ais-ninja",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "ais-ninja",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "ais-ninja",
             "desc": "数据库用户密码"
         },
         {
@@ -242,7 +249,7 @@
         {
             "key": "redis_port",
             "type": "port",
-            "default": null,
+            "default": "6379",
             "desc": "Redis服务端口"
         },
         {
@@ -254,7 +261,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40043,
             "desc": "端口"
         },
         {
@@ -266,7 +273,7 @@
         {
             "key": "smtp_port",
             "type": "port",
-            "default": null,
+            "default": "587",
             "desc": "SMTP 端口"
         },
         {
@@ -283,7 +290,7 @@
         },
         {
             "key": "smtp_password",
-            "type": "string",
+            "type": "password",
             "default": null,
             "desc": "邮箱服务密码"
         },

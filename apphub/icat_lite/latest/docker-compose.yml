@@ -6,7 +6,6 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    container_name: ${APP_NAME:-icat_lite}
     restart: always
     networks:
       - baota_net
@@ -21,6 +20,6 @@ services:
     command: "serve.js --host 0.0.0.0 --port 8095 --dbHost ${PANEL_DB_HOST} --dbPort ${PANEL_DB_PORT} --dbName ${PANEL_DB_NAME} --dbUser ${PANEL_DB_USER} --dbPassword ${PANEL_DB_USER_PASSWORD} --pwdKey ${ICAT_PWDKEY} --cookiePwd ${ICAT_COOKIEPWD} --alterAll"
     labels:
       createdBy: "bt_apps"
-networks:  
+networks:
   baota_net:
     external: true

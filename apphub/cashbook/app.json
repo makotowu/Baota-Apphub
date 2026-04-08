@@ -12,15 +12,22 @@
         {
             "m_version": "4",
             "s_version": [
-                "3.0"
+                "3.12"
             ]
         }
     ],
     "appdesc": "个人记账工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://cashbook.oldmoon.top",
     "help": "https://github.com/dingdangdog/cashbook-web",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,47 +51,47 @@
             "name": "端口",
             "type": "number",
             "default": "40291",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据存放文件夹",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据存放文件夹",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "token_salt",
             "name": "Token Salt",
-            "type": "string",
+            "type": "text",
             "default": "spend-money-like-water",
-            "suffix": "Token Salt",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "environment",
             "name": "环境",
-            "type": "string",
+            "type": "text",
             "default": "PRO",
-            "suffix": "环境",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "server_key",
             "name": "服务密钥",
-            "type": "string",
+            "type": "text",
             "default": "08cc0348-061d-4193-af05-b6cc02df28ea",
-            "suffix": "服务密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "default_password",
             "name": "默认密码",
-            "type": "string",
+            "type": "password",
             "default": "cashbook",
-            "suffix": "默认密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -108,37 +115,37 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40291",
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据存放文件夹"
         },
         {
             "key": "token_salt",
             "type": "string",
-            "default": null,
+            "default": "spend-money-like-water",
             "desc": "Token Salt"
         },
         {
             "key": "environment",
             "type": "string",
-            "default": null,
+            "default": "PRO",
             "desc": "环境"
         },
         {
             "key": "server_key",
             "type": "string",
-            "default": null,
+            "default": "08cc0348-061d-4193-af05-b6cc02df28ea",
             "desc": "服务密钥"
         },
         {
             "key": "default_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "cashbook",
             "desc": "默认密码"
         },
         {

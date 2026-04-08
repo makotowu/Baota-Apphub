@@ -12,9 +12,16 @@
     ],
     "appdesc": "一个具有有趣功能的 Web 应用程序书签仪表板",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/rmountjoy92/DashMachine",
     "help": "https://github.com/rmountjoy92/DashMachine",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,15 +45,15 @@
             "name": "端口",
             "type": "number",
             "default": 40144,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -70,13 +77,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40144,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {

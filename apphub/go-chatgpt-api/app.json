@@ -12,9 +12,16 @@
     ],
     "appdesc": "一个尝试绕过 Cloudflare 来使用 ChatGPT 接口的程序",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/linweiyuan/go-chatgpt-api",
     "help": "https://github.com/linweiyuan/go-chatgpt-api",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,39 +45,39 @@
             "name": "端口",
             "type": "number",
             "default": 40041,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_pandora",
             "name": "潘多拉API模式",
-            "type": "string",
+            "type": "text",
             "default": "1",
-            "suffix": "潘多拉API模式",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "arkose_token_url",
             "name": "ARKOSE_TOKEN 链接",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "ARKOSE_TOKEN 链接",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "openai_email",
             "name": "OpenAI账户邮箱",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "OpenAI账户邮箱",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "openai_password",
             "name": "OpenAI账户密码",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "OpenAI账户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -94,18 +101,18 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40041,
             "desc": "端口"
         },
         {
             "key": "api_pandora",
             "type": "string",
-            "default": null,
+            "default": "1",
             "desc": "潘多拉API模式"
         },
         {
             "key": "arkose_token_url",
-            "type": "string",
+            "type": "url",
             "default": null,
             "desc": "ARKOSE_TOKEN 链接"
         },
@@ -117,7 +124,7 @@
         },
         {
             "key": "openai_password",
-            "type": "string",
+            "type": "password",
             "default": null,
             "desc": "OpenAI账户密码"
         },

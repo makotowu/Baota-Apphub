@@ -10,17 +10,24 @@
             "s_version": []
         },
         {
-            "m_version": "0",
+            "m_version": "1",
             "s_version": [
-                "9.1"
+                "0.2"
             ]
         }
     ],
     "appdesc": "一个强大的多云盘管理工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://www.clouddrive2.com",
     "help": "https://www.clouddrive2.com",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,47 +51,47 @@
             "name": "端口",
             "type": "number",
             "default": "40275",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "tz",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "clouddrive_home",
             "name": "CloudDrive 根目录",
-            "type": "string",
+            "type": "text",
             "default": "/Config",
-            "suffix": "CloudDrive 根目录",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "cloud_mounts_path",
             "name": "云挂载路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/CloudNAS",
-            "suffix": "云挂载路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "app_data_path",
             "name": "应用数据路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/Config",
-            "suffix": "应用数据路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "shared_media_path",
             "name": "共享媒体路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/media",
-            "suffix": "共享媒体路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -92,7 +99,7 @@
             "name": "特权模式",
             "type": "string",
             "default": "true",
-            "suffix": "特权模式",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -116,43 +123,43 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40275",
             "desc": "端口"
         },
         {
             "key": "tz",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
             "key": "clouddrive_home",
             "type": "string",
-            "default": null,
+            "default": "/Config",
             "desc": "CloudDrive 根目录"
         },
         {
             "key": "cloud_mounts_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/CloudNAS",
             "desc": "云挂载路径"
         },
         {
             "key": "app_data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/Config",
             "desc": "应用数据路径"
         },
         {
             "key": "shared_media_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/media",
             "desc": "共享媒体路径"
         },
         {
             "key": "privileged_mode",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "特权模式"
         },
         {

@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "11.1"
+                "18.4"
             ]
         }
     ],
     "appdesc": "一个轻量级服务器资源监控工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/henrygd/beszel",
     "help": "https://github.com/henrygd/beszel",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,15 +51,15 @@
             "name": "端口",
             "type": "number",
             "default": "40331",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,13 +83,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40331",
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据路径"
         },
         {

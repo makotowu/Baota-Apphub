@@ -12,9 +12,16 @@
     ],
     "appdesc": "中文 DOS 游戏合集",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://dos.lol/",
     "help": "https://github.com/rwv/chinese-dos-games",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,7 +45,7 @@
             "name": "端口",
             "type": "number",
             "default": 40078,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -62,7 +69,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40078,
             "desc": "端口"
         },
         {

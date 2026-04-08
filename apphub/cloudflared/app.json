@@ -10,17 +10,24 @@
             "s_version": []
         },
         {
-            "m_version": "2025",
+            "m_version": "2026",
             "s_version": [
-                "7.0"
+                "3.0"
             ]
         }
     ],
     "appdesc": "Cloudflare Tunnel 客户端",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/",
     "help": "https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -42,9 +49,9 @@
         {
             "attr": "cfd_token",
             "name": "Token",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Token",
+            "suffix": "",
             "unit": ""
         },
         {

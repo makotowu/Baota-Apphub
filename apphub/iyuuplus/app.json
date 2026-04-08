@@ -12,9 +12,16 @@
     ],
     "appdesc": "自动辅种工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "http://doc.iyuu.cn",
     "help": "http://doc.iyuu.cn",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,71 +45,71 @@
             "name": "端口",
             "type": "number",
             "default": "40279",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "iyuu_path",
             "name": "IYUU 路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/iyuu",
-            "suffix": "IYUU 路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/data",
-            "suffix": "数据路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "qbittorrent_path",
             "name": "QBittorrent 路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/qbittorrent",
-            "suffix": "QBittorrent 路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "internal_qbittorrent_path",
             "name": "内部 QBittorrent 路径",
-            "type": "string",
+            "type": "text",
             "default": "/qbittorrent",
-            "suffix": "内部 QBittorrent 路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "transmission_path",
             "name": "Transmission 路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/transmission",
-            "suffix": "Transmission 路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "internal_transmission_path",
             "name": "内部 Transmission 路径",
-            "type": "string",
+            "type": "text",
             "default": "/transmission",
-            "suffix": "内部 Transmission 路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "external_mount_path",
             "name": "外部挂载路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/mnt",
-            "suffix": "外部挂载路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "internal_mount_path",
             "name": "内部挂载路径",
-            "type": "string",
+            "type": "text",
             "default": "/mnt",
-            "suffix": "内部挂载路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -126,55 +133,55 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40279",
             "desc": "端口"
         },
         {
             "key": "iyuu_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/iyuu",
             "desc": "IYUU 路径"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/data",
             "desc": "数据路径"
         },
         {
             "key": "qbittorrent_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/qbittorrent",
             "desc": "QBittorrent 路径"
         },
         {
             "key": "internal_qbittorrent_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/qbittorrent",
             "desc": "内部 QBittorrent 路径"
         },
         {
             "key": "transmission_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/transmission",
             "desc": "Transmission 路径"
         },
         {
             "key": "internal_transmission_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/transmission",
             "desc": "内部 Transmission 路径"
         },
         {
             "key": "external_mount_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/mnt",
             "desc": "外部挂载路径"
         },
         {
             "key": "internal_mount_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/mnt",
             "desc": "内部挂载路径"
         },
         {

@@ -12,15 +12,22 @@
         {
             "m_version": "3",
             "s_version": [
-                "3.25"
+                "4.6"
             ]
         }
     ],
     "appdesc": "绕过 Cloudflare 保护的代理服务器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/FlareSolverr/FlareSolverr",
     "help": "https://github.com/FlareSolverr/FlareSolverr",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口",
             "type": "number",
             "default": "40322",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -52,7 +59,7 @@
             "name": "日志级别",
             "type": "string",
             "default": "info",
-            "suffix": "日志级别",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -60,31 +67,31 @@
             "name": "日志 HTML 输出",
             "type": "string",
             "default": "false",
-            "suffix": "日志 HTML 输出",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "captcha_solver",
             "name": "CAPTCHA 解密器",
-            "type": "string",
+            "type": "text",
             "default": "none",
-            "suffix": "CAPTCHA 解密器",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "lang",
             "name": "语言",
-            "type": "string",
+            "type": "text",
             "default": "none",
-            "suffix": "语言",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -92,7 +99,7 @@
             "name": "无头模式",
             "type": "string",
             "default": "true",
-            "suffix": "无头模式",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,23 +107,23 @@
             "name": "浏览器超时时间",
             "type": "number",
             "default": "40000",
-            "suffix": "浏览器超时时间",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "test_url",
             "name": "测试 URL",
-            "type": "string",
+            "type": "text",
             "default": "https://www.google.com",
-            "suffix": "测试 URL",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "host",
             "name": "监听地址",
-            "type": "string",
+            "type": "text",
             "default": "0.0.0.0",
-            "suffix": "监听地址",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -124,7 +131,7 @@
             "name": "启用 Prometheus",
             "type": "string",
             "default": "false",
-            "suffix": "启用 Prometheus",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -148,67 +155,67 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40322",
             "desc": "端口"
         },
         {
             "key": "log_level",
             "type": "string",
-            "default": null,
+            "default": "info",
             "desc": "日志级别"
         },
         {
             "key": "log_html",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "日志 HTML 输出"
         },
         {
             "key": "captcha_solver",
             "type": "string",
-            "default": null,
+            "default": "none",
             "desc": "CAPTCHA 解密器"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
             "key": "lang",
             "type": "string",
-            "default": null,
+            "default": "none",
             "desc": "语言"
         },
         {
             "key": "headless",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "无头模式"
         },
         {
             "key": "browser_timeout",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "40000",
             "desc": "浏览器超时时间"
         },
         {
             "key": "test_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "https://www.google.com",
             "desc": "测试 URL"
         },
         {
             "key": "host",
             "type": "string",
-            "default": null,
+            "default": "0.0.0.0",
             "desc": "监听地址"
         },
         {
             "key": "prometheus_enabled",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "启用 Prometheus"
         },
         {

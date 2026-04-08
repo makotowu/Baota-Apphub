@@ -7,9 +7,16 @@
     "appversion": [],
     "appdesc": "一个简单、现代的服务器仪表板",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://getdashdot.com",
     "help": "https://getdashdot.com/docs/install",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {

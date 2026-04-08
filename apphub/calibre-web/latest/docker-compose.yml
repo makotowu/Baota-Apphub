@@ -1,6 +1,5 @@
 services:
   calibre-web:
-    container_name: ${APP_NAME:-calibre-web}
     restart: always
     networks:
       - baota_net
@@ -21,9 +20,9 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    labels:  
+    labels:
       createdBy: "bt_apps"
 
-networks:  
-  baota_net:  
+networks:
+  baota_net:
     external: true

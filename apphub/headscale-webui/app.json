@@ -12,9 +12,16 @@
     ],
     "appdesc": "适用于小规模部署的简单 Headscale 网络用户界面",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/iFargle/headscale-webui",
     "help": "https://github.com/iFargle/headscale-webui",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,87 +45,87 @@
             "name": "端口",
             "type": "number",
             "default": 40185,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "headscale_path",
             "name": "Headscale 配置文件路径",
-            "type": "string",
+            "type": "text",
             "default": "/opt/1panel/apps/local/headscale/headscale/data/config",
-            "suffix": "Headscale 配置文件路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "hs_server",
             "name": "Headscale 服务器链接",
-            "type": "string",
+            "type": "text",
             "default": "http://172.18.0.241:8080",
-            "suffix": "Headscale 服务器链接",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "external_url",
             "name": "外部访问地址 (域名地址)",
-            "type": "string",
+            "type": "text",
             "default": "https://hs.example.com",
-            "suffix": "外部访问地址 (域名地址)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "url_path",
             "name": "后台管理路径",
-            "type": "string",
+            "type": "text",
             "default": "/admin",
-            "suffix": "后台管理路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "secret_key",
             "name": "加密密钥 (终端执行'openssl rand -base64 32'获得)",
-            "type": "string",
+            "type": "text",
             "default": "TvMhk7FDnAfaIwp0RDRsq3AVNdrYBuhNT0NTPNw4vIQ=",
-            "suffix": "加密密钥 (终端执行'openssl rand -base64 32'获得)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "auth_type",
             "name": "验证方式 (留空无 http 验证)",
-            "type": "string",
+            "type": "text",
             "default": "Basic",
-            "suffix": "验证方式 (留空无 http 验证)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "http_user",
             "name": "HTTP 用户",
-            "type": "string",
+            "type": "text",
             "default": "user",
-            "suffix": "HTTP 用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "http_pwd",
             "name": "HTTP 密码",
-            "type": "string",
+            "type": "password",
             "default": "password",
-            "suffix": "HTTP 密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -142,67 +149,67 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40185,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {
             "key": "headscale_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/opt/1panel/apps/local/headscale/headscale/data/config",
             "desc": "Headscale 配置文件路径"
         },
         {
             "key": "hs_server",
             "type": "string",
-            "default": null,
+            "default": "http://172.18.0.241:8080",
             "desc": "Headscale 服务器链接"
         },
         {
             "key": "external_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "https://hs.example.com",
             "desc": "外部访问地址 (域名地址)"
         },
         {
             "key": "url_path",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "/admin",
             "desc": "后台管理路径"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
             "key": "secret_key",
             "type": "string",
-            "default": null,
+            "default": "TvMhk7FDnAfaIwp0RDRsq3AVNdrYBuhNT0NTPNw4vIQ=",
             "desc": "加密密钥 (终端执行'openssl rand -base64 32'获得)"
         },
         {
             "key": "auth_type",
             "type": "string",
-            "default": null,
+            "default": "Basic",
             "desc": "验证方式 (留空无 http 验证)"
         },
         {
             "key": "http_user",
             "type": "string",
-            "default": null,
+            "default": "user",
             "desc": "HTTP 用户"
         },
         {
             "key": "http_pwd",
             "type": "string",
-            "default": null,
+            "default": "password",
             "desc": "HTTP 密码"
         },
         {

@@ -8,15 +8,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "17.0"
+                "18.0"
             ]
         }
     ],
     "appdesc": "Microsoft Edge Insider 预览版",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://www.microsoft.com/zh-cn/edge",
     "help": "https://www.microsoft.com/zh-cn/edge",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {

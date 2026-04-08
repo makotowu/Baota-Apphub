@@ -10,7 +10,7 @@
             "s_version": []
         },
         {
-            "m_version": "1140",
+            "m_version": "1148",
             "s_version": [
                 "0.2"
             ]
@@ -18,9 +18,16 @@
     ],
     "appdesc": "一个免费的开源网络浏览器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://www.mozilla.org/",
     "help": "https://www.mozilla.org/",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,47 +51,39 @@
             "name": "HTTP端口",
             "type": "number",
             "default": 40089,
-            "suffix": "HTTP端口",
-            "unit": ""
-        },
-        {
-            "attr": "web_port",
-            "name": "HTTPS端口",
-            "type": "number",
-            "default": 40090,
-            "suffix": "HTTPS端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "http_user",
             "name": "访问用户",
-            "type": "string",
+            "type": "text",
             "default": "user",
-            "suffix": "访问用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "http_pwd",
             "name": "访问密码",
-            "type": "string",
+            "type": "password",
             "default": "Password",
-            "suffix": "访问密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "mem_use",
             "name": "共享内存占用(1gb)",
-            "type": "string",
+            "type": "text",
             "default": "512m",
-            "suffix": "共享内存占用(1gb)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -108,37 +107,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40089,
             "desc": "HTTP端口"
-        },
-        {
-            "key": "web_port",
-            "type": "port",
-            "default": null,
-            "desc": "HTTPS端口"
         },
         {
             "key": "http_user",
             "type": "string",
-            "default": null,
+            "default": "user",
             "desc": "访问用户"
         },
         {
             "key": "http_pwd",
             "type": "string",
-            "default": null,
+            "default": "Password",
             "desc": "访问密码"
         },
         {
             "key": "mem_use",
             "type": "string",
-            "default": null,
+            "default": "512m",
             "desc": "共享内存占用(1gb)"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {

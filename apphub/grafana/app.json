@@ -12,15 +12,22 @@
         {
             "m_version": "12",
             "s_version": [
-                "0.2"
+                "4.1"
             ]
         }
     ],
     "appdesc": "用于监控和可观察性的开源平台",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://grafana.com/",
     "help": "https://grafana.com/docs/grafana",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口",
             "type": "number",
             "default": 40038,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,7 +75,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40038,
             "desc": "端口"
         },
         {

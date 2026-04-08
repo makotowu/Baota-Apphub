@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "1.22"
+                "1.36"
             ]
         }
     ],
     "appdesc": "多节点 FRP WebUI (控制节点)",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/VaalaCat/frp-panel",
     "help": "https://github.com/VaalaCat/frp-panel",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口 (对应内部 9000)",
             "type": "number",
             "default": 40195,
-            "suffix": "端口 (对应内部 9000)",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -52,31 +59,31 @@
             "name": "RPC 端口 (对应内部 9001)",
             "type": "number",
             "default": 40196,
-            "suffix": "RPC 端口 (对应内部 9001)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "app_global_secret",
             "name": "通信密钥",
-            "type": "string",
+            "type": "password",
             "default": "",
-            "suffix": "通信密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "master_rpc_host",
             "name": "RPC 监听 IP",
-            "type": "string",
+            "type": "text",
             "default": "0.0.0.0",
-            "suffix": "RPC 监听 IP",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,19 +107,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40195,
             "desc": "端口 (对应内部 9000)"
         },
         {
             "key": "rpc",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": 40196,
             "desc": "RPC 端口 (对应内部 9001)"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {
@@ -124,7 +131,7 @@
         {
             "key": "master_rpc_host",
             "type": "string",
-            "default": null,
+            "default": "0.0.0.0",
             "desc": "RPC 监听 IP"
         },
         {

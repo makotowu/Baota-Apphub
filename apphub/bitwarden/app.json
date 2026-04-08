@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "34.1-alpine"
+                "35.4-alpine"
             ]
         }
     ],
     "appdesc": "一个开源的密码管理服务",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://bitwarden.com/",
     "help": "https://github.com/dani-garcia/vaultwarden/wiki",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,15 +51,15 @@
             "name": "端口",
             "type": "number",
             "default": "40031",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -60,7 +67,7 @@
             "name": "允许注册",
             "type": "string",
             "default": "true",
-            "suffix": "允许注册",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,7 +75,7 @@
             "name": "允许邀请",
             "type": "string",
             "default": "true",
-            "suffix": "允许邀请",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,15 +83,15 @@
             "name": "启用 WebSocket",
             "type": "string",
             "default": "false",
-            "suffix": "启用 WebSocket",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "admin_token",
             "name": "管理员令牌",
-            "type": "string",
+            "type": "password",
             "default": "",
-            "suffix": "管理员令牌",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -108,31 +115,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40031",
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {
             "key": "signups_allowed",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "允许注册"
         },
         {
             "key": "invitations_allowed",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "允许邀请"
         },
         {
             "key": "websocket_enabled",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "启用 WebSocket"
         },
         {

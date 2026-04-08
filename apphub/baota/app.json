@@ -12,9 +12,16 @@
     ],
     "appdesc": "宝塔面板，服务器运维管理面板",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://www.bt.cn/",
     "help": "http://docs.bt.cn/",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,7 +45,7 @@
             "name": "面板端口",
             "type": "number",
             "default": 8888,
-            "suffix": "面板端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -46,7 +53,7 @@
             "name": "HTTP端口",
             "type": "number",
             "default": 10080,
-            "suffix": "HTTP端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -54,7 +61,7 @@
             "name": "HTTPS端口",
             "type": "number",
             "default": 10443,
-            "suffix": "HTTPS端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -62,7 +69,7 @@
             "name": "phpMyAdmin端口",
             "type": "number",
             "default": 10888,
-            "suffix": "phpMyAdmin端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -70,7 +77,7 @@
             "name": "面板内SSH端口",
             "type": "number",
             "default": 20022,
-            "suffix": "面板内SSH端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -78,7 +85,7 @@
             "name": "面板内FTP端口",
             "type": "number",
             "default": 20021,
-            "suffix": "面板内FTP端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -102,37 +109,37 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 8888,
             "desc": "面板端口"
         },
         {
             "key": "http_port",
             "type": "port",
-            "default": null,
+            "default": 10080,
             "desc": "HTTP端口"
         },
         {
             "key": "https_port",
             "type": "port",
-            "default": null,
+            "default": 10443,
             "desc": "HTTPS端口"
         },
         {
             "key": "phpmyadmin_port",
             "type": "port",
-            "default": null,
+            "default": 10888,
             "desc": "phpMyAdmin端口"
         },
         {
             "key": "ssh_port",
             "type": "port",
-            "default": null,
+            "default": 20022,
             "desc": "面板内SSH端口"
         },
         {
             "key": "ftp_port",
             "type": "port",
-            "default": null,
+            "default": 20021,
             "desc": "面板内FTP端口"
         },
         {

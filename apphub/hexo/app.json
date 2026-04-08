@@ -12,9 +12,16 @@
     ],
     "appdesc": "快速、简洁且高效的博客框架",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hexo.io/",
     "help": "https://hexo.io/docs/",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,31 +45,31 @@
             "name": "端口",
             "type": "number",
             "default": 40064,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "git_username",
             "name": "Git 用户名",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Git 用户名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "git_mail",
             "name": "Git 邮箱",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Git 邮箱",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -86,18 +93,18 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40064,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {
             "key": "git_username",
-            "type": "string",
+            "type": "username",
             "default": null,
             "desc": "Git 用户名"
         },

@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "26.3"
+                "28.1"
             ]
         }
     ],
     "appdesc": "自托管的 RSS 和 Atom 订阅源聚合器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://freshrss.org",
     "help": "https://freshrss.github.io/FreshRSS",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,39 +51,39 @@
             "name": "端口",
             "type": "number",
             "default": "40293",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/data",
-            "suffix": "数据路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "extensions_path",
             "name": "扩展路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/extensions",
-            "suffix": "扩展路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "cron_min",
             "name": "定时任务分钟",
-            "type": "string",
+            "type": "text",
             "default": "2,32",
-            "suffix": "定时任务分钟",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,7 +91,7 @@
             "name": "环境",
             "type": "string",
             "default": "development",
-            "suffix": "环境",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -108,37 +115,37 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40293",
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/data",
             "desc": "数据路径"
         },
         {
             "key": "extensions_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/extensions",
             "desc": "扩展路径"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
             "key": "cron_min",
             "type": "string",
-            "default": null,
+            "default": "2,32",
             "desc": "定时任务分钟"
         },
         {
             "key": "freshrss_env",
             "type": "string",
-            "default": null,
+            "default": "development",
             "desc": "环境"
         },
         {

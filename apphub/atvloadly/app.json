@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "2.6"
+                "3.7"
             ]
         }
     ],
     "appdesc": "轻松将 IPA 侧载到 AppleTV",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/bitxeno/atvloadly",
     "help": "https://github.com/bitxeno/atvloadly",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,39 +51,39 @@
             "name": "端口",
             "type": "number",
             "default": "40338",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "privileged_mode",
             "name": "特权模式开关",
-            "type": "string",
+            "type": "text",
             "default": "true",
-            "suffix": "特权模式开关",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "dbus_path",
             "name": "DBus 路径",
-            "type": "string",
+            "type": "text",
             "default": "/var/run/dbus",
-            "suffix": "DBus 路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "avahi_daemon_path",
             "name": "Avahi Daemon 路径",
-            "type": "string",
+            "type": "text",
             "default": "/var/run/avahi-daemon",
-            "suffix": "Avahi Daemon 路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,31 +107,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40338",
             "desc": "端口"
         },
         {
             "key": "privileged_mode",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "特权模式开关"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据路径"
         },
         {
             "key": "dbus_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/var/run/dbus",
             "desc": "DBus 路径"
         },
         {
             "key": "avahi_daemon_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/var/run/avahi-daemon",
             "desc": "Avahi Daemon 路径"
         },
         {

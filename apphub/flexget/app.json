@@ -12,15 +12,22 @@
         {
             "m_version": "3",
             "s_version": [
-                "16.12"
+                "19.3"
             ]
         }
     ],
     "appdesc": "多用途自动化工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://flexget.com",
     "help": "https://flexget.com",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,31 +51,31 @@
             "name": "端口",
             "type": "number",
             "default": 40112,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "web_password",
             "name": "网页访问密码",
-            "type": "string",
+            "type": "password",
             "default": "flexget",
-            "suffix": "网页访问密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -92,25 +99,25 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40112,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/data",
             "desc": "数据文件夹路径"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
             "key": "web_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "flexget",
             "desc": "网页访问密码"
         },
         {

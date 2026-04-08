@@ -12,9 +12,16 @@
     ],
     "appdesc": "更好用的 Aria2 Docker 容器镜像",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/P3TERX/Aria2-Pro-Docker",
     "help": "https://p3terx.com/archives/docker-aria2-pro.html",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,7 +45,7 @@
             "name": "RPC端口",
             "type": "number",
             "default": 6800,
-            "suffix": "RPC端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -46,39 +53,39 @@
             "name": "监听端口",
             "type": "number",
             "default": 6888,
-            "suffix": "监听端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "token",
             "name": "RPC密钥",
-            "type": "string",
+            "type": "text",
             "default": "aria2",
-            "suffix": "RPC密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "config_path",
             "name": "配置文件所在路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/config",
-            "suffix": "配置文件所在路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "download_path",
             "name": "下载文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/downloads",
-            "suffix": "下载文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "tracker_url",
             "name": "TRACKER链接",
-            "type": "string",
+            "type": "text",
             "default": "https://trackerslist.com/all_aria2.txt",
-            "suffix": "TRACKER链接",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -102,37 +109,37 @@
         {
             "key": "rpc_port_value",
             "type": "port",
-            "default": null,
+            "default": 6800,
             "desc": "RPC端口"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 6888,
             "desc": "监听端口"
         },
         {
             "key": "token",
             "type": "string",
-            "default": null,
+            "default": "aria2",
             "desc": "RPC密钥"
         },
         {
             "key": "config_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/config",
             "desc": "配置文件所在路径"
         },
         {
             "key": "download_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/downloads",
             "desc": "下载文件夹路径"
         },
         {
             "key": "tracker_url",
-            "type": "string",
-            "default": null,
+            "type": "url",
+            "default": "https://trackerslist.com/all_aria2.txt",
             "desc": "TRACKER链接"
         },
         {

@@ -6,7 +6,6 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    container_name: ${APP_NAME:-chatgpt-on-wechat}
     restart: always
     networks:
       - baota_net
@@ -133,9 +132,9 @@ services:
       - LINKAI_API_KEY=${LINKAI_API_KEY}
       - LINKAI_APP_CODE=${LINKAI_APP_CODE}
       - LINKAI_API_BASE=${LINKAI_API_BASE}
-    labels:  
+    labels:
       createdBy: "bt_apps"
 
-networks:  
-  baota_net:  
+networks:
+  baota_net:
     external: true

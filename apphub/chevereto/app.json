@@ -12,15 +12,22 @@
         {
             "m_version": "4",
             "s_version": [
-                "3.6"
+                "4.2"
             ]
         }
     ],
     "appdesc": "一个图像托管平台",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://chevereto.com",
     "help": "https://chevereto.com/docs",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,31 +51,31 @@
             "name": "数据库服务",
             "type": "string",
             "default": "mysql",
-            "suffix": "数据库服务",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "chevereto",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "chevereto",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "chevereto",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,71 +83,71 @@
             "name": "HTTP 端口",
             "type": "number",
             "default": "40328",
-            "suffix": "HTTP 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chevereto_max_post_size",
             "name": "最大 POST 大小",
-            "type": "string",
+            "type": "text",
             "default": "2G",
-            "suffix": "最大 POST 大小",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chevereto_max_upload_size",
             "name": "最大上传大小",
-            "type": "string",
+            "type": "text",
             "default": "2G",
-            "suffix": "最大上传大小",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chevereto_servicing",
             "name": "服务模式",
-            "type": "string",
+            "type": "text",
             "default": "docker",
-            "suffix": "服务模式",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chevereto_images_path",
             "name": "图片路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/images",
-            "suffix": "图片路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chevereto_hostname",
             "name": "主机名",
-            "type": "string",
+            "type": "text",
             "default": "hostname.com",
-            "suffix": "主机名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chevereto_hostname_path",
             "name": "主机名路径",
-            "type": "string",
+            "type": "text",
             "default": "/",
-            "suffix": "主机名路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "chevereto_header_client_ip",
             "name": "客户端 IP 标头",
-            "type": "string",
+            "type": "text",
             "default": "X-Real-IP",
-            "suffix": "客户端 IP 标头",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "encryption_key",
             "name": "加密密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "加密密钥",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -164,73 +171,73 @@
         {
             "key": "panel_db_type",
             "type": "string",
-            "default": null,
+            "default": "mysql",
             "desc": "数据库服务"
         },
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "chevereto",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "chevereto",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "chevereto",
             "desc": "数据库用户密码"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40328",
             "desc": "HTTP 端口"
         },
         {
             "key": "chevereto_max_post_size",
             "type": "string",
-            "default": null,
+            "default": "2G",
             "desc": "最大 POST 大小"
         },
         {
             "key": "chevereto_max_upload_size",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "2G",
             "desc": "最大上传大小"
         },
         {
             "key": "chevereto_servicing",
             "type": "string",
-            "default": null,
+            "default": "docker",
             "desc": "服务模式"
         },
         {
             "key": "chevereto_images_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/images",
             "desc": "图片路径"
         },
         {
             "key": "chevereto_hostname",
             "type": "string",
-            "default": null,
+            "default": "hostname.com",
             "desc": "主机名"
         },
         {
             "key": "chevereto_hostname_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/",
             "desc": "主机名路径"
         },
         {
             "key": "chevereto_header_client_ip",
             "type": "string",
-            "default": null,
+            "default": "X-Real-IP",
             "desc": "客户端 IP 标头"
         },
         {

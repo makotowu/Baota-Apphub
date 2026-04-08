@@ -18,9 +18,16 @@
     ],
     "appdesc": "喵空间社区程序 Lite 版",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://miao.o-o.zone",
     "help": "https://github.com/0ui0/icat_lite_public",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "数据库服务",
             "type": "string",
             "default": "",
-            "suffix": "数据库服务",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -52,31 +59,31 @@
             "name": "数据库端口",
             "type": "number",
             "default": 5432,
-            "suffix": "数据库端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "icat_lite",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "icat_lite",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "icat_bbs",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,23 +91,23 @@
             "name": "端口",
             "type": "number",
             "default": 8095,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "icat_pwdkey",
             "name": "用于加密的密码的密钥 (丢失无法登录)",
-            "type": "string",
+            "type": "text",
             "default": "nevovltregopezeminatisejlbojudos",
-            "suffix": "用于加密的密码的密钥 (丢失无法登录)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "icat_cookiepwd",
             "name": "登录状态加密密码 (至少32位)",
-            "type": "string",
+            "type": "text",
             "default": "fibowrlnidazotocrichechotechovad",
-            "suffix": "登录状态加密密码 (至少32位)",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -123,50 +130,50 @@
     "env": [
         {
             "key": "panel_db_host",
-            "type": "string",
+            "type": "db_host",
             "default": null,
             "desc": "数据库服务"
         },
         {
             "key": "panel_db_port",
             "type": "port",
-            "default": null,
+            "default": 5432,
             "desc": "数据库端口"
         },
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "icat_lite",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "icat_lite",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "icat_bbs",
             "desc": "数据库用户密码"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 8095,
             "desc": "端口"
         },
         {
             "key": "icat_pwdkey",
             "type": "string",
-            "default": null,
+            "default": "nevovltregopezeminatisejlbojudos",
             "desc": "用于加密的密码的密钥 (丢失无法登录)"
         },
         {
             "key": "icat_cookiepwd",
             "type": "string",
-            "default": null,
+            "default": "fibowrlnidazotocrichechotechovad",
             "desc": "登录状态加密密码 (至少32位)"
         },
         {

@@ -12,9 +12,16 @@
     ],
     "appdesc": "ChatGPT 国粹版，和 GPT 一起学习地道的中国话吧",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://happy-chat-gpt.vercel.app",
     "help": "https://github.com/vastxie/Happy-ChatGPT",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,63 +45,63 @@
             "name": "端口",
             "type": "number",
             "default": 40117,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_key",
             "name": "OPENAI API KEY",
-            "type": "string",
+            "type": "text",
             "default": "sk-xxx",
-            "suffix": "OPENAI API KEY",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "secret_key",
             "name": "访问权限密钥，可选(强烈建议填写)",
-            "type": "string",
+            "type": "password",
             "default": "happychatgpt",
-            "suffix": "访问权限密钥，可选(强烈建议填写)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "https_proxy",
             "name": "HTTPS代理 (http://127.0.0.1:7890)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "HTTPS代理 (http://127.0.0.1:7890)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_base_url",
             "name": "API接口地址 (https://api.openai.com)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "API接口地址 (https://api.openai.com)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "api_model",
             "name": "API模型，可选 (https://platform.openai.com/docs/models)",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "API模型，可选 (https://platform.openai.com/docs/models)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "head_scripts_vaule",
             "name": "在页面的 </head> 之前注入分析或其他脚本",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "在页面的 </head> 之前注入分析或其他脚本",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "public_secret_key_vaule",
             "name": "项目的秘密字符串。用于生成 API 调用的签名",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "项目的秘密字符串。用于生成 API 调用的签名",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -118,19 +125,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40117,
             "desc": "端口"
         },
         {
             "key": "api_key",
             "type": "string",
-            "default": null,
+            "default": "sk-xxx",
             "desc": "OPENAI API KEY"
         },
         {
             "key": "secret_key",
             "type": "string",
-            "default": null,
+            "default": "happychatgpt",
             "desc": "访问权限密钥，可选(强烈建议填写)"
         },
         {
@@ -141,7 +148,7 @@
         },
         {
             "key": "api_base_url",
-            "type": "string",
+            "type": "url",
             "default": null,
             "desc": "API接口地址 (https://api.openai.com)"
         },

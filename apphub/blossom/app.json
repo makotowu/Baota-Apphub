@@ -18,9 +18,16 @@
     ],
     "appdesc": "一个支持私有部署的云端双链笔记软件",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://www.wangyunf.com/blossom-doc/",
     "help": "https://www.wangyunf.com/blossom-doc/",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,31 +51,31 @@
             "name": "数据库服务",
             "type": "string",
             "default": "mysql",
-            "suffix": "数据库服务",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "blossom",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "blossom",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "blossom",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,7 +83,7 @@
             "name": "端口",
             "type": "number",
             "default": 40204,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,31 +107,31 @@
         {
             "key": "panel_db_type",
             "type": "string",
-            "default": null,
+            "default": "mysql",
             "desc": "数据库服务"
         },
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "blossom",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "blossom",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "blossom",
             "desc": "数据库用户密码"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40204,
             "desc": "端口"
         },
         {

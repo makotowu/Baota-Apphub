@@ -1,6 +1,5 @@
 services:
   aria2-pro:
-    container_name: ${APP_NAME:-aria2-pro}
     restart: always
     ports:
       - "${RPC_PORT_VALUE}:${RPC_PORT_VALUE}"
@@ -32,9 +31,9 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    labels:  
+    labels:
       createdBy: "bt_apps"
 
-networks:  
-  baota_net:  
+networks:
+  baota_net:
     external: true

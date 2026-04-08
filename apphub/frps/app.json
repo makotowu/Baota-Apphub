@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "63.0"
+                "67.0"
             ]
         }
     ],
     "appdesc": "frp 是一种反向代理工具，常用于内网穿透(服务端)",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/fatedier/frp",
     "help": "https://github.com/fatedier/frp/blob/dev/README_zh.md",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -42,9 +49,9 @@
         {
             "attr": "config_file_path",
             "name": "配置文件路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/frps.toml",
-            "suffix": "配置文件路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -52,15 +59,15 @@
             "name": "端口 (由配置文件决定)",
             "type": "number",
             "default": 7000,
-            "suffix": "端口 (由配置文件决定)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "ssl_folder_path",
             "name": "证书文件夹路径 (对应容器内 \"/etc/frp/ssl\")",
-            "type": "string",
+            "type": "text",
             "default": "./data/ssl",
-            "suffix": "证书文件夹路径 (对应容器内 \"/etc/frp/ssl\")",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -83,20 +90,20 @@
     "env": [
         {
             "key": "config_file_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/frps.toml",
             "desc": "配置文件路径"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 7000,
             "desc": "端口 (由配置文件决定)"
         },
         {
             "key": "ssl_folder_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/ssl",
             "desc": "证书文件夹路径 (对应容器内 \"/etc/frp/ssl\")"
         },
         {

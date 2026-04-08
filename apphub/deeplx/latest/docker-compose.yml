@@ -1,6 +1,5 @@
 services:
   deeplx:
-    container_name: ${APP_NAME:-deeplx}
     restart: always
     networks:
       - baota_net

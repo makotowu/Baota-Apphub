@@ -1,6 +1,5 @@
 services:
   115pc:
-    container_name: ${APP_NAME:-115pc}
     restart: always
     networks:
       - baota_net

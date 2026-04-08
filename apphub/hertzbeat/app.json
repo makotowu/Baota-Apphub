@@ -12,15 +12,22 @@
         {
             "m_version": "1",
             "s_version": [
-                "7.1"
+                "8.0"
             ]
         }
     ],
     "appdesc": "一个易用友好的开源实时监控告警系统",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hertzbeat.com/",
     "help": "https://hertzbeat.com/docs/",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,15 +51,15 @@
             "name": "端口",
             "type": "number",
             "default": 40066,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,13 +83,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40066,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {

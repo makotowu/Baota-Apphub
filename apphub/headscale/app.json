@@ -8,16 +8,23 @@
         {
             "m_version": "0",
             "s_version": [
-                "23.0-alpha3",
-                "26.1"
+                "26.1",
+                "23.0-alpha3"
             ]
         }
     ],
     "appdesc": "Tailscale 控制服务器的开源自托管实现",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://headscale.net",
     "help": "https://headscale.net",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {

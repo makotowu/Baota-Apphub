@@ -1,0 +1,29 @@
+services:
+  docker-mirror-monitor:
+    image: "moelin/docker-mirror-monitor:v1.1.1"
+    deploy:
+      resources:
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
+    restart: always
+    networks:
+      - baota_net
+    ports:
+      - "${WEB_PORT}:${PANEL_APP_PORT_HTTP_INTERNAL}"
+    volumes:
+      - ${APP_PATH}/data:/app/data
+    environment:
+      - TZ=${TIME_ZONE}
+    healthcheck:
+      test: ["CMD", "/app/docker-mirror-monitor", "healthcheck", "-config", "/app/data/config.yaml"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    labels:
+      createdBy: "bt_apps"
+
+networks:
+  baota_net:
+    external: true

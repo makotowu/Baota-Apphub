@@ -18,9 +18,16 @@
     ],
     "appdesc": "一款简单、易架设的 WireGuard 服务端软件",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://fahi.uusec.com",
     "help": "https://github.com/Safe3/firefly/blob/main/README.md",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,39 +51,39 @@
             "name": "端口",
             "type": "number",
             "default": 40215,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "firefly_password",
             "name": "网页密码",
-            "type": "string",
+            "type": "password",
             "default": "password",
-            "suffix": "网页密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
-            "attr": "firefly_auto_ssl",
+            "attr": "firefly_auto_ssl_port",
             "name": "是否启用自动获取 SSL 证书 (开启则需要将端口设置为 443)",
-            "type": "string",
+            "type": "number",
             "default": "false",
-            "suffix": "是否启用自动获取 SSL 证书 (开启则需要将端口设置为 443)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "firefly_device",
             "name": "WireGuard 出入流量网卡名称",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "WireGuard 出入流量网卡名称",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,25 +107,25 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40215,
             "desc": "端口"
         },
         {
             "key": "firefly_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "password",
             "desc": "网页密码"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
-            "key": "firefly_auto_ssl",
-            "type": "string",
-            "default": null,
+            "key": "firefly_auto_ssl_port",
+            "type": "port",
+            "default": "false",
             "desc": "是否启用自动获取 SSL 证书 (开启则需要将端口设置为 443)"
         },
         {

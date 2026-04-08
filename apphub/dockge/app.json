@@ -18,9 +18,16 @@
     ],
     "appdesc": "一个精美的、易于使用的、反应式的自托管 docker compose.yaml 面向堆栈的管理器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://dockge.kuma.pet",
     "help": "https://github.com/louislam/dockge",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,23 +51,23 @@
             "name": "端口",
             "type": "number",
             "default": 40186,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "stacks_path",
             "name": "compose 编排文件路径 (绝对路径)",
-            "type": "string",
+            "type": "text",
             "default": "/opt/dockge/stacks",
-            "suffix": "compose 编排文件路径 (绝对路径)",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,19 +91,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40186,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径"
         },
         {
             "key": "stacks_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/opt/dockge/stacks",
             "desc": "compose 编排文件路径 (绝对路径)"
         },
         {

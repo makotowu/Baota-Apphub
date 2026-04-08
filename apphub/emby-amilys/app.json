@@ -12,15 +12,22 @@
         {
             "m_version": "4",
             "s_version": [
-                "9.1.0"
+                "9.2.6"
             ]
         }
     ],
     "appdesc": "一个免费的个人媒体服务器 (开心版)",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hub.docker.com/r/amilys/embyserver",
     "help": "https://hub.docker.com/r/amilys/embyserver",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,47 +51,39 @@
             "name": "HTTP 端口",
             "type": "number",
             "default": 40258,
-            "suffix": "HTTP 端口",
-            "unit": ""
-        },
-        {
-            "attr": "web_port",
-            "name": "HTTPS 端口",
-            "type": "number",
-            "default": 40259,
-            "suffix": "HTTPS 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/config",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "mount_path",
             "name": "挂载文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/mnt1",
-            "suffix": "挂载文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "mount_path2",
             "name": "挂载文件夹路径2",
-            "type": "string",
+            "type": "text",
             "default": "./data/mnt2",
-            "suffix": "挂载文件夹路径2",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -108,37 +107,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40258,
             "desc": "HTTP 端口"
         },
         {
-            "key": "web_port",
-            "type": "port",
-            "default": null,
-            "desc": "HTTPS 端口"
-        },
-        {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/config",
             "desc": "数据文件夹路径"
         },
         {
             "key": "mount_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/mnt1",
             "desc": "挂载文件夹路径"
         },
         {
             "key": "mount_path2",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/mnt2",
             "desc": "挂载文件夹路径2"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {

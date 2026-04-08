@@ -18,9 +18,16 @@
     ],
     "appdesc": "极简论坛",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://discussion.mblog.club",
     "help": "https://github.com/kingwrcy/discussion",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口",
             "type": "number",
             "default": 40254,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -52,31 +59,31 @@
             "name": "数据库服务",
             "type": "string",
             "default": "postgresql",
-            "suffix": "数据库服务",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "discussion",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "discussion",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "discussion",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,31 +107,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40254,
             "desc": "端口"
         },
         {
             "key": "panel_db_type",
             "type": "string",
-            "default": null,
+            "default": "postgresql",
             "desc": "数据库服务"
         },
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "discussion",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "discussion",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "discussion",
             "desc": "数据库用户密码"
         },
         {

@@ -12,15 +12,22 @@
         {
             "m_version": "2",
             "s_version": [
-                "17.3"
+                "18.0"
             ]
         }
     ],
     "appdesc": "哔哩哔哩直播录制工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://rec.danmuji.org",
     "help": "https://rec.danmuji.org/install/versions/",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,39 +51,39 @@
             "name": "端口",
             "type": "number",
             "default": "40278",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "user_name",
             "name": "WebUI 的用户名",
-            "type": "string",
+            "type": "text",
             "default": "admin",
-            "suffix": "WebUI 的用户名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "user_password",
             "name": "WebUI 的访问密码",
-            "type": "string",
+            "type": "password",
             "default": "admin",
-            "suffix": "WebUI 的访问密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "work_space_path",
             "name": "工作目录路径 (注意文件夹权限)",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "工作目录路径 (注意文件夹权限)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "umask",
             "name": "文件权限掩码",
-            "type": "string",
+            "type": "text",
             "default": "022",
-            "suffix": "文件权限掩码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,7 +91,7 @@
             "name": "用户 ID",
             "type": "number",
             "default": "1000",
-            "suffix": "用户 ID",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -92,7 +99,7 @@
             "name": "用户组 ID",
             "type": "number",
             "default": "1000",
-            "suffix": "用户组 ID",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -116,43 +123,43 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40278",
             "desc": "端口"
         },
         {
             "key": "user_name",
-            "type": "string",
-            "default": null,
+            "type": "username",
+            "default": "admin",
             "desc": "WebUI 的用户名"
         },
         {
             "key": "user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "admin",
             "desc": "WebUI 的访问密码"
         },
         {
             "key": "work_space_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "工作目录路径 (注意文件夹权限)"
         },
         {
             "key": "umask",
             "type": "string",
-            "default": null,
+            "default": "022",
             "desc": "文件权限掩码"
         },
         {
             "key": "puid",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "1000",
             "desc": "用户 ID"
         },
         {
             "key": "pgid",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "1000",
             "desc": "用户组 ID"
         },
         {

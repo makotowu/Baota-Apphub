@@ -18,9 +18,16 @@
     ],
     "appdesc": "极光面板-一个多服务器端口租用管理面板",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/Aurora-Admin-Panel/deploy",
     "help": "https://github.com/Aurora-Admin-Panel/deploy",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -42,25 +49,25 @@
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "aurora",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "aurora",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "aurora",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,31 +75,31 @@
             "name": "端口",
             "type": "number",
             "default": 40036,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据存放文件夹",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据存放文件夹",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "ssh_key_path",
             "name": "SSH 私钥文件",
-            "type": "string",
+            "type": "text",
             "default": "/root/.ssh/id_rsa",
-            "suffix": "SSH 私钥文件",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "secrecy_key",
             "name": "保密密码",
-            "type": "string",
+            "type": "password",
             "default": "aurora",
-            "suffix": "保密密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -116,43 +123,43 @@
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "aurora",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "aurora",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "aurora",
             "desc": "数据库用户密码"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40036,
             "desc": "端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据存放文件夹"
         },
         {
             "key": "ssh_key_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "/root/.ssh/id_rsa",
             "desc": "SSH 私钥文件"
         },
         {
             "key": "secrecy_key",
             "type": "string",
-            "default": null,
+            "default": "aurora",
             "desc": "保密密码"
         },
         {

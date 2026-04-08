@@ -18,9 +18,16 @@
     ],
     "appdesc": "为开发人员提供方便的在线工具集合，具有出色的用户体验",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://it-tools.tech",
     "help": "https://github.com/CorentinTh/it-tools",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "端口",
             "type": "number",
             "default": 40116,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,7 +75,7 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40116,
             "desc": "端口"
         },
         {

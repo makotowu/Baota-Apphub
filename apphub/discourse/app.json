@@ -18,9 +18,16 @@
     ],
     "appdesc": "开源讨论平台",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://www.discourse.org",
     "help": "https://docs.discourse.org",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,15 +51,15 @@
             "name": "端口",
             "type": "number",
             "default": "40268",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_data_to_persist",
             "name": "持久化数据",
-            "type": "string",
+            "type": "text",
             "default": "plugins public/backups public/uploads",
-            "suffix": "持久化数据",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -60,7 +67,7 @@
             "name": "启用 HTTPS",
             "type": "string",
             "default": "no",
-            "suffix": "启用 HTTPS",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,7 +75,7 @@
             "name": "外部 HTTP 端口",
             "type": "number",
             "default": "80",
-            "suffix": "外部 HTTP 端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,15 +83,15 @@
             "name": "外部 HTTPS 端口",
             "type": "number",
             "default": "443",
-            "suffix": "外部 HTTPS 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_host",
             "name": "Discourse 主机",
-            "type": "string",
+            "type": "text",
             "default": "www.example.com",
-            "suffix": "Discourse 主机",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -92,23 +99,23 @@
             "name": "Discourse 端口",
             "type": "number",
             "default": "3000",
-            "suffix": "Discourse 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_skip_bootstrap",
             "name": "跳过引导",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "跳过引导",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_site_name",
             "name": "网站名称",
-            "type": "string",
+            "type": "text",
             "default": "My site!",
-            "suffix": "网站名称",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -116,7 +123,7 @@
             "name": "环境",
             "type": "string",
             "default": "production",
-            "suffix": "环境",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -124,7 +131,7 @@
             "name": "预编译资产",
             "type": "string",
             "default": "yes",
-            "suffix": "预编译资产",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -132,7 +139,7 @@
             "name": "启用配置持久化",
             "type": "string",
             "default": "no",
-            "suffix": "启用配置持久化",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -140,7 +147,7 @@
             "name": "额外配置内容",
             "type": "string",
             "default": "yes",
-            "suffix": "额外配置内容",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -148,63 +155,63 @@
             "name": "Passenger 启动方法",
             "type": "string",
             "default": "direct",
-            "suffix": "Passenger 启动方法",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_passenger_extra_flags",
             "name": "Passenger 额外标志",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "Passenger 额外标志",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_username",
             "name": "用户名",
-            "type": "string",
+            "type": "text",
             "default": "siteadmin",
-            "suffix": "用户名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_password",
             "name": "密码",
-            "type": "string",
+            "type": "password",
             "default": "siteadmin12345",
-            "suffix": "密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_email",
             "name": "电子邮箱",
-            "type": "string",
+            "type": "text",
             "default": "admin@localhost.com",
-            "suffix": "电子邮箱",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_first_name",
             "name": "名",
-            "type": "string",
+            "type": "text",
             "default": "Admin",
-            "suffix": "名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_last_name",
             "name": "姓",
-            "type": "string",
+            "type": "text",
             "default": "User",
-            "suffix": "姓",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_smtp_host",
             "name": "SMTP 主机",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "SMTP 主机",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -212,31 +219,31 @@
             "name": "SMTP 端口",
             "type": "number",
             "default": "",
-            "suffix": "SMTP 端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_smtp_user",
             "name": "SMTP 用户名",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "SMTP 用户名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_smtp_password",
             "name": "SMTP 密码",
-            "type": "string",
+            "type": "password",
             "default": "",
-            "suffix": "SMTP 密码",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "discourse_smtp_protocol",
             "name": "SMTP 协议",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "SMTP 协议",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -244,7 +251,7 @@
             "name": "SMTP 认证",
             "type": "string",
             "default": "login",
-            "suffix": "SMTP 认证",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -252,7 +259,7 @@
             "name": "SMTP 打开超时",
             "type": "number",
             "default": "",
-            "suffix": "SMTP 打开超时",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -260,7 +267,7 @@
             "name": "SMTP 读取超时",
             "type": "number",
             "default": "",
-            "suffix": "SMTP 读取超时",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -268,7 +275,7 @@
             "name": "数据库服务",
             "type": "string",
             "default": "",
-            "suffix": "数据库服务",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -276,31 +283,31 @@
             "name": "数据库端口号",
             "type": "number",
             "default": "5432",
-            "suffix": "数据库端口号",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "bitnami_discourse",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "bn_discourse",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "discourse",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -308,7 +315,7 @@
             "name": "Redis服务",
             "type": "string",
             "default": "",
-            "suffix": "Redis服务",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -316,15 +323,15 @@
             "name": "Redis服务端口",
             "type": "number",
             "default": "6379",
-            "suffix": "Redis服务端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_redis_root_password",
             "name": "Redis 密码",
-            "type": "string",
+            "type": "password",
             "default": "",
-            "suffix": "Redis 密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -332,15 +339,15 @@
             "name": "Redis 使用 SSL",
             "type": "string",
             "default": "no",
-            "suffix": "Redis 使用 SSL",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "postgresql_client_create_database_extensions",
             "name": "PostgreSQL 客户端创建数据库扩展",
-            "type": "string",
+            "type": "text",
             "default": "hstore,pg_trgm",
-            "suffix": "PostgreSQL 客户端创建数据库扩展",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -364,43 +371,43 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40268",
             "desc": "端口"
         },
         {
             "key": "discourse_data_to_persist",
             "type": "string",
-            "default": null,
+            "default": "plugins public/backups public/uploads",
             "desc": "持久化数据"
         },
         {
             "key": "discourse_enable_https",
             "type": "string",
-            "default": null,
+            "default": "no",
             "desc": "启用 HTTPS"
         },
         {
             "key": "discourse_external_http_port_number",
             "type": "port",
-            "default": null,
+            "default": "80",
             "desc": "外部 HTTP 端口"
         },
         {
             "key": "discourse_external_https_port_number",
             "type": "port",
-            "default": null,
+            "default": "443",
             "desc": "外部 HTTPS 端口"
         },
         {
             "key": "discourse_host",
             "type": "string",
-            "default": null,
+            "default": "www.example.com",
             "desc": "Discourse 主机"
         },
         {
             "key": "discourse_port_number",
             "type": "port",
-            "default": null,
+            "default": "3000",
             "desc": "Discourse 端口"
         },
         {
@@ -412,37 +419,37 @@
         {
             "key": "discourse_site_name",
             "type": "string",
-            "default": null,
+            "default": "My site!",
             "desc": "网站名称"
         },
         {
             "key": "discourse_env",
             "type": "string",
-            "default": null,
+            "default": "production",
             "desc": "环境"
         },
         {
             "key": "discourse_precompile_assets",
             "type": "string",
-            "default": null,
+            "default": "yes",
             "desc": "预编译资产"
         },
         {
             "key": "discourse_enable_conf_persistence",
             "type": "string",
-            "default": null,
+            "default": "no",
             "desc": "启用配置持久化"
         },
         {
             "key": "discourse_extra_conf_content",
             "type": "string",
-            "default": null,
+            "default": "yes",
             "desc": "额外配置内容"
         },
         {
             "key": "discourse_passenger_spawn_method",
             "type": "string",
-            "default": null,
+            "default": "direct",
             "desc": "Passenger 启动方法"
         },
         {
@@ -453,32 +460,32 @@
         },
         {
             "key": "discourse_username",
-            "type": "string",
-            "default": null,
+            "type": "username",
+            "default": "siteadmin",
             "desc": "用户名"
         },
         {
             "key": "discourse_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "siteadmin12345",
             "desc": "密码"
         },
         {
             "key": "discourse_email",
             "type": "string",
-            "default": null,
+            "default": "admin@localhost.com",
             "desc": "电子邮箱"
         },
         {
             "key": "discourse_first_name",
             "type": "string",
-            "default": null,
+            "default": "Admin",
             "desc": "名"
         },
         {
             "key": "discourse_last_name",
             "type": "string",
-            "default": null,
+            "default": "User",
             "desc": "姓"
         },
         {
@@ -501,7 +508,7 @@
         },
         {
             "key": "discourse_smtp_password",
-            "type": "string",
+            "type": "password",
             "default": null,
             "desc": "SMTP 密码"
         },
@@ -514,49 +521,49 @@
         {
             "key": "discourse_smtp_auth",
             "type": "string",
-            "default": null,
+            "default": "login",
             "desc": "SMTP 认证"
         },
         {
             "key": "discourse_smtp_open_timeout",
-            "type": "string",
+            "type": "number",
             "default": null,
             "desc": "SMTP 打开超时"
         },
         {
             "key": "discourse_smtp_read_timeout",
-            "type": "string",
+            "type": "number",
             "default": null,
             "desc": "SMTP 读取超时"
         },
         {
             "key": "panel_db_host",
-            "type": "string",
+            "type": "db_host",
             "default": null,
             "desc": "数据库服务"
         },
         {
             "key": "panel_db_port",
             "type": "port",
-            "default": null,
+            "default": "5432",
             "desc": "数据库端口号"
         },
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "bitnami_discourse",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "bn_discourse",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "discourse",
             "desc": "数据库用户密码"
         },
         {
@@ -568,25 +575,25 @@
         {
             "key": "redis_port",
             "type": "port",
-            "default": null,
+            "default": "6379",
             "desc": "Redis服务端口"
         },
         {
             "key": "panel_redis_root_password",
-            "type": "string",
+            "type": "password",
             "default": null,
             "desc": "Redis 密码"
         },
         {
             "key": "discourse_redis_use_ssl",
             "type": "string",
-            "default": null,
+            "default": "no",
             "desc": "Redis 使用 SSL"
         },
         {
             "key": "postgresql_client_create_database_extensions",
             "type": "string",
-            "default": null,
+            "default": "hstore,pg_trgm",
             "desc": "PostgreSQL 客户端创建数据库扩展"
         },
         {

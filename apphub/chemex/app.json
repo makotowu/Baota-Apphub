@@ -12,9 +12,16 @@
     ],
     "appdesc": "一个免费、开源、高效且漂亮的运维资产管理平台",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hub.docker.com/r/celaraze/chemex",
     "help": "https://github.com/celaraze/chemex",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -34,35 +41,27 @@
             "unit": ""
         },
         {
-            "attr": "",
-            "name": "数据库服务",
-            "type": "string",
-            "default": "mysql",
-            "suffix": "数据库服务",
-            "unit": ""
-        },
-        {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "chemex",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "chemex",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "chemex",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -70,15 +69,15 @@
             "name": "端口",
             "type": "number",
             "default": 40028,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "env_path",
             "name": "环境配置文件路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/.env",
-            "suffix": "环境配置文件路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -86,15 +85,15 @@
             "name": "Redis 服务",
             "type": "string",
             "default": "",
-            "suffix": "Redis 服务",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_root_password",
             "name": "Redis 密码",
-            "type": "string",
+            "type": "password",
             "default": "",
-            "suffix": "Redis 密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -102,7 +101,7 @@
             "name": "Redis端口",
             "type": "number",
             "default": 6379,
-            "suffix": "Redis端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -124,57 +123,51 @@
     ],
     "env": [
         {
-            "key": "",
-            "type": "string",
-            "default": null,
-            "desc": "数据库服务"
-        },
-        {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "chemex",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "chemex",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "chemex",
             "desc": "数据库用户密码"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40028,
             "desc": "端口"
         },
         {
             "key": "env_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/.env",
             "desc": "环境配置文件路径"
         },
         {
             "key": "panel_redis_db_host",
-            "type": "string",
+            "type": "db_host",
             "default": null,
             "desc": "Redis 服务"
         },
         {
             "key": "panel_db_root_password",
-            "type": "string",
+            "type": "password",
             "default": null,
             "desc": "Redis 密码"
         },
         {
             "key": "redis_db_port",
             "type": "port",
-            "default": null,
+            "default": 6379,
             "desc": "Redis端口"
         },
         {

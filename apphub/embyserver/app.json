@@ -12,9 +12,16 @@
     ],
     "appdesc": "一个免费的个人媒体服务器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://emby.media/",
     "help": "https://emby.media/support/articles/Home.html",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,39 +45,31 @@
             "name": "HTTP端口",
             "type": "number",
             "default": 40091,
-            "suffix": "HTTP端口",
-            "unit": ""
-        },
-        {
-            "attr": "web_port",
-            "name": "HTTPS端口",
-            "type": "number",
-            "default": 40092,
-            "suffix": "HTTPS端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/config",
-            "suffix": "数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "mount_path",
             "name": "挂载文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/mnt1",
-            "suffix": "挂载文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "mount_path2",
             "name": "挂载文件夹路径2",
-            "type": "string",
+            "type": "text",
             "default": "./data/mnt2",
-            "suffix": "挂载文件夹路径2",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -94,31 +93,25 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40091,
             "desc": "HTTP端口"
         },
         {
-            "key": "web_port",
-            "type": "port",
-            "default": null,
-            "desc": "HTTPS端口"
-        },
-        {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/config",
             "desc": "数据文件夹路径"
         },
         {
             "key": "mount_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/mnt1",
             "desc": "挂载文件夹路径"
         },
         {
             "key": "mount_path2",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/mnt2",
             "desc": "挂载文件夹路径2"
         },
         {

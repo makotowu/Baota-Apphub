@@ -12,15 +12,22 @@
         {
             "m_version": "0",
             "s_version": [
-                "107.63"
+                "107.73"
             ]
         }
     ],
     "appdesc": "自由且开源的，功能强大的网络广告和跟踪器屏蔽DNS服务器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hub.docker.com/r/adguard/adguardhome",
     "help": "https://github.com/AdguardTeam/AdGuardHome/wiki",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,7 +51,7 @@
             "name": "普通DNS端口",
             "type": "number",
             "default": 20053,
-            "suffix": "普通DNS端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -52,7 +59,7 @@
             "name": "DHCP服务端口1",
             "type": "number",
             "default": 20067,
-            "suffix": "DHCP服务端口1",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -60,7 +67,7 @@
             "name": "DHCP服务端口2",
             "type": "number",
             "default": 20068,
-            "suffix": "DHCP服务端口2",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -68,7 +75,7 @@
             "name": "HTTP网页端口",
             "type": "number",
             "default": 23000,
-            "suffix": "HTTP网页端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,7 +83,7 @@
             "name": "初始设置网页端口",
             "type": "number",
             "default": 23001,
-            "suffix": "初始设置网页端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -84,7 +91,7 @@
             "name": "DOH服务端口",
             "type": "number",
             "default": 20443,
-            "suffix": "DOH服务端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -92,7 +99,7 @@
             "name": "DOT服务端口",
             "type": "number",
             "default": 853,
-            "suffix": "DOT服务端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -100,7 +107,7 @@
             "name": "QUIC服务端口1",
             "type": "number",
             "default": 20784,
-            "suffix": "QUIC服务端口1",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -108,7 +115,7 @@
             "name": "QUIC服务端口2",
             "type": "number",
             "default": 8853,
-            "suffix": "QUIC服务端口2",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -116,23 +123,23 @@
             "name": "DNS Crypt服务端口",
             "type": "number",
             "default": 5443,
-            "suffix": "DNS Crypt服务端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "work_path",
             "name": "工作数据文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/work",
-            "suffix": "工作数据文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "config_path",
             "name": "配置文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/conf",
-            "suffix": "配置文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -156,73 +163,73 @@
         {
             "key": "plain_dns_port",
             "type": "port",
-            "default": null,
+            "default": 20053,
             "desc": "普通DNS端口"
         },
         {
             "key": "dhcp_port1",
             "type": "port",
-            "default": null,
+            "default": 20067,
             "desc": "DHCP服务端口1"
         },
         {
             "key": "dhcp_port2",
             "type": "port",
-            "default": null,
+            "default": 20068,
             "desc": "DHCP服务端口2"
         },
         {
             "key": "http_port",
             "type": "port",
-            "default": null,
+            "default": 23000,
             "desc": "HTTP网页端口"
         },
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 23001,
             "desc": "初始设置网页端口"
         },
         {
             "key": "doh_port",
             "type": "port",
-            "default": null,
+            "default": 20443,
             "desc": "DOH服务端口"
         },
         {
             "key": "dot_port",
             "type": "port",
-            "default": null,
+            "default": 853,
             "desc": "DOT服务端口"
         },
         {
             "key": "quic_port1",
             "type": "port",
-            "default": null,
+            "default": 20784,
             "desc": "QUIC服务端口1"
         },
         {
             "key": "quic_port2",
             "type": "port",
-            "default": null,
+            "default": 8853,
             "desc": "QUIC服务端口2"
         },
         {
             "key": "dns_crypt_port",
             "type": "port",
-            "default": null,
+            "default": 5443,
             "desc": "DNS Crypt服务端口"
         },
         {
             "key": "work_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/work",
             "desc": "工作数据文件夹路径"
         },
         {
             "key": "config_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/conf",
             "desc": "配置文件夹路径"
         },
         {

@@ -1,6 +1,5 @@
 services:
   baidunetdisk:
-    container_name: ${APP_NAME:-baidunetdisk}
     restart: always
     networks:
       - baota_net

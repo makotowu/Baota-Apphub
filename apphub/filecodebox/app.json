@@ -7,9 +7,16 @@
     "appversion": [],
     "appdesc": "文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://share.lanol.cn",
     "help": "https://github.com/vastsa/FileCodeBox",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {

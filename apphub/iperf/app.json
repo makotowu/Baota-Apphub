@@ -12,9 +12,16 @@
     ],
     "appdesc": "网络性能测试工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://software.es.net/iperf/",
     "help": "https://software.es.net/iperf/",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,23 +45,23 @@
             "name": "端口",
             "type": "number",
             "default": "40267",
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "time_zone",
             "name": "时区",
-            "type": "string",
+            "type": "text",
             "default": "Asia/Shanghai",
-            "suffix": "时区",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "iperf_command",
             "name": "iPerf 命令",
-            "type": "string",
+            "type": "text",
             "default": "-s",
-            "suffix": "iPerf 命令",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -78,19 +85,19 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40267",
             "desc": "端口"
         },
         {
             "key": "time_zone",
             "type": "string",
-            "default": null,
+            "default": "Asia/Shanghai",
             "desc": "时区"
         },
         {
             "key": "iperf_command",
             "type": "string",
-            "default": null,
+            "default": "-s",
             "desc": "iPerf 命令"
         },
         {

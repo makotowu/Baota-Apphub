@@ -12,9 +12,16 @@
     ],
     "appdesc": "下一代 AI 一站式解决方案",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://chatnio.com",
     "help": "https://chatnio.com/guide",
-    "updateat": 1758961228,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615238,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,7 +45,7 @@
             "name": "端口",
             "type": "number",
             "default": 40249,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -46,31 +53,31 @@
             "name": "数据库服务",
             "type": "string",
             "default": "mysql",
-            "suffix": "数据库服务",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_name",
             "name": "数据库名",
-            "type": "string",
+            "type": "text",
             "default": "chatnio",
-            "suffix": "数据库名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user",
             "name": "数据库用户",
-            "type": "string",
+            "type": "text",
             "default": "chatnio",
-            "suffix": "数据库用户",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_db_user_password",
             "name": "数据库用户密码",
-            "type": "string",
+            "type": "password",
             "default": "chatnio",
-            "suffix": "数据库用户密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -78,7 +85,7 @@
             "name": "Redis服务",
             "type": "string",
             "default": "",
-            "suffix": "Redis服务",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -86,15 +93,15 @@
             "name": "Redis服务端口",
             "type": "number",
             "default": "6379",
-            "suffix": "Redis服务端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "panel_redis_root_password",
             "name": "Redis 密码",
-            "type": "string",
+            "type": "password",
             "default": "",
-            "suffix": "Redis 密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -102,7 +109,7 @@
             "name": "Redis 数据库",
             "type": "number",
             "default": "5",
-            "suffix": "Redis 数据库",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -110,7 +117,7 @@
             "name": "是否启用静态文件服务",
             "type": "string",
             "default": "true",
-            "suffix": "是否启用静态文件服务",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -134,31 +141,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40249,
             "desc": "端口"
         },
         {
             "key": "panel_db_type",
             "type": "string",
-            "default": null,
+            "default": "mysql",
             "desc": "数据库服务"
         },
         {
             "key": "panel_db_name",
             "type": "string",
-            "default": null,
+            "default": "chatnio",
             "desc": "数据库名"
         },
         {
             "key": "panel_db_user",
             "type": "string",
-            "default": null,
+            "default": "chatnio",
             "desc": "数据库用户"
         },
         {
             "key": "panel_db_user_password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "chatnio",
             "desc": "数据库用户密码"
         },
         {
@@ -170,25 +177,25 @@
         {
             "key": "redis_port",
             "type": "port",
-            "default": null,
+            "default": "6379",
             "desc": "Redis服务端口"
         },
         {
             "key": "panel_redis_root_password",
-            "type": "string",
+            "type": "password",
             "default": null,
             "desc": "Redis 密码"
         },
         {
             "key": "redis_db",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "5",
             "desc": "Redis 数据库"
         },
         {
             "key": "serve_static",
             "type": "string",
-            "default": null,
+            "default": "true",
             "desc": "是否启用静态文件服务"
         },
         {

@@ -12,15 +12,22 @@
         {
             "m_version": "2",
             "s_version": [
-                "36.1"
+                "62.1"
             ]
         }
     ],
     "appdesc": "网页文件浏览器",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://filebrowser.org/",
     "help": "https://filebrowser.org/",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,15 +51,15 @@
             "name": "HTTP端口",
             "type": "number",
             "default": 40071,
-            "suffix": "HTTP端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "mount_path",
             "name": "挂载文件夹路径",
-            "type": "string",
+            "type": "text",
             "default": "./data/mnt",
-            "suffix": "挂载文件夹路径",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -76,13 +83,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40071,
             "desc": "HTTP端口"
         },
         {
             "key": "mount_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data/mnt",
             "desc": "挂载文件夹路径"
         },
         {

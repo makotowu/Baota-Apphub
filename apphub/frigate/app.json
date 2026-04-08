@@ -8,16 +8,23 @@
         {
             "m_version": "0",
             "s_version": [
-                "15.1",
-                "15.1-standard-arm64"
+                "17.1-standard-arm64",
+                "17.1"
             ]
         }
     ],
     "appdesc": "一个开源的实时视频监控系统",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://frigate.video",
     "help": "https://frigate.video/docs/",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {

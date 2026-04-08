@@ -12,9 +12,16 @@
     ],
     "appdesc": "在 Docker 中运行 macOS",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/sickcodes/Docker-OSX",
     "help": "https://github.com/sickcodes/Docker-OSX",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -36,9 +43,9 @@
         {
             "attr": "display",
             "name": "显示",
-            "type": "string",
+            "type": "text",
             "default": ":0.0",
-            "suffix": "显示",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -46,7 +53,7 @@
             "name": "SSH 端口",
             "type": "number",
             "default": "40287",
-            "suffix": "SSH 端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -54,23 +61,23 @@
             "name": "重启策略",
             "type": "string",
             "default": "unless-stopped",
-            "suffix": "重启策略",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "image_file",
             "name": "系统镜像文件路径",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "系统镜像文件路径",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "disk_size",
             "name": "磁盘大小",
-            "type": "string",
+            "type": "text",
             "default": "50G",
-            "suffix": "磁盘大小",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -78,7 +85,7 @@
             "name": "内存大小",
             "type": "number",
             "default": "4",
-            "suffix": "内存大小",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -86,23 +93,23 @@
             "name": "CPU 核心数",
             "type": "number",
             "default": "2",
-            "suffix": "CPU 核心数",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "username",
             "name": "登录用户名",
-            "type": "string",
+            "type": "text",
             "default": "docker",
-            "suffix": "登录用户名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "password",
             "name": "登录密码",
-            "type": "string",
+            "type": "password",
             "default": "password",
-            "suffix": "登录密码",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -126,19 +133,19 @@
         {
             "key": "display",
             "type": "string",
-            "default": null,
+            "default": ":0.0",
             "desc": "显示"
         },
         {
             "key": "ssh",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "40287",
             "desc": "SSH 端口"
         },
         {
             "key": "restart_policy",
             "type": "string",
-            "default": null,
+            "default": "unless-stopped",
             "desc": "重启策略"
         },
         {
@@ -150,31 +157,31 @@
         {
             "key": "disk_size",
             "type": "string",
-            "default": null,
+            "default": "50G",
             "desc": "磁盘大小"
         },
         {
             "key": "ram_size",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "4",
             "desc": "内存大小"
         },
         {
             "key": "cpu_cores",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": "2",
             "desc": "CPU 核心数"
         },
         {
             "key": "username",
-            "type": "string",
-            "default": null,
+            "type": "username",
+            "default": "docker",
             "desc": "登录用户名"
         },
         {
             "key": "password",
-            "type": "string",
-            "default": null,
+            "type": "password",
+            "default": "password",
             "desc": "登录密码"
         },
         {

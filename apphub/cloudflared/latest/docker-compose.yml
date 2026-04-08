@@ -6,12 +6,11 @@ services:
         limits:
           cpus: ${CPUS}
           memory: ${MEMORY_LIMIT}
-    container_name: ${APP_NAME:-cloudflared}
     restart: always
     networks:
       - baota_net
     command: tunnel --no-autoupdate run --token ${CFD_TOKEN}
-    labels:  
+    labels:
       createdBy: "bt_apps"
 
 networks:

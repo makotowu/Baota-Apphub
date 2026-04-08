@@ -18,9 +18,16 @@
     ],
     "appdesc": "一个轻量级的 AI 证件照制作工具",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://github.com/Zeyi-Lin/HivisionIDPhotos",
     "help": "https://github.com/Zeyi-Lin/HivisionIDPhotos",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -44,55 +51,47 @@
             "name": "端口",
             "type": "number",
             "default": "40330",
-            "suffix": "端口",
-            "unit": ""
-        },
-        {
-            "attr": "web_port",
-            "name": "内部端口",
-            "type": "number",
-            "default": "7860",
-            "suffix": "内部端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "command",
             "name": "启动命令",
-            "type": "string",
+            "type": "text",
             "default": "python3 -u app.py --host 0.0.0.0 --port 7860",
-            "suffix": "启动命令",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "face_plus_api_key",
             "name": "FACE Plus API 密钥",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "FACE Plus API 密钥",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "face_plus_api_secret",
             "name": "FACE Plus API 密钥 Secret",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "FACE Plus API 密钥 Secret",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "run_mode",
             "name": "运行模式",
-            "type": "string",
+            "type": "text",
             "default": "",
-            "suffix": "运行模式",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "default_lang",
             "name": "默认语言",
-            "type": "string",
+            "type": "text",
             "default": "zh",
-            "suffix": "默认语言",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -116,19 +115,13 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": "40330",
             "desc": "端口"
-        },
-        {
-            "key": "web_port",
-            "type": "port",
-            "default": null,
-            "desc": "内部端口"
         },
         {
             "key": "command",
             "type": "string",
-            "default": null,
+            "default": "python3 -u app.py --host 0.0.0.0 --port 7860",
             "desc": "启动命令"
         },
         {
@@ -152,7 +145,7 @@
         {
             "key": "default_lang",
             "type": "string",
-            "default": null,
+            "default": "zh",
             "desc": "默认语言"
         },
         {

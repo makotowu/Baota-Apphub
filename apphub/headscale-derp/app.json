@@ -12,9 +12,16 @@
     ],
     "appdesc": "Headscale 的中继服务",
     "appstatus": 1,
+    "icon": "",
+    "sort": 100,
     "home": "https://hub.docker.com/r/fredliang/derper",
     "help": "https://headscale.net",
-    "updateat": 1758961229,
+    "cpu": 0,
+    "mem": 0,
+    "disk": 10240,
+    "updateat": 1775615239,
+    "installed": false,
+    "reuse": true,
     "depend": null,
     "field": [
         {
@@ -38,7 +45,7 @@
             "name": "端口",
             "type": "number",
             "default": 40184,
-            "suffix": "端口",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -46,31 +53,31 @@
             "name": "STUN 服务端口",
             "type": "number",
             "default": 3478,
-            "suffix": "STUN 服务端口",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "data_path",
             "name": "数据文件夹路径 (需要替换域名证书，证书文件名与服务器主机名相同)",
-            "type": "string",
+            "type": "text",
             "default": "./data",
-            "suffix": "数据文件夹路径 (需要替换域名证书，证书文件名与服务器主机名相同)",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "derp_domain",
             "name": "Derper服务器主机名",
-            "type": "string",
+            "type": "text",
             "default": "derper.your-domain.com",
-            "suffix": "Derper服务器主机名",
+            "suffix": "",
             "unit": ""
         },
         {
             "attr": "clients_verify_switch",
             "name": "客户端验证(开启:true，关闭:false)",
-            "type": "string",
+            "type": "text",
             "default": "false",
-            "suffix": "客户端验证(开启:true，关闭:false)",
+            "suffix": "",
             "unit": ""
         },
         {
@@ -94,31 +101,31 @@
         {
             "key": "web_port",
             "type": "port",
-            "default": null,
+            "default": 40184,
             "desc": "端口"
         },
         {
             "key": "stun",
-            "type": "string",
-            "default": null,
+            "type": "number",
+            "default": 3478,
             "desc": "STUN 服务端口"
         },
         {
             "key": "data_path",
-            "type": "string",
-            "default": null,
+            "type": "path",
+            "default": "./data",
             "desc": "数据文件夹路径 (需要替换域名证书，证书文件名与服务器主机名相同)"
         },
         {
             "key": "derp_domain",
             "type": "string",
-            "default": null,
+            "default": "derper.your-domain.com",
             "desc": "Derper服务器主机名"
         },
         {
             "key": "clients_verify_switch",
             "type": "string",
-            "default": null,
+            "default": "false",
             "desc": "客户端验证(开启:true，关闭:false)"
         },
         {
